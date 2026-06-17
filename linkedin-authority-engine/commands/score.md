@@ -83,9 +83,9 @@ Com base no score:
 
 Após a avaliação, conforme as instruções da skill `linkedin-authority-engine:authority-context`:
 
-1. Anexar em `memory/topic-performance.md`: tema, tipo de post, score, data da avaliação, objetivo.
+1. Anexar em `memory/topic-performance.md`: data, tema, pilar, tipo de post, score. (Colunas de performance ficam vazias até v1.x.)
 2. Anexar em `memory/learnings.md`: principais achados da avaliação, erros encontrados, padrões que prejudicaram o score.
-3. Se o hook for forte (nota ≥ 8/10 na dimensão Hook), anexar em `memory/winning-hooks.md`.
+3. Se o hook for forte (nota ≥ 8/10 na dimensão Hook), anexar em `memory/winning-hooks.md`: data, padrão de hook, tipo, categoria, objetivo, score. (Colunas `vezes usado`, `performance média`, `keep/kill` ficam vazias até v1.x.)
 
 ---
 

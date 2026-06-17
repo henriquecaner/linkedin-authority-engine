@@ -137,8 +137,8 @@ Para timing recomendado por objetivo e dia da semana, consulte a skill `linkedin
 
 Após aprovação da série, conforme as instruções da skill `linkedin-authority-engine:authority-context`:
 
-1. Anexar em `memory/winning-hooks.md`: os hooks aprovados da série, por tipo e score.
-2. Anexar em `memory/topic-performance.md`: tema da série, tipo de cada post, score, data planejada, objetivo.
+1. Anexar em `memory/winning-hooks.md`: por hook aprovado da série — data, padrão de hook, tipo, categoria, objetivo, score. (Colunas `vezes usado`, `performance média`, `keep/kill` ficam vazias até v1.x.)
+2. Anexar em `memory/topic-performance.md`: por post da série — data, tema, pilar, tipo de post, score. (Colunas de performance ficam vazias até v1.x.)
 3. Anexar em `memory/learnings.md`: o que funcionou na arquitetura, o que foi ajustado, padrões identificados.
 4. Se algum post foi rejeitado ou reescrito, registrar o motivo em `memory/learnings.md`.
 
