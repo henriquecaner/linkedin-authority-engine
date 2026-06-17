@@ -1,0 +1,10 @@
+{
+  "name": "linkedin-authority-engine",
+  "displayName": "LinkedIn Authority Engine",
+  "version": "1.0.0",
+  "description": "Sistema que transforma a expertise do founder em autoridade no LinkedIn. Posts tunados pelo algoritmo 360Brew, com perfil de cliente vivo (authority-context.md) e auto-enriquecimento por memória local. Para Claude Code e Claude Cowork.",
+  "author": { "name": "LEVEL TECH", "email": "caner@thelevel.com.br" },
+  "homepage": "https://thelevr.com",
+  "license": "proprietary",
+  "keywords": ["linkedin", "authority", "content", "360brew", "b2b", "level"]
+}

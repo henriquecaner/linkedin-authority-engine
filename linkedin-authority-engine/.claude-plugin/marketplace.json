@@ -1,0 +1,18 @@
+{
+  "name": "linkedin-authority-engine",
+  "owner": { "name": "LEVEL TECH", "email": "caner@thelevel.com.br" },
+  "metadata": {
+    "description": "Marketplace do LinkedIn Authority Engine — plugin de criação de conteúdo de autoridade no LinkedIn.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "linkedin-authority-engine",
+      "source": "./",
+      "description": "Posts de LinkedIn tunados pelo algoritmo 360Brew, com perfil de cliente vivo e memória auto-enriquecedora.",
+      "version": "1.0.0",
+      "category": "marketing",
+      "tags": ["linkedin", "authority", "content", "360brew", "b2b"]
+    }
+  ]
+}
