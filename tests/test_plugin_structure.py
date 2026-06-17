@@ -39,6 +39,15 @@ def test_marketplace_json_valid(plugin_dir):
     names = [pl["name"] for pl in data["plugins"]]
     assert "linkedin-authority-engine" in names
 
+def test_discovery_script_covers_sections(plugin_dir):
+    sk = (plugin_dir / "skills" / "discovery-script" / "SKILL.md").read_text(encoding="utf-8")
+    # uma âncora de bloco por seção do perfil
+    for label in ["Perfil", "Posicionamento", "Objetivos", "Audiência", "Ofertas",
+                  "Narrativa comercial", "Paisagem competitiva", "Territórios",
+                  "Restrições", "Tom de voz", "Instrução de conteúdo"]:
+        assert label in sk, f"discovery-script sem bloco: {label}"
+    assert sk.lower().count("?") >= 25, "discovery-script com poucas perguntas"
+
 def test_authority_context_assets(plugin_dir):
     base = plugin_dir / "skills" / "authority-context"
     assert (base / "SKILL.md").exists()
