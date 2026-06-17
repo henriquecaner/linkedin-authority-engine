@@ -66,7 +66,7 @@ Rodar `${CLAUDE_PLUGIN_ROOT}/scripts/validate_specs.py` em cada versão. Corrigi
 
 Acionar a skill `linkedin-authority-engine:humanizer-linkedin` em cada versão (A e B). Apresentar diff compacto por versão (máx. 5 itens).
 
-### Etapa D — Score Final
+### Etapa C — Score Final
 
 Rodar `${CLAUDE_PLUGIN_ROOT}/scripts/score_post.py` em cada versão humanizada:
 
@@ -85,7 +85,7 @@ Apresentar comparativo final:
 
 Usuário escolhe a versão preferida (ou pede mix). Com a versão escolhida:
 
-### Etapa C — Brief Visual
+### Etapa D — Brief Visual
 
 Acionar a skill `linkedin-authority-engine:brief-visual` na versão escolhida.
 
