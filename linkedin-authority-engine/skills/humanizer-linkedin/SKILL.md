@@ -4,7 +4,7 @@ description: Pipeline de humanização para posts LinkedIn (Etapa B do Pipeline 
 
 # Pipeline Humanizer (LinkedIn)
 
-> Esta referência descreve **como** aplicar humanizer em posts LinkedIn. A lista completa dos 24 padrões de IA vive na skill `humanizer` de este plugin (`linkedin-authority-engine`) e **não deve ser duplicada aqui**. Se divergir das duas listas, o guia oficial é a skill `humanizer`.
+> Esta referência descreve **como** aplicar humanizer em posts LinkedIn. A lista completa dos 24 padrões de IA vive na skill `humanizer` e **não deve ser duplicada aqui**. Se divergir das duas listas, o guia oficial é a skill `humanizer`.
 
 ## Quando executar
 

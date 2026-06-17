@@ -54,7 +54,7 @@ O 360Brew testa cada post com 2-5% dos seguidores mais ativos durante os primeir
 
 ## Fechar o loop
 
-Após os 90 minutos (e de novo em 7 dias), registrar a performance real para calibrar pautas, hooks e CTAs com dados do próprio perfil em vez de benchmarks genéricos.
+Após os 90 minutos (e de novo em 7 dias), registrar a performance real no Unabyss para calibrar pautas, hooks e CTAs com dados do próprio perfil em vez de benchmarks genéricos.
 
 ## Resumo entregável
 
