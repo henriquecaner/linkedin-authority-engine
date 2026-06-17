@@ -3,14 +3,14 @@
 LinkedIn Hook Suggester - Suggests hooks based on category and objective
 Usage: python suggest_hooks.py --category <cat> --objective <obj> [--topic "your topic"] [--seed N]
 
-The types and the category->type mapping mirror references/hooks.md.
+The types and the category->type mapping mirror skills/hooks/SKILL.md.
 """
 
 import argparse
 import random
 import re
 
-# Hook library organized by type (subset of references/hooks.md)
+# Hook library organized by type (subset of skills/hooks/SKILL.md)
 HOOKS = {
     "proof_of_work": [
         "I spent ${value} testing {topic}. Here's what I found:",
@@ -173,6 +173,7 @@ def print_suggestions(suggestions: list, category: str, objective: str, topic: s
     print("   X 'What do you think?'")
     print("   X 'Agree?'")
     print("   X 'Good morning, LinkedIn!'")
+    print("   X 'Thought of the day'")
     print("   X Generic clickbait with no proof")
     print("=" * 60 + "\n")
 

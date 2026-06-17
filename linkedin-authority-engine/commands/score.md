@@ -45,7 +45,7 @@ If there are critical errors, ask whether the user wants to fix them before huma
 
 Run the `linkedin-authority-engine:humanizer-linkedin` skill on the post. Present a compact diff (max 5 changed items) with the substitutions made.
 
-### Stage D — Final score
+### Stage C — Final score
 
 Run `${CLAUDE_PLUGIN_ROOT}/scripts/score_post.py` on the humanized post:
 

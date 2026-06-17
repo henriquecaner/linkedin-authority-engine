@@ -36,7 +36,7 @@ The plugin reads your authority profile, drafts the post in the right framework,
 
 - **12 skills** — 360Brew algorithm reference, a bank of 147 hooks, 8 copywriting structures, 16 content types, templates by category, CTAs, style and tone, humanizer, post-publication protocol, visual brief, memory substrate and discovery script.
 - **2 agents** — `linkedin-strategist` (strategy) and `humanizer-linkedin` (final anti-AI pass).
-- **3 scripts** — `score_post.py`, `suggest_hooks.py`, `validate_specs.py`.
+- **3 CLI scripts + shared lib** — `score_post.py`, `suggest_hooks.py`, `validate_specs.py`, plus `postlib.py` (the shared, multilingual PT+EN matcher library and 360Brew specs). Scoring and validation accept `--lang auto|pt|en`.
 - **1 hook** — a `SessionStart` banner pointing to `init`.
 
 ## Structure
@@ -47,7 +47,7 @@ linkedin-authority-engine/
 ├── commands/         # 6 commands
 ├── skills/           # 12 skills
 ├── agents/           # 2 agents
-├── scripts/          # 3 Python scripts
+├── scripts/          # 3 CLI scripts + postlib.py (shared lib)
 └── hooks/            # SessionStart hook
 ```
 

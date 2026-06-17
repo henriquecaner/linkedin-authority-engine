@@ -2,8 +2,9 @@
 """
 LinkedIn Post Scorer v3.5 - Computes a score based on the 6 360Brew dimensions.
 
-Usage: python score_post.py <post_file.txt> [--objective authority|sales|engagement]
+Usage: python score_post.py <post_file.txt> [--objective authority|sales|engagement] [--lang auto|pt|en]
 
+Multilingual: matches Portuguese and English posts (union matching by default).
 Default output: readable report. Use --json for structured output.
 Use --compact for a 1-line summary (handy for workflow integration).
 """
@@ -13,7 +14,10 @@ import re
 import sys
 from pathlib import Path
 
-# Dimension weights (v3.5) — aligned with references/algoritmo-metricas.md
+import postlib
+
+# Dimension weights (v3.5) — aligned with the Metrics section of
+# skills/360brew-algorithm/SKILL.md
 WEIGHTS = {
     "saves_potential": 0.30,
     "hook": 0.20,
@@ -23,102 +27,22 @@ WEIGHTS = {
     "data": 0.05,
 }
 
-# Hooks punished by 360Brew
-# Anchored to avoid false positives (e.g. "not everyone agrees with me")
-PUNISHED_HOOKS = [
-    r"\bwhat do you think\s*\?",
-    r"(?:^|[.!?…]\s*)(?:agree|right)\s*\?",
-    r"\bgood morning[,]?\s*linkedin",
-    r"\bthought of the day\b",
-]
-
-# Data / number patterns
-DATA_PATTERNS = [
-    r"\d+%",
-    r"\$\s*[\d.,]+",
-    r"R\$\s*[\d.,]+",
-    r"\d+x",
-    r"\d+\s*(days|weeks|months|years|hours)",
-    r"from\s+\d+\s+to\s+\d+",
-]
-
-# High save-potential patterns
-SAVES_PATTERNS = [
-    (r"step\s*\d", "Numbered steps"),
-    (r"phase\s*\d", "Numbered phases"),
-    (r"^\s*\d+\s*[-–.]\s*\w", "Numbered list"),
-    (r"checklist", "Checklist"),
-    (r"framework", "Named framework"),
-    (r"template", "Template"),
-    (r"(complete|definitive|practical)\s+guide", "Explicit guide"),
-    (r"how\s+to\s+\w+\s+in\s+\d+", "How-to with a number"),
-    (r"\d+\s+(tips|rules|principles|mistakes|signs)", "Value list"),
-]
-
-
-def count_chars(text: str) -> int:
-    return len(text.strip())
-
-
-def split_paragraphs(text: str) -> list:
-    """Paragraphs = blocks separated by a blank line (LinkedIn format)."""
-    return [p.strip() for p in re.split(r'\n\s*\n', text) if p.strip()]
-
-
-def count_paragraphs(text: str) -> int:
-    return len(split_paragraphs(text))
-
-
-def avg_word_length(text: str) -> float:
-    words = re.findall(r"\b[a-z']+\b", text.lower())
-    if not words:
-        return 0
-    return sum(len(w) for w in words) / len(words)
-
-
-def count_data_points(text: str) -> int:
-    count = 0
-    for pattern in DATA_PATTERNS:
-        count += len(re.findall(pattern, text, re.IGNORECASE))
-    return count
-
-
-def has_punished_hook(text: str) -> bool:
-    first_lines = '\n'.join(text.split('\n')[:5]).lower()
-    for pattern in PUNISHED_HOOKS:
-        if re.search(pattern, first_lines, re.IGNORECASE):
-            return True
-    return False
-
 
 def extract_hook(text: str) -> str:
     lines = [l.strip() for l in text.split('\n') if l.strip()]
     return '\n'.join(lines[:3])
 
 
-def has_link_in_body(text: str) -> bool:
-    """Detects a link ANYWHERE in the body. The 360Brew rule has no exception:
-    links belong in the 1st comment, never in the post (-60% reach)."""
-    return bool(re.search(r'https?://|www\.', text, re.IGNORECASE))
-
-
-def count_hashtags(text: str) -> int:
-    return len(re.findall(r'#\w+', text))
-
-
 # -----------------------------
 # Dimensions (6)
 # -----------------------------
 
-def score_saves_potential(text: str) -> tuple:
+def score_saves_potential(text: str, lang: str) -> tuple:
     """Evaluates save potential (30%). The strongest algorithm signal."""
     feedback = []
     score = 4.0
 
-    matches = []
-    for pattern, label in SAVES_PATTERNS:
-        if re.search(pattern, text, re.IGNORECASE | re.MULTILINE):
-            matches.append(label)
+    matches = postlib.find_saves(text, lang)
 
     if len(matches) >= 3:
         score = 10.0
@@ -133,20 +57,20 @@ def score_saves_potential(text: str) -> tuple:
         score = 3.5
         feedback.append("[X] No save triggers — add a framework, checklist or numbered list")
 
-    last_lines = '\n'.join(text.split('\n')[-5:]).lower()
-    if re.search(r"(save|bookmark)\s+(this|the)\s+post", last_lines) or re.search(r"\bbookmark this\b", last_lines):
+    last_lines = '\n'.join(text.split('\n')[-5:])
+    if postlib.has_save_cta(last_lines, lang):
         score = min(10, score + 1.0)
         feedback.append("[+] Explicit save CTA (+1)")
 
     return min(10, max(0, score)), feedback
 
 
-def score_hook(text: str) -> tuple:
+def score_hook(text: str, lang: str) -> tuple:
     feedback = []
     score = 5.0
     hook = extract_hook(text)
 
-    if has_punished_hook(text):
+    if postlib.find_punished(text, lang):
         score -= 4.0
         feedback.append("[X] Hook punished by 360Brew detected (-4)")
 
@@ -154,34 +78,34 @@ def score_hook(text: str) -> tuple:
         score += 1.5
         feedback.append("[+] Specific numbers in the hook (+1.5)")
 
-    if re.search(r'(spent|invested|tested|analyzed|lost|earned|built|implemented|audited|interviewed|reviewed|documented|ran|scaled|generated|closed|tripled|doubled)', hook, re.IGNORECASE):
+    if postlib.has_proof_of_work(hook, lang):
         score += 2.0
         feedback.append("[+] Proof of work detected (+2)")
 
-    if re.search(r'(\d+\s*(years?|months?).*?(learned|taught|discovered)|as\s+(a\s+)?(ceo|founder|director|manager|head|vp))', hook, re.IGNORECASE):
+    if postlib.has_authority(hook, lang):
         score += 1.5
         feedback.append("[+] Authority proof detected (+1.5)")
 
-    if re.search(r'from\s+\d+.*?to\s+\d+', hook, re.IGNORECASE):
+    if postlib.has_transformation_range(hook, lang):
         score += 1.5
         feedback.append("[+] Transformation with numbers (+1.5)")
 
     return min(10, max(0, score)), feedback
 
 
-def score_algorithm(text: str) -> tuple:
+def score_algorithm(text: str, lang: str) -> tuple:
     """Evaluates adherence to the 360Brew specs (20%). Saves is now a separate dimension."""
     feedback = []
     score = 5.0
 
-    if has_link_in_body(text):
+    if postlib.has_link_in_body(text):
         score -= 4.0
         feedback.append("[X] Link in the post body detected (-4) — move it to the 1st comment")
     else:
         score += 1.5
         feedback.append("[+] No links in the body (+1.5)")
 
-    hashtag_count = count_hashtags(text)
+    hashtag_count = postlib.count_hashtags(text)
     if hashtag_count == 0:
         score += 1.0
         feedback.append("[+] No hashtags (2026 default) (+1)")
@@ -192,7 +116,7 @@ def score_algorithm(text: str) -> tuple:
         score -= 2.0
         feedback.append(f"[X] {hashtag_count} hashtags — excess punished (-2)")
 
-    avg_len = avg_word_length(text)
+    avg_len = postlib.avg_word_length(text)
     if avg_len <= 5:
         score += 2.0
         feedback.append(f"[+] Simple words: average {avg_len:.1f} letters (+2)")
@@ -203,7 +127,7 @@ def score_algorithm(text: str) -> tuple:
         score -= 1.5
         feedback.append(f"[X] Complex words: average {avg_len:.1f} letters (-1.5)")
 
-    if has_punished_hook(text):
+    if postlib.find_punished(text, lang):
         score -= 1.5
         feedback.append("[X] Bait pattern detected in the hook (-1.5)")
     else:
@@ -213,73 +137,59 @@ def score_algorithm(text: str) -> tuple:
     return min(10, max(0, score)), feedback
 
 
-def score_structure(text: str) -> tuple:
+def score_structure(text: str, lang: str) -> tuple:
     """Structure (15%): 3 sub-components — Length, Paragraphs, Framework."""
     feedback = []
     score = 5.0
 
-    chars = count_chars(text)
-    paragraphs = count_paragraphs(text)
+    chars = postlib.count_chars(text)
+    paragraphs = postlib.count_paragraphs(text)
+    specs = postlib.SPECS
 
     # Length
-    if 1250 <= chars <= 2500:
+    if specs["chars_min"] <= chars <= specs["chars_max"]:
         score += 2.0
         feedback.append(f"[+] Ideal length: {chars} chars (+2)")
-    elif chars < 1000:
+    elif chars < specs["chars_warning_min"]:
         score -= 2.5
         feedback.append(f"[X] Too short: {chars} chars (-2.5)")
-    elif chars > 3000:
+    elif chars > specs["chars_warning_max"]:
         score -= 2.0
         feedback.append(f"[X] Too long: {chars} chars (-2)")
     else:
         feedback.append(f"[o] Length outside the optimal range: {chars} chars (0)")
 
     # Paragraphs
-    if paragraphs >= 14:
+    if paragraphs >= specs["paragraphs_min"]:
         score += 2.0
         feedback.append(f"[+] Scannability: {paragraphs} paragraphs (+2)")
-    elif paragraphs >= 10:
+    elif paragraphs >= specs["paragraphs_warning"]:
         score += 1.0
         feedback.append(f"[o] Paragraphs OK: {paragraphs} (+1)")
     else:
         score -= 2.0
         feedback.append(f"[X] Too few paragraphs: {paragraphs} (-2) — break up the text more")
 
-    # Dense blocks (paragraph >150 chars, per algoritmo-metricas.md)
-    dense_blocks = sum(1 for para in split_paragraphs(text) if len(para) > 150)
+    # Dense blocks (paragraph longer than the spec, per skills/360brew-algorithm/SKILL.md)
+    dense_blocks = sum(1 for para in postlib.split_paragraphs(text) if len(para) > specs["dense_paragraph_chars"])
     if dense_blocks > 2:
         score -= 1.5
         feedback.append(f"[X] {dense_blocks} dense blocks detected (-1.5)")
 
     # Framework (weak heuristic)
-    framework_signals = re.findall(
-        r"(problem|agitation|solution|before|after|bridge|setup|conflict|resolution|feature|advantage|benefit)",
-        text,
-        re.IGNORECASE,
-    )
-    if len(set(s.lower() for s in framework_signals)) >= 3:
+    if postlib.framework_signal_count(text, lang) >= 3:
         score += 1.0
         feedback.append("[+] Detectable framework (+1)")
 
     return min(10, max(0, score)), feedback
 
 
-def score_cta(text: str, objective: str) -> tuple:
+def score_cta(text: str, objective: str, lang: str) -> tuple:
     feedback = []
     score = 5.0
-    last_lines = '\n'.join(text.split('\n')[-5:]).lower()
+    last_lines = '\n'.join(text.split('\n')[-5:])
 
-    # "save" aligned with the official CTAs in ctas.md ("Save this post", "Bookmark this")
-    cta_patterns = {
-        "save": r'\b(save|bookmark)\b',
-        "follow": r'(follow me|follow back|hit follow|turn on)',
-        "comment_dm": r'comment\s+\w+',
-        "dm": r'(dm me|send\s+(a\s+)?(dm|message)|open dms?)',
-        "click": r'click\s+(the\s+)?link',
-        "bio": r'link\s+in\s+(the\s+)?(bio|profile|first comment)',
-    }
-
-    detected = [k for k, p in cta_patterns.items() if re.search(p, last_lines)]
+    detected = postlib.find_ctas(last_lines, lang)
     # Dedupe: variations of the same CTA don't count as multiple CTAs
     if "comment_dm" in detected and "dm" in detected:
         detected.remove("dm")
@@ -303,7 +213,7 @@ def score_cta(text: str, objective: str) -> tuple:
     elif objective == "sales" and ("comment_dm" in detected or "dm" in detected):
         score = min(10, score + 1.0)
         feedback.append("[+] CTA aligned with Sales (+1)")
-    elif objective == "engagement" and detected and re.search(r'(tell me|let me know|comment|which (one|of these))', last_lines):
+    elif objective == "engagement" and detected and postlib.has_engagement_cue(last_lines, lang):
         score = min(10, score + 1.0)
         feedback.append("[+] CTA aligned with Engagement (+1)")
 
@@ -314,9 +224,9 @@ def score_cta(text: str, objective: str) -> tuple:
     return min(10, max(0, score)), feedback
 
 
-def score_data(text: str) -> tuple:
+def score_data(text: str, lang: str) -> tuple:
     feedback = []
-    data_count = count_data_points(text)
+    data_count = postlib.count_data_points(text, lang)
 
     if data_count >= 5:
         score = 10.0
@@ -362,13 +272,13 @@ def calculate_probabilities(final_score, saves_score, hook_score, algo_score):
     return {"top1": top1, "top5": top5}
 
 
-def score_post(text, objective="authority"):
-    saves_score, saves_fb = score_saves_potential(text)
-    hook_score, hook_fb = score_hook(text)
-    algo_score, algo_fb = score_algorithm(text)
-    structure_score, structure_fb = score_structure(text)
-    cta_score, cta_fb = score_cta(text, objective)
-    data_score, data_fb = score_data(text)
+def score_post(text, objective="authority", lang="auto"):
+    saves_score, saves_fb = score_saves_potential(text, lang)
+    hook_score, hook_fb = score_hook(text, lang)
+    algo_score, algo_fb = score_algorithm(text, lang)
+    structure_score, structure_fb = score_structure(text, lang)
+    cta_score, cta_fb = score_cta(text, objective, lang)
+    data_score, data_fb = score_data(text, lang)
 
     final_score = (
         saves_score * WEIGHTS["saves_potential"] +
@@ -392,6 +302,7 @@ def score_post(text, objective="authority"):
     dimensions_sorted = sorted(dimensions, key=lambda x: x[1], reverse=True)
 
     return {
+        "language": postlib.detect_language(text) if lang == "auto" else lang,
         "final_score": round(final_score, 1),
         "dimensions": {
             "saves_potential": {"score": saves_score, "feedback": saves_fb},
@@ -426,7 +337,7 @@ def print_report(result):
     print("SCORE REPORT — LinkedIn 360Brew (v3.5)")
     print("=" * 60)
 
-    print(f"\nFINAL SCORE: {result['final_score']}/10")
+    print(f"\nFINAL SCORE: {result['final_score']}/10  (language: {result['language']})")
     print(f"   {result['recommendation']}")
 
     print(f"\nProbabilities:")
@@ -461,7 +372,7 @@ def print_report(result):
 def print_compact(result):
     d = result["dimensions"]
     print(
-        f"Score {result['final_score']}/10 | "
+        f"Score {result['final_score']}/10 [{result['language']}] | "
         f"Top1: {result['probabilities']['top1']:.0f}% | "
         f"Top5: {result['probabilities']['top5']:.0f}% | "
         f"Saves {d['saves_potential']['score']:.1f} Hook {d['hook']['score']:.1f} "
@@ -476,6 +387,8 @@ def main():
     parser.add_argument("file", help="File with the post text")
     parser.add_argument("--objective", "-o", choices=["authority", "sales", "engagement"],
                         default="authority", help="Post objective (default: authority)")
+    parser.add_argument("--lang", "-l", choices=["auto", "pt", "en"], default="auto",
+                        help="Post language for matching (default: auto = PT+EN)")
     parser.add_argument("--json", action="store_true", help="JSON output")
     parser.add_argument("--compact", action="store_true", help="1-line output for a pipeline")
 
@@ -487,7 +400,7 @@ def main():
         print(f"Error: file '{args.file}' not found")
         sys.exit(1)
 
-    result = score_post(text, args.objective)
+    result = score_post(text, args.objective, args.lang)
 
     if args.json:
         import json

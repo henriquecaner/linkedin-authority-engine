@@ -243,3 +243,4 @@ The algorithm detects and penalizes these patterns:
 | Practical Tip | Proof of Work, Lists & Frameworks, Curiosity |
 | Opinion | Contrarian, Authority Proof |
 | Behind the Scenes | Story, Confession, Proof of Work |
+| Other | Curiosity, Proof of Work, Lists & Frameworks |

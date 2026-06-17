@@ -6,7 +6,7 @@ Files created in the client folder. Append-only. Read during generation (Gate 2)
 | date | hook pattern | type | category | objective | score | times used | avg performance | keep/kill |
 |---|---|---|---|---|---|---|---|---|
 
-**v1 fills:** date, hook pattern, type, category, objective, score. The `times used`, `avg performance` and `keep/kill` columns stay empty until v1.x (manual perf via `/linkedin perf` or Unabyss).
+**v1 fills:** date, hook pattern, type, category, objective, score. The `times used`, `avg performance` and `keep/kill` columns stay empty until v1.x (filled by manual performance entry, or via Unabyss when present).
 
 ## topic-performance.md
 | date | topic | pillar | post type | score | avg reactions | avg comments | avg saves | vs baseline | verdict |

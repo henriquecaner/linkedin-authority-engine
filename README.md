@@ -103,15 +103,17 @@ The plugin's intelligence lives in the skills — each one is a reference that C
 - **`linkedin-strategist`** — content strategy and angle decisions.
 - **`humanizer-linkedin`** — final pass that takes the AI signature out of the text.
 
-### Scripts (3)
+### Scripts (3 CLIs + 1 shared library)
 
-Python tools the commands call:
+Python tools the commands call. Scoring and validation are **multilingual (PT + EN)**: matching runs against both languages by default, so the scorer works on Portuguese and English posts. Use `--lang pt|en` to force one language.
 
 ```bash
-python scripts/score_post.py <post.txt> [--objective authority|sales|engagement]
+python scripts/score_post.py <post.txt> [--objective authority|sales|engagement] [--lang auto|pt|en]
 python scripts/suggest_hooks.py --category <cat> --objective <obj> [--topic "..."]
-python scripts/validate_specs.py <post.txt>
+python scripts/validate_specs.py <post.txt> [--lang auto|pt|en]
 ```
+
+`postlib.py` is the shared library both `score_post.py` and `validate_specs.py` import — the single source of truth for the PT/EN matchers and the 360Brew specs.
 
 ### Hook
 
@@ -128,7 +130,7 @@ authority-engine/
 │   ├── commands/                # 6 commands
 │   ├── skills/                  # 12 skills
 │   ├── agents/                  # 2 agents
-│   ├── scripts/                 # 3 Python scripts
+│   ├── scripts/                 # 3 CLI scripts + postlib.py (shared lib)
 │   └── hooks/                   # SessionStart hook
 │
 ├── gtm-context.md               # go-to-market context (ICP, offer, voice, channels)
@@ -153,11 +155,11 @@ Beyond the plugin, the repo holds the product's go-to-market work, generated wit
 ## Tests
 
 ```bash
-# from the plugin directory
+# from the repo root
 pytest
 ```
 
-The suite covers the integrity of the plugin structure (`test_plugin_structure.py`) and the behavior of the scripts via CLI (`test_scripts_cli.py`).
+The suite covers the plugin structure (`test_plugin_structure.py`), the script behavior via CLI including PT/EN scoring (`test_scripts_cli.py`), and the shared matcher library (`test_postlib.py`).
 
 ---
 
@@ -165,7 +167,8 @@ The suite covers the integrity of the plugin structure (`test_plugin_structure.p
 
 - [ ] Self-serve launch (Gold + continuity) — first for the warm audience already waiting for the product
 - [ ] Sales page + payment gateway + HubSpot Sales integration
-- [ ] Multi-language operation (PT / EN / ES)
+- [x] Multilingual scoring (PT + EN)
+- [ ] Multi-language operation end-to-end, including generation and ES
 - [ ] Publication on the public plugin marketplace
 
 ---

@@ -1,70 +1,24 @@
 #!/usr/bin/env python3
 """
 LinkedIn Post Validator - Validates 360Brew specs
-Usage: python validate_specs.py <post_file.txt>
+Usage: python validate_specs.py <post_file.txt> [--lang auto|pt|en]
+
+Multilingual: matches Portuguese and English posts (union matching by default).
 """
 
 import argparse
-import re
 import sys
 from pathlib import Path
 
-# 360Brew specs
-SPECS = {
-    "chars_min": 1250,
-    "chars_max": 2500,
-    "chars_warning_min": 1000,
-    "chars_warning_max": 3000,
-    "paragraphs_min": 14,
-    "paragraphs_warning": 10,
-    "avg_word_length_max": 5,
-    "avg_word_length_warning": 6,
-    "max_words_per_paragraph": 19,
-}
+import postlib
 
-# Punished patterns
-# Anchored to avoid false positives (e.g. "not everyone agrees with me")
-PUNISHED_PATTERNS = [
-    (r"\bwhat do you think\s*\?", "What do you think?"),
-    (r"(?:^|[.!?…]\s*)(?:agree|right)\s*\?", "Agree?"),
-    (r"\bgood morning[,]?\s*linkedin", "Good morning, LinkedIn"),
-    (r"\bthought of the day\b", "Thought of the day"),
-]
-
-
-def count_chars(text: str) -> int:
-    return len(text.strip())
-
-
-def split_paragraphs(text: str) -> list:
-    """Paragraphs = blocks separated by a blank line (LinkedIn format)."""
-    return [p.strip() for p in re.split(r'\n\s*\n', text) if p.strip()]
-
-
-def count_paragraphs(text: str) -> int:
-    return len(split_paragraphs(text))
-
-
-def avg_word_length(text: str) -> float:
-    words = re.findall(r"\b[a-z']+\b", text.lower())
-    if not words:
-        return 0
-    return sum(len(w) for w in words) / len(words)
-
-
-def has_link_in_body(text: str) -> bool:
-    """Detects a link ANYWHERE in the body. The 360Brew rule has no exception:
-    links belong in the 1st comment, never in the post (-60% reach)."""
-    return bool(re.search(r'https?://|www\.', text, re.IGNORECASE))
-
-
-def count_hashtags(text: str) -> int:
-    return len(re.findall(r'#\w+', text))
+# 360Brew specs — single source of truth in postlib.
+SPECS = postlib.SPECS
 
 
 def get_long_paragraphs(text: str) -> list:
     """Returns paragraphs with more than 19 words"""
-    paragraphs = split_paragraphs(text)
+    paragraphs = postlib.split_paragraphs(text)
     long_paras = []
     for i, p in enumerate(paragraphs, 1):
         words = len(p.split())
@@ -73,16 +27,7 @@ def get_long_paragraphs(text: str) -> list:
     return long_paras
 
 
-def check_punished_patterns(text: str) -> list:
-    """Checks for patterns punished by the algorithm"""
-    found = []
-    for pattern, name in PUNISHED_PATTERNS:
-        if re.search(pattern, text, re.IGNORECASE):
-            found.append(name)
-    return found
-
-
-def validate_post(text: str) -> dict:
+def validate_post(text: str, lang: str = "auto") -> dict:
     """Validates a post against the 360Brew specs"""
 
     results = {
@@ -94,11 +39,12 @@ def validate_post(text: str) -> dict:
     }
 
     # Basic stats
-    chars = count_chars(text)
-    paragraphs = count_paragraphs(text)
-    avg_len = avg_word_length(text)
+    chars = postlib.count_chars(text)
+    paragraphs = postlib.count_paragraphs(text)
+    avg_len = postlib.avg_word_length(text)
 
     results["stats"] = {
+        "language": postlib.detect_language(text) if lang == "auto" else lang,
         "characters": chars,
         "paragraphs": paragraphs,
         "avg_word_length": round(avg_len, 1),
@@ -138,11 +84,11 @@ def validate_post(text: str) -> dict:
     long_paras = get_long_paragraphs(text)
     if long_paras:
         for para_num, word_count, preview in long_paras:
-            results["warnings"].append(f"Paragraph {para_num} too long: {word_count} words")
+            results["warnings"].append(f"Paragraph {para_num} too long: {word_count} words — \"{preview}\"")
         results["suggestions"].append(f"Break the {len(long_paras)} long paragraphs into smaller blocks")
 
     # Check punished patterns
-    punished = check_punished_patterns(text)
+    punished = postlib.find_punished(text, lang)
     if punished:
         for p in punished:
             results["errors"].append(f"Punished pattern detected: '{p}'")
@@ -150,13 +96,13 @@ def validate_post(text: str) -> dict:
         results["suggestions"].append("Remove bait patterns and use proof-of-work / authority hooks")
 
     # Check for a link in the body (-60% reach)
-    if has_link_in_body(text):
+    if postlib.has_link_in_body(text):
         results["errors"].append("Link in the post body detected (-60% reach)")
         results["valid"] = False
         results["suggestions"].append("Move the link to the 1st comment")
 
     # Check hashtags
-    hashtag_count = count_hashtags(text)
+    hashtag_count = postlib.count_hashtags(text)
     results["stats"]["hashtags"] = hashtag_count
     if hashtag_count > 2:
         results["errors"].append(f"Too many hashtags: {hashtag_count} (2026 default: zero, max 2 hyper-specific)")
@@ -217,6 +163,8 @@ def print_report(results: dict):
 def main():
     parser = argparse.ArgumentParser(description="Validate LinkedIn post specs")
     parser.add_argument("file", help="File with the post text")
+    parser.add_argument("--lang", "-l", choices=["auto", "pt", "en"], default="auto",
+                        help="Post language for matching (default: auto = PT+EN)")
     parser.add_argument("--json", action="store_true", help="JSON output")
     parser.add_argument("--quiet", "-q", action="store_true", help="Status only (exit code)")
 
@@ -230,7 +178,7 @@ def main():
         sys.exit(1)
 
     # Validate
-    results = validate_post(text)
+    results = validate_post(text, args.lang)
 
     # Output
     if args.quiet:

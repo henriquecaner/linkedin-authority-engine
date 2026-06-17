@@ -71,4 +71,4 @@ Visual tone: [Minimalist / Data or infographic / Human or photo / Illustration]
 
 ## Integration with adjacent skills
 
-If the user has an image generation or presentation skill active (e.g. Canva MCP, premium-web-architect), suggest triggering those skills to materialize the brief. Otherwise, deliver just the ready prompt.
+If the user has an image generation or presentation skill active (e.g. Canva MCP), suggest triggering those skills to materialize the brief. Otherwise, deliver just the ready prompt.

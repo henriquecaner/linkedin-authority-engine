@@ -31,16 +31,18 @@ Already done via Gate 2 above. Confirm internally: tone, pillars and constraints
 
 Ask which post category:
 
-| Option | What it is |
-|--------|------------|
-| Career lesson | Defining moment + takeaway |
-| Achievement | Win with numbers |
-| Failure | Mistake + lesson (vulnerability) |
-| Debunk | Break a market myth |
-| Practical tip | Something actionable |
-| Opinion | Bold stance |
-| Behind the scenes | Real day-to-day |
-| Other | Free topic |
+The `slug` column is the exact value to pass to `suggest_hooks.py --category`.
+
+| Option | Slug (`--category`) | What it is |
+|--------|--------------------|------------|
+| Career lesson | `career_lesson` | Defining moment + takeaway |
+| Achievement | `achievement` | Win with numbers |
+| Failure | `failure` | Mistake + lesson (vulnerability) |
+| Debunk | `debunk` | Break a market myth |
+| Practical tip | `practical_tip` | Something actionable |
+| Opinion | `opinion` | Bold stance |
+| Behind the scenes | `behind_the_scenes` | Real day-to-day |
+| Other | `other` | Free topic |
 
 ---
 
