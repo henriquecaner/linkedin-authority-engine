@@ -38,3 +38,14 @@ def test_marketplace_json_valid(plugin_dir):
     assert data["name"] == "linkedin-authority-engine"
     names = [pl["name"] for pl in data["plugins"]]
     assert "linkedin-authority-engine" in names
+
+def test_authority_context_assets(plugin_dir):
+    base = plugin_dir / "skills" / "authority-context"
+    assert (base / "SKILL.md").exists()
+    tpl = (base / "references" / "authority-context-template.md").read_text(encoding="utf-8")
+    # 13 seções numeradas do template
+    for n in range(1, 14):
+        assert f"# {n}." in tpl, f"template sem seção {n}"
+    mem = (base / "references" / "memory-schemas.md").read_text(encoding="utf-8")
+    for f in ("winning-hooks.md", "topic-performance.md", "voice-profile.md", "learnings.md"):
+        assert f in mem, f"memory-schemas sem {f}"
