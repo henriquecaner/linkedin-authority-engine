@@ -61,7 +61,7 @@ def test_authority_context_assets(plugin_dir):
 
 def test_command_frontmatter(plugin_dir):
     import os
-    cmds = ["init"]  # ampliado na Task 7
+    cmds = ["init", "linkedin", "guiado", "rewrite", "thread", "score"]
     for c in cmds:
         p = plugin_dir / "commands" / f"{c}.md"
         assert p.exists(), f"command ausente: {c}"
