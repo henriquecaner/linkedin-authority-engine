@@ -69,3 +69,10 @@ def test_command_frontmatter(plugin_dir):
         assert text.startswith("---"), f"{c}: sem frontmatter"
         assert "description:" in text.split("---")[1], f"{c}: sem description"
         assert "argument-hint:" in text.split("---")[1], f"{c}: sem argument-hint"
+
+def test_agents_frontmatter(plugin_dir):
+    for a in ["linkedin-strategist", "humanizer-linkedin"]:
+        p = plugin_dir / "agents" / f"{a}.md"
+        assert p.exists(), f"agent ausente: {a}"
+        fm = p.read_text(encoding="utf-8").split("---")[1]
+        assert "name:" in fm and "description:" in fm, f"{a}: frontmatter incompleto"
