@@ -1,120 +1,120 @@
 ---
-description: Modo Rewrite do LinkedIn Authority Engine — otimiza um post existente em duas versões (conservadora e bold), aplicando diagnóstico 360Brew, humanizer e score comparativo. Use quando o usuário tem um rascunho ou post pronto que precisa de melhoria.
-argument-hint: "[post a otimizar]"
+description: Rewrite Mode of the LinkedIn Authority Engine — optimizes an existing post into two versions (conservative and bold), applying 360Brew diagnosis, humanizer and a comparative score. Use when the user has a draft or finished post that needs improvement.
+argument-hint: "[post to optimize]"
 ---
 
 # /linkedin-authority-engine:rewrite
 
-## Porta 2 — Leitura do Substrato (obrigatória, automática)
+## Gate 2 — Read the substrate (required, automatic)
 
-Antes de qualquer análise ou geração:
+Before any analysis or generation:
 
-1. Carregue a skill `linkedin-authority-engine:authority-context`.
-2. Leia `authority-context.md` (perfil completo) e todos os arquivos em `memory/` (`winning-hooks.md`, `topic-performance.md`, `voice-profile.md`, `learnings.md`).
-3. Aplicar: tom de voz, pilares de conteúdo, credenciais reais, restrições editoriais.
-4. Priorizar padrões vencedores de `winning-hooks.md` e `topic-performance.md`.
-5. Validar a cada versão gerada: "Isso soa como esse cliente falaria?"
+1. Load the `linkedin-authority-engine:authority-context` skill.
+2. Read `authority-context.md` (full profile) and every file in `memory/` (`winning-hooks.md`, `topic-performance.md`, `voice-profile.md`, `learnings.md`).
+3. Apply: tone of voice, content pillars, real credentials, editorial constraints.
+4. Prioritize winning patterns from `winning-hooks.md` and `topic-performance.md`.
+5. Validate on each generated version: "Does this sound like how this client would talk?"
 
-Se não houver post fornecido como argumento, solicitar: "Cole o post que deseja otimizar."
+If no post is provided as an argument, ask: "Paste the post you want to optimize."
 
 ---
 
-## REWRITE STEP 1 — Diagnóstico
+## REWRITE STEP 1 — Diagnosis
 
-Rodar `${CLAUDE_PLUGIN_ROOT}/scripts/validate_specs.py` no post original e analisar contra as specs 360Brew (carregue `linkedin-authority-engine:algoritmo-360brew` para referência completa).
+Run `${CLAUDE_PLUGIN_ROOT}/scripts/validate_specs.py` on the original post and analyze it against the 360Brew specs (load `linkedin-authority-engine:360brew-algorithm` for the full reference).
 
-Apresentar diagnóstico:
+Present the diagnosis:
 
 ```
-DIAGNÓSTICO:
-Score estimado: X/10
-🚨 Problemas críticos: [ex: link no corpo, hashtags em excesso]
-⚠️  Importantes: [ex: hook fraco, CTA genérico]
-✅ O que funciona: [pontos fortes do post]
+DIAGNOSIS:
+Estimated score: X/10
+🚨 Critical problems: [e.g., link in body, too many hashtags]
+⚠️  Important: [e.g., weak hook, generic CTA]
+✅ What works: [the post's strong points]
 ```
 
 ---
 
-## REWRITE STEP 2 — Foco
+## REWRITE STEP 2 — Focus
 
-Perguntar: "Foco principal do rewrite? (a) Hook, (b) Alcance/specs, (c) CTA, (d) Tudo"
+Ask: "Main focus of the rewrite? (a) Hook, (b) Reach/specs, (c) CTA, (d) Everything"
 
-Aguardar resposta antes de gerar as versões.
-
----
-
-## REWRITE STEP 3 — Gerar 2 Versões
-
-Com base no diagnóstico e no foco escolhido, gerar:
-
-- **Versão A (Conservadora):** Mantém a voz e estrutura originais, corrige apenas os problemas técnicos identificados. Usa credenciais e tom do perfil carregado na Porta 2.
-- **Versão B (Bold):** Hook mais forte (utilize a skill `linkedin-authority-engine:hooks`), reestrutura para impacto máximo (utilize `linkedin-authority-engine:estruturas-copywriting`), maximiza Saves Potential.
-
-Para CTAs de ambas as versões, utilize a skill `linkedin-authority-engine:ctas` alinhando ao objetivo do post.
+Wait for the answer before generating the versions.
 
 ---
 
-## REWRITE STEP 4 — Pipeline de Finalização em Ambas + Comparativo
+## REWRITE STEP 3 — Generate 2 versions
 
-> Ordem correta: humanizar primeiro, depois mostrar score comparativo. Senão o usuário escolhe baseado em score que vai mudar.
+Based on the diagnosis and the chosen focus, generate:
 
-### Etapa A — Validação Técnica
+- **Version A (Conservative):** Keeps the original voice and structure, fixes only the technical problems identified. Uses the credentials and tone from the profile loaded in Gate 2.
+- **Version B (Bold):** Stronger hook (use the `linkedin-authority-engine:hooks` skill), restructures for maximum impact (use `linkedin-authority-engine:copywriting-structures`), maximizes Saves Potential.
 
-Rodar `${CLAUDE_PLUGIN_ROOT}/scripts/validate_specs.py` em cada versão. Corrigir erros antes de avançar.
+For the CTAs of both versions, use the `linkedin-authority-engine:ctas` skill, aligning to the post's objective.
 
-### Etapa B — Humanizer LinkedIn
+---
 
-Acionar a skill `linkedin-authority-engine:humanizer-linkedin` em cada versão (A e B). Apresentar diff compacto por versão (máx. 5 itens).
+## REWRITE STEP 4 — Finalization pipeline on both + comparison
 
-### Etapa C — Score Final
+> Correct order: humanize first, then show the comparative score. Otherwise the user chooses based on a score that will change.
 
-Rodar `${CLAUDE_PLUGIN_ROOT}/scripts/score_post.py` em cada versão humanizada:
+### Stage A — Technical validation
+
+Run `${CLAUDE_PLUGIN_ROOT}/scripts/validate_specs.py` on each version. Fix errors before advancing.
+
+### Stage B — Humanizer LinkedIn
+
+Run the `linkedin-authority-engine:humanizer-linkedin` skill on each version (A and B). Present a compact diff per version (max 5 items).
+
+### Stage C — Final score
+
+Run `${CLAUDE_PLUGIN_ROOT}/scripts/score_post.py` on each humanized version:
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/score_post.py post.txt --objetivo <authority|sales|engagement>
+python ${CLAUDE_PLUGIN_ROOT}/scripts/score_post.py post.txt --objective <authority|sales|engagement>
 ```
 
-Apresentar comparativo final:
+Present the final comparison:
 
-| Métrica | Original | Versão A (humanizada) | Versão B (humanizada) |
-|---------|----------|------------------------|------------------------|
+| Metric | Original | Version A (humanized) | Version B (humanized) |
+|--------|----------|------------------------|------------------------|
 | Score | X/10 | X/10 | X/10 |
 | Saves Potential | X/10 | X/10 | X/10 |
 | Hook | X/10 | X/10 | X/10 |
 | Algorithm | X/10 | X/10 | X/10 |
 
-Usuário escolhe a versão preferida (ou pede mix). Com a versão escolhida:
+The user picks the preferred version (or asks for a mix). With the chosen version:
 
-### Etapa D — Brief Visual
+### Stage D — Visual brief
 
-Acionar a skill `linkedin-authority-engine:brief-visual` na versão escolhida.
+Run the `linkedin-authority-engine:visual-brief` skill on the chosen version.
 
-### Etapa E — Protocolo Pós-Publicação
+### Stage E — Post-publication protocol
 
-Acionar a skill `linkedin-authority-engine:protocolo-pos-publicacao`.
+Run the `linkedin-authority-engine:post-publication-protocol` skill.
 
-1. Gerar o **1º comentário pronto** para colar logo após publicar: link (se houver) + contexto extra + 1 pergunta que convide respostas de 3+ frases.
-2. Entregar resumo dos 90 minutos críticos.
-
----
-
-## Porta 3 — Write-back ao Substrato
-
-Após aprovação da versão final, conforme as instruções da skill `linkedin-authority-engine:authority-context`:
-
-1. Anexar em `memory/winning-hooks.md`: data, padrão de hook da versão escolhida (se houve melhoria de hook), tipo, categoria, objetivo, score final. (Colunas `vezes usado`, `performance média`, `keep/kill` ficam vazias até v1.x.)
-2. Anexar em `memory/topic-performance.md`: data, tema, pilar, tipo de post, score. (Colunas de performance ficam vazias até v1.x.)
-3. Anexar em `memory/learnings.md`: o que foi alterado no rewrite, qual versão foi escolhida e por quê, restrições aplicadas.
-4. Se o usuário rejeitou uma das versões, registrar o motivo em `memory/learnings.md`.
+1. Generate the **ready-to-paste first comment** to drop in right after publishing: link (if any) + extra context + 1 question that invites 3+ sentence replies.
+2. Deliver the summary of the critical 90 minutes.
 
 ---
 
-## Salvar o Post Final
+## Gate 3 — Write-back to the substrate
 
-Salvar o post final (versão escolhida, humanizada) em:
+After approval of the final version, following the instructions of the `linkedin-authority-engine:authority-context` skill:
+
+1. Append to `memory/winning-hooks.md`: date, hook pattern of the chosen version (if the hook improved), type, category, objective, final score. (Columns `times used`, `average performance`, `keep/kill` stay empty until v1.x.)
+2. Append to `memory/topic-performance.md`: date, topic, pillar, post type, score. (Performance columns stay empty until v1.x.)
+3. Append to `memory/learnings.md`: what was changed in the rewrite, which version was chosen and why, constraints applied.
+4. If the user rejected one of the versions, record the reason in `memory/learnings.md`.
+
+---
+
+## Save the final post
+
+Save the final post (chosen, humanized version) to:
 
 ```
-outputs/posts/<AAAAMMDD>-<slug>-v1.md
+outputs/posts/<YYYYMMDD>-<slug>-v1.md
 ```
 
-Se já existir versão anterior do mesmo slug, incrementar o número (v2, v3...).
+If a previous version of the same slug already exists, increment the number (v2, v3...).

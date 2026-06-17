@@ -12,27 +12,27 @@ frameworks:
   - grand-slam-offer
 humanizer_pass: false
 humanizer_mode: n/a
-voz: crua
+voz: raw
 ---
 
-# Audit de Oferta — LinkedIn Authority Engine
+# Offer Audit — LinkedIn Authority Engine
 
 ## TL;DR
 
-Score agregado: **5.5/10**.
-Gargalo crítico: **Effort & Sacrifice** (4/10) — colado em Time Delay (4/10).
-Top 3 fix em ordem: 1) Mata o medo do "20-30 posts/mês" reposicionando esforço de *produção* pra *aprovação em lote* + Setup Day done-with-you. 2) Bota garantia condicional ancorada em execução (hoje não existe nenhuma — suicídio a R$ 2.997 pro ICP que já foi traído por agência). 3) Cria uma primeira vitória visível em 7-14 dias pra matar os "30 dias de silêncio".
+Aggregate score: **5.5/10**.
+Critical bottleneck: **Effort & Sacrifice** (4/10) — neck-and-neck with Time Delay (4/10).
+Top 3 fixes in order: 1) Kill the fear of "20-30 posts/month" by repositioning the effort from *production* to *batch approval* + a done-with-you Setup Day. 2) Add a conditional guarantee anchored on execution (today there's none — suicide at R$ 2.997 for an ICP that's already been burned by an agency). 3) Create a visible first win in 7-14 days to kill the "30 days of silence".
 
 ---
 
-## Snapshot da oferta auditada
+## Snapshot of the audited offer
 
-- **Produto:** LinkedIn Authority Engine (plugin Claude self-serve)
-- **Preço atual:** R$ 2.997 one-time + R$ 297/mês continuity
-- **ICP:** Founder PME B2B, fatura R$ 1M+/ano, vende B2B, mercado >10k no LinkedIn, já queimou grana com agência ruim, quer pipeline E virar referência (ego incluso)
-- **Transformação prometida:** Expert invisível → autoridade absoluta num assunto, com leads orgânicos chegando já confiando. Operação 20-30 posts/mês + 1-4 lead magnets/mês + automação diária de comentários por IA
-- **Stack atual:** Plugin + guia passo a passo + Slack connect individual (2-3 meses) + onboarding + automação de comentários IA
-- **Garantia atual:** NENHUMA. Esse é o buraco mais caro da oferta inteira.
+- **Product:** LinkedIn Authority Engine (self-serve Claude plugin)
+- **Current price:** R$ 2.997 one-time + R$ 297/month continuity
+- **ICP:** B2B SMB founder, R$ 1M+/year in revenue, sells B2B, market >10k on LinkedIn, has already burned money on a bad agency, wants pipeline AND to become a reference (ego included)
+- **Promised transformation:** Invisible expert → absolute authority on a topic, with organic leads showing up already trusting. Operation of 20-30 posts/month + 1-4 lead magnets/month + daily AI comment automation
+- **Current stack:** Plugin + step-by-step guide + individual Slack connect (2-3 months) + onboarding + AI comment automation
+- **Current guarantee:** NONE. This is the most expensive hole in the entire offer.
 
 ---
 
@@ -40,100 +40,100 @@ Top 3 fix em ordem: 1) Mata o medo do "20-30 posts/mês" reposicionando esforço
 
 ### Dream Outcome — 8/10
 
-**Diagnóstico:**
-O desejo é forte e duplo: pipeline qualificado (leads B2B que fecham) + virar referência de mercado (podcast, palestra, ego). Pro founder que fatura R$ 1M+ e se sente invisível no LinkedIn, isso é exatamente o que tira o sono. O "Expert's Paradox" da tua LP (tem conhecimento, é invisível) acerta o nervo.
+**Diagnosis:**
+The desire is strong and dual: a qualified pipeline (B2B leads that close) + becoming a market reference (podcasts, talks, ego). For the founder doing R$ 1M+ who feels invisible on LinkedIn, this is exactly what keeps them up at night. The "Expert's Paradox" on your LP (has the knowledge, is invisible) hits the nerve.
 
-**Por que essa nota:**
-Não é 10 porque o dream tá descrito em duas línguas — "leads" e "autoridade" — e na cabeça do founder isso às vezes briga. Falta cravar UM número de sonho ("X reuniões com decisor/mês" ou "convidado pra Y palcos em 90 dias"). Desejo enorme, mas ainda meio difuso pra fechar sozinho.
+**Why this score:**
+It's not a 10 because the dream is described in two languages — "leads" and "authority" — and in the founder's head those sometimes fight each other. It's missing one nailed-down dream number ("X meetings with decision-makers/month" or "invited to Y stages in 90 days"). Huge desire, but still a bit diffuse to close on its own.
 
 ### Perceived Probability of Success — 6/10
 
-**Diagnóstico:**
-Você tem prova pesada: R$ 40k+ vendidos no formato implementado, você mesmo é Top 50 Creators (Favikon), prêmio do Sean Ellis, +R$68M. Mechanism nomeado ("viral manufacturing system", virality predictor 9.2). Isso segura. MAS: dois furos. Primeiro, **zero garantia** — pro ICP que JÁ foi traído por agência, "confia em mim" não passa. Segundo, os cases são do formato *você implementando*; ninguém viu ainda o resultado do *self-serve* na mão de um founder sozinho.
+**Diagnosis:**
+You have heavy proof: R$ 40k+ sold in the implemented format, you yourself are a Top 50 Creator (Favikon), a Sean Ellis award, +R$68M. A named mechanism ("viral manufacturing system", virality predictor 9.2). That holds up. BUT: two gaps. First, **zero guarantee** — for an ICP that's ALREADY been burned by an agency, "trust me" doesn't fly. Second, the cases are from the *you-implementing* format; nobody has yet seen the result of *self-serve* in the hands of a founder going it alone.
 
-**Por que essa nota:**
-A prova do founder puxa pra cima. A ausência de garantia e de case self-serve puxa pra baixo. A R$ 2.997, o cético que já se queimou precisa de reversão de risco visível — e não tem nenhuma.
+**Why this score:**
+The founder's proof pulls it up. The absence of a guarantee and of a self-serve case pulls it down. At R$ 2.997, the skeptic who's already been burned needs visible risk reversal — and there's none.
 
 ### Time Delay — 4/10
 
-**Diagnóstico:**
-A própria mecânica é de acúmulo: "os primeiros 30 dias parecem silêncio" (tua LP fala isso). Autoridade não nasce em 7 dias — alcance composto leva meses. Honesto, mas é veneno pra conversão se não tiver marco intermediário. O cara paga R$ 2.997 e fica 30 dias sem ver nada? Ele cancela mentalmente na semana 2.
+**Diagnosis:**
+The mechanics themselves are about accumulation: "the first 30 days feel like silence" (your LP says this). Authority isn't born in 7 days — compounding reach takes months. Honest, but it's poison for conversion if there's no intermediate milestone. The guy pays R$ 2.997 and sees nothing for 30 days? He cancels mentally by week 2.
 
-**Por que essa nota:**
-Resultado final é genuinamente lento e você é honesto sobre isso (bom). Mas não há nenhuma vitória rápida desenhada pra segurar o cara nos primeiros 14 dias. Time longo + sem milestone = abandono.
+**Why this score:**
+The final result is genuinely slow and you're honest about it (good). But there's no quick win designed to hold the guy through the first 14 days. Long time + no milestone = abandonment.
 
 ### Effort & Sacrifice — 4/10
 
-**Diagnóstico:**
-Esse é o gargalo. A oferta exige que o cliente "execute 30-60 dias sem falhar", produza/aprove 20-30 posts/mês e opere 1-4 lead magnets. Pro founder que fatura R$ 1M+ — o cara MAIS ocupado e mais sem tempo do planeta — "você precisa postar 30 vezes por mês sem falhar" soa como uma segunda função. Mesmo com o plugin gerando, a percepção é de trabalho pesado e disciplina diária. É exatamente por isso que ele falhou sozinho antes.
+**Diagnosis:**
+This is the bottleneck. The offer requires the client to "execute for 30-60 days without slipping", produce/approve 20-30 posts/month, and run 1-4 lead magnets. For the founder doing R$ 1M+ — the most overloaded, time-starved person on the planet — "you need to post 30 times a month without slipping" sounds like a second job. Even with the plugin generating, the perception is heavy work and daily discipline. That's exactly why he failed on his own before.
 
-**Por que essa nota:**
-O produto reduz esforço de *escrita* (o plugin tuna), mas a percepção de esforço *operacional* continua alta: ritmo diário, disciplina de 60 dias, "sem falhar". Pro ICP, esforço alto é o motivo número 1 de não comprar — ele já provou pra si mesmo que não sustenta sozinho.
+**Why this score:**
+The product reduces *writing* effort (the plugin tunes it), but the perception of *operational* effort stays high: daily rhythm, 60 days of discipline, "without slipping". For the ICP, high effort is the number-one reason not to buy — he's already proven to himself that he can't keep it up alone.
 
 ---
 
-## Score agregado
+## Aggregate score
 
 ```
-Valor = (Dream × Probability) / (Time-atrito × Effort-atrito)
-       = (8 × 6) / (proporcional ao atrito de Time e Effort)
+Value = (Dream × Probability) / (Time-friction × Effort-friction)
+       = (8 × 6) / (proportional to the friction of Time and Effort)
 ```
 
-Normalizado (média dos 4 vetores como qualidade, onde 10 = sem atrito): **(8 + 6 + 4 + 4) / 4 = 5.5/10**.
+Normalized (average of the 4 vectors as quality, where 10 = no friction): **(8 + 6 + 4 + 4) / 4 = 5.5/10**.
 
-Leitura: oferta com **desejo forte e prova decente, estrangulada pelo denominador** — esforço percebido alto e tempo até resultado longo. O numerador vende; o denominador derruba.
-
----
-
-## Gargalo crítico
-
-**Vetor mais fraco:** Effort & Sacrifice (4/10), colado em Time Delay (4/10).
-
-**Por que esse é o gargalo:**
-O ICP já tentou sozinho e não sustentou consistência — essa é a dor que ele te conta. Então quando a tua oferta diz "execute 30-60 dias sem falhar, 20-30 posts/mês", você tá repetindo de volta o exato lugar onde ele já fracassou. Não importa quão forte é o Dream nem quanta prova você tem: se ele lê a oferta e pensa "isso é mais trabalho que eu não vou dar conta", ele não compra — ou compra, não executa, e churna. O esforço alto também envenena o Time: quanto mais trabalho diário, mais longo *parece* o caminho. Atacar o Effort destrava conversão E retenção de uma vez. É a alavanca de maior retorno.
+Reading: an offer with **strong desire and decent proof, strangled by the denominator** — high perceived effort and a long time to result. The numerator sells; the denominator drags it down.
 
 ---
 
-## Top 3 alavancas (prioridade)
+## Critical bottleneck
 
-### 1. Reposiciona o esforço: de "produzir 30 posts" pra "aprovar um lote em 1 sessão" + Setup Day done-with-you
+**Weakest vector:** Effort & Sacrifice (4/10), neck-and-neck with Time Delay (4/10).
 
-**O que fazer:** Reescreve a oferta inteira pra deixar explícito que o founder NÃO escreve 30 posts ao longo do mês. Ele entra numa sessão de batching (com o plugin) e sai com o mês inteiro gerado e agendado. Mensagem: "Você não posta todo dia. Você aprova um lote uma vez e o sistema entrega o mês." Inclui um **Setup Day** (sessão 1:1 de setup feito junto) já no Gold ou como bump — o primeiro lote sai COM você na linha, não largado no manual.
-
-**Por que muda o jogo:** Ataca direto o motivo nº 1 de não-compra e de churn. Tira o produto da categoria "mais uma tarefa diária" e bota em "1 sessão por mês". Effort percebido despenca, Time percebido encurta junto.
-
-**Como medir sucesso:** Nas entrevistas de no-buy, a objeção "não vou ter tempo/disciplina" some ou cai pra <1 em 5. Ativação (cliente que publica o 1º lote em 7 dias) sobe pra >70%.
-
-### 2. Garantia condicional ancorada em execução
-
-**O que fazer:** Cria e estampa no hero/checkout uma garantia que reverte o risco SEM te expor ao cliente preguiçoso. Modelo: *"Execute o protocolo por 60 dias — o lote de posts e a automação de comentários rodando como o sistema manda. Se no fim do período você não bater [marco mensurável: ex. X mil impressões qualificadas / primeiro lead inbound de decisor], eu trabalho com você de graça até bater, ou devolvo cada centavo."* A condição de execução te protege; a reversão derruba a objeção do cético.
-
-**Por que muda o jogo:** Probability sobe de 6 pra 8+. Pro ICP que já foi traído por agência, a garantia é o que separa "mais um vendendo sonho" de "esse cara aposta junto comigo". A R$ 2.997, sem reversão de risco, você perde o cético — que é justamente o teu ICP.
-
-**Como medir sucesso:** Conversão lead→close dos céticos (os que mencionam "já tentei agência") sobe. Taxa de acionamento da garantia fica baixa (<10%) porque a condição de execução filtra — se subir muito, o problema é entrega, não oferta.
-
-### 3. Primeira vitória visível em 7-14 dias (mata o "silêncio dos 30 dias")
-
-**O que fazer:** Desenha um milestone rápido e o promete na oferta. Candidatos: primeiro post com alcance acima da média do perfil dele na 1ª semana; primeiro comentário estratégico (via automação) que gera conexão com um decisor do ICP dele em 14 dias; primeiro lead magnet no ar em 10 dias. Escolhe o mais provável e o nomeia: "Seu primeiro sinal de tração em 7 dias, não em 30."
-
-**Por que muda o jogo:** Time Delay sai de 4 pra 6-7. O cliente que vê sinal cedo não cancela mentalmente na semana 2 — ele aguenta o acúmulo composto porque já provou pra si mesmo que funciona. Reduz churn precoce, que é o que mais machuca um modelo com continuity.
-
-**Como medir sucesso:** % de clientes que reportam "primeira vitória" até o dia 14. Churn nos primeiros 30 dias cai. Retenção da continuity no mês 2 sobe.
+**Why this is the bottleneck:**
+The ICP already tried it alone and couldn't keep up the consistency — that's the pain he tells you about. So when your offer says "execute for 30-60 days without slipping, 20-30 posts/month", you're echoing back the exact place where he already failed. It doesn't matter how strong the Dream is or how much proof you have: if he reads the offer and thinks "this is more work than I can handle", he doesn't buy — or he buys, doesn't execute, and churns. High effort also poisons Time: the more daily work, the longer the path *seems*. Attacking Effort unlocks conversion AND retention at once. It's the highest-return lever.
 
 ---
 
-## Reescrita sugerida da oferta
+## Top 3 levers (priority)
 
-Você é expert e ninguém no LinkedIn sabe disso. Em 90 dias eu te transformo em autoridade reconhecida no teu mercado — sem você virar criador de conteúdo de tempo integral. Você não escreve 30 posts por mês: entra numa sessão de produção em lote, aprova o mês inteiro de uma vez, e o sistema agenda e roda a automação de comentários sozinho. Primeira vitória visível em 7 dias, não em 30. E a aposta é minha junto com a tua: executa o protocolo por 60 dias e, se não bater o marco combinado, eu trabalho com você de graça até bater — ou te devolvo cada centavo. R$ 2.997, o sistema é seu pra sempre. É uma fração do que uma agência cobra por mês pra fazer pior.
+### 1. Reposition the effort: from "produce 30 posts" to "approve a batch in 1 session" + a done-with-you Setup Day
+
+**What to do:** Rewrite the whole offer to make it explicit that the founder does NOT write 30 posts over the month. He goes into one batching session (with the plugin) and comes out with the entire month generated and scheduled. Message: "You don't post every day. You approve a batch once and the system delivers the month." Include a **Setup Day** (a 1:1 session where setup is done together) already in Gold or as a bump — the first batch goes out WITH you on the line, not dumped into a manual.
+
+**Why it changes the game:** Hits directly the #1 reason for not-buying and for churn. Takes the product out of the "one more daily task" category and into "1 session per month". Perceived effort plummets, perceived Time shortens along with it.
+
+**How to measure success:** In no-buy interviews, the objection "I won't have the time/discipline" disappears or drops to <1 in 5. Activation (clients who publish their 1st batch within 7 days) rises above 70%.
+
+### 2. Conditional guarantee anchored on execution
+
+**What to do:** Create and stamp on the hero/checkout a guarantee that reverses the risk WITHOUT exposing you to the lazy client. Model: *"Execute the protocol for 60 days — the batch of posts and the comment automation running as the system requires. If at the end of the period you haven't hit [a measurable milestone: e.g. X thousand qualified impressions / first inbound lead from a decision-maker], I work with you for free until you do, or I refund every cent."* The execution condition protects you; the reversal drops the skeptic's objection.
+
+**Why it changes the game:** Probability goes from 6 to 8+. For an ICP that's already been burned by an agency, the guarantee is what separates "another one selling dreams" from "this guy bets alongside me". At R$ 2.997, with no risk reversal, you lose the skeptic — who is exactly your ICP.
+
+**How to measure success:** Conversion lead→close among skeptics (those who mention "I already tried an agency") rises. The guarantee's claim rate stays low (<10%) because the execution condition filters — if it climbs too high, the problem is delivery, not the offer.
+
+### 3. Visible first win in 7-14 days (kills the "30 days of silence")
+
+**What to do:** Design a quick milestone and promise it in the offer. Candidates: a first post with above-average reach for his profile in week 1; a first strategic comment (via automation) that generates a connection with a decision-maker in his ICP within 14 days; a first lead magnet live in 10 days. Pick the most likely one and name it: "Your first sign of traction in 7 days, not 30."
+
+**Why it changes the game:** Time Delay goes from 4 to 6-7. The client who sees an early signal doesn't cancel mentally by week 2 — he sticks through the compounding accumulation because he's already proven to himself that it works. It reduces early churn, which is what hurts a continuity model most.
+
+**How to measure success:** % of clients who report a "first win" by day 14. Churn in the first 30 days drops. Continuity retention in month 2 rises.
 
 ---
 
-## Próximos passos recomendados
+## Suggested offer rewrite
 
-1. **`/hormozi-gtm:lp`** — escreve a LP de vendas já com a oferta refeita (esforço reposicionado + garantia + primeira-vitória). O preço R$ 2.997 já está validado; agora a oferta sustenta ele. Esse é o caminho pra "por no ar essa semana".
-2. **`/hormozi-gtm:guarantees`** (ou pede direto na LP) — fecha a redação exata da garantia condicional, definindo o marco mensurável certo (é o detalhe que faz ou quebra a reversão de risco).
-3. **`/hormozi-gtm:hooks`** — gera os hooks/headlines pro hero da LP e pros ads, ancorados no novo ângulo "1 sessão por mês, não 30 posts" + "minha aposta junto com a tua".
+You're an expert and nobody on LinkedIn knows it. In 90 days I turn you into a recognized authority in your market — without you becoming a full-time content creator. You don't write 30 posts a month: you go into a batch production session, approve the whole month at once, and the system schedules and runs the comment automation on its own. First visible win in 7 days, not 30. And the bet is mine alongside yours: execute the protocol for 60 days and, if you don't hit the agreed milestone, I work with you for free until you do — or I refund every cent. R$ 2.997, the system is yours forever. It's a fraction of what an agency charges per month to do it worse.
 
 ---
 
-*Audit gerado pelo plugin hormozi-gtm. Persona Alex Hormozi. Voz crua — diagnóstico interno não passa por humanizer.*
+## Recommended next steps
+
+1. **`/hormozi-gtm:lp`** — write the sales LP with the reworked offer (repositioned effort + guarantee + first-win). The R$ 2.997 price is already validated; now the offer supports it. This is the path to "live this week".
+2. **`/hormozi-gtm:guarantees`** (or ask directly on the LP) — lock down the exact wording of the conditional guarantee, defining the right measurable milestone (it's the detail that makes or breaks the risk reversal).
+3. **`/hormozi-gtm:hooks`** — generate the hooks/headlines for the LP hero and the ads, anchored on the new angle "1 session a month, not 30 posts" + "my bet alongside yours".
+
+---
+
+*Audit generated by the hormozi-gtm plugin. Alex Hormozi persona. Raw voice — an internal diagnostic doesn't go through humanizer.*

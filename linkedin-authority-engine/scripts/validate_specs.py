@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-LinkedIn Post Validator - Valida specs do 360Brew
-Uso: python validate_specs.py <arquivo_post.txt>
+LinkedIn Post Validator - Validates 360Brew specs
+Usage: python validate_specs.py <post_file.txt>
 """
 
 import argparse
@@ -9,7 +9,7 @@ import re
 import sys
 from pathlib import Path
 
-# Specs do 360Brew
+# 360Brew specs
 SPECS = {
     "chars_min": 1250,
     "chars_max": 2500,
@@ -22,13 +22,13 @@ SPECS = {
     "max_words_per_paragraph": 19,
 }
 
-# Padrões punidos
-# Anchored para evitar falsos positivos (ex: "nem todo mundo concorda comigo")
+# Punished patterns
+# Anchored to avoid false positives (e.g. "not everyone agrees with me")
 PUNISHED_PATTERNS = [
-    (r"\bo que voc[êe]s? acham?\s*\?", "O que você acha?"),
-    (r"(?:^|[.!?…]\s*)concordam?\s*\?", "Concordam?"),
-    (r"\bbom dia[,]?\s*linkedin", "Bom dia, LinkedIn!"),
-    (r"\breflex[ãa]o do dia\b", "Reflexão do dia"),
+    (r"\bwhat do you think\s*\?", "What do you think?"),
+    (r"(?:^|[.!?…]\s*)(?:agree|right)\s*\?", "Agree?"),
+    (r"\bgood morning[,]?\s*linkedin", "Good morning, LinkedIn"),
+    (r"\bthought of the day\b", "Thought of the day"),
 ]
 
 
@@ -37,7 +37,7 @@ def count_chars(text: str) -> int:
 
 
 def split_paragraphs(text: str) -> list:
-    """Parágrafos = blocos separados por linha em branco (formato LinkedIn)."""
+    """Paragraphs = blocks separated by a blank line (LinkedIn format)."""
     return [p.strip() for p in re.split(r'\n\s*\n', text) if p.strip()]
 
 
@@ -46,15 +46,15 @@ def count_paragraphs(text: str) -> int:
 
 
 def avg_word_length(text: str) -> float:
-    words = re.findall(r'\b[a-záàâãéèêíïóôõöúçñ]+\b', text.lower())
+    words = re.findall(r"\b[a-z']+\b", text.lower())
     if not words:
         return 0
     return sum(len(w) for w in words) / len(words)
 
 
 def has_link_in_body(text: str) -> bool:
-    """Detecta link em QUALQUER parte do corpo. A regra 360Brew não tem exceção:
-    link pertence ao 1º comentário, nunca ao post (-60% alcance)."""
+    """Detects a link ANYWHERE in the body. The 360Brew rule has no exception:
+    links belong in the 1st comment, never in the post (-60% reach)."""
     return bool(re.search(r'https?://|www\.', text, re.IGNORECASE))
 
 
@@ -63,7 +63,7 @@ def count_hashtags(text: str) -> int:
 
 
 def get_long_paragraphs(text: str) -> list:
-    """Retorna parágrafos com mais de 19 palavras"""
+    """Returns paragraphs with more than 19 words"""
     paragraphs = split_paragraphs(text)
     long_paras = []
     for i, p in enumerate(paragraphs, 1):
@@ -74,7 +74,7 @@ def get_long_paragraphs(text: str) -> list:
 
 
 def check_punished_patterns(text: str) -> list:
-    """Verifica padrões punidos pelo algoritmo"""
+    """Checks for patterns punished by the algorithm"""
     found = []
     for pattern, name in PUNISHED_PATTERNS:
         if re.search(pattern, text, re.IGNORECASE):
@@ -83,8 +83,8 @@ def check_punished_patterns(text: str) -> list:
 
 
 def validate_post(text: str) -> dict:
-    """Valida post contra specs do 360Brew"""
-    
+    """Validates a post against the 360Brew specs"""
+
     results = {
         "valid": True,
         "errors": [],
@@ -92,146 +92,146 @@ def validate_post(text: str) -> dict:
         "stats": {},
         "suggestions": []
     }
-    
-    # Stats básicos
+
+    # Basic stats
     chars = count_chars(text)
     paragraphs = count_paragraphs(text)
     avg_len = avg_word_length(text)
-    
+
     results["stats"] = {
-        "caracteres": chars,
-        "paragrafos": paragraphs,
-        "media_letras_palavra": round(avg_len, 1),
+        "characters": chars,
+        "paragraphs": paragraphs,
+        "avg_word_length": round(avg_len, 1),
     }
-    
-    # Validar caracteres
+
+    # Validate character count
     if chars < SPECS["chars_warning_min"]:
-        results["errors"].append(f"Muito curto: {chars} chars (mínimo aceitável: {SPECS['chars_warning_min']}; recomendado: {SPECS['chars_min']}-{SPECS['chars_max']})")
+        results["errors"].append(f"Too short: {chars} chars (acceptable minimum: {SPECS['chars_warning_min']}; recommended: {SPECS['chars_min']}-{SPECS['chars_max']})")
         results["valid"] = False
-        results["suggestions"].append("Expandir o conteúdo com mais contexto ou exemplos")
+        results["suggestions"].append("Expand the content with more context or examples")
     elif chars < SPECS["chars_min"]:
-        results["warnings"].append(f"Abaixo do ideal: {chars} chars (recomendado: {SPECS['chars_min']}-{SPECS['chars_max']})")
+        results["warnings"].append(f"Below ideal: {chars} chars (recommended: {SPECS['chars_min']}-{SPECS['chars_max']})")
     elif chars > SPECS["chars_warning_max"]:
-        results["errors"].append(f"Muito longo: {chars} chars (máximo aceitável: {SPECS['chars_warning_max']}; recomendado: {SPECS['chars_min']}-{SPECS['chars_max']})")
+        results["errors"].append(f"Too long: {chars} chars (acceptable maximum: {SPECS['chars_warning_max']}; recommended: {SPECS['chars_min']}-{SPECS['chars_max']})")
         results["valid"] = False
-        results["suggestions"].append("Cortar partes menos essenciais")
+        results["suggestions"].append("Cut the less essential parts")
     elif chars > SPECS["chars_max"]:
-        results["warnings"].append(f"Acima do ideal: {chars} chars (recomendado: {SPECS['chars_min']}-{SPECS['chars_max']})")
-    
-    # Validar parágrafos
+        results["warnings"].append(f"Above ideal: {chars} chars (recommended: {SPECS['chars_min']}-{SPECS['chars_max']})")
+
+    # Validate paragraphs
     if paragraphs < SPECS["paragraphs_warning"]:
-        results["errors"].append(f"Poucos parágrafos: {paragraphs} (mínimo: {SPECS['paragraphs_min']})")
+        results["errors"].append(f"Too few paragraphs: {paragraphs} (minimum: {SPECS['paragraphs_min']})")
         results["valid"] = False
-        results["suggestions"].append("Quebrar o texto em mais parágrafos curtos (1-3 linhas cada)")
+        results["suggestions"].append("Break the text into more short paragraphs (1-3 lines each)")
     elif paragraphs < SPECS["paragraphs_min"]:
-        results["warnings"].append(f"Parágrafos abaixo do ideal: {paragraphs} (recomendado: {SPECS['paragraphs_min']}+)")
-    
-    # Validar complexidade das palavras
+        results["warnings"].append(f"Paragraphs below ideal: {paragraphs} (recommended: {SPECS['paragraphs_min']}+)")
+
+    # Validate word complexity
     if avg_len > SPECS["avg_word_length_warning"]:
-        results["errors"].append(f"Palavras muito complexas: média {avg_len:.1f} letras (máximo: {SPECS['avg_word_length_max']})")
+        results["errors"].append(f"Words too complex: average {avg_len:.1f} letters (maximum: {SPECS['avg_word_length_max']})")
         results["valid"] = False
-        results["suggestions"].append("Usar palavras mais simples e curtas")
+        results["suggestions"].append("Use simpler, shorter words")
     elif avg_len > SPECS["avg_word_length_max"]:
-        results["warnings"].append(f"Palavras um pouco complexas: média {avg_len:.1f} letras (ideal: ≤{SPECS['avg_word_length_max']})")
-    
-    # Verificar parágrafos longos
+        results["warnings"].append(f"Words a bit complex: average {avg_len:.1f} letters (ideal: ≤{SPECS['avg_word_length_max']})")
+
+    # Check long paragraphs
     long_paras = get_long_paragraphs(text)
     if long_paras:
         for para_num, word_count, preview in long_paras:
-            results["warnings"].append(f"Parágrafo {para_num} muito longo: {word_count} palavras")
-        results["suggestions"].append(f"Quebrar os {len(long_paras)} parágrafos longos em blocos menores")
-    
-    # Verificar padrões punidos
+            results["warnings"].append(f"Paragraph {para_num} too long: {word_count} words")
+        results["suggestions"].append(f"Break the {len(long_paras)} long paragraphs into smaller blocks")
+
+    # Check punished patterns
     punished = check_punished_patterns(text)
     if punished:
         for p in punished:
-            results["errors"].append(f"Padrão punido detectado: '{p}'")
+            results["errors"].append(f"Punished pattern detected: '{p}'")
         results["valid"] = False
-        results["suggestions"].append("Remover padrões de isca e usar hooks de prova de trabalho/autoridade")
+        results["suggestions"].append("Remove bait patterns and use proof-of-work / authority hooks")
 
-    # Verificar link no corpo (-60% alcance)
+    # Check for a link in the body (-60% reach)
     if has_link_in_body(text):
-        results["errors"].append("Link no corpo do post detectado (-60% alcance)")
+        results["errors"].append("Link in the post body detected (-60% reach)")
         results["valid"] = False
-        results["suggestions"].append("Mover link para o 1º comentário")
+        results["suggestions"].append("Move the link to the 1st comment")
 
-    # Verificar hashtags
+    # Check hashtags
     hashtag_count = count_hashtags(text)
     results["stats"]["hashtags"] = hashtag_count
     if hashtag_count > 2:
-        results["errors"].append(f"Hashtags em excesso: {hashtag_count} (default 2026: zero, máx 2 hiper-específicas)")
+        results["errors"].append(f"Too many hashtags: {hashtag_count} (2026 default: zero, max 2 hyper-specific)")
         results["valid"] = False
-        results["suggestions"].append("Remover hashtags genéricas, manter no máximo 2 ultra-específicas")
+        results["suggestions"].append("Remove generic hashtags, keep at most 2 ultra-specific ones")
     elif hashtag_count > 0:
-        results["warnings"].append(f"{hashtag_count} hashtag(s) detectada(s) — confirmar se são hiper-específicas")
+        results["warnings"].append(f"{hashtag_count} hashtag(s) detected — confirm they are hyper-specific")
 
     return results
 
 
 def print_report(results: dict):
-    """Imprime relatório de validação"""
-    
+    """Prints the validation report"""
+
     print("\n" + "="*60)
-    print("✅ VALIDAÇÃO DE SPECS - LinkedIn 360Brew")
+    print("VALIDATION OF SPECS - LinkedIn 360Brew")
     print("="*60)
-    
-    # Status geral
+
+    # Overall status
     if results["valid"]:
-        print("\n🟢 POST VÁLIDO - Specs do 360Brew atendidas")
+        print("\n[OK] VALID POST - 360Brew specs met")
     else:
-        print("\n🔴 POST INVÁLIDO - Corrigir erros abaixo")
-    
+        print("\n[X] INVALID POST - Fix the errors below")
+
     # Stats
-    print("\n📊 ESTATÍSTICAS:")
+    print("\nSTATISTICS:")
     for stat, value in results["stats"].items():
-        print(f"   • {stat}: {value}")
-    
-    # Erros
+        print(f"   - {stat}: {value}")
+
+    # Errors
     if results["errors"]:
-        print("\n❌ ERROS (bloqueia publicação):")
+        print("\nERRORS (blocks publishing):")
         for err in results["errors"]:
-            print(f"   • {err}")
-    
+            print(f"   - {err}")
+
     # Warnings
     if results["warnings"]:
-        print("\n⚠️  AVISOS (recomendado corrigir):")
+        print("\nWARNINGS (recommended to fix):")
         for warn in results["warnings"]:
-            print(f"   • {warn}")
-    
-    # Sugestões
+            print(f"   - {warn}")
+
+    # Suggestions
     if results["suggestions"]:
-        print("\n💡 SUGESTÕES:")
+        print("\nSUGGESTIONS:")
         for sug in results["suggestions"]:
-            print(f"   • {sug}")
-    
-    # Specs de referência
+            print(f"   - {sug}")
+
+    # Reference specs
     print("\n" + "-"*60)
-    print("📋 SPECS 360BREW DE REFERÊNCIA:")
-    print(f"   • Caracteres: {SPECS['chars_min']}-{SPECS['chars_max']}")
-    print(f"   • Parágrafos: {SPECS['paragraphs_min']}+ curtos")
-    print(f"   • Palavras: média ≤{SPECS['avg_word_length_max']} letras")
-    print(f"   • Parágrafos: máx {SPECS['max_words_per_paragraph']} palavras cada")
+    print("360BREW REFERENCE SPECS:")
+    print(f"   - Characters: {SPECS['chars_min']}-{SPECS['chars_max']}")
+    print(f"   - Paragraphs: {SPECS['paragraphs_min']}+ short")
+    print(f"   - Words: average ≤{SPECS['avg_word_length_max']} letters")
+    print(f"   - Paragraphs: max {SPECS['max_words_per_paragraph']} words each")
     print("="*60 + "\n")
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Validar specs de post LinkedIn")
-    parser.add_argument("arquivo", help="Arquivo com o texto do post")
-    parser.add_argument("--json", action="store_true", help="Output em JSON")
-    parser.add_argument("--quiet", "-q", action="store_true", help="Apenas status (exit code)")
-    
+    parser = argparse.ArgumentParser(description="Validate LinkedIn post specs")
+    parser.add_argument("file", help="File with the post text")
+    parser.add_argument("--json", action="store_true", help="JSON output")
+    parser.add_argument("--quiet", "-q", action="store_true", help="Status only (exit code)")
+
     args = parser.parse_args()
-    
-    # Ler arquivo
+
+    # Read file
     try:
-        text = Path(args.arquivo).read_text(encoding='utf-8')
+        text = Path(args.file).read_text(encoding='utf-8')
     except FileNotFoundError:
-        print(f"Erro: arquivo '{args.arquivo}' não encontrado")
+        print(f"Error: file '{args.file}' not found")
         sys.exit(1)
-    
-    # Validar
+
+    # Validate
     results = validate_post(text)
-    
+
     # Output
     if args.quiet:
         sys.exit(0 if results["valid"] else 1)
@@ -240,7 +240,7 @@ def main():
         print(json.dumps(results, ensure_ascii=False, indent=2))
     else:
         print_report(results)
-    
+
     sys.exit(0 if results["valid"] else 1)
 
 

@@ -1,245 +1,245 @@
 ---
 name: hooks
-description: Banco de 147 hooks de LinkedIn organizados por tipo (prova de trabalho, autoridade, transformação, contrarian, confissão, curiosidade, história, listas). Use ao gerar headlines de post, primeiras linhas e variações de gancho para qualquer categoria de conteúdo.
+description: Bank of 147 LinkedIn hooks organized by type (proof of work, authority proof, transformation, contrarian, confession, curiosity, story, lists & frameworks). Use when generating post headlines, opening lines, and hook variations for any content category.
 ---
 
-# Biblioteca de Hooks LinkedIn
+# LinkedIn hook library
 
-> 147 hooks organizados por tipo. Priorizar **Prova de Trabalho** e **Prova de Autoridade** (premiados pelo 360Brew).
+> 147 hooks organized by type. Prioritize **Proof of Work** and **Authority Proof** (rewarded by 360Brew).
 
-## 1. Prova de Trabalho (PREMIADO)
+## 1. Proof of Work (rewarded)
 
-O 360Brew premia hooks que demonstram **investimento real** (tempo, dinheiro, esforço).
+360Brew rewards hooks that show **real investment** (time, money, effort).
 
-1. "Gastei R${valor} testando {tema}. Aqui está o que descobri:"
-2. "Analisei {número} {items} nos últimos {tempo}. O padrão:"
-3. "Testei {número} ferramentas de {tema}. Só {X} funcionam:"
-4. "Investi {tempo} em {tema}. Resultado:"
-5. "Perdi R${valor} por ignorar isso sobre {tema}:"
-6. "{número} experimentos depois, posso afirmar:"
-7. "Gastei {tempo} para você não precisar:"
-8. "Li {número} livros sobre {tema}. Os 3 que importam:"
-9. "Entrevistei {número} {profissionais}. O consenso:"
-10. "R${valor} em cursos depois, descobri que..."
-11. "Revisei {número} {items} este mês. O erro mais comum:"
-12. "{número} reuniões depois, o padrão ficou claro:"
-13. "Implementei isso em {número} empresas. Funciona porque..."
-14. "Acompanhei {número} {profissionais} por {tempo}. A diferença:"
-15. "{número} horas de pesquisa condensadas em {X} minutos:"
-16. "O que R${valor} em {experiência} me ensinou:"
-17. "Gastei {tempo} otimizando {processo}. O hack:"
-18. "Auditei {número} {items}. {X}% tinham este problema:"
-19. "Rodei {número} testes A/B. O vencedor sempre tem:"
-20. "Documentei {número} casos de {tema}. O padrão:"
-21. "Analisei os {número} melhores {profissionais}. O que têm em comum:"
-22. "Investi {valor} do meu bolso para testar {tema}:"
-23. "{número} erros e R${valor} depois, finalmente entendi:"
-
----
-
-## 2. Prova de Autoridade (PREMIADO)
-
-Hooks que demonstram **credencial ou experiência** relevante.
-
-1. "O que {número} anos em {indústria} me ensinaram:"
-2. "Como {cargo}, descobri que..."
-3. "Liderando {número} pessoas, aprendi:"
-4. "Depois de {número} projetos, posso afirmar:"
-5. "{número} clientes depois, o padrão é claro:"
-6. "O erro que vejo em 90% das empresas:"
-7. "A verdade que {número} anos de experiência me mostraram:"
-8. "Como {cargo} na {empresa}, percebi que..."
-9. "{número} contratações depois, sei identificar:"
-10. "Mentorando {número} {profissionais}, o bloqueio mais comum:"
-11. "Construí {número} {resultados}. O segredo:"
-12. "Depois de escalar de {antes} para {depois}:"
-13. "{credencial}. Aqui está o que sei:"
-14. "Treinei {número} equipes. O erro que todas cometem:"
-15. "Negociei {número} contratos de {tema}. A tática:"
-16. "Fechei {número} deals de {valor}. O que funciona:"
-17. "Gerenciei {valor} em {área}. O que ninguém conta:"
-18. "Formei {número} {profissionais}. O gap de mercado:"
+1. "I spent ${value} testing {topic}. Here's what I found:"
+2. "I analyzed {number} {items} over the last {time}. The pattern:"
+3. "I tested {number} {topic} tools. Only {X} actually work:"
+4. "I put {time} into {topic}. The result:"
+5. "I lost ${value} by ignoring this about {topic}:"
+6. "{number} experiments later, I can say this:"
+7. "I spent {time} so you don't have to:"
+8. "I read {number} books on {topic}. The 3 that matter:"
+9. "I interviewed {number} {professionals}. The consensus:"
+10. "${value} in courses later, I figured out that..."
+11. "I reviewed {number} {items} this month. The most common mistake:"
+12. "{number} meetings later, the pattern got clear:"
+13. "I rolled this out at {number} companies. It works because..."
+14. "I tracked {number} {professionals} for {time}. The difference:"
+15. "{number} hours of research condensed into {X} minutes:"
+16. "What ${value} in {experience} taught me:"
+17. "I spent {time} optimizing {process}. The hack:"
+18. "I audited {number} {items}. {X}% had this problem:"
+19. "I ran {number} A/B tests. The winner always has:"
+20. "I documented {number} cases of {topic}. The pattern:"
+21. "I analyzed the {number} best {professionals}. What they share:"
+22. "I spent {value} out of pocket to test {topic}:"
+23. "{number} mistakes and ${value} later, I finally got it:"
 
 ---
 
-## 3. Transformação
+## 2. Authority Proof (rewarded)
 
-Hooks de **antes/depois** com contraste claro.
+Hooks that show relevant **credentials or experience**.
 
-1. "De {antes} para {depois} em {tempo}."
-2. "Era {situação_antes}. Hoje {situação_depois}."
-3. "Há {tempo}, eu {antes}. Agora {depois}."
-4. "{número}% de crescimento em {tempo}. Veja como:"
-5. "De zero a {resultado} em {tempo}:"
-6. "Antes: {antes}. Depois: {depois}. A diferença:"
-7. "Em {tempo}, saí de {antes} para {depois}:"
-8. "Minha rotina antes vs depois de {mudança}:"
-9. "O que mudou quando parei de {antes} e comecei {depois}:"
-10. "De {métrica_antes} para {métrica_depois}. O turning point:"
-11. "Há {tempo} eu odiava {tema}. Hoje:"
-12. "Triplicou em {tempo}. A única mudança:"
-13. "De burnout para {estado_positivo} em {tempo}:"
-14. "Antes eu perdia {X}. Agora ganho {Y}:"
-15. "A mudança que levou de {antes} para {depois}:"
-
----
-
-## 4. Contrarian/Polêmico
-
-Hooks que **desafiam o consenso** (usar com responsabilidade).
-
-1. "Todo mundo diz que {crença_comum}. Eu fiz diferente:"
-2. "Opinião impopular: {opinião}"
-3. "O conselho mais comum sobre {tema} está errado."
-4. "Pare de {erro_comum}. Comece {alternativa}."
-5. "95% das pessoas fazem {tema} errado:"
-6. "Você NÃO deveria {conselho_comum}. Faça isso:"
-7. "{crença_comum}? Mentira. A verdade:"
-8. "O maior mito sobre {tema}:"
-9. "Fui contra o conselho de todos. Resultado:"
-10. "Por que {prática_popular} é overrated:"
-11. "O erro que 'especialistas' continuam repetindo:"
-12. "Fizeram isso por anos. Estava errado:"
-13. "A verdade inconveniente sobre {tema}:"
-14. "Ignore este conselho sobre {tema}:"
-15. "O que {profissionais} não querem que você saiba:"
-16. "Controverso: {opinião}. Me deixa explicar:"
-17. "Você foi ensinado errado sobre {tema}:"
-18. "O oposto do que dizem funciona melhor:"
-19. "Desaprendi {crença} e tudo mudou:"
-20. "Hot take: {tema} não funciona como você pensa:"
+1. "What {number} years in {industry} taught me:"
+2. "As a {role}, I found that..."
+3. "Leading {number} people, I learned:"
+4. "After {number} projects, I can say this:"
+5. "{number} clients later, the pattern is clear:"
+6. "The mistake I see in 90% of companies:"
+7. "The truth {number} years of experience showed me:"
+8. "As {role} at {company}, I realized that..."
+9. "{number} hires later, I know how to spot:"
+10. "Mentoring {number} {professionals}, the most common block:"
+11. "I built {number} {results}. The secret:"
+12. "After scaling from {before} to {after}:"
+13. "{credential}. Here's what I know:"
+14. "I trained {number} teams. The mistake they all make:"
+15. "I negotiated {number} {topic} contracts. The tactic:"
+16. "I closed {number} deals worth {value}. What works:"
+17. "I managed {value} in {area}. What nobody tells you:"
+18. "I trained {number} {professionals}. The market gap:"
 
 ---
 
-## 5. Confissão/Fracasso
+## 3. Transformation
 
-Hooks de **vulnerabilidade** que geram conexão.
+**Before/after** hooks with clear contrast.
 
-1. "Perdi R${valor} por causa de {erro}."
-2. "Meu maior erro em {tema}:"
-3. "Fui demitido. E foi a melhor coisa que aconteceu."
-4. "Fracassei {número} vezes em {tema}. O que aprendi:"
-5. "O erro que quase destruiu {resultado}:"
-6. "Admito: eu estava errado sobre {tema}."
-7. "Meu fracasso público em {tema}:"
-8. "Perdi {oportunidade} por {razão}. A lição:"
-9. "O cliente que perdi me ensinou mais que os que ganhei:"
-10. "Errei feio em {situação}. Aqui está o que aprendi:"
-11. "Minha pior decisão de carreira (e o que veio depois):"
-12. "Fui arrogante sobre {tema}. O mercado me corrigiu:"
-13. "O projeto que fracassou me ensinou:"
-14. "Ignorei {sinal} e paguei o preço:"
-15. "Meu erro de R${valor} em {tema}:"
-16. "{número} coisas que aprendi perdendo {valor}:"
-
----
-
-## 6. Curiosidade
-
-Hooks que **abrem um loop** de informação.
-
-1. "Você sabia que {estatística}?"
-2. "{número} erros que você está cometendo:"
-3. "A maneira mais fácil de {objetivo}:"
-4. "O que ninguém te conta sobre {tema}:"
-5. "Por que {prática_comum} não funciona mais:"
-6. "O segredo para {resultado} em {tempo}:"
-7. "{número} sinais de que {situação}:"
-8. "A habilidade mais subestimada em {área}:"
-9. "O que {profissionais_top} fazem diferente:"
-10. "A diferença entre {grupo_A} e {grupo_B}:"
-11. "O fator oculto por trás de {resultado}:"
-12. "Por que {número}% falham em {tema}:"
-13. "A pergunta que ninguém faz sobre {tema}:"
-14. "O custo real de {decisão}:"
-15. "O que acontece quando {ação}:"
-16. "A regra dos {número}% em {tema}:"
-17. "Por que {evento} muda tudo em {área}:"
-18. "O padrão que {profissionais} ignoram:"
-19. "A armadilha de {prática_comum}:"
-20. "O que {dado} revela sobre {tema}:"
-21. "A razão #1 para {problema}:"
-22. "Sem {resultado}? Você pode estar errando nisso:"
+1. "From {before} to {after} in {time}."
+2. "It was {situation_before}. Today it's {situation_after}."
+3. "{time} ago, I {before}. Now {after}."
+4. "{number}% growth in {time}. Here's how:"
+5. "From zero to {result} in {time}:"
+6. "Before: {before}. After: {after}. The difference:"
+7. "In {time}, I went from {before} to {after}:"
+8. "My routine before vs. after {change}:"
+9. "What changed when I stopped {before} and started {after}:"
+10. "From {metric_before} to {metric_after}. The turning point:"
+11. "{time} ago I hated {topic}. Today:"
+12. "It tripled in {time}. The only change:"
+13. "From burnout to {positive_state} in {time}:"
+14. "I used to lose {X}. Now I gain {Y}:"
+15. "The change that took me from {before} to {after}:"
 
 ---
 
-## 7. História/Narrativa
+## 4. Contrarian
 
-Hooks que **iniciam uma jornada**.
+Hooks that **challenge the consensus** (use responsibly).
 
-1. "Nunca vou esquecer quando {momento}."
-2. "Em {ano}, eu estava {situação}. Hoje..."
-3. "Meu mentor me disse algo que mudou tudo:"
-4. "Uma ligação mudou minha carreira:"
-5. "O dia que {evento} me ensinou sobre {tema}:"
-6. "Tinha 5 minutos para convencer {pessoa}:"
-7. "A reunião que mudou minha perspectiva sobre {tema}:"
-8. "Recebi um feedback que doeu. E transformou:"
-9. "A conversa mais difícil da minha carreira:"
-10. "O momento exato que decidi mudar {tema}:"
-11. "Uma frase mudou como eu vejo {tema}:"
-12. "O email que recebi às 23h e mudou tudo:"
-13. "A demissão mais importante da minha vida:"
-14. "O 'não' que me levou ao maior 'sim':"
-15. "A pergunta de um junior que me fez repensar tudo:"
-16. "O cliente que me ensinou mais em 1 hora:"
-17. "A crise que revelou o que realmente importa:"
-18. "O erro do meu chefe que me ensinou liderança:"
-
----
-
-## 8. Listas/Frameworks
-
-Hooks que prometem **estrutura organizada** (alto potencial de salvamento).
-
-1. "Meu framework de {número} passos para {resultado}:"
-2. "{número} lições de {experiência}:"
-3. "Minha checklist de {número} itens para {objetivo}:"
-4. "Os {número} princípios que mudaram meu {resultado}:"
-5. "{número} regras não-negociáveis em {área}:"
-6. "O sistema de {número} etapas que uso para {objetivo}:"
-7. "{número} perguntas para avaliar {tema}:"
-8. "Meu template de {tema} (copiável):"
-9. "{número} métricas que realmente importam em {área}:"
-10. "O playbook de {número} passos para {resultado}:"
-11. "{número} red flags em {tema}:"
-12. "Meu processo de {número} fases para {objetivo}:"
-13. "{número} scripts que uso toda semana:"
-14. "O framework {nome} para {resultado}:"
-15. "{número} hábitos de {profissionais_top}:"
+1. "Everyone says {common_belief}. I did the opposite:"
+2. "Unpopular opinion: {opinion}"
+3. "The most common advice about {topic} is wrong."
+4. "Stop {common_mistake}. Start {alternative}."
+5. "95% of people do {topic} wrong:"
+6. "You should NOT {common_advice}. Do this instead:"
+7. "{common_belief}? Not true. The reality:"
+8. "The biggest myth about {topic}:"
+9. "I went against everyone's advice. The result:"
+10. "Why {popular_practice} is overrated:"
+11. "The mistake 'experts' keep repeating:"
+12. "They did it for years. It was wrong:"
+13. "The inconvenient truth about {topic}:"
+14. "Ignore this advice about {topic}:"
+15. "What {professionals} don't want you to know:"
+16. "Controversial: {opinion}. Let me explain:"
+17. "You were taught {topic} wrong:"
+18. "The opposite of what they say works better:"
+19. "I unlearned {belief} and everything changed:"
+20. "Hot take: {topic} doesn't work the way you think:"
 
 ---
 
-## Hooks a EVITAR (Punidos pelo 360Brew)
+## 5. Confession
 
-O algoritmo detecta e penaliza estes padrões:
+**Vulnerability** hooks that build connection.
 
-❌ **"O que você acha?"** → Isca de engajamento detectada
-❌ **"Concordam?"** → Pedido preguiçoso de interação
-❌ **"Bom dia, LinkedIn!"** → Zero valor, scroll instantâneo
-❌ **"Reflexão do dia:"** → Vago, sem gancho
-❌ **Hooks vagos sem dado ou credencial** → Sem prova = sem confiança
-❌ **Clickbaits genéricos** → "Você não vai acreditar..." sem substância
-❌ **Perguntas retóricas vazias** → "Já pensou em...?"
+1. "I lost ${value} because of {mistake}."
+2. "My biggest mistake in {topic}:"
+3. "I got fired. And it was the best thing that happened to me."
+4. "I failed {number} times at {topic}. What I learned:"
+5. "The mistake that almost destroyed {result}:"
+6. "I'll admit it: I was wrong about {topic}."
+7. "My public failure at {topic}:"
+8. "I lost {opportunity} because of {reason}. The lesson:"
+9. "The client I lost taught me more than the ones I won:"
+10. "I screwed up badly in {situation}. Here's what I learned:"
+11. "My worst career decision (and what came next):"
+12. "I was arrogant about {topic}. The market corrected me:"
+13. "The project that failed taught me:"
+14. "I ignored {signal} and paid the price:"
+15. "My ${value} mistake in {topic}:"
+16. "{number} things I learned losing {value}:"
 
 ---
 
-## Como Usar Esta Biblioteca
+## 6. Curiosity
 
-1. **Escolha o tipo** baseado em categoria + objetivo do post
-2. **Personalize** com seus dados reais (números, valores, tempo)
-3. **Adicione a Net** (segunda linha que complementa o hook)
-4. **Valide** se tem prova de trabalho ou autoridade
-5. **Evite** padrões punidos listados acima
+Hooks that **open an information loop**.
 
-### Mapeamento Categoria → Tipos Recomendados
+1. "Did you know that {statistic}?"
+2. "{number} mistakes you're making:"
+3. "The easiest way to {goal}:"
+4. "What nobody tells you about {topic}:"
+5. "Why {common_practice} doesn't work anymore:"
+6. "The secret to {result} in {time}:"
+7. "{number} signs that {situation}:"
+8. "The most underrated skill in {area}:"
+9. "What {top_professionals} do differently:"
+10. "The difference between {group_A} and {group_B}:"
+11. "The hidden factor behind {result}:"
+12. "Why {number}% fail at {topic}:"
+13. "The question nobody asks about {topic}:"
+14. "The real cost of {decision}:"
+15. "What happens when {action}:"
+16. "The {number}% rule in {topic}:"
+17. "Why {event} changes everything in {area}:"
+18. "The pattern {professionals} ignore:"
+19. "The trap of {common_practice}:"
+20. "What {data} reveals about {topic}:"
+21. "The #1 reason for {problem}:"
+22. "No {result}? You might be getting this wrong:"
 
-| Categoria | Tipos de Hook |
+---
+
+## 7. Story
+
+Hooks that **start a journey**.
+
+1. "I'll never forget when {moment}."
+2. "In {year}, I was {situation}. Today..."
+3. "My mentor told me something that changed everything:"
+4. "One phone call changed my career:"
+5. "The day {event} taught me about {topic}:"
+6. "I had 5 minutes to convince {person}:"
+7. "The meeting that changed my perspective on {topic}:"
+8. "I got feedback that hurt. And it transformed me:"
+9. "The hardest conversation of my career:"
+10. "The exact moment I decided to change {topic}:"
+11. "One sentence changed how I see {topic}:"
+12. "The email I got at 11 p.m. that changed everything:"
+13. "The most important layoff of my life:"
+14. "The 'no' that led me to my biggest 'yes':"
+15. "A junior's question that made me rethink everything:"
+16. "The client who taught me more in 1 hour:"
+17. "The crisis that revealed what really matters:"
+18. "My boss's mistake that taught me leadership:"
+
+---
+
+## 8. Lists & Frameworks
+
+Hooks that promise **organized structure** (high save potential).
+
+1. "My {number}-step framework for {result}:"
+2. "{number} lessons from {experience}:"
+3. "My {number}-item checklist for {goal}:"
+4. "The {number} principles that changed my {result}:"
+5. "{number} non-negotiable rules in {area}:"
+6. "The {number}-step system I use for {goal}:"
+7. "{number} questions to evaluate {topic}:"
+8. "My {topic} template (copy it):"
+9. "{number} metrics that actually matter in {area}:"
+10. "The {number}-step playbook for {result}:"
+11. "{number} red flags in {topic}:"
+12. "My {number}-phase process for {goal}:"
+13. "{number} scripts I use every week:"
+14. "The {name} framework for {result}:"
+15. "{number} habits of {top_professionals}:"
+
+---
+
+## Hooks to AVOID (punished by 360Brew)
+
+The algorithm detects and penalizes these patterns:
+
+- **"What do you think?"** → Engagement bait detected
+- **"Agree?" / "Right?"** → Lazy interaction request
+- **"Good morning, LinkedIn"** → Zero value, instant scroll
+- **"Thought of the day"** → Vague, no hook
+- **Vague hooks with no data or credential** → No proof = no trust
+- **Generic clickbait** → "You won't believe..." with no substance
+- **Empty rhetorical questions** → "Ever thought about...?"
+
+---
+
+## How to use this library
+
+1. **Pick the type** based on the post's category + objective
+2. **Personalize** with your real data (numbers, values, time)
+3. **Add the net** (a second line that completes the hook)
+4. **Validate** that it carries proof of work or authority
+5. **Avoid** the punished patterns listed above
+
+### Category → recommended types
+
+| Category | Hook types |
 |-----------|---------------|
-| Lição de Carreira | História, Prova de Autoridade, Transformação |
-| Conquista | Prova de Trabalho, Transformação, Prova de Autoridade |
-| Fracasso | Confissão, História, Prova de Trabalho |
-| Desmistificar | Contrarian, Prova de Autoridade, Curiosidade |
-| Dica Prática | Prova de Trabalho, Listas, Curiosidade |
-| Opinião | Contrarian, Prova de Autoridade |
-| Bastidores | História, Confissão, Prova de Trabalho |
+| Career Lesson | Story, Authority Proof, Transformation |
+| Achievement | Proof of Work, Transformation, Authority Proof |
+| Failure | Confession, Story, Proof of Work |
+| Debunk | Contrarian, Authority Proof, Curiosity |
+| Practical Tip | Proof of Work, Lists & Frameworks, Curiosity |
+| Opinion | Contrarian, Authority Proof |
+| Behind the Scenes | Story, Confession, Proof of Work |

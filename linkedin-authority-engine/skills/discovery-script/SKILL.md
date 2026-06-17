@@ -1,98 +1,98 @@
 ---
 name: discovery-script
-description: Recurso interno carregado pelo command linkedin-authority-engine:init para conduzir a entrevista de discovery (Caminho A, in-session). Não usar isoladamente. Perguntas agrupadas pelas 13 seções do authority-context.md; * = pergunta que alimenta campo crítico do perfil.
+description: Internal resource loaded by the linkedin-authority-engine:init command to run the discovery interview (Path A, in-session). Do not use on its own. Questions are grouped by the 13 sections of authority-context.md; * = question that feeds a critical profile field.
 ---
 
-# Discovery Script — entrevista guiada
+# Discovery script — guided interview
 
-Conduzir uma pergunta por vez (ou blocos curtos). Não avançar de seção sem cobrir os campos `*`.
+Ask one question at a time (or in short blocks). Do not move past a section until the `*` fields are covered.
 
-## Perfil do cliente
+## Profile
 
-- Qual seu nome completo, cargo atual e empresa?
-- Há quanto tempo você está nessa posição e quantos anos de experiência total na área?
-- Em que cidade ou região você atua?
-- Em 30 segundos, como você se apresentaria para alguém que nunca te viu? (essa resposta vira a bio) *
-- Quais são seus principais marcadores de credibilidade — resultados concretos, marcas onde trabalhou, números que provam o impacto?
-- Você tem um perfil no LinkedIn? Qual a URL?
-- Como foi sua trajetória até aqui? Quais os marcos da carreira e os momentos de virada que moldaram quem você é profissionalmente?
+- What is your full name, current role, and company?
+- How long have you held this position, and how many years of total experience in the field?
+- What city or region do you operate in?
+- In 30 seconds, how would you introduce yourself to someone who has never seen you before? (this answer becomes the bio) *
+- What are your main credibility markers — concrete results, brands you've worked with, numbers that prove the impact?
+- Do you have a LinkedIn profile? What is the URL?
+- How did your path lead you here? What career milestones and turning points shaped who you are professionally?
 
-## Posicionamento e autoridade
+## Positioning
 
-- Em qual grande tema você quer ser reconhecido como referência? *
-- Se dividíssemos seu conteúdo em 3 pilares principais, quais seriam? *
-- De onde você pega o cliente — qual é o ponto de partida — e para onde você o leva ao final do seu trabalho? (isso é sua proposta de valor) *
-- Quais histórias ou cases reais você tem disponíveis para usar como conteúdo?
-- Quais conquistas ou histórias suas ainda não foram contadas publicamente — material bruto que pode virar conteúdo de alto impacto?
-- Quais crenças do seu mercado você discorda? O que a maioria faz ou acredita que você considera errado?
-- Se você fosse dar UMA palestra este ano, qual seria o tema?
-- Quais são seus valores inegociáveis — os princípios que orientam o que você pode e não pode dizer publicamente?
-- O que um ex-cliente diria que é genuinamente diferente no seu trabalho — algo difícil de copiar?
+- On which broad theme do you want to be recognized as a reference? *
+- If we split your content into 3 main pillars, what would they be? *
+- Where do you pick the client up — what is the starting point — and where do you take them by the end of your work? (this is your value proposition) *
+- What real stories or cases do you have available to use as content?
+- Which of your achievements or stories haven't been told publicly yet — raw material that could become high-impact content?
+- Which beliefs in your market do you disagree with? What does the majority do or believe that you consider wrong?
+- If you were to give ONE talk this year, what would the topic be?
+- What are your non-negotiable values — the principles that guide what you can and cannot say publicly?
+- What would a former client say is genuinely different about your work — something hard to copy?
 
-## Objetivos
+## Goals
 
-- Qual é o foco principal agora: Authority (ser referência), Sales (gerar leads) ou Engagement (construir comunidade)? (pode combinar, com %) *
-- O que tornaria este projeto um sucesso concreto nos primeiros 90 dias? *
-- Qual métrica você quer acompanhar — impressões semanais, leads gerados, SSI, outro?
+- What is the main focus right now: Authority (be a reference), Sales (generate leads), or Engagement (build community)? (you can combine, with %) *
+- What would make this project a concrete success in the first 90 days? *
+- Which metric do you want to track — weekly impressions, leads generated, SSI, something else?
 
-## Audiência
+## Audience
 
-- Quem exatamente você quer alcançar? Cargo, setor, porte de empresa, região?
-- Quais são as 3 maiores dores dessa audiência — o que tira o sono dela? *
-- Como é o antes e o depois que essa audiência busca? Qual é o estado de dor de entrada e o resultado desejado de saída? *
-- Como essa audiência chega até você hoje — LinkedIn, indicação, evento, outro canal?
-- Qual é a pergunta ou pedido que clientes e pares repetem com mais frequência para você?
+- Who exactly do you want to reach? Role, industry, company size, region?
+- What are the 3 biggest pains of this audience — what keeps them up at night? *
+- What does the before and after that this audience is looking for look like? What is the entry pain state and the desired exit outcome? *
+- How does this audience find you today — LinkedIn, referral, event, another channel?
+- What question or request do clients and peers repeat to you most often?
 
-## Ofertas
+## Offers
 
-- Quais são suas ofertas atualmente — formato, ticket e audiência-alvo de cada uma?
-- Qual oferta você quer priorizar impulsionar agora via conteúdo?
+- What are your offers right now — format, price point, and target audience for each one?
+- Which offer do you want to prioritize pushing through content now?
 
-## Narrativa comercial
+## Commercial Narrative
 
-- Como você convence hoje? Quais argumentos, histórias ou provas sociais você usa nas conversas comerciais?
-- Quais são as objeções mais frequentes que você enfrenta antes do fechamento? *
+- How do you convince people today? What arguments, stories, or social proof do you use in commercial conversations?
+- What are the most frequent objections you face before closing? *
 
-## Paisagem competitiva
+## Competitive Landscape
 
-- Quais são seus 3 principais concorrentes diretos? O que cada um comunica bem e onde fica o gap de posicionamento deles?
-- Quais executivos ou criadores de conteúdo você admira pelo posicionamento — não para copiar, mas como referência de tom e sofisticação? *
+- Who are your 3 main direct competitors? What does each one communicate well, and where is the gap in their positioning?
+- Which executives or content creators do you admire for their positioning — not to copy, but as a reference for tone and sophistication? *
 
-## Territórios
+## Territories
 
-- Quais temas você se sente bem em falar com frequência — onde tem repertório, opinião formada e energia?
-- Quais temas você NÃO quer tocar — por razões pessoais, estratégicas ou de outro tipo?
-- Quais são suas fontes de informação habituais — portais, newsletters, podcasts, livros, pessoas que acompanha? *
+- Which topics do you feel comfortable talking about often — where you have repertoire, a formed opinion, and energy?
+- Which topics do you NOT want to touch — for personal, strategic, or other reasons?
+- What are your usual information sources — sites, newsletters, podcasts, books, people you follow? *
 
-## Restrições
+## Constraints
 
-- Existem palavras ou expressões que você não quer que apareçam no seu conteúdo? *
-- Há informações confidenciais que nunca devem ser mencionadas — valores de contratos, nomes de clientes, dados financeiros?
-- Há alguma sensibilidade específica que preciso conhecer antes de criar conteúdo — situação legal, contexto pessoal, tema delicado?
+- Are there words or expressions you don't want to appear in your content? *
+- Is there confidential information that should never be mentioned — contract values, client names, financial data?
+- Is there any specific sensitivity I should know about before creating content — a legal situation, personal context, a delicate topic?
 
-## Tom de voz
+## Tone of Voice
 
-- Como você descreveria seu estilo de comunicação em 3 palavras?
-- Tem algum benchmark de tom que você admira — alguém cujo jeito de falar você quer como referência?
-- Em qual nível de vulnerabilidade você se sente confortável: 1 (só profissional, sem vida pessoal) até 5 (sem filtro — erros, dilemas, bastidores)? *
-- Onde você se posiciona nos espectros: formal vs. casual, técnico vs. acessível, distante vs. próximo?
+- How would you describe your communication style in 3 words?
+- Is there a tone benchmark you admire — someone whose way of speaking you want as a reference?
+- What level of vulnerability are you comfortable with: 1 (purely professional, no personal life) to 5 (no filter — mistakes, dilemmas, behind the scenes)? *
+- Where do you sit on the spectrums: formal vs. casual, technical vs. accessible, distant vs. close?
 
-## Instrução de conteúdo
+## Content Instruction
 
-- Qual o mix de conteúdo que faz sentido — que % de autoridade/educação, % de prova de trabalho e % de conteúdo pessoal/humanização? *
-- Com que frequência você quer publicar — quantos posts por semana, em quais dias e horários?
-- Qual formato de post você prefere: texto corrido, lista, carrossel, storytelling puro, ou mix?
-- Como funciona o processo de aprovação — você quer ver tudo antes de publicar ou só os textos de opinião forte?
+- What content mix makes sense — what % authority/education, % proof of work, and % personal/humanizing content? *
+- How often do you want to publish — how many posts per week, on which days and times?
+- Which post format do you prefer: running text, list, carousel, pure storytelling, or a mix?
+- How does the approval process work — do you want to see everything before publishing, or only the strong-opinion pieces?
 
-## Identidade visual (opcional)
+## Visual identity (optional)
 
-- Você tem guia de marca? Quais fontes, paleta de cores e estilo visual usa nos seus materiais?
-- Como você quer que seus carrosséis e peças visuais se pareçam?
+- Do you have a brand guide? What fonts, color palette, and visual style do you use in your materials?
+- How do you want your carousels and visual pieces to look?
 
-## Notas
+## Notes
 
-- Tem algo que me ajudaria a criar conteúdo que eu ainda não perguntei?
-- Qual foi o desafio ou insatisfação que motivou você a buscar isso agora — por que este projeto, por que neste momento?
-- Quais palavras-chave você quer que apareçam com frequência na sua comunicação — os termos que definem a sua marca? *
-- Você já tentou criar conteúdo no LinkedIn antes? O que funcionou e o que não funcionou?
-- Tem algum evento, palestra ou lançamento previsto nos próximos meses que o conteúdo deve preparar?
+- Is there anything that would help me create content that I haven't asked about yet?
+- What was the challenge or dissatisfaction that drove you to pursue this now — why this project, why at this moment?
+- Which keywords do you want to appear frequently in your communication — the terms that define your brand? *
+- Have you tried creating content on LinkedIn before? What worked and what didn't?
+- Is there any event, talk, or launch planned in the coming months that the content should prepare for?

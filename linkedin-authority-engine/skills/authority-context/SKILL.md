@@ -1,25 +1,25 @@
 ---
 name: authority-context
-description: Protocolo de leitura e escrita do substrato de memória do cliente (authority-context.md + memory/). Use SEMPRE antes de gerar conteúdo (ler perfil + padrões vencedores) e ao fim de toda sessão de geração (write-back). Define as 3 portas do auto-enriquecimento.
+description: Read and write protocol for the client memory substrate (authority-context.md + memory/). ALWAYS use it before generating content (read the profile + winning patterns) and at the end of every generation session (write-back). Defines the 3 gates of auto-enrichment.
 ---
 
-# Authority Context — substrato auto-enriquecedor
+# Authority context — self-enriching substrate
 
-A pasta do cliente é a fonte de verdade (local-first). Unabyss (MCP) é enriquecimento opcional quando presente (opcional — enriquecimento via Unabyss MCP quando presente; não requerido na v1).
+The client folder is the source of truth (local-first). Unabyss (MCP) is optional enrichment when present (optional — enrichment via Unabyss MCP when present; not required in v1).
 
-## Arquivos
-- `authority-context.md` — perfil vivo (13 seções). Template em `references/authority-context-template.md`.
-- `memory/winning-hooks.md`, `memory/topic-performance.md`, `memory/voice-profile.md`, `memory/learnings.md` — schemas em `references/memory-schemas.md`.
-- `outputs/posts/` — posts gerados versionados (`AAAAMMDD-vN`).
+## Files
+- `authority-context.md` — living profile (13 sections). Template in `references/authority-context-template.md`.
+- `memory/winning-hooks.md`, `memory/topic-performance.md`, `memory/voice-profile.md`, `memory/learnings.md` — schemas in `references/memory-schemas.md`.
+- `outputs/posts/` — versioned generated posts (`YYYYMMDD-vN`).
 
-## Porta 1 — Escrita (onboarding)
-`init` escreve `authority-context.md`. Ver command `init`.
+## Gate 1 — Write (onboarding)
+`init` writes `authority-context.md`. See the `init` command.
 
-## Porta 2 — Leitura (geração)
-Antes de gerar qualquer post: ler `authority-context.md` (tema central, 3 pilares, ICP, voz, restrições, territórios SIM/NÃO) e `memory/` (priorizar hooks/temas com veredito positivo). Se Unabyss presente, puxar performance real (opcional — enriquecimento via Unabyss MCP quando presente; não requerido na v1).
+## Gate 2 — Read (generation)
+Before generating any post: read `authority-context.md` (core theme, 3 pillars, ICP, voice, constraints, YES/NO territories) and `memory/` (prioritize hooks/topics with a positive verdict). If Unabyss is present, pull real performance (optional — enrichment via Unabyss MCP when present; not required in v1).
 
-## Porta 3 — Write-back (fim da sessão)
-Anexar (nunca sobrescrever): `winning-hooks.md` (hooks aprovados + categoria/objetivo/score), `topic-performance.md` (tema/pilar/tipo/score) e `learnings.md` (o que funcionou, ajustes de voz, rejeições). `voice-profile.md` é READ-ONLY em v1 (lido na Porta 2, escrita entra em v1.x). Colunas e schemas em `references/memory-schemas.md`.
+## Gate 3 — Write-back (end of session)
+Append (never overwrite): `winning-hooks.md` (approved hooks + category/objective/score), `topic-performance.md` (topic/pillar/type/score) and `learnings.md` (what worked, voice adjustments, rejections). `voice-profile.md` is READ-ONLY in v1 (read in Gate 2, writing arrives in v1.x). Columns and schemas in `references/memory-schemas.md`.
 
 ## Guardrails
-Aplicar restrições da seção 9 do perfil (palavras proibidas, confidencial, sensibilidades) e respeitar territórios NÃO da seção 8.
+Apply the constraints from section 9 of the profile (forbidden words, confidential information, sensitivities) and respect the NO territories from section 8.

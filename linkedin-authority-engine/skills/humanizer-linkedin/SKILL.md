@@ -1,57 +1,57 @@
 ---
 name: humanizer-linkedin
-description: Pipeline de humanização para posts LinkedIn (Etapa B do Pipeline de Finalização): quando executar, como executar, padrões de IA prioritários em posts LinkedIn, princípios de cirurgia (não demolição) e formato de output com diff compacto. Use automaticamente após o CTA ser escolhido, antes do score final, em qualquer modo de geração de post.
+description: Humanizing pipeline for LinkedIn posts (Step B of the Finishing Pipeline): when to run it, how to run it, the priority AI patterns in LinkedIn posts, surgery (not demolition) principles, and the output format with a compact diff. Use automatically after the CTA is chosen, before the final score, in any post-generation mode.
 ---
 
-# Pipeline Humanizer (LinkedIn)
+# Humanizer pipeline (LinkedIn)
 
-> Esta referência descreve **como** aplicar humanizer em posts LinkedIn. A lista completa dos 24 padrões de IA vive na skill `humanizer` e **não deve ser duplicada aqui**. Se divergir das duas listas, o guia oficial é a skill `humanizer`.
+> This reference describes **how** to apply the humanizer to LinkedIn posts. The full list of 24 AI patterns lives in the `humanizer` skill and **must not be duplicated here**. If the two lists diverge, the `humanizer` skill is the official guide.
 
-## Quando executar
+## When to run it
 
-Automático após o CTA ser escolhido e integrado ao post — é a **Etapa B do Pipeline de Finalização**, compartilhada por todos os modos (Guiado, Rewrite, Thread e Score).
+Automatic after the CTA is chosen and integrated into the post — it is **Step B of the Finishing Pipeline**, shared by all modes (Guided, Rewrite, Thread, and Score).
 
-Não perguntar ao usuário. É parte do pipeline padrão.
+Do not ask the user. It is part of the standard pipeline.
 
-## Como executar
+## How to run it
 
-1. Acionar a skill `humanizer` com o post completo (hook + corpo + CTA)
-2. A skill retorna o texto humanizado + diff dos padrões detectados
-3. Apresentar diff compacto (máximo 5 itens) seguido do post humanizado completo
+1. Trigger the `humanizer` skill with the full post (hook + body + CTA)
+2. The skill returns the humanized text + a diff of the detected patterns
+3. Present a compact diff (5 items maximum) followed by the full humanized post
 
-## Padrões prioritários em posts LinkedIn
+## Priority patterns in LinkedIn posts
 
-Estes são os padrões que aparecem com mais frequência em posts LinkedIn gerados por IA. Se a skill `humanizer` estiver indisponível por algum motivo, Claude pode executar uma passada manual priorizando:
+These are the patterns that show up most often in AI-generated LinkedIn posts. If the `humanizer` skill is unavailable for some reason, Claude can run a manual pass prioritizing:
 
-| Padrão | Exemplos a detectar |
+| Pattern | Examples to detect |
 |--------|---------------------|
-| Significance inflation | "pivotal", "transformativo", "vital", "impactante", "robusto" |
-| Promotional language | "incrível", "revolucionário", "groundbreaking", "poderoso" |
-| Superficial -ing | "mostrando que", "refletindo a", "destacando", "contribuindo" |
-| Em dashes em excesso | Substituir por ponto, vírgula ou reescrita |
-| Rule of three | "velocidade, qualidade e resultado" → colapsar ou variar |
-| Vague attributions | "especialistas dizem", "o mercado indica" → especificar ou remover |
-| Filler phrases | "No contexto atual", "É importante ressaltar que", "Vale destacar" |
-| Generic conclusions | "O futuro é promissor", "Está apenas começando", "O momento é agora" |
-| Copula avoidance | "serve como", "funciona como", "atua como" → verbo direto |
+| Significance inflation | "pivotal", "transformative", "vital", "impactful", "robust" |
+| Promotional language | "incredible", "revolutionary", "groundbreaking", "powerful" |
+| Superficial -ing | "showing that", "reflecting the", "highlighting", "contributing" |
+| Excessive em dashes | Replace with a period, comma, or rewrite |
+| Rule of three | "speed, quality, and results" → collapse or vary |
+| Vague attributions | "experts say", "the market indicates" → specify or remove |
+| Filler phrases | "In the current context", "It's important to note that", "It's worth highlighting" |
+| Generic conclusions | "The future is promising", "It's just the beginning", "The moment is now" |
+| Copula avoidance | "serves as", "works as", "acts as" → direct verb |
 
-Os outros 15 padrões estão documentados na skill `humanizer`.
+The other 15 patterns are documented in the `humanizer` skill.
 
-## Princípios
+## Principles
 
-**Cirurgia, não demolição.** Trocar a palavra ou frase problemática mantendo estrutura, dados e voz do autor. O humanizer não reescreve o post, ele corrige padrões.
+**Surgery, not demolition.** Swap the problematic word or phrase while keeping the structure, data, and the author's voice. The humanizer does not rewrite the post, it corrects patterns.
 
-**Preservar voz do cliente.** Se houver documento de estilo carregado no STEP 0, não remover vocabulário que é parte intencional da voz do cliente (mesmo que caia em algum padrão genérico).
+**Preserve the client's voice.** If a style document was loaded in STEP 0, do not remove vocabulary that is an intentional part of the client's voice (even if it falls into some generic pattern).
 
-**Preservar dados.** Nunca alterar números, valores, métricas ou nomes próprios na passada do humanizer.
+**Preserve data.** Never change numbers, values, metrics, or proper nouns in the humanizer pass.
 
-## Output do pipeline
+## Pipeline output
 
 ```
-✏️ Humanizer aplicado:
-- "[palavra/frase original]" → "[correção]"
-- "[padrão detectado]" → removido / reestruturado
-(máx. 5 itens — omitir se não houver padrões significativos)
+Humanizer applied:
+- "[original word/phrase]" → "[correction]"
+- "[detected pattern]" → removed / restructured
+(max 5 items — omit if there are no significant patterns)
 ```
 
-Seguido pelo **post humanizado completo** (versão final para scoring).
+Followed by the **full humanized post** (final version for scoring).

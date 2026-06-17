@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-LinkedIn Post Scorer v3.5 - Calcula score baseado nas 6 dimensões do 360Brew.
+LinkedIn Post Scorer v3.5 - Computes a score based on the 6 360Brew dimensions.
 
-Uso: python score_post.py <arquivo_post.txt> [--objetivo authority|sales|engagement]
+Usage: python score_post.py <post_file.txt> [--objective authority|sales|engagement]
 
-Saída padrão: relatório legível. Use --json para output estruturado.
-Use --compact para resumo em 1 linha (útil pra integração no workflow).
+Default output: readable report. Use --json for structured output.
+Use --compact for a 1-line summary (handy for workflow integration).
 """
 
 import argparse
@@ -13,7 +13,7 @@ import re
 import sys
 from pathlib import Path
 
-# Pesos das dimensões (v3.5) — alinhados com references/algoritmo-metricas.md
+# Dimension weights (v3.5) — aligned with references/algoritmo-metricas.md
 WEIGHTS = {
     "saves_potential": 0.30,
     "hook": 0.20,
@@ -23,36 +23,36 @@ WEIGHTS = {
     "data": 0.05,
 }
 
-# Hooks punidos pelo 360Brew
-# Anchored para evitar falsos positivos (ex: "nem todo mundo concorda comigo")
+# Hooks punished by 360Brew
+# Anchored to avoid false positives (e.g. "not everyone agrees with me")
 PUNISHED_HOOKS = [
-    r"\bo que voc[êe]s? acham?\s*\?",
-    r"(?:^|[.!?…]\s*)concordam?\s*\?",
-    r"\bbom dia[,]?\s*linkedin",
-    r"\breflex[ãa]o do dia\b",
+    r"\bwhat do you think\s*\?",
+    r"(?:^|[.!?…]\s*)(?:agree|right)\s*\?",
+    r"\bgood morning[,]?\s*linkedin",
+    r"\bthought of the day\b",
 ]
 
-# Palavras de dados/números
+# Data / number patterns
 DATA_PATTERNS = [
     r"\d+%",
-    r"R\$\s*[\d.,]+",
     r"\$\s*[\d.,]+",
+    r"R\$\s*[\d.,]+",
     r"\d+x",
-    r"\d+\s*(dias|meses|anos|semanas|horas)",
-    r"de\s+\d+\s+para\s+\d+",
+    r"\d+\s*(days|weeks|months|years|hours)",
+    r"from\s+\d+\s+to\s+\d+",
 ]
 
-# Padrões de alto potencial de salvamento
+# High save-potential patterns
 SAVES_PATTERNS = [
-    (r"passo\s*\d", "Passos numerados"),
-    (r"etapa\s*\d", "Etapas numeradas"),
-    (r"^\s*\d+\s*[-–.]\s*\w", "Lista numerada"),
+    (r"step\s*\d", "Numbered steps"),
+    (r"phase\s*\d", "Numbered phases"),
+    (r"^\s*\d+\s*[-–.]\s*\w", "Numbered list"),
     (r"checklist", "Checklist"),
-    (r"framework", "Framework nomeado"),
+    (r"framework", "Named framework"),
     (r"template", "Template"),
-    (r"guia\s+(completo|definitivo|pr[áa]tico)", "Guia explícito"),
-    (r"como\s+\w+\s+em\s+\d+", "How-to com número"),
-    (r"\d+\s+(dicas|regras|princípios|erros|sinais)", "Lista de valor"),
+    (r"(complete|definitive|practical)\s+guide", "Explicit guide"),
+    (r"how\s+to\s+\w+\s+in\s+\d+", "How-to with a number"),
+    (r"\d+\s+(tips|rules|principles|mistakes|signs)", "Value list"),
 ]
 
 
@@ -61,7 +61,7 @@ def count_chars(text: str) -> int:
 
 
 def split_paragraphs(text: str) -> list:
-    """Parágrafos = blocos separados por linha em branco (formato LinkedIn)."""
+    """Paragraphs = blocks separated by a blank line (LinkedIn format)."""
     return [p.strip() for p in re.split(r'\n\s*\n', text) if p.strip()]
 
 
@@ -70,7 +70,7 @@ def count_paragraphs(text: str) -> int:
 
 
 def avg_word_length(text: str) -> float:
-    words = re.findall(r'\b[a-záàâãéèêíïóôõöúçñ]+\b', text.lower())
+    words = re.findall(r"\b[a-z']+\b", text.lower())
     if not words:
         return 0
     return sum(len(w) for w in words) / len(words)
@@ -97,8 +97,8 @@ def extract_hook(text: str) -> str:
 
 
 def has_link_in_body(text: str) -> bool:
-    """Detecta link em QUALQUER parte do corpo. A regra 360Brew não tem exceção:
-    link pertence ao 1º comentário, nunca ao post (-60% alcance)."""
+    """Detects a link ANYWHERE in the body. The 360Brew rule has no exception:
+    links belong in the 1st comment, never in the post (-60% reach)."""
     return bool(re.search(r'https?://|www\.', text, re.IGNORECASE))
 
 
@@ -107,11 +107,11 @@ def count_hashtags(text: str) -> int:
 
 
 # -----------------------------
-# Dimensões (6)
+# Dimensions (6)
 # -----------------------------
 
 def score_saves_potential(text: str) -> tuple:
-    """Avalia potencial de save (30%). Sinal mais poderoso do algoritmo."""
+    """Evaluates save potential (30%). The strongest algorithm signal."""
     feedback = []
     score = 4.0
 
@@ -122,21 +122,21 @@ def score_saves_potential(text: str) -> tuple:
 
     if len(matches) >= 3:
         score = 10.0
-        feedback.append(f"✓ Alto potencial de save: {', '.join(matches[:3])}")
+        feedback.append(f"[+] High save potential: {', '.join(matches[:3])}")
     elif len(matches) == 2:
         score = 8.5
-        feedback.append(f"✓ Bom potencial de save: {', '.join(matches)}")
+        feedback.append(f"[+] Good save potential: {', '.join(matches)}")
     elif len(matches) == 1:
         score = 6.5
-        feedback.append(f"○ Potencial moderado: {matches[0]}")
+        feedback.append(f"[o] Moderate potential: {matches[0]}")
     else:
         score = 3.5
-        feedback.append("❌ Sem gatilhos de save — adicionar framework, checklist ou lista numerada")
+        feedback.append("[X] No save triggers — add a framework, checklist or numbered list")
 
     last_lines = '\n'.join(text.split('\n')[-5:]).lower()
-    if re.search(r"(salva|salve)\s+(esse|este|o)\s+post", last_lines):
+    if re.search(r"(save|bookmark)\s+(this|the)\s+post", last_lines) or re.search(r"\bbookmark this\b", last_lines):
         score = min(10, score + 1.0)
-        feedback.append("✓ CTA de save explícito (+1)")
+        feedback.append("[+] Explicit save CTA (+1)")
 
     return min(10, max(0, score)), feedback
 
@@ -148,73 +148,73 @@ def score_hook(text: str) -> tuple:
 
     if has_punished_hook(text):
         score -= 4.0
-        feedback.append("❌ Hook punido pelo 360Brew detectado (-4)")
+        feedback.append("[X] Hook punished by 360Brew detected (-4)")
 
     if re.search(r'\d+', hook):
         score += 1.5
-        feedback.append("✓ Números específicos no hook (+1.5)")
+        feedback.append("[+] Specific numbers in the hook (+1.5)")
 
-    if re.search(r'(gastei|investi|testei|analisei|perdi|ganhei|constru[íi]|implementei|auditei|entrevistei|revisei|documentei|rodei|escalei|faturei|gerei|fechei|triplic|dobr)', hook, re.IGNORECASE):
+    if re.search(r'(spent|invested|tested|analyzed|lost|earned|built|implemented|audited|interviewed|reviewed|documented|ran|scaled|generated|closed|tripled|doubled)', hook, re.IGNORECASE):
         score += 2.0
-        feedback.append("✓ Prova de trabalho detectada (+2)")
+        feedback.append("[+] Proof of work detected (+2)")
 
-    if re.search(r'(\d+\s*(anos?|meses?).*?(aprendi|ensinaram|descobri)|como\s+(ceo|founder|diretor|gerente))', hook, re.IGNORECASE):
+    if re.search(r'(\d+\s*(years?|months?).*?(learned|taught|discovered)|as\s+(a\s+)?(ceo|founder|director|manager|head|vp))', hook, re.IGNORECASE):
         score += 1.5
-        feedback.append("✓ Prova de autoridade detectada (+1.5)")
+        feedback.append("[+] Authority proof detected (+1.5)")
 
-    if re.search(r'de\s+\d+.*?para\s+\d+', hook, re.IGNORECASE):
+    if re.search(r'from\s+\d+.*?to\s+\d+', hook, re.IGNORECASE):
         score += 1.5
-        feedback.append("✓ Transformação com números (+1.5)")
+        feedback.append("[+] Transformation with numbers (+1.5)")
 
     return min(10, max(0, score)), feedback
 
 
 def score_algorithm(text: str) -> tuple:
-    """Avalia aderência às specs 360Brew (20%). Saves é dimensão separada agora."""
+    """Evaluates adherence to the 360Brew specs (20%). Saves is now a separate dimension."""
     feedback = []
     score = 5.0
 
     if has_link_in_body(text):
         score -= 4.0
-        feedback.append("❌ Link no corpo do post detectado (-4) — mover para 1º comentário")
+        feedback.append("[X] Link in the post body detected (-4) — move it to the 1st comment")
     else:
         score += 1.5
-        feedback.append("✓ Sem links no corpo (+1.5)")
+        feedback.append("[+] No links in the body (+1.5)")
 
     hashtag_count = count_hashtags(text)
     if hashtag_count == 0:
         score += 1.0
-        feedback.append("✓ Sem hashtags (padrão 2026) (+1)")
+        feedback.append("[+] No hashtags (2026 default) (+1)")
     elif hashtag_count <= 2:
         score += 0.5
-        feedback.append(f"○ {hashtag_count} hashtag(s) — aceitável se hiper-específicas (+0.5)")
+        feedback.append(f"[o] {hashtag_count} hashtag(s) — acceptable if hyper-specific (+0.5)")
     else:
         score -= 2.0
-        feedback.append(f"❌ {hashtag_count} hashtags — excesso punido (-2)")
+        feedback.append(f"[X] {hashtag_count} hashtags — excess punished (-2)")
 
     avg_len = avg_word_length(text)
     if avg_len <= 5:
         score += 2.0
-        feedback.append(f"✓ Palavras simples: média {avg_len:.1f} letras (+2)")
+        feedback.append(f"[+] Simple words: average {avg_len:.1f} letters (+2)")
     elif avg_len <= 6:
         score += 1.0
-        feedback.append(f"○ Palavras OK: média {avg_len:.1f} letras (+1)")
+        feedback.append(f"[o] Words OK: average {avg_len:.1f} letters (+1)")
     else:
         score -= 1.5
-        feedback.append(f"❌ Palavras complexas: média {avg_len:.1f} letras (-1.5)")
+        feedback.append(f"[X] Complex words: average {avg_len:.1f} letters (-1.5)")
 
     if has_punished_hook(text):
         score -= 1.5
-        feedback.append("❌ Padrão de isca detectado no hook (-1.5)")
+        feedback.append("[X] Bait pattern detected in the hook (-1.5)")
     else:
         score += 0.5
-        feedback.append("✓ Sem padrões de isca (+0.5)")
+        feedback.append("[+] No bait patterns (+0.5)")
 
     return min(10, max(0, score)), feedback
 
 
 def score_structure(text: str) -> tuple:
-    """Structure (15%): 3 sub-componentes — Length, Parágrafos, Framework."""
+    """Structure (15%): 3 sub-components — Length, Paragraphs, Framework."""
     feedback = []
     score = 5.0
 
@@ -224,63 +224,63 @@ def score_structure(text: str) -> tuple:
     # Length
     if 1250 <= chars <= 2500:
         score += 2.0
-        feedback.append(f"✓ Length ideal: {chars} chars (+2)")
+        feedback.append(f"[+] Ideal length: {chars} chars (+2)")
     elif chars < 1000:
         score -= 2.5
-        feedback.append(f"❌ Muito curto: {chars} chars (-2.5)")
+        feedback.append(f"[X] Too short: {chars} chars (-2.5)")
     elif chars > 3000:
         score -= 2.0
-        feedback.append(f"❌ Muito longo: {chars} chars (-2)")
+        feedback.append(f"[X] Too long: {chars} chars (-2)")
     else:
-        feedback.append(f"○ Length fora do ótimo: {chars} chars (0)")
+        feedback.append(f"[o] Length outside the optimal range: {chars} chars (0)")
 
-    # Parágrafos
+    # Paragraphs
     if paragraphs >= 14:
         score += 2.0
-        feedback.append(f"✓ Escaneabilidade: {paragraphs} parágrafos (+2)")
+        feedback.append(f"[+] Scannability: {paragraphs} paragraphs (+2)")
     elif paragraphs >= 10:
         score += 1.0
-        feedback.append(f"○ Parágrafos OK: {paragraphs} (+1)")
+        feedback.append(f"[o] Paragraphs OK: {paragraphs} (+1)")
     else:
         score -= 2.0
-        feedback.append(f"❌ Poucos parágrafos: {paragraphs} (-2) — quebrar mais o texto")
+        feedback.append(f"[X] Too few paragraphs: {paragraphs} (-2) — break up the text more")
 
-    # Blocos densos (parágrafo >150 chars, conforme algoritmo-metricas.md)
+    # Dense blocks (paragraph >150 chars, per algoritmo-metricas.md)
     dense_blocks = sum(1 for para in split_paragraphs(text) if len(para) > 150)
     if dense_blocks > 2:
         score -= 1.5
-        feedback.append(f"❌ {dense_blocks} blocos densos detectados (-1.5)")
+        feedback.append(f"[X] {dense_blocks} dense blocks detected (-1.5)")
 
-    # Framework (heurística fraca)
+    # Framework (weak heuristic)
     framework_signals = re.findall(
-        r"(problema|agita[çc][ãa]o|solu[çc][ãa]o|antes|depois|ponte|setup|conflito|resolu[çc][ãa]o|feature|vantagem|benef[íi]cio)",
+        r"(problem|agitation|solution|before|after|bridge|setup|conflict|resolution|feature|advantage|benefit)",
         text,
         re.IGNORECASE,
     )
     if len(set(s.lower() for s in framework_signals)) >= 3:
         score += 1.0
-        feedback.append("✓ Framework detectável (+1)")
+        feedback.append("[+] Detectable framework (+1)")
 
     return min(10, max(0, score)), feedback
 
 
-def score_cta(text: str, objetivo: str) -> tuple:
+def score_cta(text: str, objective: str) -> tuple:
     feedback = []
     score = 5.0
     last_lines = '\n'.join(text.split('\n')[-5:]).lower()
 
-    # "save" alinhado com os CTAs oficiais de ctas.md ("Salva esse post", "Guarda aqui", "Salva —", "Salva e manda")
+    # "save" aligned with the official CTAs in ctas.md ("Save this post", "Bookmark this")
     cta_patterns = {
-        "save": r'\b(salva|salve|guarda|guarde)\b',
-        "follow": r'(me siga|siga[- ]me|ative o)',
-        "comment_dm": r'comenta\s+\w+',
-        "dm": r'(manda?\s+(dm|mensagem)|dm aberta)',
-        "click": r'clica\s+(no\s+)?link',
-        "bio": r'link\s+(na|no)\s+(bio|perfil|primeiro coment)',
+        "save": r'\b(save|bookmark)\b',
+        "follow": r'(follow me|follow back|hit follow|turn on)',
+        "comment_dm": r'comment\s+\w+',
+        "dm": r'(dm me|send\s+(a\s+)?(dm|message)|open dms?)',
+        "click": r'click\s+(the\s+)?link',
+        "bio": r'link\s+in\s+(the\s+)?(bio|profile|first comment)',
     }
 
     detected = [k for k, p in cta_patterns.items() if re.search(p, last_lines)]
-    # Dedupe: variações do mesmo CTA não contam como múltiplos CTAs
+    # Dedupe: variations of the same CTA don't count as multiple CTAs
     if "comment_dm" in detected and "dm" in detected:
         detected.remove("dm")
     if "click" in detected and "bio" in detected:
@@ -288,28 +288,28 @@ def score_cta(text: str, objetivo: str) -> tuple:
 
     if not detected:
         score = 3.5
-        feedback.append("❌ CTA não detectado ou muito fraco")
+        feedback.append("[X] CTA not detected or too weak")
     else:
         score = 7.0
-        feedback.append(f"✓ CTA presente ({detected[0]})")
+        feedback.append(f"[+] CTA present ({detected[0]})")
 
     if "save" in detected:
         score = min(10, score + 2.0)
-        feedback.append("✓ CTA de save (prioridade 2026) (+2)")
+        feedback.append("[+] Save CTA (2026 priority) (+2)")
 
-    if objetivo == "authority" and "follow" in detected:
+    if objective == "authority" and "follow" in detected:
         score = min(10, score + 1.0)
-        feedback.append("✓ CTA alinhado com Authority (+1)")
-    elif objetivo == "sales" and ("comment_dm" in detected or "dm" in detected):
+        feedback.append("[+] CTA aligned with Authority (+1)")
+    elif objective == "sales" and ("comment_dm" in detected or "dm" in detected):
         score = min(10, score + 1.0)
-        feedback.append("✓ CTA alinhado com Sales (+1)")
-    elif objetivo == "engagement" and detected and re.search(r'(me conta|conta (a[íi]|pra mim)|comenta|qual (foi|seria|desses))', last_lines):
+        feedback.append("[+] CTA aligned with Sales (+1)")
+    elif objective == "engagement" and detected and re.search(r'(tell me|let me know|comment|which (one|of these))', last_lines):
         score = min(10, score + 1.0)
-        feedback.append("✓ CTA alinhado com Engagement (+1)")
+        feedback.append("[+] CTA aligned with Engagement (+1)")
 
     if len(detected) > 1:
         score -= 1.5
-        feedback.append(f"⚠ Múltiplos CTAs detectados ({len(detected)}) — usar só 1 (-1.5)")
+        feedback.append(f"[!] Multiple CTAs detected ({len(detected)}) — use only 1 (-1.5)")
 
     return min(10, max(0, score)), feedback
 
@@ -320,22 +320,22 @@ def score_data(text: str) -> tuple:
 
     if data_count >= 5:
         score = 10.0
-        feedback.append(f"✓ Excelente: {data_count} pontos de dados")
+        feedback.append(f"[+] Excellent: {data_count} data points")
     elif data_count >= 3:
         score = 8.0
-        feedback.append(f"✓ Bom: {data_count} pontos de dados")
+        feedback.append(f"[+] Good: {data_count} data points")
     elif data_count >= 1:
         score = 6.0
-        feedback.append(f"○ Básico: {data_count} pontos de dados — adicionar mais números")
+        feedback.append(f"[o] Basic: {data_count} data points — add more numbers")
     else:
         score = 3.0
-        feedback.append("❌ Sem dados concretos — adicionar números, %, valores")
+        feedback.append("[X] No concrete data — add numbers, %, values")
 
     return score, feedback
 
 
 # -----------------------------
-# Agregação
+# Aggregation
 # -----------------------------
 
 def calculate_probabilities(final_score, saves_score, hook_score, algo_score):
@@ -362,12 +362,12 @@ def calculate_probabilities(final_score, saves_score, hook_score, algo_score):
     return {"top1": top1, "top5": top5}
 
 
-def score_post(text, objetivo="authority"):
+def score_post(text, objective="authority"):
     saves_score, saves_fb = score_saves_potential(text)
     hook_score, hook_fb = score_hook(text)
     algo_score, algo_fb = score_algorithm(text)
     structure_score, structure_fb = score_structure(text)
-    cta_score, cta_fb = score_cta(text, objetivo)
+    cta_score, cta_fb = score_cta(text, objective)
     data_score, data_fb = score_data(text)
 
     final_score = (
@@ -410,34 +410,34 @@ def score_post(text, objetivo="authority"):
 
 def get_recommendation(score):
     if score >= 9.0:
-        return "✅ PUBLICAR — candidato a outlier"
+        return "PUBLISH — outlier candidate"
     elif score >= 8.0:
-        return "⚠️ REVISAR — ajustes rápidos e publicar"
+        return "REVIEW — quick tweaks, then publish"
     elif score >= 7.0:
-        return "🔄 RETRABALHAR — gargalos claros"
+        return "REWORK — clear bottlenecks"
     elif score >= 6.0:
-        return "❌ REFAZER — ajuste estrutural"
+        return "REDO — structural fix"
     else:
-        return "🚫 RECOMEÇAR — voltar para objetivo + estrutura"
+        return "START OVER — back to objective + structure"
 
 
 def print_report(result):
     print("\n" + "=" * 60)
-    print("📊 RELATÓRIO DE SCORE — LinkedIn 360Brew (v3.5)")
+    print("SCORE REPORT — LinkedIn 360Brew (v3.5)")
     print("=" * 60)
 
-    print(f"\n🎯 SCORE FINAL: {result['final_score']}/10")
+    print(f"\nFINAL SCORE: {result['final_score']}/10")
     print(f"   {result['recommendation']}")
 
-    print(f"\n📈 Probabilidades:")
+    print(f"\nProbabilities:")
     print(f"   Top 1%: {result['probabilities']['top1']:.0f}%")
     print(f"   Top 5%: {result['probabilities']['top5']:.0f}%")
 
-    print(f"\n💪 Dimensões mais fortes: {', '.join(result['strongest'])}")
-    print(f"⚠️  Dimensões mais fracas: {', '.join(result['weakest'])}")
+    print(f"\nStrongest dimensions: {', '.join(result['strongest'])}")
+    print(f"Weakest dimensions: {', '.join(result['weakest'])}")
 
     print("\n" + "-" * 60)
-    print("📋 DETALHAMENTO POR DIMENSÃO:")
+    print("BREAKDOWN BY DIMENSION:")
     print("-" * 60)
 
     labels = {
@@ -472,22 +472,22 @@ def print_compact(result):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Score de post LinkedIn v3.5 baseado no 360Brew")
-    parser.add_argument("arquivo", help="Arquivo com o texto do post")
-    parser.add_argument("--objetivo", "-o", choices=["authority", "sales", "engagement"],
-                        default="authority", help="Objetivo do post (default: authority)")
-    parser.add_argument("--json", action="store_true", help="Output em JSON")
-    parser.add_argument("--compact", action="store_true", help="Output em 1 linha para pipeline")
+    parser = argparse.ArgumentParser(description="LinkedIn post score v3.5 based on 360Brew")
+    parser.add_argument("file", help="File with the post text")
+    parser.add_argument("--objective", "-o", choices=["authority", "sales", "engagement"],
+                        default="authority", help="Post objective (default: authority)")
+    parser.add_argument("--json", action="store_true", help="JSON output")
+    parser.add_argument("--compact", action="store_true", help="1-line output for a pipeline")
 
     args = parser.parse_args()
 
     try:
-        text = Path(args.arquivo).read_text(encoding='utf-8')
+        text = Path(args.file).read_text(encoding='utf-8')
     except FileNotFoundError:
-        print(f"Erro: arquivo '{args.arquivo}' não encontrado")
+        print(f"Error: file '{args.file}' not found")
         sys.exit(1)
 
-    result = score_post(text, args.objetivo)
+    result = score_post(text, args.objective)
 
     if args.json:
         import json

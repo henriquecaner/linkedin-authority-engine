@@ -14,7 +14,7 @@ frameworks:
   - money-models
 humanizer_pass: false
 humanizer_mode: n/a
-voz: crua
+voz: raw
 audit_ref: null
 parent_version: null
 ---
@@ -23,180 +23,180 @@ parent_version: null
 
 ## TL;DR
 
-**Preço que você ia cobrar:** R$ 2.397 one-time (mirando ~R$ 2.000 líquido).
-**Recomendação:** Gold em **R$ 2.997 a R$ 3.497** + continuity **R$ 297/mês** obrigatória no modelo.
-**Maior alavanca:** não é o número do front-end. É a **recorrência zero-touch** — sem ela você não bate R$ 25-40k de lucro, vira escravo de uma esteira que tem que reencher todo mês.
-**Risco principal:** não é o preço ser alto demais. É **converter ~13-15 vendas/mês em canal orgânico/warm/cold sem paid**. O preço tá certo. O volume é a aposta.
+**The price you were going to charge:** R$ 2.397 one-time (aiming for ~R$ 2.000 net).
+**Recommendation:** Gold at **R$ 2.997 to R$ 3.497** + **R$ 297/month** continuity, mandatory in the model.
+**Biggest lever:** it's not the front-end number. It's the **zero-touch recurring revenue** — without it you don't hit R$ 25-40k in profit, you become a slave to a treadmill you have to refill every month.
+**Main risk:** it's not that the price is too high. It's **converting ~13-15 sales/month through organic/warm/cold channels with no paid**. The price is right. The volume is the bet.
 
-> ⚠️ Premissa a confirmar: teu texto disse "fique em R$ 20000" — tratei como typo de **R$ 2.000**. Se eu li errado, todo o piso muda. Me corrige.
+> ⚠️ Assumption to confirm: your text said "stay at R$ 20000" — I treated it as a typo for **R$ 2.000**. If I read it wrong, the whole floor changes. Correct me.
 
 ---
 
 ## 📊 Snapshot
 
-| Campo | Valor |
+| Field | Value |
 |---|---|
-| Produto | LinkedIn Authority Engine (plugin Claude self-serve) |
-| Preço atual (ideado) | R$ 2.397 one-time |
-| Modelo | one-time → **recomendo híbrido (one-time + continuity)** |
-| Margem gross atual | alta — **custo de inferência é do cliente** (conta Claude dele), teu custo variável real ≈ licença Slack connect + tempo de suporte |
-| Volume mensal alvo | 13-15+ vendas/mês pra bater o piso de lucro |
-| LTGP estimado | ~R$ 2.000 (one-time líquido) + R$ ~177/mês de continuity, se zero-touch |
-| CAC atual | R$ 200 |
-| Ratio LTGP:CAC | ~10:1 no front-end (R$ 2.000 / R$ 200) — folgado |
+| Product | LinkedIn Authority Engine (self-serve Claude plugin) |
+| Current price (proposed) | R$ 2.397 one-time |
+| Model | one-time → **I recommend hybrid (one-time + continuity)** |
+| Current gross margin | high — **inference cost is the client's** (on their Claude bill), your real variable cost ≈ Slack connect license + support time |
+| Target monthly volume | 13-15+ sales/month to hit the profit floor |
+| Estimated LTGP | ~R$ 2.000 (net one-time) + ~R$ 177/month of continuity, if zero-touch |
+| Current CAC | R$ 200 |
+| LTGP:CAC ratio | ~10:1 on the front-end (R$ 2.000 / R$ 200) — comfortable |
 
-Validação até aqui: **R$ 40k+** já vendidos no formato implementado direto. Isso não é teoria. Você já provou que o método vende.
+Validation so far: **R$ 40k+** already sold in the directly implemented format. This isn't theory. You've already proven the method sells.
 
 ---
 
-## 🏛 Concorrência direta
+## 🏛 Direct competition
 
-| Concorrente | Oferta similar | Preço | Observação |
+| Competitor | Similar offer | Price | Note |
 |---|---|---|---|
-| Taplio | SaaS de conteúdo LinkedIn | $69-199/mês (~R$ 350-1.000/mês) | "Peca em contexto" — é editor, não sistema. Teu diferencial mora exatamente nesse buraco |
-| Ghostwriters | Posts por volume | R$ 100-200/post → R$ 2.000-6.000/mês no teu volume (20-30 posts) | Recorrente. Tradução: o mercado JÁ paga R$ 2-6k/mês por menos do que você entrega |
-| Brand You Up | Agência done-for-you | R$ 5.000/mês, contrato mín. 6 meses = **R$ 30.000** | Done-for-you. Você é DIY-assistido — não cobre o mesmo, mas ancora |
-| Ondas Kim | Agência | R$ 5.000-7.000/mês | Idem |
-| Alpaca (Michel Leach) | Setup de personal branding | **R$ 20.000 só setup** | Âncora superior absoluta. Teu Platinum vive na sombra desse número |
+| Taplio | LinkedIn content SaaS | $69-199/month (~R$ 350-1.000/month) | "Falls short on context" — it's an editor, not a system. Your edge lives exactly in that gap |
+| Ghostwriters | Posts by volume | R$ 100-200/post → R$ 2.000-6.000/month at your volume (20-30 posts) | Recurring. Translation: the market ALREADY pays R$ 2-6k/month for less than you deliver |
+| Brand You Up | Done-for-you agency | R$ 5.000/month, 6-month min. contract = **R$ 30.000** | Done-for-you. You're DIY-assisted — not the same coverage, but it anchors |
+| Ondas Kim | Agency | R$ 5.000-7.000/month | Same |
+| Alpaca (Michel Leach) | Personal branding setup | **R$ 20.000 for setup alone** | Absolute upper anchor. Your Platinum lives in the shadow of this number |
 
-**Sua posição no mercado:** mid-low no preço, premium no mecanismo. Esse descasamento é o problema inteiro. Você tem produto premium com etiqueta de ferramentinha.
-
----
-
-## ⚖️ Análise das 5 Leis
-
-### Lei 1: Compete em valor, não em preço
-**Score:** 🟡 amarelo
-**Diagnóstico:** Você tava ancorando mentalmente no Taplio ($199/mês). Errado. O Taplio "peca em contexto" — e contexto é literalmente o teu produto. Quem ancora em SaaS aceita preço de SaaS.
-**Recomendação:** Ancora em ghostwriter/agência (R$ 2-6k/mês recorrente, R$ 5k/mês done-for-you), não em SaaS. Tua frase: "ghostwriter cobra R$ 2-6k/mês pra escrever pra você. Eu te entrego o sistema que faz isso melhor, e o ativo fica seu pra sempre."
-
-### Lei 2: Cobra o que vale, não o que custa
-**Score:** 🔴 vermelho
-**Diagnóstico:** R$ 2.397 é cost-plus disfarçado. Você partiu de "quero receber R$ 2.000 líquido" e voltou pro preço. Isso é cobrar pelo teu custo/desejo, não pelo valor. Pro ICP que fatura R$ 1M+, **uma** venda B2B fechada via o pipeline paga o produto 10x. O valor não é R$ 2k. É múltiplos disso.
-**Recomendação:** Para de calcular do teu bolso pra fora. Calcula do resultado dele pra dentro. R$ 2.997-3.497 ainda é desconto absurdo contra o que a autoridade gera pra quem fatura sete dígitos.
-
-### Lei 3: Preço sinaliza qualidade
-**Score:** 🔴 vermelho
-**Diagnóstico:** Ironia que dói — você vende um produto de **autoridade** com um preço **sem autoridade**. R$ 2k pro cara que fatura R$ 1M+ sinaliza "ferramenta barata", não "sistema que me torna referência". O preço baixo VIRA a objeção. É o mesmo erro do serviço a R$ 2.500.
-**Recomendação:** O preço tem que vestir o ICP. Founder R$ 1M+ desconfia de transformação que custa R$ 2k. Sobe pra faixa onde o número confirma a promessa.
-
-### Lei 4: Tiering captura mais mercado
-**Score:** 🔴 vermelho
-**Diagnóstico:** Um preço só. Sem âncora em cima, sem rede embaixo. Você deixa na mesa tanto quem pagaria 3x quanto quem só topa entrar barato.
-**Recomendação:** 3 tiers (abaixo). Mas **lança v1 com só o Gold + continuity** — não deixa a sofisticação atrasar o lançamento que você disse que precisa AGORA.
-
-### Lei 5: Runway maior, ask maior
-**Score:** 🟡 amarelo
-**Diagnóstico:** Você dá suporte 2-3 meses (runway) mas não cobra proporcional, e não captura o runway longo com recorrência. Entrega contínua (comentários IA diários, 20-30 posts/mês) com cobrança única é vazamento de valor.
-**Recomendação:** O que é contínuo se cobra contínuo. Continuity obrigatória no modelo.
-
-**Placar: 0 🟢 / 2 🟡 / 3 🔴.** Áspero. Mas você ia regalar trabalho de agência por preço de app.
+**Your position in the market:** mid-low on price, premium on mechanism. That mismatch is the whole problem. You have a premium product with a little-tool price tag.
 
 ---
 
-## 💡 É problema de preço OU de percepção?
+## ⚖️ Analysis of the 5 laws
 
-**É os dois, e eles se alimentam.** O preço baixo CRIA o problema de percepção: R$ 2k pro ICP R$ 1M+ não lê como "premium acessível", lê como "deve ser fraco". Aqui subir o preço **melhora** a percepção em vez de piorar a conversão — é o caso raro em que o número baixo era o teto da credibilidade.
+### Law 1: Compete on value, not on price
+**Score:** 🟡 yellow
+**Diagnosis:** You were mentally anchoring on Taplio ($199/month). Wrong. Taplio "falls short on context" — and context is literally your product. Whoever anchors on SaaS accepts SaaS pricing.
+**Recommendation:** Anchor on ghostwriter/agency (R$ 2-6k/month recurring, R$ 5k/month done-for-you), not on SaaS. Your line: "a ghostwriter charges R$ 2-6k/month to write for you. I hand you the system that does it better, and the asset stays yours forever."
 
-O que falta pra sustentar o preço maior sem quebrar conversão: **prova visível** (os R$ 40k+ em cases, os teus próprios números de LinkedIn como prova viva). Você tem isso. Use na LP.
+### Law 2: Charge what it's worth, not what it costs
+**Score:** 🔴 red
+**Diagnosis:** R$ 2.397 is cost-plus in disguise. You started from "I want to net R$ 2.000" and worked back to the price. That's charging for your cost/want, not for the value. For the ICP doing R$ 1M+, **one** B2B deal closed through the pipeline pays for the product 10x over. The value isn't R$ 2k. It's multiples of that.
+**Recommendation:** Stop calculating from your pocket outward. Calculate from their result inward. R$ 2.997-3.497 is still an absurd discount against what authority generates for someone doing seven figures.
 
-**Conclusão:** problema é **percepção causada por preço baixo + ausência de money model recorrente**. Não é preço alto demais — é o oposto.
+### Law 3: Price signals quality
+**Score:** 🔴 red
+**Diagnosis:** A painful irony — you sell a product about **authority** with a price that has **no authority**. R$ 2k to the guy doing R$ 1M+ signals "cheap tool", not "system that makes me a reference". The low price BECOMES the objection. It's the same mistake as the R$ 2.500 service.
+**Recommendation:** The price has to fit the ICP. A R$ 1M+ founder distrusts a transformation that costs R$ 2k. Move it up to the range where the number confirms the promise.
+
+### Law 4: Tiering captures more market
+**Score:** 🔴 red
+**Diagnosis:** A single price. No anchor above, no net below. You leave money on the table from both the people who'd pay 3x and the people who'll only come in cheap.
+**Recommendation:** 3 tiers (below). But **launch v1 with just Gold + continuity** — don't let the sophistication delay the launch you said you need NOW.
+
+### Law 5: Bigger runway, bigger ask
+**Score:** 🟡 yellow
+**Diagnosis:** You give 2-3 months of support (runway) but don't charge proportionally, and you don't capture the long runway with recurring revenue. Continuous delivery (daily AI comments, 20-30 posts/month) on a one-time charge is value leakage.
+**Recommendation:** What's continuous gets charged continuously. Mandatory continuity in the model.
+
+**Scoreboard: 0 🟢 / 2 🟡 / 3 🔴.** Rough. But you were about to give away agency-level work at app-level prices.
 
 ---
 
-## 🎯 Recomendação
+## 💡 Is it a price problem OR a perception problem?
 
-### Estrutura de tiers proposta
+**It's both, and they feed each other.** The low price CREATES the perception problem: R$ 2k to an ICP doing R$ 1M+ doesn't read as "affordable premium", it reads as "must be weak". Here, raising the price **improves** perception instead of hurting conversion — it's the rare case where the low number was the ceiling on credibility.
 
-**Tier 1 — Silver: R$ 1.497** (v2 — não trava o lançamento)
-- Plugin + guia passo a passo + comunidade (suporte assíncrono coletivo).
-- Sem Slack connect individual.
-- Para quem: budget-conscious, EN/ES assíncrono, ou quem disse não ao Gold (vira downsell).
+What's missing to support the higher price without breaking conversion: **visible proof** (the R$ 40k+ in cases, your own LinkedIn numbers as living proof). You have that. Use it on the LP.
 
-**Tier 2 — Gold (DEFAULT): R$ 2.997 à vista / 12x R$ 297** ← **o carro-chefe**
-- Plugin + guia + **Slack connect individual** (suporte assistido 2-3 meses) + onboarding de setup.
-- Mira ~R$ 2.000-2.400 líquido por venda.
-- Para quem: 60-70% do mercado. É aqui que o dinheiro mora.
+**Conclusion:** the problem is **perception caused by a low price + the absence of a recurring money model**. It's not that the price is too high — it's the opposite.
 
-**Tier 3 — Platinum: R$ 8.997** (v2 — âncora)
-- Tudo do Gold + **teu envolvimento direto** (mentoria assistida, só PT).
-- É literalmente teu modelo "3x": Gold (1x) + tua ajuda direta (2x) = 3x. Tua própria intuição já desenhou isso.
-- Para quem: quem quer você na mesa. Poucos. A função principal é **ancorar** — faz o Gold parecer pechincha.
+---
 
-### Ancoragem
-Na LP, lado a lado: **"Agência: R$ 30.000 (6 meses). Setup avulso de mercado: R$ 20.000. Authority Engine Gold: R$ 2.997 — e o sistema fica seu pra sempre."**
-Atenção honesta: ancora como **"uma fração do que a agência cobra"**, NÃO como "mesmo valor da agência". A agência é done-for-you, você é DIY-assistido. Comprador sofisticado pega overclaim na hora e você perde a venda toda. A fração já é argumento devastador sozinha.
+## 🎯 Recommendation
 
-### Estrutura de pagamento
-- **PIX/à vista: R$ 2.997** (incentiva — taxa ~0-1%, recebe quase limpo).
-- **12x R$ 297** (R$ 3.564) — você absorve o juro da antecipação (18,79% na InfinityPay+Nitro come ~R$ 600). Por isso o preço de tabela parcelado sobe: ou você embute, ou empurra PIX com desconto.
-- Recomendação: **preço de tabela R$ 2.997, desconto PIX visível**. Empurra todo mundo que puder pro PIX e protege tua margem da mordida do cartão.
+### Proposed tier structure
+
+**Tier 1 — Silver: R$ 1.497** (v2 — doesn't block the launch)
+- Plugin + step-by-step guide + community (collective async support).
+- No individual Slack connect.
+- For whom: budget-conscious, async EN/ES, or anyone who said no to Gold (becomes a downsell).
+
+**Tier 2 — Gold (DEFAULT): R$ 2.997 upfront / 12x R$ 297** ← **the flagship**
+- Plugin + guide + **individual Slack connect** (assisted support 2-3 months) + setup onboarding.
+- Aims for ~R$ 2.000-2.400 net per sale.
+- For whom: 60-70% of the market. This is where the money lives.
+
+**Tier 3 — Platinum: R$ 8.997** (v2 — anchor)
+- Everything in Gold + **your direct involvement** (assisted mentoring, PT only).
+- It's literally your "3x" model: Gold (1x) + your direct help (2x) = 3x. Your own intuition already designed this.
+- For whom: people who want you at the table. Few. Its main function is to **anchor** — it makes Gold look like a bargain.
+
+### Anchoring
+On the LP, side by side: **"Agency: R$ 30.000 (6 months). Standalone market setup: R$ 20.000. Authority Engine Gold: R$ 2.997 — and the system stays yours forever."**
+An honest caveat: anchor it as **"a fraction of what the agency charges"**, NOT as "the same value as the agency". The agency is done-for-you, you're DIY-assisted. A sophisticated buyer catches the overclaim instantly and you lose the whole sale. The fraction is already a devastating argument on its own.
+
+### Payment structure
+- **PIX/upfront: R$ 2.997** (incentivize it — fee ~0-1%, you receive almost clean).
+- **12x R$ 297** (R$ 3.564) — you absorb the advance-financing interest (18.79% on InfinityPay+Nitro eats ~R$ 600). That's why the listed installment price goes up: either you build it in, or you push PIX with a discount.
+- Recommendation: **list price R$ 2.997, visible PIX discount**. Push everyone who can toward PIX and protect your margin from the credit-card bite.
 
 ### Downsell
-Quem disse não ao Gold → oferece o **Silver R$ 1.497** (sem teu suporte individual). Mantém a venda, corta teu custo de atendimento.
+Anyone who said no to Gold → offer **Silver R$ 1.497** (without your individual support). Keeps the sale, cuts your service cost.
 
-### Upsell / order bump (v2, pós-checkout)
-"Setup Day" — sessão 1:1 de 90 min onde você faz o diagnóstico + setup **junto** com o cliente. **R$ 497.** Absorve parte do CAC no dia zero e aumenta ativação (cliente que faz setup junto não abandona).
-
----
-
-## 🔁 O money model (a peça que faltava — responde tua pergunta direto)
-
-Você perguntou: "talvez faça sentido ter recorrência pra apoiar nisso, né?" — **Sim. Não é talvez. É obrigatório.**
-
-Com one-time puro de R$ 2k líquido, pra bater R$ 30k de lucro/mês você precisa de ~15 vendas TODO mês, pra sempre, sem nunca acumular. Esteira infinita. No primeiro mês fraco, teu salário some.
-
-**Continuity: "Authority Engine OS" — R$ 297/mês.**
-Mantém: automação de comentários IA rodando, novos prompts/features do plugin, atualizações conforme o algoritmo do LinkedIn muda, comunidade.
-
-⚠️ **CONSTRAINT DURO E INEGOCIÁVEL: a continuity tem que ser ZERO-TOUCH.**
-R$ 297/mês rende ~R$ 177 líquido. Teu custo-hora é R$ 250. **Uma única hora de suporte/mês torna a continuity prejuízo.** Logo: continuity = produto + automação + comunidade. NUNCA 1:1 agendado. Se você colocar atendimento individual na recorrência, o MRR vira ficção e você paga pra trabalhar. Suporte individual mora no Gold (período fechado de 2-3 meses) e no Platinum. Na recorrência, não.
-
-**Matemática pro piso de R$ 30k lucro/mês (mês 3-4):**
-- ~13 vendas Gold/mês × R$ 2.000 líquido = R$ 26k front-end.
-- Continuity acumulando: se 50% ficam, mês 3 ≈ 20 assinantes × R$ 177 = ~R$ 3,5k MRR e subindo.
-- Menos custos fixos de ferramenta (~R$ 2k/mês).
-- Bate R$ 25-30k no mês 3, R$ 35-40k no mês 5-6 conforme o MRR compõe.
-
-A recorrência é o que transforma "esteira que reencho" em "lucro que cresce sozinho".
+### Upsell / order bump (v2, post-checkout)
+"Setup Day" — a 90-min 1:1 session where you do the diagnosis + setup **together** with the client. **R$ 497.** Absorbs part of the CAC on day zero and increases activation (a client who does setup with you doesn't abandon).
 
 ---
 
-## 🧪 Teste de validação (1-2 semanas)
+## 🔁 The money model (the missing piece — answers your question directly)
 
-**Cenário:** os próximos 10-20 leads — começa pelo **warm que já está esperando o produto** — recebem o pricing novo (Gold R$ 2.997 + continuity R$ 297/mês).
+You asked: "maybe it makes sense to have recurring revenue to support this, right?" — **Yes. It's not a maybe. It's mandatory.**
 
-**Métricas:**
+With pure one-time of R$ 2k net, to hit R$ 30k profit/month you need ~15 sales EVERY month, forever, never accumulating. An infinite treadmill. In the first weak month, your salary vanishes.
+
+**Continuity: "Authority Engine OS" — R$ 297/month.**
+Keeps running: the AI comment automation, new plugin prompts/features, updates as the LinkedIn algorithm changes, the community.
+
+⚠️ **HARD, NON-NEGOTIABLE CONSTRAINT: continuity has to be ZERO-TOUCH.**
+R$ 297/month yields ~R$ 177 net. Your hourly cost is R$ 250. **A single hour of support/month turns continuity into a loss.** So: continuity = product + automation + community. NEVER scheduled 1:1. If you put individual support in the recurring tier, the MRR becomes fiction and you pay to work. Individual support lives in Gold (the closed 2-3 month period) and in Platinum. Not in the recurring tier.
+
+**Math for the R$ 30k profit/month floor (month 3-4):**
+- ~13 Gold sales/month × R$ 2.000 net = R$ 26k front-end.
+- Continuity stacking: if 50% stay, month 3 ≈ 20 subscribers × R$ 177 = ~R$ 3.5k MRR and climbing.
+- Minus fixed tool costs (~R$ 2k/month).
+- Hits R$ 25-30k in month 3, R$ 35-40k in month 5-6 as the MRR compounds.
+
+The recurring revenue is what turns "a treadmill I keep refilling" into "profit that grows on its own".
+
+---
+
+## 🧪 Validation test (1-2 weeks)
+
+**Scenario:** the next 10-20 leads — start with the **warm audience already waiting for the product** — get the new pricing (Gold R$ 2.997 + continuity R$ 297/month).
+
+**Metrics:**
 - Conversion rate lead → close.
-- AOV (com quantos pegam continuity no ato).
-- Take rate: quantos pedem desconto / hesitam no número.
-- Tempo médio de decisão.
-- Razões de "não" — entrevista 3-5 no-buys (é preço ou é percepção/prova?).
+- AOV (how many take continuity on the spot).
+- Take rate: how many ask for a discount / hesitate at the number.
+- Average decision time.
+- Reasons for "no" — interview 3-5 no-buys (is it price or perception/proof?).
 
-**Critério de sucesso:**
-- Fecha ≥4 dos primeiros 15 a R$ 2.997 → preço validado, escala.
-- Conversão despenca E todo "não" cita preço explícito → testa R$ 2.497 antes de descer mais (não volta pra R$ 2k).
-- "Não" cita falta de prova/confiança, não preço → o problema é percepção: roda `/hormozi-gtm:audit` e reforça cases na LP, NÃO baixa o preço.
-
----
-
-## ⚠️ Riscos da recomendação
-
-1. **Volume é a aposta real, não o preço.** ~13-15 vendas/mês a R$ 2.997 em canal orgânico/warm/cold, sem paid ligado, é o gargalo verdadeiro. Mitigação: lança primeiro pro warm que já espera (conversão alta, ciclo curto), valida o número, e SÓ DEPOIS liga paid pra escalar volume.
-2. **Sem audit da oferta, o salto de preço corre no escuro.** Se a Probability na Value Equation estiver fraca (sem cases visíveis, sem garantia clara na LP), R$ 2.997 pode travar conversão. Mitigação: roda `/hormozi-gtm:audit` antes de lançar a LP, ou no mínimo bota os R$ 40k+ em cases e uma garantia visível no hero.
-3. **Continuity vira prejuízo se você ceder e colocar suporte 1:1 nela.** Já explicado. Mitigação: disciplina — recorrência é produto+automação+comunidade, ponto.
-4. **Sofisticação de pricing atrasando o lançamento que você precisa AGORA.** 3 tiers + bump + continuity = muita coisa pra montar antes de vender. Mitigação: **v1 = só Gold + continuity em UM link InfinityPay, no ar essa semana.** Silver, Platinum e order bump entram na v2, depois das primeiras vendas.
+**Success criteria:**
+- Close ≥4 of the first 15 at R$ 2.997 → price validated, scale.
+- Conversion tanks AND every "no" cites price explicitly → test R$ 2.497 before going lower (don't go back to R$ 2k).
+- "No" cites lack of proof/trust, not price → the problem is perception: run `/hormozi-gtm:audit` and reinforce cases on the LP, do NOT lower the price.
 
 ---
 
-## 🔄 Próximos passos
+## ⚠️ Risks of the recommendation
 
-1. **Confirma o typo** R$ 20000 → R$ 2.000 (1 linha). Todo o piso depende disso.
-2. **Sobe a LP com Gold R$ 2.997 + continuity R$ 297/mês** num link só. Essa semana. Não espera os 3 tiers.
-3. **Roda `/hormozi-gtm:audit`** antes de mandar tráfego frio — pra garantir que a Probability sustenta o preço novo (cases + garantia visíveis).
-4. **Lança pro warm primeiro.** Valida o R$ 2.997 com quem já te conhece antes de gastar em frio/paid.
-5. Depois de 15-20 vendas, volta com `/hormozi-gtm:pricing` (gera v2) pra calibrar tiers e ligar Silver/Platinum/bump.
+1. **Volume is the real bet, not the price.** ~13-15 sales/month at R$ 2.997 through organic/warm/cold, with no paid turned on, is the true bottleneck. Mitigation: launch first to the warm audience already waiting (high conversion, short cycle), validate the number, and ONLY THEN turn on paid to scale volume.
+2. **Without an offer audit, the price jump runs blind.** If Probability in the Value Equation is weak (no visible cases, no clear guarantee on the LP), R$ 2.997 can stall conversion. Mitigation: run `/hormozi-gtm:audit` before launching the LP, or at minimum put the R$ 40k+ in cases and a visible guarantee in the hero.
+3. **Continuity becomes a loss if you cave and put 1:1 support into it.** Already explained. Mitigation: discipline — recurring is product+automation+community, period.
+4. **Pricing sophistication delaying the launch you need NOW.** 3 tiers + bump + continuity = a lot to build before selling. Mitigation: **v1 = just Gold + continuity on ONE InfinityPay link, live this week.** Silver, Platinum, and the order bump come in v2, after the first sales.
 
 ---
 
-*Pricing review gerado pelo plugin hormozi-gtm. Persona Alex Hormozi aplicada. Voz crua, sem humanizer (output interno/diagnóstico).*
+## 🔄 Next steps
+
+1. **Confirm the typo** R$ 20000 → R$ 2.000 (1 line). The whole floor depends on it.
+2. **Put up the LP with Gold R$ 2.997 + continuity R$ 297/month** on a single link. This week. Don't wait for the 3 tiers.
+3. **Run `/hormozi-gtm:audit`** before sending cold traffic — to make sure Probability holds up the new price (visible cases + guarantee).
+4. **Launch to the warm audience first.** Validate the R$ 2.997 with people who already know you before spending on cold/paid.
+5. After 15-20 sales, come back with `/hormozi-gtm:pricing` (generates v2) to calibrate tiers and turn on Silver/Platinum/bump.
+
+---
+
+*Pricing review generated by the hormozi-gtm plugin. Alex Hormozi persona applied. Raw voice, no humanizer (internal/diagnostic output).*

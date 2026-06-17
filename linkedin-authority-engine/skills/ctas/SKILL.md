@@ -1,143 +1,143 @@
 ---
 name: ctas
-description: Banco de CTAs para LinkedIn por objetivo (saves, leads, engajamento, seguidores, vendas, newsletter) com fórmulas e erros a evitar. Use ao escolher o CTA final de qualquer post para maximizar o sinal correto no 360Brew.
+description: A bank of LinkedIn CTAs by objective (saves, leads, engagement, followers, sales, newsletter) with formulas and mistakes to avoid. Use when choosing the closing CTA of any post to maximize the right signal in 360Brew.
 ---
 
-# CTAs por Objetivo
+# CTAs by objective
 
-> **Prioridade de CTA em 2026:** Saves (5x curtidas) > Comentários longos (2x curtidas) > Follow > Leads
-
----
-
-## Para Maximizar Saves (PRIORIDADE MÁXIMA)
-
-Saves são o sinal mais poderoso do 360Brew — valem 5x uma curtida. CTAs que incentivam salvar geram alcance multiplicado.
-
-**Top CTAs de Save:**
-
-1. "Salva esse post para consultar quando precisar"
-2. "Guarda aqui para ter isso à mão na hora certa"
-3. "Salva — você vai querer reler isso antes da sua próxima [situação específica]"
-4. "Esse é o tipo de post pra salvar e aplicar. Não no futuro: na próxima semana"
-5. "Salva e manda para alguém que tá passando por isso agora"
-
-**Quando usar:** Sempre que o post contiver framework, checklist, lista de referência, template ou guia prático — ou seja, conteúdo que as pessoas vão querer consultar depois.
+> **CTA priority in 2026:** Saves (5x likes) > Long comments (2x likes) > Follow > Leads
 
 ---
 
-## Para Gerar Leads (Funil de Comentários)
+## To maximize saves (TOP PRIORITY)
 
-**Top CTAs 2026:**
+Saves are the most powerful signal in 360Brew — worth 5x a like. CTAs that encourage saving multiply reach.
 
-1. "Comenta [PALAVRA] que eu mando [RECURSO]"
-2. "Comenta [PALAVRA] que eu mando o GPT"
-3. "DM aberta - me mande mensagem"
-4. "Link na bio para agendar call"
+**Top save CTAs:**
 
-**Exemplo:**
+1. "Save this post so you can come back to it when you need it"
+2. "Bookmark this to have it on hand at the right moment"
+3. "Save this — you'll want to reread it before your next [specific situation]"
+4. "This is the kind of post to save and apply. Not someday: next week"
+5. "Save this and send it to someone going through this right now"
 
-"Quer a planilha completa? Comenta PLANILHA que eu mando no seu DM. Grátis."
-
----
-
-## Para Engajamento (Comentários Longos)
-
-> Atenção: o 360Brew só conta comentários com 3+ frases estruturadas. CTAs que incentivam respostas superficiais não geram distribuição.
-
-**Top CTAs que geram comentários substanciais:**
-
-1. "Discorda de algum ponto? Me conta qual e por quê"
-2. "Qual desses [número] erros você já cometeu — e o que aprendeu?"
-3. "Qual desses pontos mais ressoou com o momento que você tá vivendo?"
-4. "Já passou por isso? Conta um detalhe da sua experiência"
-5. "Qual seria o ponto número [N+1] da sua perspectiva?"
-
-**EVITAR em 2026:**
-
-❌ "O que você acha?" (isca detectada — gera respostas rasas)
-❌ "Concordam?" (preguiçoso — uma palavra não conta)
+**When to use:** Whenever the post contains a framework, checklist, reference list, template, or practical guide — content people will want to revisit later.
 
 ---
 
-## Para Seguidores
+## To generate leads (comment funnel)
+
+**Top CTAs for 2026:**
+
+1. "Comment [WORD] and I'll send you [RESOURCE]"
+2. "Comment [WORD] and I'll send you the GPT"
+3. "DM me — send me a message"
+4. "Link in bio to book a call"
+
+**Example:**
+
+"Want the full spreadsheet? Comment SPREADSHEET and I'll DM it to you. Free."
+
+---
+
+## For engagement (long comments)
+
+> Note: 360Brew only counts comments with 3+ structured sentences. CTAs that encourage shallow replies don't drive distribution.
+
+**Top CTAs that generate substantial comments:**
+
+1. "Disagree with any point? Tell me which one and why"
+2. "Which of these [number] mistakes have you made — and what did you learn?"
+3. "Which of these points resonated most with where you are right now?"
+4. "Been through this? Share one detail from your experience"
+5. "What would point number [N+1] be from your perspective?"
+
+**AVOID in 2026:**
+
+❌ "What do you think?" (detected as bait — generates shallow replies)
+❌ "Agree?" (lazy — a single word doesn't count)
+
+---
+
+## For followers
 
 **Top CTAs:**
 
-1. "Me siga para [benefício específico e concreto]"
-2. "Sigo publicando sobre [nicho] toda semana — siga para não perder"
-3. "Ative o 🔔 para receber quando postar"
+1. "Follow me for [specific, concrete benefit]"
+2. "I keep publishing about [niche] every week — follow me so you don't miss it"
+3. "Turn on the 🔔 to get notified when I post"
 
-**Exemplo:**
+**Example:**
 
-"Me siga para frameworks práticos de growth B2B toda semana."
+"Follow me for practical B2B growth frameworks every week."
 
 ---
 
-## Para Vender
+## To sell
 
 **Top CTAs:**
 
-1. "Vagas limitadas: [link no primeiro comentário]"
-2. "Apenas [número] vagas restantes"
-3. "Agende call para ver se faz sentido: [link no primeiro comentário]"
-4. "Inscrições fecham em [data]"
+1. "Limited spots: [link in first comment]"
+2. "Only [number] spots left"
+3. "Book a call to see if it's a fit: [link in first comment]"
+4. "Enrollment closes on [date]"
 
-> **Nota:** Nunca coloque o link no corpo do post — isso corta 60% do alcance. Coloque no 1º comentário logo após publicar.
+> **Note:** Never put the link in the body of the post — that cuts reach by 60%. Put it in the first comment right after publishing.
 
 ---
 
-## Para Newsletter
+## For newsletter
 
 **Top CTAs:**
 
-1. "Inscreva-se na newsletter: [link no primeiro comentário]"
-2. "Comenta EMAIL que eu mando o link"
-3. "[Número]+ pessoas recebem semanalmente. Link no primeiro comentário"
+1. "Subscribe to the newsletter: [link in first comment]"
+2. "Comment EMAIL and I'll send the link"
+3. "[Number]+ people get this weekly. Link in first comment"
 
 ---
 
-## Fórmulas de CTA Poderoso
+## Powerful CTA formulas
 
-### Fórmula 1: Save + Benefício Futuro
+### Formula 1: Save + future benefit
 
-"Salva esse post — você vai precisar disso quando [situação específica]"
+"Save this post — you'll need it when [specific situation]"
 
-### Fórmula 2: Problema + Solução + Ação
+### Formula 2: Problem + solution + action
 
-"Se você [problema], [ação] para [solução concreta]"
+"If you [problem], [action] to [concrete solution]"
 
-### Fórmula 3: Social Proof + Ação
+### Formula 3: Social proof + action
 
-"[Número] pessoas já aplicaram isso. [Ação] para [próximo passo]"
+"[Number] people have already applied this. [Action] for [next step]"
 
-### Fórmula 4: Convite para Debate Real
+### Formula 4: Invitation to real debate
 
-"Minha posição é [posição clara]. E a sua? Me conta em 3 frases"
-
----
-
-## Erros de CTA (EVITE)
-
-❌ Sem CTA algum
-
-❌ CTA vago ("Pense sobre isso")
-
-❌ Múltiplos CTAs (confunde e dilui o sinal)
-
-❌ CTA desconectado do conteúdo
-
-❌ "O que você acha?" (punido em 2026)
-
-❌ Link no corpo do post (−60% alcance — use o 1º comentário)
+"My take is [clear position]. What's yours? Tell me in 3 sentences"
 
 ---
 
-## Checklist de CTA
+## CTA mistakes (AVOID)
 
-- [ ] Claro e específico
-- [ ] Fácil de executar
-- [ ] Conectado ao conteúdo
-- [ ] Um único foco
-- [ ] Benefício óbvio
-- [ ] Se tiver link: está no 1º comentário, não no corpo?
-- [ ] Incentiva save OU comentário longo (3+ frases) — não like superficial?
+❌ No CTA at all
+
+❌ Vague CTA ("Think about it")
+
+❌ Multiple CTAs (confuses and dilutes the signal)
+
+❌ A CTA disconnected from the content
+
+❌ "What do you think?" (punished in 2026)
+
+❌ Link in the body of the post (−60% reach — use the first comment)
+
+---
+
+## CTA checklist
+
+- [ ] Clear and specific
+- [ ] Easy to act on
+- [ ] Connected to the content
+- [ ] A single focus
+- [ ] Obvious benefit
+- [ ] If there's a link: is it in the first comment, not the body?
+- [ ] Encourages a save OR a long comment (3+ sentences) — not a shallow like?

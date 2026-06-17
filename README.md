@@ -1,175 +1,175 @@
 # LinkedIn Authority Engine
 
-> Plugin para **Claude Code** e **Claude Cowork** que transforma a expertise de um founder em autoridade no LinkedIn. Posts tunados pelo algoritmo 360Brew, com perfil de cliente vivo e memória que aprende a cada sessão.
+> Plugin for **Claude Code** and **Claude Cowork** that turns a founder's expertise into authority on LinkedIn. Posts tuned for the 360Brew algorithm, with a living client profile and memory that learns every session.
 
-[![versão](https://img.shields.io/badge/versão-1.0.0-black)](./linkedin-authority-engine/.claude-plugin/plugin.json)
-[![plataforma](https://img.shields.io/badge/Claude%20Code%20%7C%20Cowork-plugin-blue)](https://thelevr.com)
-[![algoritmo](https://img.shields.io/badge/360Brew-v3.0%20Q1%202026-orange)](./linkedin-authority-engine/skills/algoritmo-360brew/SKILL.md)
-[![licença](https://img.shields.io/badge/licença-proprietary-lightgrey)](#licença)
+[![version](https://img.shields.io/badge/version-1.0.0-black)](./linkedin-authority-engine/.claude-plugin/plugin.json)
+[![platform](https://img.shields.io/badge/Claude%20Code%20%7C%20Cowork-plugin-blue)](https://thelevr.com)
+[![algorithm](https://img.shields.io/badge/360Brew-v3.0%20Q1%202026-orange)](./linkedin-authority-engine/skills/360brew-algorithm/SKILL.md)
+[![license](https://img.shields.io/badge/license-proprietary-lightgrey)](#license)
 
-Por **[LEVEL TECH](https://thelevel.com.br)** · página do produto: **[thelevr.com](https://thelevr.com)**
-
----
-
-## O problema
-
-Você é especialista e ninguém no LinkedIn sabe disso. Ou você já tentou: postou por meses, colheu dois likes (um do sócio) e parou. Ou pagou uma agência que devolveu "awareness" e um relatório bonito, sem uma reunião no calendário.
-
-O gargalo nunca foi falta de conhecimento. Foi falta de um sistema que pega o que você sabe e entrega no formato que o algoritmo do LinkedIn premia — toda semana, sem você virar criador de conteúdo de tempo integral.
-
-## O que o plugin faz
-
-Você conversa com a Claude. O plugin lê o seu perfil de autoridade, gera o post no framework certo, tira a cara de IA do texto, dá uma nota técnica antes de publicar e ainda te entrega o protocolo dos 90 minutos seguintes à publicação. Cada post que sai bem alimenta a memória, e o próximo já nasce mais perto da sua voz.
-
-Três coisas separam ele de um gerador de texto genérico:
-
-- **Tunado pelo 360Brew.** Toda decisão de formato, timing, gancho e CTA é checada contra a referência do algoritmo do LinkedIn (v3.0, Q1 2026) — não contra "boas práticas" vagas.
-- **Perfil de cliente vivo.** O `authority-context.md` guarda quem você é, sua voz, seus temas e seus números. O conteúdo nasce seu, não de um template.
-- **Memória auto-enriquecedora.** Padrões que funcionam viram aprendizado persistente. O plugin fica melhor no seu caso a cada sessão, por três "portas" de write-back.
+By **[LEVEL TECH](https://thelevel.com.br)** · product page: **[thelevr.com](https://thelevr.com)**
 
 ---
 
-## Instalação
+## The problem
+
+You're an expert and no one on LinkedIn knows it. Maybe you've already tried: posted for months, got two likes (one from your business partner), and stopped. Or you paid an agency that gave you back "awareness" and a polished report, with zero meetings on the calendar.
+
+The bottleneck was never knowledge. It's that you didn't have a system to take what you know and ship it in the format the LinkedIn algorithm rewards, week after week, without turning you into a full-time content creator.
+
+## What the plugin does
+
+You talk to Claude. The plugin reads your authority profile, drafts the post in the right framework, strips the AI tone out of the text, and grades it before you publish. It also gives you a protocol for the first 90 minutes after the post goes live. Every post that lands feeds the memory, so the next one starts closer to your voice.
+
+Three things set it apart from a generic text generator:
+
+- **Tuned for 360Brew.** Format, timing, hook, and CTA all get checked against the LinkedIn algorithm reference (v3.0, Q1 2026), not against vague "best practices."
+- **Living client profile.** The `authority-context.md` holds who you are, your voice, your topics, and your numbers. The content comes out yours, not off a template.
+- **Self-enriching memory.** Patterns that work get saved as learnings. The plugin gets sharper on your case each session, through three write-back "doors."
+
+---
+
+## Installation
 
 ```bash
-# 1. adiciona o marketplace local
-/plugin marketplace add /caminho/para/linkedin-authority-engine
+# 1. add the local marketplace
+/plugin marketplace add /path/to/linkedin-authority-engine
 
-# 2. instala o plugin
+# 2. install the plugin
 /plugin install linkedin-authority-engine
 
-# 3. cria o perfil do cliente (onboarding)
+# 3. create the client profile (onboarding)
 /linkedin-authority-engine:init
 ```
 
-Depois do `init`, use `/linkedin-authority-engine:linkedin` para ver o menu de modos.
+After `init`, use `/linkedin-authority-engine:linkedin` to see the mode menu.
 
 ---
 
-## Comandos
+## Commands
 
-| Comando | O que faz |
+| Command | What it does |
 |---|---|
-| `init` | Onboarding. Conduz a entrevista de discovery e cria `authority-context.md`, `memory/` e `outputs/posts/`. Aceita `--refresh` pra atualizar o perfil. |
-| `linkedin` | Menu central. Mostra os modos e roteia pro escolhido. Bom ponto de partida. |
-| `guiado` | Cria um post do zero num workflow de 7 etapas: categoria → objetivo → pauta → estrutura → tipo → hook → corpo → CTA. |
-| `rewrite` | Otimiza um post existente em duas versões (conservadora e bold), com diagnóstico 360Brew, humanizer e score comparativo. |
-| `thread` | Monta uma série de 3-7 posts sobre um tema, com arquitetura planejada (gancho, autoridade, educativo, story, conversão). |
-| `score` | Avalia e humaniza um post pronto. Roda validação técnica, humanizer e nota nas 6 dimensões, com veredicto: publicar / ajustar / retrabalhar. |
+| `init` | Onboarding. Runs the discovery interview and creates `authority-context.md`, `memory/` and `outputs/posts/`. Accepts `--refresh` to update the profile. |
+| `linkedin` | Central menu. Shows the modes and routes to the chosen one. A good starting point. |
+| `guided` | Creates a post from scratch in a 7-step workflow: category → objective → angle → structure → type → hook → body → CTA. |
+| `rewrite` | Optimizes an existing post into two versions (conservative and bold), with a 360Brew diagnosis, humanizer and comparative score. |
+| `thread` | Builds a series of 3-7 posts on a topic, with a planned architecture (hook, authority, educational, story, conversion). |
+| `score` | Evaluates and humanizes a finished post. Runs technical validation, humanizer and a grade across the 6 dimensions, with a verdict: publish / adjust / rework. |
 
 ---
 
-## Como funciona por dentro
+## How it works under the hood
 
 ```
 authority-context.md  ─┐
-memory/                ─┤──►  lê perfil + padrões vencedores
+memory/                ─┤──►  reads profile + winning patterns
                         │
                   ┌─────▼─────────────────────────────────┐
-                  │  geração (guiado / rewrite / thread)   │
-                  │  estrutura → hook → corpo → CTA        │
+                  │  generation (guided / rewrite / thread)│
+                  │  structure → hook → body → CTA         │
                   └─────┬─────────────────────────────────┘
                         │
-                  humanizer-linkedin   (tira a cara de IA)
+                  humanizer-linkedin   (takes the AI look out)
                         │
-                  score_post.py        (6 dimensões 360Brew)
+                  score_post.py        (6 360Brew dimensions)
                         │
-                  protocolo-pos-publicacao (90 min críticos)
+                  post-publication-protocol (90 critical min)
                         │
-                  write-back ──►  memory/  (auto-enriquecimento)
+                  write-back ──►  memory/  (self-enrichment)
 ```
 
 ### Skills (12)
 
-A inteligência do plugin mora nas skills — cada uma é uma referência que a Claude carrega quando precisa.
+The plugin's intelligence lives in the skills — each one is a reference that Claude loads when it needs it.
 
-| Skill | Função |
+| Skill | Function |
 |---|---|
-| `algoritmo-360brew` | Referência completa do algoritmo: formato, timing, métricas e pontuação. |
-| `authority-context` | Protocolo de leitura/escrita do substrato de memória do cliente. As 3 portas de auto-enriquecimento. |
-| `hooks` | Banco de 147 hooks por tipo (prova, autoridade, transformação, contrarian, confissão…). |
-| `estruturas-copywriting` | 8 frameworks (AIDA, PAS, BAB, FAB, Star-Story-Solution, APP, HSO, Storytelling) e guia de escolha. |
-| `tipos-conteudo` | Catálogo de 16 tipos de post por objetivo. |
-| `templates-por-categoria` | Templates prontos pra 7 categorias, com placeholders e exemplos. |
-| `ctas` | Banco de CTAs por objetivo (saves, leads, engajamento, vendas…). |
-| `estilo-tom` | Guia de formatação 360Brew, autenticidade e checklist de voz. |
-| `humanizer-linkedin` | Pipeline que remove padrões de escrita de IA — cirurgia, não demolição. |
-| `protocolo-pos-publicacao` | Os 90 minutos críticos depois de publicar: sinais, ações e erros que matam alcance. |
-| `brief-visual` | Brief visual do post com specs técnicas e prompts prontos pra geração de imagem. |
-| `discovery-script` | Roteiro de entrevista do `init` (uso interno). |
+| `360brew-algorithm` | Full algorithm reference: format, timing, metrics and scoring. |
+| `authority-context` | Read/write protocol for the client's memory substrate. The 3 self-enrichment doors. |
+| `hooks` | A bank of 147 hooks by type (proof, authority, transformation, contrarian, confession…). |
+| `copywriting-structures` | 8 frameworks (AIDA, PAS, BAB, FAB, Star-Story-Solution, APP, HSO, Storytelling) and a selection guide. |
+| `content-types` | A catalog of 16 post types by objective. |
+| `templates-by-category` | Ready templates for 7 categories, with placeholders and examples. |
+| `ctas` | A bank of CTAs by objective (saves, leads, engagement, sales…). |
+| `style-and-tone` | 360Brew formatting guide, authenticity and a voice checklist. |
+| `humanizer-linkedin` | Pipeline that removes AI writing patterns — surgery, not demolition. |
+| `post-publication-protocol` | The 90 critical minutes after publishing: signals, actions and mistakes that kill reach. |
+| `visual-brief` | Visual brief for the post with technical specs and ready prompts for image generation. |
+| `discovery-script` | The `init` interview script (internal use). |
 
 ### Agents (2)
 
-- **`linkedin-strategist`** — estratégia de conteúdo e decisões de pauta.
-- **`humanizer-linkedin`** — passe final que tira a assinatura de IA do texto.
+- **`linkedin-strategist`** — content strategy and angle decisions.
+- **`humanizer-linkedin`** — final pass that takes the AI signature out of the text.
 
 ### Scripts (3)
 
-Ferramentas Python que os comandos chamam:
+Python tools the commands call:
 
 ```bash
-python scripts/score_post.py <post.txt> [--objetivo authority|sales|engagement]
-python scripts/suggest_hooks.py --categoria <cat> --objetivo <obj> [--tema "..."]
+python scripts/score_post.py <post.txt> [--objective authority|sales|engagement]
+python scripts/suggest_hooks.py --category <cat> --objective <obj> [--topic "..."]
 python scripts/validate_specs.py <post.txt>
 ```
 
 ### Hook
 
-Um `SessionStart` mostra um banner apontando pro `init` quando ainda não existe perfil no projeto.
+A `SessionStart` shows a banner pointing to `init` when no profile exists in the project yet.
 
 ---
 
-## Estrutura do repositório
+## Repository structure
 
 ```
 authority-engine/
-├── linkedin-authority-engine/   # o plugin (produto)
+├── linkedin-authority-engine/   # the plugin (product)
 │   ├── .claude-plugin/          # plugin.json + marketplace.json
-│   ├── commands/                # 6 comandos
+│   ├── commands/                # 6 commands
 │   ├── skills/                  # 12 skills
 │   ├── agents/                  # 2 agents
-│   ├── scripts/                 # 3 scripts Python
-│   └── hooks/                   # hook de SessionStart
+│   ├── scripts/                 # 3 Python scripts
+│   └── hooks/                   # SessionStart hook
 │
-├── gtm-context.md               # contexto go-to-market (ICP, oferta, voz, canais)
-├── outputs/                     # entregáveis de estratégia comercial
-│   ├── pricing/                 # pricing review (5 leis Hormozi)
-│   └── audit/                   # audit de oferta (Value Equation)
+├── gtm-context.md               # go-to-market context (ICP, offer, voice, channels)
+├── outputs/                     # commercial strategy deliverables
+│   ├── pricing/                 # pricing review (5 Hormozi laws)
+│   └── audit/                   # offer audit (Value Equation)
 │
-├── tests/                       # suíte pytest (estrutura do plugin + scripts)
-└── docs/                        # documentação de apoio
+├── tests/                       # pytest suite (plugin structure + scripts)
+└── docs/                        # supporting documentation
 ```
 
-### A camada GTM
+### The GTM layer
 
-Além do plugin, o repo guarda o trabalho de go-to-market do produto, gerado com o plugin Hormozi GTM:
+Beyond the plugin, the repo holds the product's go-to-market work, generated with the Hormozi GTM plugin:
 
-- **`gtm-context.md`** — ICP, oferta, brand voice, canais e estágio. Fonte única de contexto comercial.
-- **`outputs/pricing/`** — análise de preço pelas 5 leis do Pricing Playbook.
-- **`outputs/audit/`** — diagnóstico da oferta pela Value Equation.
+- **`gtm-context.md`** — ICP, offer, brand voice, channels and stage. Single source of commercial context.
+- **`outputs/pricing/`** — price analysis by the 5 laws of the Pricing Playbook.
+- **`outputs/audit/`** — offer diagnosis by the Value Equation.
 
 ---
 
-## Testes
+## Tests
 
 ```bash
-# do diretório do plugin
+# from the plugin directory
 pytest
 ```
 
-A suíte cobre a integridade da estrutura do plugin (`test_plugin_structure.py`) e o comportamento dos scripts via CLI (`test_scripts_cli.py`).
+The suite covers the integrity of the plugin structure (`test_plugin_structure.py`) and the behavior of the scripts via CLI (`test_scripts_cli.py`).
 
 ---
 
 ## Roadmap
 
-- [ ] Lançamento self-serve (Gold + continuity) — primeiro pro warm que já espera o produto
-- [ ] Página de vendas + gateway de pagamento + integração com HubSpot Sales
-- [ ] Operação multi-idioma (PT / EN / ES)
-- [ ] Publicação no marketplace público de plugins
+- [ ] Self-serve launch (Gold + continuity) — first for the warm audience already waiting for the product
+- [ ] Sales page + payment gateway + HubSpot Sales integration
+- [ ] Multi-language operation (PT / EN / ES)
+- [ ] Publication on the public plugin marketplace
 
 ---
 
-## Licença
+## License
 
-Proprietary © LEVEL TECH. Contato: caner@thelevel.com.br
+Proprietary © LEVEL TECH. Contact: caner@thelevel.com.br

@@ -1,27 +1,27 @@
-# Schemas de `memory/` — substrato auto-enriquecedor
+# Schemas for `memory/` — self-enriching substrate
 
-Arquivos criados na pasta do cliente. Append-only. Lidos na geração (Porta 2), escritos no fim da sessão (Porta 3).
+Files created in the client folder. Append-only. Read during generation (Gate 2), written at the end of the session (Gate 3).
 
 ## winning-hooks.md
-| data | padrão de hook | tipo | categoria | objetivo | score | vezes usado | performance média | keep/kill |
+| date | hook pattern | type | category | objective | score | times used | avg performance | keep/kill |
 |---|---|---|---|---|---|---|---|---|
 
-**v1 preenche:** data, padrão de hook, tipo, categoria, objetivo, score. As colunas `vezes usado`, `performance média` e `keep/kill` ficam vazias até v1.x (perf manual via `/linkedin perf` ou Unabyss).
+**v1 fills:** date, hook pattern, type, category, objective, score. The `times used`, `avg performance` and `keep/kill` columns stay empty until v1.x (manual perf via `/linkedin perf` or Unabyss).
 
 ## topic-performance.md
-| data | tema | pilar | tipo de post | score | reações méd | comentários méd | saves méd | vs baseline | veredito |
+| date | topic | pillar | post type | score | avg reactions | avg comments | avg saves | vs baseline | verdict |
 |---|---|---|---|---|---|---|---|---|---|
 
-**v1 preenche:** data, tema, pilar, tipo de post, score. As colunas `reações méd`, `comentários méd`, `saves méd`, `vs baseline` e `veredito` ficam vazias até v1.x.
+**v1 fills:** date, topic, pillar, post type, score. The `avg reactions`, `avg comments`, `avg saves`, `vs baseline` and `verdict` columns stay empty until v1.x.
 
 ## voice-profile.md
-Bullets datados: `**AAAA-MM-DD:** ajuste de voz → resultado → manter? (sim/não)`
+Dated bullets: `**YYYY-MM-DD:** voice adjustment → result → keep? (yes/no)`
 
-**v1: READ-ONLY.** Este arquivo é lido na geração (Porta 2) para calibrar a voz. Escrita de ajustes de voz entra em v1.x. A ausência de write-back em v1 é intencional, não um bug.
+**v1: READ-ONLY.** This file is read during generation (Gate 2) to calibrate the voice. Writing voice adjustments arrives in v1.x. The absence of write-back in v1 is intentional, not a bug.
 
 ## learnings.md
-Entradas livres datadas: `**AAAA-MM-DD:** aprendizado`
+Dated free-form entries: `**YYYY-MM-DD:** learning`
 
-v1 grava entradas livres a cada sessão (o que funcionou, ajustes, rejeições).
+v1 records free-form entries every session (what worked, adjustments, rejections).
 
-> Schema de referência: este arquivo é a fonte da verdade (schema of record) para os contratos de Porta 3 nos 4 comandos do plugin. Qualquer divergência entre este arquivo e os comandos deve ser resolvida aqui.
+> Reference schema: this file is the schema of record for the Gate 3 contracts across the 4 plugin commands. Any divergence between this file and the commands must be resolved here.

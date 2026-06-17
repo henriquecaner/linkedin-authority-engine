@@ -1,54 +1,54 @@
 ---
-description: Menu de modos do LinkedIn Authority Engine. Exibe Guiado, Rewrite, Thread e Score e roteia para o modo escolhido. Use quando o usuário não sabe por onde começar ou quer uma visão geral dos modos disponíveis.
-argument-hint: "[guiado|rewrite|thread|score]"
+description: Mode menu for the LinkedIn Authority Engine. Shows Guided, Rewrite, Thread and Score and routes to the chosen mode. Use when the user doesn't know where to start or wants an overview of the available modes.
+argument-hint: "[guided|rewrite|thread|score]"
 ---
 
 # /linkedin-authority-engine:linkedin
 
-## Verificação de Perfil (obrigatória antes de qualquer modo)
+## Profile check (required before any mode)
 
-Antes de exibir o menu ou rotear para um modo, verificar silenciosamente se `authority-context.md` existe no projeto atual.
+Before showing the menu or routing to a mode, silently verify whether `authority-context.md` exists in the current project.
 
-- Se **não existir**: exibir a mensagem abaixo e parar.
+- If it **does not exist**: show the message below and stop.
 
 ```
-⚠️  Nenhum perfil encontrado.
-Execute /linkedin-authority-engine:init para criar seu perfil de autoridade antes de gerar posts.
+⚠️  No profile found.
+Run /linkedin-authority-engine:init to create your authority profile before generating posts.
 ```
 
-- Se **existir**: continuar com o roteamento abaixo.
+- If it **exists**: continue with the routing below.
 
 ---
 
-## Roteamento por Argumento
+## Routing by argument
 
-| Argumento recebido | Ação imediata |
-|-------------------|---------------|
-| `guiado` | Iniciar MODO GUIADO (STEP 1.0) |
-| `guiado [tema]` | MODO GUIADO com tema já informado (pula STEP 1.2) |
-| `rewrite` | Solicitar o post e iniciar MODO REWRITE |
-| `rewrite [post]` | MODO REWRITE com o post já fornecido |
-| `thread` | Iniciar MODO THREAD (coletar tema e nº de posts) |
-| `thread [tema]` | MODO THREAD com tema já informado |
-| `score [post]` | MODO SCORE direto no post colado |
-| sem argumento | Exibir menu abaixo |
+| Argument received | Immediate action |
+|-------------------|------------------|
+| `guided` | Start GUIDED MODE (STEP 1.0) |
+| `guided [topic]` | GUIDED MODE with the topic already provided (skip STEP 1.2) |
+| `rewrite` | Ask for the post and start REWRITE MODE |
+| `rewrite [post]` | REWRITE MODE with the post already provided |
+| `thread` | Start THREAD MODE (collect topic and number of posts) |
+| `thread [topic]` | THREAD MODE with the topic already provided |
+| `score [post]` | SCORE MODE directly on the pasted post |
+| no argument | Show the menu below |
 
 ---
 
-## Menu (sem argumento)
+## Menu (no argument)
 
 ```
-🎯 LinkedIn Authority Engine — O que vamos criar?
-1 Guiado   — post do zero (workflow completo)
-2 Rewrite  — otimizar post existente
-3 Thread   — série de posts
-4 Score    — avaliar + humanizar post pronto
+🎯 LinkedIn Authority Engine — What are we creating?
+1 Guided   — post from scratch (full workflow)
+2 Rewrite  — optimize an existing post
+3 Thread   — series of posts
+4 Score    — evaluate + humanize a finished post
 
-Digite o número ou o nome do modo.
+Type the number or the mode name.
 ```
 
-Aguardar escolha do usuário e rotear para o comando correspondente:
-- `1` ou `guiado` → invocar `/linkedin-authority-engine:guiado`
-- `2` ou `rewrite` → invocar `/linkedin-authority-engine:rewrite`
-- `3` ou `thread` → invocar `/linkedin-authority-engine:thread`
-- `4` ou `score` → invocar `/linkedin-authority-engine:score`
+Wait for the user's choice and route to the matching command:
+- `1` or `guided` → invoke `/linkedin-authority-engine:guided`
+- `2` or `rewrite` → invoke `/linkedin-authority-engine:rewrite`
+- `3` or `thread` → invoke `/linkedin-authority-engine:thread`
+- `4` or `score` → invoke `/linkedin-authority-engine:score`

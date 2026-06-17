@@ -1,155 +1,155 @@
 ---
-description: Modo Thread do LinkedIn Authority Engine — cria uma série de 3-7 posts sobre um tema central, com arquitetura planejada (gancho, autoridade, educativo, story, conversão) e pipeline de finalização por post. Use quando o usuário quer uma campanha de conteúdo sequencial.
-argument-hint: "[tema central]"
+description: Thread Mode of the LinkedIn Authority Engine — creates a series of 3-7 posts around a central theme, with a planned architecture (hook, authority, educational, story, conversion) and a finalization pipeline per post. Use when the user wants a sequential content campaign.
+argument-hint: "[central theme]"
 ---
 
 # /linkedin-authority-engine:thread
 
-## Porta 2 — Leitura do Substrato (obrigatória, automática)
+## Gate 2 — Read the substrate (required, automatic)
 
-Antes de qualquer geração:
+Before any generation:
 
-1. Carregue a skill `linkedin-authority-engine:authority-context`.
-2. Leia `authority-context.md` (perfil completo) e todos os arquivos em `memory/` (`winning-hooks.md`, `topic-performance.md`, `voice-profile.md`, `learnings.md`).
-3. Aplicar: tom de voz, pilares de conteúdo, credenciais reais, restrições editoriais em todos os posts da série.
-4. Priorizar padrões vencedores: hooks aprovados em `winning-hooks.md`, temas com alta performance em `topic-performance.md`.
-5. Garantir coerência de voz e progressão narrativa entre os posts.
-
----
-
-## THREAD STEP 1 — Definir a Série
-
-Se não foram fornecidos via argumento, coletar:
-- Tema central da série
-- Objetivo (Authority / Sales / Engagement)
-- Número de posts desejado (3-7)
-- Cadência pretendida (ex: diário, em dias alternados, semanal)
+1. Load the `linkedin-authority-engine:authority-context` skill.
+2. Read `authority-context.md` (full profile) and every file in `memory/` (`winning-hooks.md`, `topic-performance.md`, `voice-profile.md`, `learnings.md`).
+3. Apply: tone of voice, content pillars, real credentials, editorial constraints across every post in the series.
+4. Prioritize winning patterns: approved hooks in `winning-hooks.md`, high-performing topics in `topic-performance.md`.
+5. Ensure voice consistency and narrative progression across the posts.
 
 ---
 
-## THREAD STEP 2 — Arquitetura da Série
+## THREAD STEP 1 — Define the series
 
-Gerar a arquitetura de posts adaptada ao número escolhido:
+If not provided via argument, collect:
+- Central theme of the series
+- Objective (Authority / Sales / Engagement)
+- Desired number of posts (3-7)
+- Intended cadence (e.g., daily, every other day, weekly)
+
+---
+
+## THREAD STEP 2 — Series architecture
+
+Generate the post architecture adapted to the chosen number:
 
 ```
-POST 1 — GANCHO DA SÉRIE (Hook/Contrarian)
-  → Apresenta o tema, cria expectativa, promete valor
+POST 1 — SERIES HOOK (Hook/Contrarian)
+  → Introduces the theme, builds anticipation, promises value
 
-POST 2 — PROVA DE AUTORIDADE
-  → Credencial real + contexto que justifica o tema
+POST 2 — AUTHORITY PROOF
+  → Real credential + context that justifies the theme
 
-POST 3 — EDUCATIVO/HOW-TO
-  → Valor prático acionável, alto Saves Potential
+POST 3 — EDUCATIONAL/HOW-TO
+  → Actionable practical value, high Saves Potential
 
-POST 4 — STORY/BASTIDORES
-  → Conexão emocional, bastidores reais
+POST 4 — STORY/BEHIND THE SCENES
+  → Emotional connection, real behind-the-scenes
 
-POST 5 — CONVERSÃO/CTA
-  → Fechamento com oferta, lead magnet ou próximo passo
+POST 5 — CONVERSION/CTA
+  → Close with an offer, lead magnet or next step
 ```
 
-Adaptar conforme o número de posts (ex: para 3 posts, condensar em Gancho + Educativo + Conversão).
+Adapt to the number of posts (e.g., for 3 posts, condense into Hook + Educational + Conversion).
 
-Usar credenciais reais do perfil para ancorar cada post ao posicionamento da pessoa.
+Use real profile credentials to anchor each post to the person's positioning.
 
-Apresentar a arquitetura e aguardar aprovação antes de gerar.
-
----
-
-## THREAD STEP 3 — Ponto de Partida
-
-Perguntar: "Prefere gerar todos os posts de uma vez ou um por vez (workflow guiado)?"
-
-- "Todos de uma vez": gerar toda a série sequencialmente.
-- "Um por vez": gerar o primeiro, aguardar aprovação, então o próximo.
+Present the architecture and wait for approval before generating.
 
 ---
 
-## THREAD STEP 4 — Geração + Pipeline por Post
+## THREAD STEP 3 — Starting point
 
-Para **cada post** da série:
+Ask: "Would you rather generate all the posts at once or one at a time (guided workflow)?"
 
-1. Gerar o post seguindo as specs 360Brew (carregue `linkedin-authority-engine:algoritmo-360brew`):
-   - 1.250-2.500 caracteres
-   - 14+ parágrafos curtos (máx. ~19 palavras cada)
-   - Sem links no corpo, sem hashtags genéricas
-   - Re-hook no meio do post
-   - Usar hook adequado ao tipo de post (skill `linkedin-authority-engine:hooks`)
-   - CTA alinhado ao objetivo (skill `linkedin-authority-engine:ctas`)
+- "All at once": generate the entire series sequentially.
+- "One at a time": generate the first, wait for approval, then the next.
 
-2. Executar o **Pipeline de Finalização** completo:
+---
 
-   **Etapa A — Validação Técnica**
+## THREAD STEP 4 — Generation + pipeline per post
+
+For **each post** in the series:
+
+1. Generate the post following the 360Brew specs (load `linkedin-authority-engine:360brew-algorithm`):
+   - 1,250-2,500 characters
+   - 14+ short paragraphs (max ~19 words each)
+   - No links in the body, no generic hashtags
+   - Re-hook mid-post
+   - Use a hook suited to the post type (skill `linkedin-authority-engine:hooks`)
+   - CTA aligned with the objective (skill `linkedin-authority-engine:ctas`)
+
+2. Run the full **Finalization pipeline**:
+
+   **Stage A — Technical validation**
 
    ```bash
    python ${CLAUDE_PLUGIN_ROOT}/scripts/validate_specs.py post.txt
    ```
 
-   Corrigir erros antes de avançar.
+   Fix errors before advancing.
 
-   **Etapa B — Humanizer LinkedIn**
+   **Stage B — Humanizer LinkedIn**
 
-   Acionar a skill `linkedin-authority-engine:humanizer-linkedin`. Apresentar diff compacto (máx. 5 itens).
+   Run the `linkedin-authority-engine:humanizer-linkedin` skill. Present a compact diff (max 5 items).
 
-   **Etapa C — Brief Visual**
+   **Stage C — Visual brief**
 
-   Acionar a skill `linkedin-authority-engine:brief-visual`.
+   Run the `linkedin-authority-engine:visual-brief` skill.
 
-   **Etapa D — Score Final**
+   **Stage D — Final score**
 
    ```bash
-   python ${CLAUDE_PLUGIN_ROOT}/scripts/score_post.py post.txt --objetivo <authority|sales|engagement>
+   python ${CLAUDE_PLUGIN_ROOT}/scripts/score_post.py post.txt --objective <authority|sales|engagement>
    ```
 
-   **Etapa E — Protocolo Pós-Publicação**
+   **Stage E — Post-publication protocol**
 
-   Acionar a skill `linkedin-authority-engine:protocolo-pos-publicacao`. Gerar o 1º comentário pronto para cada post.
+   Run the `linkedin-authority-engine:post-publication-protocol` skill. Generate the ready-to-paste first comment for each post.
 
-3. Apresentar o post no formato:
+3. Present the post in the format:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━
-POST [N]/[TOTAL] — [Tipo]
+POST [N]/[TOTAL] — [Type]
 ━━━━━━━━━━━━━━━━━━━━━━━
 
-[Texto humanizado]
+[Humanized text]
 
-Humanizer: [diff compacto]
+Humanizer: [compact diff]
 Score: X.X/10 | Top 1%: X% | Top 5%: X%
-Brief Visual: [formato + conceito + prompt IA]
+Visual brief: [format + concept + AI prompt]
 ━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
 ---
 
-## THREAD STEP 5 — Calendário de Publicação
+## THREAD STEP 5 — Publishing calendar
 
-Após gerar todos os posts, apresentar o calendário sugerido:
+After generating all the posts, present the suggested calendar:
 
-| Post | Tema | Tipo | Score | Data sugerida | Janela (BRT) |
-|------|------|------|-------|---------------|--------------|
+| Post | Topic | Type | Score | Suggested date | Window (BRT) |
+|------|-------|------|-------|----------------|--------------|
 
-Para timing recomendado por objetivo e dia da semana, consulte a skill `linkedin-authority-engine:protocolo-pos-publicacao`.
-
----
-
-## Porta 3 — Write-back ao Substrato
-
-Após aprovação da série, conforme as instruções da skill `linkedin-authority-engine:authority-context`:
-
-1. Anexar em `memory/winning-hooks.md`: por hook aprovado da série — data, padrão de hook, tipo, categoria, objetivo, score. (Colunas `vezes usado`, `performance média`, `keep/kill` ficam vazias até v1.x.)
-2. Anexar em `memory/topic-performance.md`: por post da série — data, tema, pilar, tipo de post, score. (Colunas de performance ficam vazias até v1.x.)
-3. Anexar em `memory/learnings.md`: o que funcionou na arquitetura, o que foi ajustado, padrões identificados.
-4. Se algum post foi rejeitado ou reescrito, registrar o motivo em `memory/learnings.md`.
+For recommended timing by objective and day of the week, see the `linkedin-authority-engine:post-publication-protocol` skill.
 
 ---
 
-## Salvar os Posts Finais
+## Gate 3 — Write-back to the substrate
 
-Salvar cada post aprovado em:
+After approval of the series, following the instructions of the `linkedin-authority-engine:authority-context` skill:
+
+1. Append to `memory/winning-hooks.md`: per approved hook in the series — date, hook pattern, type, category, objective, score. (Columns `times used`, `average performance`, `keep/kill` stay empty until v1.x.)
+2. Append to `memory/topic-performance.md`: per post in the series — date, topic, pillar, post type, score. (Performance columns stay empty until v1.x.)
+3. Append to `memory/learnings.md`: what worked in the architecture, what was adjusted, patterns identified.
+4. If any post was rejected or rewritten, record the reason in `memory/learnings.md`.
+
+---
+
+## Save the final posts
+
+Save each approved post to:
 
 ```
-outputs/posts/<AAAAMMDD>-<slug-do-post>-v1.md
+outputs/posts/<YYYYMMDD>-<post-slug>-v1.md
 ```
 
-Se já existir versão anterior do mesmo slug, incrementar o número (v2, v3...).
+If a previous version of the same slug already exists, increment the number (v2, v3...).

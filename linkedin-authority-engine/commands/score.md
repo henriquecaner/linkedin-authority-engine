@@ -1,64 +1,64 @@
 ---
-description: Modo Score do LinkedIn Authority Engine — avalia e humaniza um post pronto, rodando validação técnica, humanizer e score nas 6 dimensões com veredicto final (publicar / ajustar / retrabalhar). Use quando o usuário tem um post pronto e quer saber se está pronto para publicar.
-argument-hint: "[post a avaliar]"
+description: Score Mode of the LinkedIn Authority Engine — evaluates and humanizes a finished post, running technical validation, humanizer and a score across the 6 dimensions with a final verdict (publish / adjust / rework). Use when the user has a finished post and wants to know if it's ready to publish.
+argument-hint: "[post to evaluate]"
 ---
 
 # /linkedin-authority-engine:score
 
-## Porta 2 — Leitura do Substrato (obrigatória, automática)
+## Gate 2 — Read the substrate (required, automatic)
 
-Antes de avaliar:
+Before evaluating:
 
-1. Carregue a skill `linkedin-authority-engine:authority-context`.
-2. Leia `authority-context.md` (perfil completo) e todos os arquivos em `memory/` (`winning-hooks.md`, `topic-performance.md`, `voice-profile.md`, `learnings.md`).
-3. Aplicar: tom de voz, pilares de conteúdo, credenciais reais, restrições editoriais como critérios adicionais na avaliação.
-4. Se `topic-performance.md` tiver baseline real do perfil, usar para comparação relativa no score.
+1. Load the `linkedin-authority-engine:authority-context` skill.
+2. Read `authority-context.md` (full profile) and every file in `memory/` (`winning-hooks.md`, `topic-performance.md`, `voice-profile.md`, `learnings.md`).
+3. Apply: tone of voice, content pillars, real credentials, editorial constraints as additional evaluation criteria.
+4. If `topic-performance.md` has a real baseline for the profile, use it for relative comparison in the score.
 
-Se não houver post fornecido como argumento, solicitar: "Cole o post que deseja avaliar."
+If no post is provided as an argument, ask: "Paste the post you want to evaluate."
 
 ---
 
-## Pipeline Parcial (MODO SCORE)
+## Partial pipeline (SCORE MODE)
 
-> Pula geração e Brief Visual, vai direto para avaliação. Sem Protocolo Pós-Publicação (a menos que solicitado explicitamente).
+> Skips generation and the visual brief, goes straight to evaluation. No post-publication protocol (unless explicitly requested).
 
-### Etapa A — Validação Técnica
+### Stage A — Technical validation
 
-Rodar `${CLAUDE_PLUGIN_ROOT}/scripts/validate_specs.py` no post:
+Run `${CLAUDE_PLUGIN_ROOT}/scripts/validate_specs.py` on the post:
 
 ```bash
 python ${CLAUDE_PLUGIN_ROOT}/scripts/validate_specs.py post.txt
 ```
 
-Apresentar resultado:
+Present the result:
 
 ```
-VALIDAÇÃO TÉCNICA:
-🚨 Erros críticos: [link no corpo, hashtags em excesso, ...]
-⚠️  Avisos: [parágrafos densos, palavras complexas, ...]
-✅ Specs OK: [o que está dentro dos parâmetros]
+TECHNICAL VALIDATION:
+🚨 Critical errors: [link in body, too many hashtags, ...]
+⚠️  Warnings: [dense paragraphs, complex words, ...]
+✅ Specs OK: [what's within the parameters]
 ```
 
-Se houver erros críticos, perguntar se o usuário quer corrigir antes de humanizar. Se sim, corrigir; se não, continuar e registrar os erros no score final.
+If there are critical errors, ask whether the user wants to fix them before humanizing. If yes, fix; if no, continue and record the errors in the final score.
 
-### Etapa B — Humanizer LinkedIn
+### Stage B — Humanizer LinkedIn
 
-Acionar a skill `linkedin-authority-engine:humanizer-linkedin` no post. Apresentar diff compacto (máx. 5 itens alterados) com as substituições realizadas.
+Run the `linkedin-authority-engine:humanizer-linkedin` skill on the post. Present a compact diff (max 5 changed items) with the substitutions made.
 
-### Etapa D — Score Final
+### Stage D — Final score
 
-Rodar `${CLAUDE_PLUGIN_ROOT}/scripts/score_post.py` no post humanizado:
+Run `${CLAUDE_PLUGIN_ROOT}/scripts/score_post.py` on the humanized post:
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/score_post.py post.txt --objetivo <authority|sales|engagement>
+python ${CLAUDE_PLUGIN_ROOT}/scripts/score_post.py post.txt --objective <authority|sales|engagement>
 ```
 
-Se o objetivo não foi informado, inferir pelo conteúdo do post ou perguntar.
+If the objective was not provided, infer it from the post content or ask.
 
-Apresentar relatório nas 6 dimensões:
+Present the report across the 6 dimensions:
 
-| Dimensão | Peso | Nota | Observação |
-|----------|------|------|------------|
+| Dimension | Weight | Score | Note |
+|-----------|--------|-------|------|
 | Saves Potential | 30% | X/10 | ... |
 | Hook | 20% | X/10 | ... |
 | Algorithm | 20% | X/10 | ... |
@@ -67,34 +67,34 @@ Apresentar relatório nas 6 dimensões:
 | Data | 5% | X/10 | ... |
 | **Total** | 100% | **X.X/10** | |
 
-Se `topic-performance.md` tiver baseline real, apresentar comparação: "Média deste perfil: X.X/10 — este post está X% acima/abaixo."
+If `topic-performance.md` has a real baseline, present the comparison: "Average for this profile: X.X/10 — this post is X% above/below."
 
-### Veredicto Final
+### Final verdict
 
-Com base no score:
+Based on the score:
 
-- **Score ≥ 9/10:** "Publicar. Post pronto."
-- **Score 7-8.9/10:** "Ajustar. [Indicar 1-2 melhorias específicas com maior impacto no score.]"
-- **Score < 7/10:** "Retrabalhar. [Indicar os problemas críticos e sugerir usar o modo Rewrite (`/linkedin-authority-engine:rewrite`).]"
-
----
-
-## Porta 3 — Write-back ao Substrato
-
-Após a avaliação, conforme as instruções da skill `linkedin-authority-engine:authority-context`:
-
-1. Anexar em `memory/topic-performance.md`: data, tema, pilar, tipo de post, score. (Colunas de performance ficam vazias até v1.x.)
-2. Anexar em `memory/learnings.md`: principais achados da avaliação, erros encontrados, padrões que prejudicaram o score.
-3. Se o hook for forte (nota ≥ 8/10 na dimensão Hook), anexar em `memory/winning-hooks.md`: data, padrão de hook, tipo, categoria, objetivo, score. (Colunas `vezes usado`, `performance média`, `keep/kill` ficam vazias até v1.x.)
+- **Score ≥ 9/10:** "Publish. Post ready."
+- **Score 7-8.9/10:** "Adjust. [Point out 1-2 specific improvements with the highest impact on the score.]"
+- **Score < 7/10:** "Rework. [Point out the critical problems and suggest using Rewrite Mode (`/linkedin-authority-engine:rewrite`).]"
 
 ---
 
-## Salvar o Post Avaliado
+## Gate 3 — Write-back to the substrate
 
-Salvar o post na versão humanizada (pós-Etapa B) em:
+After the evaluation, following the instructions of the `linkedin-authority-engine:authority-context` skill:
+
+1. Append to `memory/topic-performance.md`: date, topic, pillar, post type, score. (Performance columns stay empty until v1.x.)
+2. Append to `memory/learnings.md`: the main findings of the evaluation, errors found, patterns that hurt the score.
+3. If the hook is strong (Hook dimension score ≥ 8/10), append to `memory/winning-hooks.md`: date, hook pattern, type, category, objective, score. (Columns `times used`, `average performance`, `keep/kill` stay empty until v1.x.)
+
+---
+
+## Save the evaluated post
+
+Save the post in its humanized version (post-Stage B) to:
 
 ```
-outputs/posts/<AAAAMMDD>-<slug>-v1.md
+outputs/posts/<YYYYMMDD>-<slug>-v1.md
 ```
 
-Se já existir versão anterior do mesmo slug, incrementar o número (v2, v3...).
+If a previous version of the same slug already exists, increment the number (v2, v3...).

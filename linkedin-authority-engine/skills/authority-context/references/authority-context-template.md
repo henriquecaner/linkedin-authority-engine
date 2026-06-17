@@ -1,389 +1,389 @@
-# INSTRUÇÕES DO PROJETO — [NOME DO CLIENTE]
+# PROJECT INSTRUCTIONS — [CLIENT NAME]
 
-> **Como usar:** Preencher após entrevista de setup. Cada campo indica de qual pergunta da entrevista o dado vem. Campos marcados com `*` são críticos para este plugin (`linkedin-authority-engine`).
+> **How to use:** Fill in after the setup interview. Each field indicates which interview question the data comes from. Fields marked with `*` are critical for this plugin (`linkedin-authority-engine`).
 > 
-> **Skill principal:** este plugin (`linkedin-authority-engine`) (usar sempre como base para criação de conteúdo)
+> **Primary skill:** this plugin (`linkedin-authority-engine`) (always use it as the base for content creation)
 
 ---
 
-# 1. PERFIL DO CLIENTE
+# 1. Profile
 
-- **Nome completo:** [Nome Completo]
-- **Cargo atual:** [Cargo] na [Empresa]
-- **LinkedIn:** [URL do perfil]
-- **Tempo na posição atual:** [X anos]
-- **Experiência total:** [X anos — qual área/setor]
-- **Cidade/região de atuação:** [Cidade, Estado]
+- **Full name:** [Full Name]
+- **Current role:** [Role] at [Company]
+- **LinkedIn:** [Profile URL]
+- **Time in current role:** [X years]
+- **Total experience:** [X years — which area/sector]
+- **City/region of operation:** [City, State]
 
-**Bio resumida (2-3 linhas)* :**
-> [Quem é, o que faz, qual o diferencial principal. Deve ser a versão que o próprio cliente usaria para se apresentar em 30 segundos.]
+**Short bio (2-3 lines)* :**
+> [Who they are, what they do, the main differentiator. Should be the version the client would use to introduce themselves in 30 seconds.]
 
-**Marcadores de credibilidade (institucional/social proof):**
-- [Ex: "Liderou M&A de R$500M na Ambev"]
-- [Ex: "20 anos em supply chain industrial"]
-- [Ex: "Mentor de 50+ executivos C-level"]
-- [Ex: "Empresas no entorno: nome de marcas reconhecidas, parceiros, clientes relevantes"]
-- [Adicionar mais conforme entrevista]
+**Credibility markers (institutional/social proof):**
+- [E.g. "Led a R$500M M&A at Ambev"]
+- [E.g. "20 years in industrial supply chain"]
+- [E.g. "Mentor to 50+ C-level executives"]
+- [E.g. "Brands in their orbit: recognized names, partners, relevant clients"]
+- [Add more as the interview reveals]
 
-**Trajetória resumida (linha do tempo):**
-> [Capturado na entrevista de discovery: marcos da carreira, momentos de virada, capítulos que moldaram o perfil profissional. Escrever em formato narrativo, não lista de empregos.]
-
----
-
-# 2. POSICIONAMENTO E AUTORIDADE
-
-**Tema central de autoridade* :**
-> [O grande tema que o cliente quer ser referência. Ex: "Transformação digital em indústrias tradicionais" ou "Liderança humanizada em ambientes de alta performance". Derivado da entrevista de discovery.]
-
-**3 pilares de conteúdo* :**
-
-1. **[Pilar 1]** — [Descrição: qual recorte temático, por que é relevante para a audiência, como se conecta com a autoridade do cliente]
-2. **[Pilar 2]** — [Descrição]
-3. **[Pilar 3]** — [Descrição]
-
-**Proposta de valor (jornada do cliente)* :**
-> [De: onde o cliente pega a pessoa / empresa. Para: onde conduz. Ex: "Pego fundadores que cresceram rápido demais e não têm processo, e levo para uma operação escalável sem perder a cultura." (capturado na entrevista de discovery)]
-
-**Mandamentos profissionais (valores inegociáveis):**
-> [Do que o cliente não abre mão. Capturado na entrevista de discovery. São os princípios que orientam o que pode e não pode ser dito — e que dão autenticidade ao conteúdo.]
-- [Mandamento 1]
-- [Mandamento 2]
-- [Mandamento 3]
-- [Adicionar mais conforme entrevista]
-
-**Diferenciais reais (o que torna o trabalho singular):**
-> [Capturado na entrevista de discovery: não os genéricos "sou comprometido", mas os específicos e difíceis de copiar. O que um ex-cliente diria que é diferente?]
-- [Diferencial 1]
-- [Diferencial 2]
-- [Diferencial 3]
-
-**Histórias e cases disponíveis para conteúdo:**
-> [Capturado na entrevista de discovery. Cada história é uma pauta potencial.]
-- [História 1 — resumo em 1 linha + contexto de uso recomendado]
-- [História 2 — resumo + contexto]
-- [História 3 — resumo + contexto]
-- [Adicionar mais conforme entrevista]
-
-**Histórias/conquistas ainda não contadas publicamente:**
-> [Capturado na entrevista de discovery: material bruto inédito que pode virar conteúdo de alto impacto com o trabalho certo de extração.]
-- [Conquista ou história inédita 1]
-- [Conquista ou história inédita 2]
-
-**Crenças que o cliente discorda no mercado:**
-> [Capturado na entrevista de discovery: opiniões contra-intuitivas ou anticonvencionais sobre o setor. São o combustível para conteúdo de posicionamento forte e memória de marca.]
-- [Crença do mercado que o cliente questiona 1]
-- [Crença do mercado que o cliente questiona 2]
-- [Crença do mercado que o cliente questiona 3]
-
-**"Se você fosse dar UMA palestra, qual seria o tema?":**
-> [Capturado na entrevista de discovery: revela o tema de maior domínio e paixão. É o núcleo do posicionamento e da autoridade máxima.]
-> [Resposta do cliente]
+**Career summary (timeline):**
+> [Captured in the discovery interview: career milestones, turning points, chapters that shaped the professional profile. Write it as a narrative, not a list of jobs.]
 
 ---
 
-# 3. OBJETIVOS DO CONTEÚDO
+# 2. Positioning
 
-**Objetivo principal* :** *(Marcar o principal ou combinar com %)*
+**Core authority theme* :**
+> [The big theme the client wants to be a reference for. E.g. "Digital transformation in traditional industries" or "Humanized leadership in high-performance environments". Derived from the discovery interview.]
 
-- [ ] Authority — ser referência, aumentar reconhecimento, atrair convites
-- [ ] Sales — gerar leads, criar demanda para as ofertas
-- [ ] Engagement — construir comunidade, aumentar alcance e conexões
+**3 content pillars* :**
 
-**Objetivos específicos:**
+1. **[Pillar 1]** — [Description: which thematic angle, why it matters to the audience, how it connects to the client's authority]
+2. **[Pillar 2]** — [Description]
+3. **[Pillar 3]** — [Description]
 
-- [ ] Aumentar reconhecimento como referência em [tema]
-- [ ] Gerar leads para [produto/serviço]
-- [ ] Atrair convites para [palestras / boards / mentorias]
-- [ ] Posicionar para [nova oportunidade / transição de carreira]
-- [ ] Fortalecer marca pessoal para [objetivo específico]
-- [ ] Superar objeções de mercado recorrentes via conteúdo educativo
-- [ ] Outro: [descrever]
+**Value proposition (client journey)* :**
+> [From: where the client picks up the person / company. To: where it leads. E.g. "I take founders who grew too fast and lack process, and lead them to a scalable operation without losing culture." (captured in the discovery interview)]
 
-**Definição de vitória em 90 dias* :**
-> [Capturado na entrevista de discovery: o que tornaria este projeto um sucesso tangível nos primeiros 3 meses? Ex: "Receber 2 convites de palestra", "5 leads qualificados por semana", "SSI acima de 70", "Ser reconhecido por X". Calibra todo o trabalho de conteúdo.]
+**Professional commandments (non-negotiable values):**
+> [What the client won't compromise on. Captured in the discovery interview. These are the principles that guide what can and can't be said — and that give authenticity to the content.]
+- [Commandment 1]
+- [Commandment 2]
+- [Commandment 3]
+- [Add more as the interview reveals]
 
-**Métrica principal de acompanhamento:**
-> [Ex: impressões semanais, taxa de engajamento, novos seguidores qualificados, leads gerados, SSI score]
+**Real differentiators (what makes the work singular):**
+> [Captured in the discovery interview: not generic ones like "I'm committed", but the specific and hard-to-copy ones. What would a former client say is different?]
+- [Differentiator 1]
+- [Differentiator 2]
+- [Differentiator 3]
 
----
+**Stories and cases available for content:**
+> [Captured in the discovery interview. Each story is a potential topic.]
+- [Story 1 — one-line summary + recommended use context]
+- [Story 2 — summary + context]
+- [Story 3 — summary + context]
+- [Add more as the interview reveals]
 
-# 4. AUDIÊNCIA-ALVO (ICP)
+**Stories/achievements not yet told publicly:**
+> [Captured in the discovery interview: raw, untold material that can become high-impact content with the right extraction work.]
+- [Untold achievement or story 1]
+- [Untold achievement or story 2]
 
-## Perfil 1: [Nome do perfil — ex: "CEO de Escala"]
+**Beliefs the client disagrees with in the market:**
+> [Captured in the discovery interview: counterintuitive or unconventional opinions about the sector. They fuel strong positioning content and brand recall.]
+- [Market belief the client questions 1]
+- [Market belief the client questions 2]
+- [Market belief the client questions 3]
 
-**Quem queremos alcançar:**
-- **Cargo:** [Cargos-alvo]
-- **Setor:** [Indústrias / setores]
-- **Tamanho de empresa:** [Porte]
-- **Geografia:** [Regiões]
-- **Maturidade digital:** [baixa / média / alta]
-
-**Dores principais desta audiência* :**
-> [Capturado na entrevista de discovery: o que tira o sono, o que eles queriam resolver ontem]
-1. [Dor 1]
-2. [Dor 2]
-3. [Dor 3]
-
-**A grande transformação que querem* :**
-> [Capturado na entrevista de discovery: qual é o "antes" (estado de dor) e o "depois" (resultado desejado) que esta audiência busca]
-- **Antes (estado de dor):** [Descrição]
-- **Depois (resultado desejado):** [Descrição]
-
-**O que essa audiência valoriza:**
-- [Valor 1]
-- [Valor 2]
-- [Valor 3]
-
-**Como essa audiência chega até o cliente hoje:**
-> [Capturado na entrevista de discovery: canal de origem, indicação, LinkedIn, evento, etc. Indica onde o conteúdo precisa trabalhar.]
-
-**Pergunta que essa audiência mais faz ao cliente:**
-> [Capturado na entrevista de discovery: qual é a dúvida ou pedido recorrente que clientes e pares fazem? Cada resposta a essa pergunta é um post de autoridade pronto.]
+**"If you were to give ONE talk, what would the topic be?":**
+> [Captured in the discovery interview: reveals the topic of greatest mastery and passion. It's the core of positioning and peak authority.]
+> [Client's answer]
 
 ---
 
-## Perfil 2: [Nome do perfil] *(OPCIONAL)*
+# 3. Goals
 
-**Quem queremos alcançar:**
-- **Cargo:** [Cargos-alvo]
-- **Setor:** [Indústrias / setores]
-- **Tamanho de empresa:** [Porte]
-- **Geografia:** [Regiões]
+**Primary objective* :** *(Mark the main one or combine with %)*
 
-**Dores principais:**
-1. [Dor 1]
-2. [Dor 2]
-3. [Dor 3]
+- [ ] Authority — be a reference, increase recognition, attract invitations
+- [ ] Sales — generate leads, create demand for the offers
+- [ ] Engagement — build community, increase reach and connections
 
-**A grande transformação que querem:**
-- **Antes:** [Descrição]
-- **Depois:** [Descrição]
+**Specific objectives:**
 
-**O que essa audiência valoriza:**
-- [Valor 1]
-- [Valor 2]
-- [Valor 3]
+- [ ] Increase recognition as a reference in [theme]
+- [ ] Generate leads for [product/service]
+- [ ] Attract invitations to [talks / boards / mentorships]
+- [ ] Position for [new opportunity / career transition]
+- [ ] Strengthen personal brand for [specific goal]
+- [ ] Overcome recurring market objections through educational content
+- [ ] Other: [describe]
+
+**Definition of a 90-day win* :**
+> [Captured in the discovery interview: what would make this project a tangible success in the first 3 months? E.g. "Receive 2 speaking invitations", "5 qualified leads per week", "SSI above 70", "Be recognized for X". It calibrates all the content work.]
+
+**Primary tracking metric:**
+> [E.g. weekly impressions, engagement rate, new qualified followers, leads generated, SSI score]
 
 ---
 
-# 5. ARQUITETURA DE OFERTAS
+# 4. Audience (ICP)
 
-> [Capturado na entrevista de discovery. Essencial para calibrar o volume e o tipo de conteúdo de conversão.]
+## Profile 1: [Profile name — e.g. "Scaling CEO"]
 
-| Oferta | Formato | Ticket / Nível | Audiência-alvo | Conteúdo que atrai |
+**Who we want to reach:**
+- **Role:** [Target roles]
+- **Sector:** [Industries / sectors]
+- **Company size:** [Size]
+- **Geography:** [Regions]
+- **Digital maturity:** [low / medium / high]
+
+**Main pains of this audience* :**
+> [Captured in the discovery interview: what keeps them up at night, what they wanted to solve yesterday]
+1. [Pain 1]
+2. [Pain 2]
+3. [Pain 3]
+
+**The big transformation they want* :**
+> [Captured in the discovery interview: what is the "before" (state of pain) and the "after" (desired outcome) this audience is after]
+- **Before (state of pain):** [Description]
+- **After (desired outcome):** [Description]
+
+**What this audience values:**
+- [Value 1]
+- [Value 2]
+- [Value 3]
+
+**How this audience reaches the client today:**
+> [Captured in the discovery interview: source channel, referral, LinkedIn, event, etc. Indicates where the content needs to work.]
+
+**The question this audience asks the client most:**
+> [Captured in the discovery interview: what is the recurring question or request clients and peers make? Each answer to that question is a ready-made authority post.]
+
+---
+
+## Profile 2: [Profile name] *(OPTIONAL)*
+
+**Who we want to reach:**
+- **Role:** [Target roles]
+- **Sector:** [Industries / sectors]
+- **Company size:** [Size]
+- **Geography:** [Regions]
+
+**Main pains:**
+1. [Pain 1]
+2. [Pain 2]
+3. [Pain 3]
+
+**The big transformation they want:**
+- **Before:** [Description]
+- **After:** [Description]
+
+**What this audience values:**
+- [Value 1]
+- [Value 2]
+- [Value 3]
+
+---
+
+# 5. Offers
+
+> [Captured in the discovery interview. Essential for calibrating the volume and type of conversion content.]
+
+| Offer | Format | Ticket / Level | Target audience | Content that attracts |
 |--------|---------|----------------|----------------|--------------------|
-| [Nome da oferta 1] | [Consultoria / Curso / Mentoria / SaaS / etc.] | [Alto / Médio / Entrada] | [Perfil ICP] | [Tipo de post que gera demanda] |
-| [Nome da oferta 2] | | | | |
-| [Nome da oferta 3] | | | | |
+| [Offer name 1] | [Consulting / Course / Mentorship / SaaS / etc.] | [High / Mid / Entry] | [ICP profile] | [Type of post that generates demand] |
+| [Offer name 2] | | | | |
+| [Offer name 3] | | | | |
 
-**Oferta prioritária no momento:**
-> [Qual produto/serviço o conteúdo deve priorizar impulsionar agora? Isso define o % de conteúdo de Sales na mix.]
+**Priority offer right now:**
+> [Which product/service should the content prioritize pushing now? This defines the % of Sales content in the mix.]
 
 ---
 
-# 6. NARRATIVA COMERCIAL
+# 6. Commercial narrative
 
-> [Capturado na entrevista de discovery. O discurso de venda atual e as objeções recorrentes são o mapa do conteúdo de autoridade: cada objeção frequente é uma pauta de post.]
+> [Captured in the discovery interview. The current sales pitch and the recurring objections are the map for authority content: every frequent objection is a post topic.]
 
-**Discurso de venda atual (como o cliente convence hoje):**
-> [Argumentos centrais, histórias usadas, analogias, provas sociais mobilizadas na venda]
+**Current sales pitch (how the client convinces today):**
+> [Core arguments, stories used, analogies, social proof mobilized in the sale]
 
-**Principais objeções de mercado* :**
-> [Cada objeção é um post de autoridade em potencial. Conteúdo existe para desfazê-las antes da conversa comercial.]
+**Main market objections* :**
+> [Each objection is a potential authority post. Content exists to dismantle them before the sales conversation.]
 
-| Objeção | Frequência | Resposta atual do cliente | Post potencial |
+| Objection | Frequency | Client's current response | Potential post |
 |---------|------------|--------------------------|----------------|
-| [Ex: "É caro demais"] | Alta / Média / Baixa | [Como o cliente responde hoje] | [Ideia de post que endereça isso] |
-| [Objeção 2] | | | |
-| [Objeção 3] | | | |
-| [Objeção 4] | | | |
+| [E.g. "It's too expensive"] | High / Medium / Low | [How the client responds today] | [Post idea that addresses this] |
+| [Objection 2] | | | |
+| [Objection 3] | | | |
+| [Objection 4] | | | |
 
 ---
 
-# 7. PAISAGEM COMPETITIVA
+# 7. Competitive landscape
 
-> [Capturado na entrevista de discovery.]
+> [Captured in the discovery interview.]
 
-**Principais concorrentes diretos:**
-- [Concorrente 1 — o que comunica bem / gap de posicionamento]
-- [Concorrente 2 — o que comunica bem / gap de posicionamento]
-- [Concorrente 3 — o que comunica bem / gap de posicionamento]
+**Main direct competitors:**
+- [Competitor 1 — what they communicate well / positioning gap]
+- [Competitor 2 — what they communicate well / positioning gap]
+- [Competitor 3 — what they communicate well / positioning gap]
 
-**Onde existe espaço de diferenciação na comunicação:**
-> [O que nenhum concorrente está dizendo mas deveria — e o cliente pode ownar]
+**Where there's room for differentiation in communication:**
+> [What no competitor is saying but should — and the client can own]
 
-**Referências de posicionamento (executivos que admira)* :**
-> [Capturado na entrevista de discovery: não para copiar, mas para calibrar tom, temas e nível de sofisticação]
-- [Nome — URL — o que admira nesse posicionamento]
-- [Nome — URL — o que admira]
-- [Nome — URL — o que admira]
-
----
-
-# 8. TERRITÓRIOS DE CONTEÚDO
-
-> [Capturado na entrevista de discovery.]
-
-**Temas que o cliente se sente bem em falar (território SIM):**
-> [Assuntos de domínio genuíno, com repertório, opinião formada e energia para falar com frequência]
-- [Tema 1]
-- [Tema 2]
-- [Tema 3]
-- [Tema 4]
-- [Adicionar mais conforme entrevista]
-
-**Temas que o cliente NÃO se sente bem em falar (território NÃO):**
-> [Limites de ordem pessoal, política, religiosa ou estratégica. Definir bordas protege a coerência da marca.]
-- [Tema a evitar 1]
-- [Tema a evitar 2]
-- [Tema a evitar 3]
-
-**Fontes de informação do cliente* :**
-> [Capturado na entrevista de discovery: portais, newsletters, podcasts, livros, pessoas que acompanha. Orienta curadoria de conteúdo e a escolha de repertório para publicações.]
-- [Fonte 1 — tipo: portal / newsletter / podcast / livro]
-- [Fonte 2]
-- [Fonte 3]
-- [Fonte 4]
+**Positioning references (executives they admire)* :**
+> [Captured in the discovery interview: not to copy, but to calibrate tone, themes and level of sophistication]
+- [Name — URL — what they admire about this positioning]
+- [Name — URL — what they admire]
+- [Name — URL — what they admire]
 
 ---
 
-# 9. RESTRIÇÕES E CUIDADOS
+# 8. Territories
 
-**Palavras e expressões a NÃO usar* :**
-- [Palavra / expressão 1]
-- [Palavra / expressão 2]
-- [Palavra / expressão 3]
+> [Captured in the discovery interview.]
 
-**Informações confidenciais (nunca mencionar):**
-> [Ex: valores de contratos, nomes de clientes sem autorização, dados financeiros da empresa]
+**Themes the client is comfortable talking about (YES territory):**
+> [Subjects of genuine mastery, with repertoire, formed opinions and the energy to speak about them often]
+- [Theme 1]
+- [Theme 2]
+- [Theme 3]
+- [Theme 4]
+- [Add more as the interview reveals]
 
-**Sensibilidades específicas:**
-> [Contextos delicados. Ex: "Evitar mencionar empresa anterior por litígio em andamento" ou "Não abordar tema X por questões pessoais"]
+**Themes the client is NOT comfortable talking about (NO territory):**
+> [Personal, political, religious or strategic limits. Defining the edges protects brand coherence.]
+- [Theme to avoid 1]
+- [Theme to avoid 2]
+- [Theme to avoid 3]
+
+**Client's information sources* :**
+> [Captured in the discovery interview: portals, newsletters, podcasts, books, people they follow. Guides content curation and the choice of repertoire for posts.]
+- [Source 1 — type: portal / newsletter / podcast / book]
+- [Source 2]
+- [Source 3]
+- [Source 4]
 
 ---
 
-# 10. TOM DE VOZ E ESTILO
+# 9. Constraints
 
-> [Capturado na entrevista de discovery.]
+**Words and expressions NOT to use* :**
+- [Word / expression 1]
+- [Word / expression 2]
+- [Word / expression 3]
 
-**Como o cliente descreveria o próprio estilo de comunicação em 3 palavras:**
-> [Capturado na entrevista de discovery: resposta direta do cliente. Ex: "Direto, técnico, sem frescura" ou "Inspirador, humano, concreto"]
+**Confidential information (never mention):**
+> [E.g. contract values, client names without authorization, the company's financial data]
 
-**Tom de referência (benchmark):**
-> [Ex: "Estilo do Simon Sinek — inspirador mas prático" ou "Tom técnico como Fabio Akita, mas mais acessível" ou "Autoridade como Seth Godin, mas focado em negócios"]
+**Specific sensitivities:**
+> [Delicate contexts. E.g. "Avoid mentioning a previous company due to ongoing litigation" or "Don't address topic X for personal reasons"]
 
-**Espectro de tom (posicionar com X):**
+---
+
+# 10. Tone of voice
+
+> [Captured in the discovery interview.]
+
+**How the client would describe their own communication style in 3 words:**
+> [Captured in the discovery interview: the client's direct answer. E.g. "Direct, technical, no fluff" or "Inspiring, human, concrete"]
+
+**Reference tone (benchmark):**
+> [E.g. "Simon Sinek's style — inspiring but practical" or "Technical tone like Fabio Akita, but more accessible" or "Authority like Seth Godin, but business-focused"]
+
+**Tone spectrum (mark with X):**
 
 ```
-Formal  ←————————X————→  Casual
-Sério   ←———X————————→  Leve
-Técnico ←————————X————→  Acessível
-Distante ←———————X———→  Próximo
-Polido  ←———————X————→  Direto/cru
+Formal   ←————————X————→  Casual
+Serious  ←———X————————→  Light
+Technical ←————————X————→  Accessible
+Distant  ←———————X———→  Close
+Polished ←———————X————→  Direct/raw
 ```
 
-**Nível de vulnerabilidade / pessoal* :**
-> [Capturado na entrevista de discovery: qual é o nível de abertura pessoal que o cliente se sente confortável em compartilhar? Define o tipo de storytelling permitido.]
+**Level of vulnerability / personal* :**
+> [Captured in the discovery interview: what level of personal openness is the client comfortable sharing? Defines the type of storytelling allowed.]
 
-- [ ] 1 — Apenas profissional. Sem vida pessoal, sem emoção
-- [ ] 2 — Aprendizados pessoais filtrados pelo viés profissional
-- [ ] 3 — Histórias pessoais quando têm lição de negócio clara
-- [ ] 4 — Aberto a vulnerabilidade e bastidores reais
-- [ ] 5 — Sem filtro — vida, erros, dilemas, tudo na mesa
+- [ ] 1 — Professional only. No personal life, no emotion
+- [ ] 2 — Personal learnings filtered through a professional lens
+- [ ] 3 — Personal stories when they carry a clear business lesson
+- [ ] 4 — Open to vulnerability and real behind-the-scenes
+- [ ] 5 — No filter — life, mistakes, dilemmas, everything on the table
 
-**Ponto de vista / contrarian opinions:**
-> [Crenças que o cliente tem sobre o mercado que vão na contramão da maioria — capturado na entrevista de discovery. São o motor de diferenciação e memória de marca.]
-- [Opinião forte 1]
-- [Opinião forte 2]
-- [Opinião forte 3]
+**Point of view / contrarian opinions:**
+> [Beliefs the client holds about the market that go against the majority — captured in the discovery interview. They drive differentiation and brand recall.]
+- [Strong opinion 1]
+- [Strong opinion 2]
+- [Strong opinion 3]
 
 ---
 
-# 11. INSTRUÇÃO DE CONTEÚDO PARA O CLAUDE
+# 11. Content instruction for Claude
 
-**SEMPRE usar este plugin (`linkedin-authority-engine`) como base.**
+**ALWAYS use this plugin (`linkedin-authority-engine`) as the base.**
 
-**Mix de conteúdo (ajustar % conforme objetivo)* :**
+**Content mix (adjust % by objective)* :**
 
-| Tipo | % | O que é |
+| Type | % | What it is |
 |------|----|---------|
-| Autoridade / Educação | [X]% | Insights, análises, tendências, frameworks, bastidores |
-| Prova de trabalho | [X]% | Cases, processos, metodologias, resultados concretos |
-| Pessoal / Humanização | [X]% | Valores, filosofia, aprendizados, histórias de vida |
+| Authority / Education | [X]% | Insights, analyses, trends, frameworks, behind-the-scenes |
+| Proof of work | [X]% | Cases, processes, methodologies, concrete results |
+| Personal / Humanizing | [X]% | Values, philosophy, learnings, life stories |
 
-**Temas prioritários (próximos 30-60 dias):**
-- [Tema 1 — relacionado aos pilares e objetivo atual]
-- [Tema 2]
-- [Tema 3]
-- [Tema 4]
-- [Adicionar mais conforme necessário]
+**Priority themes (next 30-60 days):**
+- [Theme 1 — related to the pillars and current objective]
+- [Theme 2]
+- [Theme 3]
+- [Theme 4]
+- [Add more as needed]
 
-**Formato preferido de entrega dos posts:**
+**Preferred post delivery format:**
 
-- [ ] Texto corrido (sem emojis, formato editorial)
-- [ ] Texto com emojis estratégicos como marcadores
-- [ ] Carrossel (texto estruturado para slides)
-- [ ] Lista numerada
-- [ ] Storytelling puro
-- [ ] Mix — definir proporção: [X]% texto / [X]% lista / [X]% story
+- [ ] Running text (no emojis, editorial format)
+- [ ] Text with strategic emojis as markers
+- [ ] Carousel (text structured for slides)
+- [ ] Numbered list
+- [ ] Pure storytelling
+- [ ] Mix — define the proportion: [X]% text / [X]% list / [X]% story
 
-**Frequência de publicação desejada:**
-> [Capturado na entrevista de discovery: quantos posts por semana / mês. Calibra o volume de produção e o ritmo de aprovação.]
-- Posts por semana: [X]
-- Dias preferenciais: [Ex: Terça, Quinta]
-- Horário preferido de publicação: [Ex: 7h-9h]
+**Desired posting frequency:**
+> [Captured in the discovery interview: how many posts per week / month. Calibrates production volume and the approval rhythm.]
+- Posts per week: [X]
+- Preferred days: [E.g. Tuesday, Thursday]
+- Preferred posting time: [E.g. 7am-9am]
 
-**Processo de aprovação:**
-- [ ] Cliente aprova tudo antes de publicar
-- [ ] Cliente aprova apenas conteúdos de opinião forte
-- [ ] Publicação direta após revisão da agência
-
----
-
-# 12. IDENTIDADE VISUAL *(OPCIONAL)*
-
-**Fontes:**
-- **Primária:** [Nome da fonte e peso]
-- **Secundária:** [Nome da fonte e peso]
-
-**Paleta de cores:**
-- **Cor principal:** [Nome / HEX]
-- **Cor secundária:** [Nome / HEX]
-- **Cor de destaque:** [Nome / HEX]
-
-**Estilo visual:**
-- [Clean / colorido / minimalista / premium / etc.]
-- [Diretrizes de uso das cores nos carrosséis]
-- [Elementos visuais a incluir / evitar]
+**Approval process:**
+- [ ] Client approves everything before publishing
+- [ ] Client approves only strong-opinion content
+- [ ] Direct publishing after agency review
 
 ---
 
-# 13. NOTAS ADICIONAIS
+# 12. Visual identity *(OPTIONAL)*
 
-**Perfil psicográfico do cliente:**
-> [Traços de personalidade, valores pessoais, estilo de trabalho, hobbies que podem aparecer no conteúdo — capturado ao longo de toda a entrevista]
-- [Traço 1]
-- [Traço 2]
-- [Estilo de trabalho]
-- [Hobbies / interesses que podem aparecer no conteúdo]
+**Fonts:**
+- **Primary:** [Font name and weight]
+- **Secondary:** [Font name and weight]
 
-**Ponto de partida digital (experiência atual):**
-> [Capturado na entrevista de discovery: nível de familiaridade com redes, histórico de tentativas anteriores, bloqueios identificados, o que já foi tentado. Define o ponto zero e a curva de aprendizado esperada.]
+**Color palette:**
+- **Primary color:** [Name / HEX]
+- **Secondary color:** [Name / HEX]
+- **Accent color:** [Name / HEX]
 
-**Desafio principal que motivou a contratação:**
-> [Ex: "Pouca visibilidade apesar de expertise sólida" ou "Necessidade de se posicionar digitalmente antes de uma transição de carreira"]
-
-**Palavras-chave da marca* :**
-[Palavra 1] | [Palavra 2] | [Palavra 3] | [Palavra 4] | [Palavra 5] | [Palavra 6] | [Palavra 7] | [Palavra 8]
-
-**Outras informações relevantes:**
-- [Contexto adicional que ajuda na criação de conteúdo]
-- [Particularidades do projeto]
-- [Parcerias ou colaborações em andamento]
-- [Eventos, palestras ou lançamentos previstos no calendário]
+**Visual style:**
+- [Clean / colorful / minimalist / premium / etc.]
+- [Guidelines for color use in carousels]
+- [Visual elements to include / avoid]
 
 ---
 
-**Última atualização:** [Data]
-**Versão:** 1.0
-**Responsável pelo setup:** [Nome]
+# 13. Additional notes
+
+**Client's psychographic profile:**
+> [Personality traits, personal values, work style, hobbies that can show up in the content — captured throughout the interview]
+- [Trait 1]
+- [Trait 2]
+- [Work style]
+- [Hobbies / interests that can show up in the content]
+
+**Digital starting point (current experience):**
+> [Captured in the discovery interview: level of familiarity with networks, history of previous attempts, identified blockers, what has already been tried. Defines the zero point and the expected learning curve.]
+
+**Main challenge that drove the engagement:**
+> [E.g. "Low visibility despite solid expertise" or "Need to position digitally ahead of a career transition"]
+
+**Brand keywords* :**
+[Keyword 1] | [Keyword 2] | [Keyword 3] | [Keyword 4] | [Keyword 5] | [Keyword 6] | [Keyword 7] | [Keyword 8]
+
+**Other relevant information:**
+- [Additional context that helps with content creation]
+- [Project particularities]
+- [Partnerships or collaborations in progress]
+- [Events, talks or launches scheduled on the calendar]
+
+---
+
+**Last updated:** [Date]
+**Version:** 1.0
+**Setup owner:** [Name]
