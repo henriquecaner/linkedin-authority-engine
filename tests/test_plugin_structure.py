@@ -27,7 +27,7 @@ def test_plugin_json_valid(plugin_dir):
     assert p.exists(), "plugin.json missing"
     data = json.loads(p.read_text(encoding="utf-8"))
     assert data["name"] == "linkedin-authority-engine"
-    assert data["version"] == "1.0.0"
+    assert data["version"] == "1.1.0"
     for key in ("displayName", "description", "author", "license"):
         assert key in data, f"plugin.json missing key {key}"
 
