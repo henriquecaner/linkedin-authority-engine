@@ -1,10 +1,11 @@
 ---
+name: authority-context
 description: Protocolo de leitura e escrita do substrato de memória do cliente (authority-context.md + memory/). Use SEMPRE antes de gerar conteúdo (ler perfil + padrões vencedores) e ao fim de toda sessão de geração (write-back). Define as 3 portas do auto-enriquecimento.
 ---
 
 # Authority Context — substrato auto-enriquecedor
 
-A pasta do cliente é a fonte de verdade (local-first). Unabyss (MCP) é enriquecimento opcional quando presente.
+A pasta do cliente é a fonte de verdade (local-first). Unabyss (MCP) é enriquecimento opcional quando presente (opcional — enriquecimento via Unabyss MCP quando presente; não requerido na v1).
 
 ## Arquivos
 - `authority-context.md` — perfil vivo (13 seções). Template em `references/authority-context-template.md`.
@@ -15,10 +16,10 @@ A pasta do cliente é a fonte de verdade (local-first). Unabyss (MCP) é enrique
 `init` escreve `authority-context.md`. Ver command `init`.
 
 ## Porta 2 — Leitura (geração)
-Antes de gerar qualquer post: ler `authority-context.md` (tema central, 3 pilares, ICP, voz, restrições, territórios SIM/NÃO) e `memory/` (priorizar hooks/temas com veredito positivo). Se Unabyss presente, puxar performance real.
+Antes de gerar qualquer post: ler `authority-context.md` (tema central, 3 pilares, ICP, voz, restrições, territórios SIM/NÃO) e `memory/` (priorizar hooks/temas com veredito positivo). Se Unabyss presente, puxar performance real (opcional — enriquecimento via Unabyss MCP quando presente; não requerido na v1).
 
 ## Porta 3 — Write-back (fim da sessão)
-Anexar a `memory/`: hooks/temas usados, ângulo, aprovado vs rejeitado. Performance (quando houver) atualiza `topic-performance.md`/`winning-hooks.md`. Nunca sobrescrever — append.
+Anexar (nunca sobrescrever): `winning-hooks.md` (hooks aprovados + categoria/objetivo/score), `topic-performance.md` (tema/pilar/tipo/score) e `learnings.md` (o que funcionou, ajustes de voz, rejeições). `voice-profile.md` é READ-ONLY em v1 (lido na Porta 2, escrita entra em v1.x). Colunas e schemas em `references/memory-schemas.md`.
 
 ## Guardrails
 Aplicar restrições da seção 9 do perfil (palavras proibidas, confidencial, sensibilidades) e respeitar territórios NÃO da seção 8.

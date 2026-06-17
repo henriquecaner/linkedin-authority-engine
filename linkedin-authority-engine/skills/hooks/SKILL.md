@@ -1,4 +1,5 @@
 ---
+name: hooks
 description: Banco de 147 hooks de LinkedIn organizados por tipo (prova de trabalho, autoridade, transformação, contrarian, confissão, curiosidade, história, listas). Use ao gerar headlines de post, primeiras linhas e variações de gancho para qualquer categoria de conteúdo.
 ---
 

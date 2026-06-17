@@ -1,4 +1,5 @@
 ---
+name: protocolo-pos-publicacao
 description: Protocolo dos 90 minutos críticos após publicar no LinkedIn: sinais medidos pelo 360Brew, ações passo a passo, timing por objetivo e erros que destroem alcance. Use ao finalizar qualquer post para entregar junto com o conteúdo e guiar a execução pós-publicação.
 ---
 

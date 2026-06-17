@@ -1,4 +1,5 @@
 ---
+name: brief-visual
 description: Geração de brief visual para posts LinkedIn: mapeamento de formato ideal por tipo de conteúdo, template de output com specs técnicas, prompts prontos para geração de imagem com IA (Midjourney/DALL-E/Canva) e regras de adaptação a documento de estilo do cliente. Use ao finalizar um post para gerar o brief visual que acompanha o conteúdo.
 ---
 

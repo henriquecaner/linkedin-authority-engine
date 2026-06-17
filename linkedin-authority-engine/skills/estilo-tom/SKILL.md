@@ -1,4 +1,5 @@
 ---
+name: estilo-tom
 description: Guia de estilo e tom para posts LinkedIn: especificações de formatação 360Brew 2026, princípios de autenticidade, exemplos bom vs ruim e checklist de estilo. Use ao revisar ou calibrar a voz e formatação de qualquer post antes de publicar.
 ---
 

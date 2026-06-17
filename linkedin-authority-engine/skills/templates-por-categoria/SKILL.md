@@ -1,4 +1,5 @@
 ---
+name: templates-por-categoria
 description: Templates prontos para 7 categorias de post LinkedIn (lição de carreira, conquista com números, fracasso, contrarian, how-to, opinião, bastidores) com estrutura de seções, placeholders e exemplos preenchidos. Use ao escrever posts para ter ponto de partida estruturado por categoria.
 ---
 

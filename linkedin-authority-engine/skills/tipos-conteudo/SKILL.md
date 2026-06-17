@@ -1,4 +1,5 @@
 ---
+name: tipos-conteudo
 description: Catálogo de 16 tipos de conteúdo para LinkedIn com estrutura e guia de escolha por objetivo (educar, inspirar, engajar, converter, autoridade). Use ao definir o tipo de post antes de escolher o framework de copywriting.
 ---
 

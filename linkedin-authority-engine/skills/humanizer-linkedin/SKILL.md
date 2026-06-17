@@ -1,4 +1,5 @@
 ---
+name: humanizer-linkedin
 description: Pipeline de humanização para posts LinkedIn (Etapa B do Pipeline de Finalização): quando executar, como executar, padrões de IA prioritários em posts LinkedIn, princípios de cirurgia (não demolição) e formato de output com diff compacto. Use automaticamente após o CTA ser escolhido, antes do score final, em qualquer modo de geração de post.
 ---
 

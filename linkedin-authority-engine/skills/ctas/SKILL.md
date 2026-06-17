@@ -1,4 +1,5 @@
 ---
+name: ctas
 description: Banco de CTAs para LinkedIn por objetivo (saves, leads, engajamento, seguidores, vendas, newsletter) com fórmulas e erros a evitar. Use ao escolher o CTA final de qualquer post para maximizar o sinal correto no 360Brew.
 ---
 

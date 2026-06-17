@@ -1,5 +1,6 @@
 ---
-description: Roteiro de entrevista de discovery para montar o perfil do cliente (authority-context.md) no Caminho A (entrevista guiada in-session). Use dentro do command init. Perguntas agrupadas pelas 13 seções do perfil; * = alimenta campo crítico.
+name: discovery-script
+description: Recurso interno carregado pelo command linkedin-authority-engine:init para conduzir a entrevista de discovery (Caminho A, in-session). Não usar isoladamente. Perguntas agrupadas pelas 13 seções do authority-context.md; * = pergunta que alimenta campo crítico do perfil.
 ---
 
 # Discovery Script — entrevista guiada
@@ -8,12 +9,13 @@ Conduzir uma pergunta por vez (ou blocos curtos). Não avançar de seção sem c
 
 ## Perfil do cliente
 
-- Qual seu nome completo, cargo atual e empresa? *
+- Qual seu nome completo, cargo atual e empresa?
 - Há quanto tempo você está nessa posição e quantos anos de experiência total na área?
 - Em que cidade ou região você atua?
 - Em 30 segundos, como você se apresentaria para alguém que nunca te viu? (essa resposta vira a bio) *
-- Quais são seus principais marcadores de credibilidade — resultados concretos, marcas onde trabalhou, números que provam o impacto? *
+- Quais são seus principais marcadores de credibilidade — resultados concretos, marcas onde trabalhou, números que provam o impacto?
 - Você tem um perfil no LinkedIn? Qual a URL?
+- Como foi sua trajetória até aqui? Quais os marcos da carreira e os momentos de virada que moldaram quem você é profissionalmente?
 
 ## Posicionamento e autoridade
 
@@ -21,6 +23,7 @@ Conduzir uma pergunta por vez (ou blocos curtos). Não avançar de seção sem c
 - Se dividíssemos seu conteúdo em 3 pilares principais, quais seriam? *
 - De onde você pega o cliente — qual é o ponto de partida — e para onde você o leva ao final do seu trabalho? (isso é sua proposta de valor) *
 - Quais histórias ou cases reais você tem disponíveis para usar como conteúdo?
+- Quais conquistas ou histórias suas ainda não foram contadas publicamente — material bruto que pode virar conteúdo de alto impacto?
 - Quais crenças do seu mercado você discorda? O que a maioria faz ou acredita que você considera errado?
 - Se você fosse dar UMA palestra este ano, qual seria o tema?
 - Quais são seus valores inegociáveis — os princípios que orientam o que você pode e não pode dizer publicamente?
@@ -28,13 +31,13 @@ Conduzir uma pergunta por vez (ou blocos curtos). Não avançar de seção sem c
 
 ## Objetivos
 
-- Qual é o foco principal agora: Authority (ser referência), Sales (gerar leads) ou Engagement (construir comunidade)? *
+- Qual é o foco principal agora: Authority (ser referência), Sales (gerar leads) ou Engagement (construir comunidade)? (pode combinar, com %) *
 - O que tornaria este projeto um sucesso concreto nos primeiros 90 dias? *
 - Qual métrica você quer acompanhar — impressões semanais, leads gerados, SSI, outro?
 
 ## Audiência
 
-- Quem exatamente você quer alcançar? Cargo, setor, porte de empresa, região? *
+- Quem exatamente você quer alcançar? Cargo, setor, porte de empresa, região?
 - Quais são as 3 maiores dores dessa audiência — o que tira o sono dela? *
 - Como é o antes e o depois que essa audiência busca? Qual é o estado de dor de entrada e o resultado desejado de saída? *
 - Como essa audiência chega até você hoje — LinkedIn, indicação, evento, outro canal?
@@ -47,7 +50,7 @@ Conduzir uma pergunta por vez (ou blocos curtos). Não avançar de seção sem c
 
 ## Narrativa comercial
 
-- Como você convence hoje? Quais argumentos, histórias ou provas sociais você usa nas conversas comerciais? *
+- Como você convence hoje? Quais argumentos, histórias ou provas sociais você usa nas conversas comerciais?
 - Quais são as objeções mais frequentes que você enfrenta antes do fechamento? *
 
 ## Paisagem competitiva
@@ -89,6 +92,7 @@ Conduzir uma pergunta por vez (ou blocos curtos). Não avançar de seção sem c
 ## Notas
 
 - Tem algo que me ajudaria a criar conteúdo que eu ainda não perguntei?
+- Qual foi o desafio ou insatisfação que motivou você a buscar isso agora — por que este projeto, por que neste momento?
 - Quais palavras-chave você quer que apareçam com frequência na sua comunicação — os termos que definem a sua marca? *
 - Você já tentou criar conteúdo no LinkedIn antes? O que funcionou e o que não funcionou?
 - Tem algum evento, palestra ou lançamento previsto nos próximos meses que o conteúdo deve preparar?

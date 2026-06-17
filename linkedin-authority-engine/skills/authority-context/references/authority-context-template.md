@@ -23,17 +23,17 @@
 - [Ex: "20 anos em supply chain industrial"]
 - [Ex: "Mentor de 50+ executivos C-level"]
 - [Ex: "Empresas no entorno: nome de marcas reconhecidas, parceiros, clientes relevantes"]
-- [Adicionar mais conforme entrevista — Q4 e Q6]
+- [Adicionar mais conforme entrevista]
 
 **Trajetória resumida (linha do tempo):**
-> [Capturado na Q4 da entrevista: marcos da carreira, momentos de virada, capítulos que moldaram o perfil profissional. Escrever em formato narrativo, não lista de empregos.]
+> [Capturado na entrevista de discovery: marcos da carreira, momentos de virada, capítulos que moldaram o perfil profissional. Escrever em formato narrativo, não lista de empregos.]
 
 ---
 
 # 2. POSICIONAMENTO E AUTORIDADE
 
 **Tema central de autoridade* :**
-> [O grande tema que o cliente quer ser referência. Ex: "Transformação digital em indústrias tradicionais" ou "Liderança humanizada em ambientes de alta performance". Derivado das Q4, Q5, Q13.]
+> [O grande tema que o cliente quer ser referência. Ex: "Transformação digital em indústrias tradicionais" ou "Liderança humanizada em ambientes de alta performance". Derivado da entrevista de discovery.]
 
 **3 pilares de conteúdo* :**
 
@@ -42,41 +42,41 @@
 3. **[Pilar 3]** — [Descrição]
 
 **Proposta de valor (jornada do cliente)* :**
-> [De: onde o cliente pega a pessoa / empresa. Para: onde conduz. Ex: "Pego fundadores que cresceram rápido demais e não têm processo, e levo para uma operação escalável sem perder a cultura." — Q12]
+> [De: onde o cliente pega a pessoa / empresa. Para: onde conduz. Ex: "Pego fundadores que cresceram rápido demais e não têm processo, e levo para uma operação escalável sem perder a cultura." (capturado na entrevista de discovery)]
 
 **Mandamentos profissionais (valores inegociáveis):**
-> [Do que o cliente não abre mão. Capturado na Q5. São os princípios que orientam o que pode e não pode ser dito — e que dão autenticidade ao conteúdo.]
+> [Do que o cliente não abre mão. Capturado na entrevista de discovery. São os princípios que orientam o que pode e não pode ser dito — e que dão autenticidade ao conteúdo.]
 - [Mandamento 1]
 - [Mandamento 2]
 - [Mandamento 3]
 - [Adicionar mais conforme entrevista]
 
 **Diferenciais reais (o que torna o trabalho singular):**
-> [Capturado na Q13: não os genéricos "sou comprometido", mas os específicos e difíceis de copiar. O que um ex-cliente diria que é diferente?]
+> [Capturado na entrevista de discovery: não os genéricos "sou comprometido", mas os específicos e difíceis de copiar. O que um ex-cliente diria que é diferente?]
 - [Diferencial 1]
 - [Diferencial 2]
 - [Diferencial 3]
 
 **Histórias e cases disponíveis para conteúdo:**
-> [Capturado nas Q4, Q6 e Q13. Cada história é uma pauta potencial.]
+> [Capturado na entrevista de discovery. Cada história é uma pauta potencial.]
 - [História 1 — resumo em 1 linha + contexto de uso recomendado]
 - [História 2 — resumo + contexto]
 - [História 3 — resumo + contexto]
 - [Adicionar mais conforme entrevista]
 
 **Histórias/conquistas ainda não contadas publicamente:**
-> [Q extra de entrevista: material bruto inédito que pode virar conteúdo de alto impacto com o trabalho certo de extração.]
+> [Capturado na entrevista de discovery: material bruto inédito que pode virar conteúdo de alto impacto com o trabalho certo de extração.]
 - [Conquista ou história inédita 1]
 - [Conquista ou história inédita 2]
 
 **Crenças que o cliente discorda no mercado:**
-> [Q extra de entrevista: opiniões contra-intuitivas ou anticonvencionais sobre o setor. São o combustível para conteúdo de posicionamento forte e memória de marca.]
+> [Capturado na entrevista de discovery: opiniões contra-intuitivas ou anticonvencionais sobre o setor. São o combustível para conteúdo de posicionamento forte e memória de marca.]
 - [Crença do mercado que o cliente questiona 1]
 - [Crença do mercado que o cliente questiona 2]
 - [Crença do mercado que o cliente questiona 3]
 
 **"Se você fosse dar UMA palestra, qual seria o tema?":**
-> [Q extra de entrevista: revela o tema de maior domínio e paixão. É o núcleo do posicionamento e da autoridade máxima.]
+> [Capturado na entrevista de discovery: revela o tema de maior domínio e paixão. É o núcleo do posicionamento e da autoridade máxima.]
 > [Resposta do cliente]
 
 ---
@@ -100,7 +100,7 @@
 - [ ] Outro: [descrever]
 
 **Definição de vitória em 90 dias* :**
-> [Q extra de entrevista: o que tornaria este projeto um sucesso tangível nos primeiros 3 meses? Ex: "Receber 2 convites de palestra", "5 leads qualificados por semana", "SSI acima de 70", "Ser reconhecido por X". Calibra todo o trabalho de conteúdo.]
+> [Capturado na entrevista de discovery: o que tornaria este projeto um sucesso tangível nos primeiros 3 meses? Ex: "Receber 2 convites de palestra", "5 leads qualificados por semana", "SSI acima de 70", "Ser reconhecido por X". Calibra todo o trabalho de conteúdo.]
 
 **Métrica principal de acompanhamento:**
 > [Ex: impressões semanais, taxa de engajamento, novos seguidores qualificados, leads gerados, SSI score]
@@ -119,13 +119,13 @@
 - **Maturidade digital:** [baixa / média / alta]
 
 **Dores principais desta audiência* :**
-> [Capturado nas Q10 e Q11: o que tira o sono, o que eles queriam resolver ontem]
+> [Capturado na entrevista de discovery: o que tira o sono, o que eles queriam resolver ontem]
 1. [Dor 1]
 2. [Dor 2]
 3. [Dor 3]
 
 **A grande transformação que querem* :**
-> [Q11: qual é o "antes" (estado de dor) e o "depois" (resultado desejado) que esta audiência busca]
+> [Capturado na entrevista de discovery: qual é o "antes" (estado de dor) e o "depois" (resultado desejado) que esta audiência busca]
 - **Antes (estado de dor):** [Descrição]
 - **Depois (resultado desejado):** [Descrição]
 
@@ -135,10 +135,10 @@
 - [Valor 3]
 
 **Como essa audiência chega até o cliente hoje:**
-> [Q10: canal de origem, indicação, LinkedIn, evento, etc. Indica onde o conteúdo precisa trabalhar.]
+> [Capturado na entrevista de discovery: canal de origem, indicação, LinkedIn, evento, etc. Indica onde o conteúdo precisa trabalhar.]
 
 **Pergunta que essa audiência mais faz ao cliente:**
-> [Q extra de entrevista: qual é a dúvida ou pedido recorrente que clientes e pares fazem? Cada resposta a essa pergunta é um post de autoridade pronto.]
+> [Capturado na entrevista de discovery: qual é a dúvida ou pedido recorrente que clientes e pares fazem? Cada resposta a essa pergunta é um post de autoridade pronto.]
 
 ---
 
@@ -168,7 +168,7 @@
 
 # 5. ARQUITETURA DE OFERTAS
 
-> [Capturado na Q16 da entrevista. Essencial para calibrar o volume e o tipo de conteúdo de conversão.]
+> [Capturado na entrevista de discovery. Essencial para calibrar o volume e o tipo de conteúdo de conversão.]
 
 | Oferta | Formato | Ticket / Nível | Audiência-alvo | Conteúdo que atrai |
 |--------|---------|----------------|----------------|--------------------|
@@ -183,7 +183,7 @@
 
 # 6. NARRATIVA COMERCIAL
 
-> [Capturado na Q14 da entrevista. O discurso de venda atual e as objeções recorrentes são o mapa do conteúdo de autoridade: cada objeção frequente é uma pauta de post.]
+> [Capturado na entrevista de discovery. O discurso de venda atual e as objeções recorrentes são o mapa do conteúdo de autoridade: cada objeção frequente é uma pauta de post.]
 
 **Discurso de venda atual (como o cliente convence hoje):**
 > [Argumentos centrais, histórias usadas, analogias, provas sociais mobilizadas na venda]
@@ -202,7 +202,7 @@
 
 # 7. PAISAGEM COMPETITIVA
 
-> [Capturado na Q15 da entrevista e Q7/Q8 sobre referências.]
+> [Capturado na entrevista de discovery.]
 
 **Principais concorrentes diretos:**
 - [Concorrente 1 — o que comunica bem / gap de posicionamento]
@@ -213,7 +213,7 @@
 > [O que nenhum concorrente está dizendo mas deveria — e o cliente pode ownar]
 
 **Referências de posicionamento (executivos que admira)* :**
-> [Capturado nas Q7 e Q8: não para copiar, mas para calibrar tom, temas e nível de sofisticação]
+> [Capturado na entrevista de discovery: não para copiar, mas para calibrar tom, temas e nível de sofisticação]
 - [Nome — URL — o que admira nesse posicionamento]
 - [Nome — URL — o que admira]
 - [Nome — URL — o que admira]
@@ -222,7 +222,7 @@
 
 # 8. TERRITÓRIOS DE CONTEÚDO
 
-> [Capturado nas Q17 e Q18 da entrevista.]
+> [Capturado na entrevista de discovery.]
 
 **Temas que o cliente se sente bem em falar (território SIM):**
 > [Assuntos de domínio genuíno, com repertório, opinião formada e energia para falar com frequência]
@@ -239,7 +239,7 @@
 - [Tema a evitar 3]
 
 **Fontes de informação do cliente* :**
-> [Capturado na Q9: portais, newsletters, podcasts, livros, pessoas que acompanha. Orienta curadoria de conteúdo e a escolha de repertório para publicações.]
+> [Capturado na entrevista de discovery: portais, newsletters, podcasts, livros, pessoas que acompanha. Orienta curadoria de conteúdo e a escolha de repertório para publicações.]
 - [Fonte 1 — tipo: portal / newsletter / podcast / livro]
 - [Fonte 2]
 - [Fonte 3]
@@ -264,10 +264,10 @@
 
 # 10. TOM DE VOZ E ESTILO
 
-> [Capturado nas Q5, Q7, Q8 e nas Q extras de entrevista sobre comunicação.]
+> [Capturado na entrevista de discovery.]
 
 **Como o cliente descreveria o próprio estilo de comunicação em 3 palavras:**
-> [Q extra de entrevista: resposta direta do cliente. Ex: "Direto, técnico, sem frescura" ou "Inspirador, humano, concreto"]
+> [Capturado na entrevista de discovery: resposta direta do cliente. Ex: "Direto, técnico, sem frescura" ou "Inspirador, humano, concreto"]
 
 **Tom de referência (benchmark):**
 > [Ex: "Estilo do Simon Sinek — inspirador mas prático" ou "Tom técnico como Fabio Akita, mas mais acessível" ou "Autoridade como Seth Godin, mas focado em negócios"]
@@ -283,7 +283,7 @@ Polido  ←———————X————→  Direto/cru
 ```
 
 **Nível de vulnerabilidade / pessoal* :**
-> [Q extra de entrevista: qual é o nível de abertura pessoal que o cliente se sente confortável em compartilhar? Define o tipo de storytelling permitido.]
+> [Capturado na entrevista de discovery: qual é o nível de abertura pessoal que o cliente se sente confortável em compartilhar? Define o tipo de storytelling permitido.]
 
 - [ ] 1 — Apenas profissional. Sem vida pessoal, sem emoção
 - [ ] 2 — Aprendizados pessoais filtrados pelo viés profissional
@@ -292,7 +292,7 @@ Polido  ←———————X————→  Direto/cru
 - [ ] 5 — Sem filtro — vida, erros, dilemas, tudo na mesa
 
 **Ponto de vista / contrarian opinions:**
-> [Crenças que o cliente tem sobre o mercado que vão na contramão da maioria — capturado na Q extra. São o motor de diferenciação e memória de marca.]
+> [Crenças que o cliente tem sobre o mercado que vão na contramão da maioria — capturado na entrevista de discovery. São o motor de diferenciação e memória de marca.]
 - [Opinião forte 1]
 - [Opinião forte 2]
 - [Opinião forte 3]
@@ -328,7 +328,7 @@ Polido  ←———————X————→  Direto/cru
 - [ ] Mix — definir proporção: [X]% texto / [X]% lista / [X]% story
 
 **Frequência de publicação desejada:**
-> [Q extra de entrevista: quantos posts por semana / mês. Calibra o volume de produção e o ritmo de aprovação.]
+> [Capturado na entrevista de discovery: quantos posts por semana / mês. Calibra o volume de produção e o ritmo de aprovação.]
 - Posts por semana: [X]
 - Dias preferenciais: [Ex: Terça, Quinta]
 - Horário preferido de publicação: [Ex: 7h-9h]
@@ -368,7 +368,7 @@ Polido  ←———————X————→  Direto/cru
 - [Hobbies / interesses que podem aparecer no conteúdo]
 
 **Ponto de partida digital (experiência atual):**
-> [Q1 da entrevista: nível de familiaridade com redes, histórico de tentativas anteriores, bloqueios identificados, o que já foi tentado. Define o ponto zero e a curva de aprendizado esperada.]
+> [Capturado na entrevista de discovery: nível de familiaridade com redes, histórico de tentativas anteriores, bloqueios identificados, o que já foi tentado. Define o ponto zero e a curva de aprendizado esperada.]
 
 **Desafio principal que motivou a contratação:**
 > [Ex: "Pouca visibilidade apesar de expertise sólida" ou "Necessidade de se posicionar digitalmente antes de uma transição de carreira"]

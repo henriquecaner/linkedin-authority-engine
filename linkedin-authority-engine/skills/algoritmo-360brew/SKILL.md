@@ -1,4 +1,5 @@
 ---
+name: algoritmo-360brew
 description: Referência completa do algoritmo 360Brew do LinkedIn (v3.0, Q1 2026): fundamentos, specs de formato e timing, métricas e sistema de pontuação. Use ao criar ou avaliar posts para garantir aderência às regras do algoritmo, otimizar alcance orgânico e calcular probabilidades de outlier.
 ---
 
