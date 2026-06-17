@@ -58,3 +58,13 @@ def test_authority_context_assets(plugin_dir):
     mem = (base / "references" / "memory-schemas.md").read_text(encoding="utf-8")
     for f in ("winning-hooks.md", "topic-performance.md", "voice-profile.md", "learnings.md"):
         assert f in mem, f"memory-schemas sem {f}"
+
+def test_command_frontmatter(plugin_dir):
+    import os
+    cmds = ["init"]  # ampliado na Task 7
+    for c in cmds:
+        p = plugin_dir / "commands" / f"{c}.md"
+        assert p.exists(), f"command ausente: {c}"
+        text = p.read_text(encoding="utf-8")
+        assert text.startswith("---"), f"{c}: sem frontmatter"
+        assert "description:" in text.split("---")[1], f"{c}: sem description"
