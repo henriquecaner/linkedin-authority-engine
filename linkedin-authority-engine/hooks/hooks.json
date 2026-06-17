@@ -1,0 +1,16 @@
+{
+  "description": "linkedin-authority-engine: banner de SessionStart apontando para o onboarding.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'LinkedIn Authority Engine ativo. Se ainda não há authority-context.md neste projeto, rode /linkedin-authority-engine:init. Depois use /linkedin-authority-engine:linkedin para criar posts.'"
+          }
+        ]
+      }
+    ]
+  }
+}

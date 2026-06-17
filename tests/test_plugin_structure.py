@@ -76,3 +76,10 @@ def test_agents_frontmatter(plugin_dir):
         assert p.exists(), f"agent ausente: {a}"
         fm = p.read_text(encoding="utf-8").split("---")[1]
         assert "name:" in fm and "description:" in fm, f"{a}: frontmatter incompleto"
+
+def test_hooks_json_valid(plugin_dir):
+    import json
+    p = plugin_dir / "hooks" / "hooks.json"
+    assert p.exists(), "hooks.json ausente"
+    data = json.loads(p.read_text(encoding="utf-8"))
+    assert "SessionStart" in data["hooks"]
