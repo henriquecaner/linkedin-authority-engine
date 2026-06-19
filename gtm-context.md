@@ -40,12 +40,15 @@ Persistent context file. Every plugin command reads it automatically. Update it 
   > Implementation service (validated model): R$ 2.500 per 2-3 month project (setup + rollout + support on the first batch of 20 posts the client writes and the founder approves/refines). R$ 40k+ already sold in this format.
   > ⚠️ The service price is underpriced for an ICP doing R$ 1M+ — a low price becomes a credibility objection. Handle in `/hormozi-gtm:pricing`.
 
-- **New product price (DEFINED in `/pricing` 2026-06-17 — follows the Hormozi playbook):**
-  > **Gold (DEFAULT): R$ 2.997** upfront/PIX (12x R$ 297 with an incentivized PIX discount). Plugin + guide + individual Slack connect (assisted support 2-3 months, closed period) + onboarding.
-  > **MANDATORY continuity: "Authority Engine OS" R$ 297/month** — ZERO-TOUCH (product + AI comment automation + new prompts/features + community). NEVER 1:1 on the recurring tier (hourly cost R$ 250 > margin R$ 177 → 1h/month turns into a loss).
-  > **Tiers v2 (don't block the launch):** Silver R$ 1.497 (self-serve, no individual support — also serves as a downsell) · Platinum R$ 8.997 (Gold + Henrique's direct involvement, PT only — this is the "3x", the anchor).
-  > **Order bump v2:** "Setup Day" 90min 1:1 session R$ 497.
-  > Ref: `outputs/pricing/pricing-level-tech-20260617-v1.md`
+- **Product ladder (LOCKED 2026-06-18 — additive add-ons, NOT alternative tiers; static stickers grossed up over InfinityPay+Nitro fees + Simples Anexo III tax; fees ABSORBED, NOT passed to client):**
+  > **Step 1 — Gold (base, standalone): static R$ 3.997** → nets ~R$ 3.000 clean even on the worst payment path (20% PIX coupon OR 10x absorbed at 17.39%). The self-serve product = plugin + guide/wiki/SDK (best-practices + step-by-step, education layer) + chat support on the site (CS-staffed) + 12 months updates/support included. Conversion lever: "R$ 399/month" (up to 10x sem juros) + PIX coupon 10-20% (cap 20%; doubles as a margin tool steering to PIX where fee ≈ 0). Nitro antecipates the full value upfront even on a 10x sale → Henrique's cash-flow tool.
+  > **Step 2 — + Platinum add-on (Henrique's direct help, 12h = 1h/week × 12 weeks; ONLY sold with Gold, never standalone): +R$ 8.000 → Gold+Platinum bundle R$ 11.997** → nets ~R$ 9.000. Henrique's hour LOCKED at **R$ 500/h** (a deliberate discount off his R$ 700-1500 billable rate to keep the bundle accessible, still 2x his R$ 250 cost). "R$ 1.200/month" lever (10x). Bundle ÷ Gold = exactly **3x** — the "3x" anchor model (Gold 1x + his help = 3x); makes R$ 3.997 Gold look small.
+  > **Step 3 — + Extension add-on: +R$ 1.197 → nets ~R$ 897.** Extends updates/support 12 → 24 months. Available on Gold-only (Gold + Extension) OR on the bundle (Gold + Platinum + Extension). Offered in-cart at a discount (ticket upgrade) — the main cash-forward lever now that there's no monthly.
+  > **NO free tier.**
+  > **Recurring model = ANNUAL RENEWAL ONLY (no monthly continuity — DECIDED 2026-06-18).** Henrique manages his own cash flow (Nitro antecipation funds it). Consequence: year 1 is 100% front-end (the treadmill — needs ~11-15 sales/month for the R$ 25-40k profit floor); compounding only kicks in year 2 via renewals. **Religion metric = annual renewal rate + extension take-rate, NOT MRR.**
+  > **Payment mechanics:** InfinityPay + Nitro, fees ABSORBED, static price, no juros repasse. PIX ≈ 0% · card 1x 5.99% · 3x 12.49% · 10x 17.39% · 12x 18.79%. Coupon cap 20%.
+  > ⏳ ONLY OPEN ITEM: Fator R — confirm Anexo III holds (folha/receita ≥ 28%) or budget Anexo V (~15.5% → Gold needs ~R$ 3.550 to keep R$ 3.000 clean). The only number still on a guess.
+  > Refs: `outputs/pricing/pricing-level-tech-20260618-v2.md` · `outputs/audit/audit-level-tech-20260618-v2.md` (offer 8.0). Prior `pricing-...20260617-v1.md` superseded on the payment + ladder model.
 
 - **Model:** hybrid (one-time + recurring continuity)
   > Self-serve (plugin + guide) + zero-touch continuity + upsell of assisted mentoring (Platinum). Multi-language sale: PT / EN / ES. Support: assisted mentoring in PT only; EN and ES via asynchronous chat/WhatsApp/email.
@@ -54,7 +57,7 @@ Persistent context file. Every plugin command reads it automatically. Update it 
 - **Promised transformation** (in how long, who becomes what):
   > The client executes for 30-60 days without slipping. Setup (diagnosis + first 3-7 posts of the week + 1st lead magnet) in ~2-3 weeks; AI comment setup ~1 week in parallel. After that: an operation of 20-30 posts/month + 1-4 lead magnets/month + daily comment automation. Goes from "invisible expert posting for 2 likes" to "absolute authority on a topic, with organic leads showing up already trusting what they can buy".
 
-- **Last audit:** `outputs/audit/audit-level-tech-20260617-v1.md` (score 5.5/10 · bottleneck: Effort 4/10 + Time 4/10 · fix: reposition the effort as "1 batch/month" + conditional guarantee + first win in 7-14 days)
+- **Last audit:** `outputs/audit/audit-level-tech-20260618-v3.md` (score **8.0/10** re-confirmed against the locked offer · bottleneck = Time 6 (intrinsic) + Probability capped at 8 by the missing self-serve case · verdict: offer is maxed, the next point comes from SELLING not auditing — ship the LP). Guarantee LOCKED: outcome anchored on a 2x reach floor in 60 days, sells the 2x-14x ceiling. ⚠️ validate the 14x ceiling against a real case before copy. Lineage: v1 (5.5) → v2 (8.0, offer refined + guarantee) → v3 (8.0, re-scored vs locked product/ladder).
 
 ## Brand Voice
 
@@ -86,8 +89,9 @@ Persistent context file. Every plugin command reads it automatically. Update it 
 
 ## Unit economics (if known)
 
-- **Gold price:** R$ 2.997 one-time → ~R$ 2.000 net (after ~8% fee + ~10% tax)
-- **Continuity:** R$ 297/month → ~R$ 177 net per subscriber (zero-touch)
+- **Gold price:** static R$ 3.997 → ~R$ 3.000 net clean (worst path: 10x absorbed 17.39% → R$ 3.062, or 20% PIX coupon → R$ 3.006; PIX at full/10%-off nets more). Simples Anexo III 6% now / ~10% at scale.
+- **Gold+Platinum bundle:** static R$ 11.997 → ~R$ 9.000 net (R$ 3.000 Gold + R$ 6.000 for 12h of Henrique @ R$ 500/h). Exactly 3x Gold.
+- **Recurring = annual renewal only (no monthly).** Extension R$ 1.197 (~R$ 897 net) at checkout/renewal pulls year-2 cash forward. Year 1 is front-end-driven; compounding via renewals in year 2. Religion metric = renewal rate, not MRR.
 - **Variable cost per client:** Slack connect license (~R$ 80) + support time (ONLY during the closed Gold period). Claude inference = the client's bill (cost ~R$ 0 for Henrique)
 - **Fixed monthly costs (tools):** ~R$ 2.000 (HubSpot R$200 + Claude Max R$500 + Sales Navigator R$300 + Lemlist R$500 + Workspace R$120 + GCloud R$200 + Notion R$100 + Slack R$80)
 - **Current CAC:** R$ 200
