@@ -7,6 +7,8 @@ description: Internal resource loaded by the linkedin-authority-engine:init comm
 
 Ask one question at a time (or in short blocks). Do not move past a section until the `*` fields are covered.
 
+Conduct the interview in the language chosen in step 1 of `init` (the `language` token). When it is `pt`, ask every question in **Brazilian Portuguese (pt-BR)** — "você", Brazilian vocabulary and spelling, never European Portuguese. The question wording below is the English reference; translate it to the chosen language as you go.
+
 ## Profile
 
 - What is your full name, current role, and company?
