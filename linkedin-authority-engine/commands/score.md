@@ -13,6 +13,7 @@ Before evaluating:
 2. Read `authority-context.md` (full profile) and every file in `memory/` (`winning-hooks.md`, `topic-performance.md`, `voice-profile.md`, `learnings.md`).
 3. Apply: tone of voice, content pillars, real credentials, editorial constraints as additional evaluation criteria.
 4. If `topic-performance.md` has a real baseline for the profile, use it for relative comparison in the score.
+5. **Language.** Read the `language` field from the `authority-context.md` frontmatter and operate in it for the whole session: `language: pt` → generate every post and conduct the interaction in **Brazilian Portuguese (pt-BR)** ("você", never "tu"; Brazilian vocabulary, spelling, and idiom; never European Portuguese); `language: en` → English. Pass the token as `--lang <pt|en>` to **both** `validate_specs.py` and `score_post.py`. If the field is absent (older profile), omit `--lang` (scorer defaults to `auto`) and infer the language from the conversation.
 
 If no post is provided as an argument, ask: "Paste the post you want to evaluate."
 
@@ -27,7 +28,7 @@ If no post is provided as an argument, ask: "Paste the post you want to evaluate
 Run `${CLAUDE_PLUGIN_ROOT}/scripts/validate_specs.py` on the post:
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/validate_specs.py post.txt
+python ${CLAUDE_PLUGIN_ROOT}/scripts/validate_specs.py post.txt --lang <pt|en>
 ```
 
 Present the result:
@@ -50,7 +51,7 @@ Run the `linkedin-authority-engine:humanizer-linkedin` skill on the post. Presen
 Run `${CLAUDE_PLUGIN_ROOT}/scripts/score_post.py` on the humanized post:
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/score_post.py post.txt --objective <authority|sales|engagement>
+python ${CLAUDE_PLUGIN_ROOT}/scripts/score_post.py post.txt --lang <pt|en> --objective <authority|sales|engagement>
 ```
 
 If the objective was not provided, infer it from the post content or ask.

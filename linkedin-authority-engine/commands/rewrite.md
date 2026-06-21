@@ -14,6 +14,7 @@ Before any analysis or generation:
 3. Apply: tone of voice, content pillars, real credentials, editorial constraints.
 4. Prioritize winning patterns from `winning-hooks.md` and `topic-performance.md`.
 5. Validate on each generated version: "Does this sound like how this client would talk?"
+6. **Language.** Read the `language` field from the `authority-context.md` frontmatter and operate in it for the whole session: `language: pt` → generate every post and conduct the interaction in **Brazilian Portuguese (pt-BR)** ("você", never "tu"; Brazilian vocabulary, spelling, and idiom; never European Portuguese); `language: en` → English. Pass the token as `--lang <pt|en>` to **both** `validate_specs.py` and `score_post.py`. If the field is absent (older profile), omit `--lang` (scorer defaults to `auto`) and infer the language from the conversation.
 
 If no post is provided as an argument, ask: "Paste the post you want to optimize."
 
@@ -71,7 +72,7 @@ Run the `linkedin-authority-engine:humanizer-linkedin` skill on each version (A 
 Run `${CLAUDE_PLUGIN_ROOT}/scripts/score_post.py` on each humanized version:
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/score_post.py post.txt --objective <authority|sales|engagement>
+python ${CLAUDE_PLUGIN_ROOT}/scripts/score_post.py post.txt --lang <pt|en> --objective <authority|sales|engagement>
 ```
 
 Present the final comparison:

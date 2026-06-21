@@ -14,6 +14,7 @@ Before any generation:
 3. Apply: tone of voice, content pillars, real credentials, editorial constraints across every post in the series.
 4. Prioritize winning patterns: approved hooks in `winning-hooks.md`, high-performing topics in `topic-performance.md`.
 5. Ensure voice consistency and narrative progression across the posts.
+6. **Language.** Read the `language` field from the `authority-context.md` frontmatter and operate in it for the whole session: `language: pt` → generate every post and conduct the interaction in **Brazilian Portuguese (pt-BR)** ("você", never "tu"; Brazilian vocabulary, spelling, and idiom; never European Portuguese); `language: en` → English. Pass the token as `--lang <pt|en>` to **both** `validate_specs.py` and `score_post.py`. If the field is absent (older profile), omit `--lang` (scorer defaults to `auto`) and infer the language from the conversation.
 
 ---
 
@@ -82,7 +83,7 @@ For **each post** in the series:
    **Stage A — Technical validation**
 
    ```bash
-   python ${CLAUDE_PLUGIN_ROOT}/scripts/validate_specs.py post.txt
+   python ${CLAUDE_PLUGIN_ROOT}/scripts/validate_specs.py post.txt --lang <pt|en>
    ```
 
    Fix errors before advancing.
@@ -98,7 +99,7 @@ For **each post** in the series:
    **Stage D — Final score**
 
    ```bash
-   python ${CLAUDE_PLUGIN_ROOT}/scripts/score_post.py post.txt --objective <authority|sales|engagement>
+   python ${CLAUDE_PLUGIN_ROOT}/scripts/score_post.py post.txt --lang <pt|en> --objective <authority|sales|engagement>
    ```
 
    **Stage E — Post-publication protocol**
