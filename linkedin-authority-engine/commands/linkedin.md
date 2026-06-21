@@ -1,6 +1,6 @@
 ---
-description: Mode menu for the LinkedIn Authority Engine. Shows Guided, Rewrite, Thread and Score and routes to the chosen mode. Use when the user doesn't know where to start or wants an overview of the available modes.
-argument-hint: "[guided|rewrite|thread|score]"
+description: Mode menu for the LinkedIn Authority Engine. Shows Onboarding, Guided, Rewrite, Thread and Score and routes to the chosen mode. Use when the user doesn't know where to start or wants an overview of the available modes.
+argument-hint: "[onboarding|guided|rewrite|thread|score]"
 ---
 
 # /linkedin-authority-engine:linkedin
@@ -26,6 +26,7 @@ When the profile exists, read its `language` frontmatter field and render the me
 
 | Argument received | Immediate action |
 |-------------------|------------------|
+| `onboarding` | Start onboarding — invoke `/linkedin-authority-engine:init` |
 | `guided` | Start GUIDED MODE (STEP 1.0) |
 | `guided [topic]` | GUIDED MODE with the topic already provided (skip STEP 1.2) |
 | `rewrite` | Ask for the post and start REWRITE MODE |
@@ -41,6 +42,7 @@ When the profile exists, read its `language` frontmatter field and render the me
 
 ```
 🎯 LinkedIn Authority Engine — What are we creating?
+0 Onboarding — create or refresh your authority profile (/init)
 1 Guided   — post from scratch (full workflow)
 2 Rewrite  — optimize an existing post
 3 Thread   — series of posts
@@ -50,6 +52,7 @@ Type the number or the mode name.
 ```
 
 Wait for the user's choice and route to the matching command:
+- `0` or `onboarding` → invoke `/linkedin-authority-engine:init`
 - `1` or `guided` → invoke `/linkedin-authority-engine:guided`
 - `2` or `rewrite` → invoke `/linkedin-authority-engine:rewrite`
 - `3` or `thread` → invoke `/linkedin-authority-engine:thread`
