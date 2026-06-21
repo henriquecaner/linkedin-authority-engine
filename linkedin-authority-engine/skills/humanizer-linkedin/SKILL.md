@@ -55,3 +55,43 @@ Humanizer applied:
 ```
 
 Followed by the **full humanized post** (final version for scoring).
+
+## LinkedIn voice recovery (LinkedIn-specific layer)
+
+> This layer is additive to the 24 patterns in the `humanizer` skill. It targets LinkedIn-native AI tells.
+
+### Banned words — replace with what you'd say out loud
+
+| AI word | Say instead |
+|---|---|
+| Surfaced | Found / Noticed |
+| Fostered | Built / Helped |
+| Utilized | Used |
+| Paradigm | Approach / Way |
+| Mitigated | Reduced / Fixed |
+| Leveraged | Used |
+| Moreover | Also / And |
+| Holistic | Full / Complete |
+| Synergy | Teamwork / Overlap |
+| Streamlined | Simplified / Sped up |
+| Pivoted | Changed / Shifted |
+| Ecosystem | Space / World |
+| Robust | Strong / Solid |
+| Facilitate | Help / Run |
+| Cultivate | Build / Grow |
+
+### Banned hooks — rewrite if you see these
+
+Concrete phrases (also caught by the scorer): "Read that again", "Let that sink in", "What if I told you...?", "Here's the truth about...", "Nobody tells you...", "Unlock the power of...", "Game-changer", "Here's the shift...", "The real question is...", "And here's the kicker...".
+
+Variable templates (humanizer-only — too variable to regex safely): "Stop doing X. Do Y.", "Unpopular opinion: ...", "Most people think X. They're wrong.", "I used to believe X. Then everything changed.", "Not only that, but...", "Not because X. Because Y.", "And here's the thing most people miss...".
+
+### Out-loud test
+
+Read every sentence aloud. If you wouldn't say it to a friend over coffee, rewrite it the way you'd actually say it. Vary sentence length — mix short punches with longer thoughts.
+
+### Specificity check
+
+Vague = AI. Specific = human. Every story carries at least 2 of: a name, a number, a date, a place. Replace "the results were impressive" with "that post got 2,192 reactions in 4 days".
+
+> On the "use AI only for feedback" rule from the source checklist: this plugin generates and rewrites, so the equivalent discipline is **surgery, not demolition** — fix the pattern, keep the author's voice and data.
