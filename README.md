@@ -4,7 +4,7 @@
 
 [![version](https://img.shields.io/badge/version-1.1.0-black)](./linkedin-authority-engine/.claude-plugin/plugin.json)
 [![platform](https://img.shields.io/badge/Claude%20Code%20%7C%20Cowork-plugin-blue)](https://thelevr.com)
-[![algorithm](https://img.shields.io/badge/360Brew-v3.0%20Q1%202026-orange)](./linkedin-authority-engine/skills/360brew-algorithm/SKILL.md)
+[![algorithm](https://img.shields.io/badge/360Brew-v3.5%20Q1%202026-orange)](./linkedin-authority-engine/skills/360brew-algorithm/SKILL.md)
 [![license](https://img.shields.io/badge/license-proprietary-lightgrey)](#license)
 
 By **[LEVEL TECH](https://thelevel.com.br)** · product page: **[thelevr.com](https://thelevr.com)**
@@ -23,7 +23,7 @@ You talk to Claude. The plugin reads your authority profile, drafts the post in 
 
 Three things set it apart from a generic text generator:
 
-- **Tuned for 360Brew.** Format, timing, hook, and CTA all get checked against the LinkedIn algorithm reference (v3.0, Q1 2026), not against vague "best practices."
+- **Tuned for 360Brew.** Format, timing, hook, and CTA all get checked against the LinkedIn algorithm reference (v3.5, Q1 2026), not against vague "best practices."
 - **Living client profile.** The `authority-context.md` holds who you are, your voice, your topics, and your numbers. The content comes out yours, not off a template.
 - **Self-enriching memory.** Patterns that work get saved as learnings. The plugin gets sharper on your case each session, through three write-back "doors."
 - **Multilingual Scoring Engine.** Complete support for Portuguese (PT) and English (EN) posts. A shared library (`postlib.py`) acts as the single source of truth for PT/EN matchers and 360Brew specs, allowing automatic detection (`--lang auto`) or explicit override (`--lang pt|en`) during scoring and validation.
@@ -134,38 +134,9 @@ authority-engine/
 │   ├── scripts/                 # 3 CLI scripts + postlib.py (shared lib)
 │   └── hooks/                   # SessionStart hook
 │
-├── gtm-context.md               # go-to-market context (ICP, offer, voice, channels)
-├── outputs/                     # commercial strategy deliverables
-│   ├── pricing/                 # pricing review (5 Hormozi laws)
-│   └── audit/                   # offer audit (Value Equation)
-│
 ├── tests/                       # pytest suite (plugin structure + scripts)
 └── docs/                        # supporting documentation
 ```
-
-### The GTM layer
-
-Beyond the plugin, the repo holds the product's go-to-market (GTM) strategy, pricing modeling, and offer audit generated using the Hormozi GTM plugin framework:
-
-- **`gtm-context.md`** — ICP, offer, brand voice, channels, and stage. Single source of commercial context.
-- **`outputs/pricing/`** — price analysis by the 5 laws of the Pricing Playbook.
-- **`outputs/audit/`** — offer diagnosis by the Value Equation.
-
-#### Commercial Packaging & Pricing (Hormozi Playbook)
-
-Following the Pricing Playbook and GTM audit conducted on 2026-06-17, the LinkedIn Authority Engine transitioned from a R$ 2.500 direct consulting service to a highly-scalable, productized subscription model:
-
-- **Gold Tier (Main Offer): R$ 2.997** upfront/PIX (or 12x R$ 297). Includes the Core Plugin + Implementation Guide + Onboarding + 2-3 months of assisted support via direct Slack Connect.
-- **Mandatory Continuity ("Authority Engine OS"): R$ 297/month** — A zero-touch recurring subscription covering the product, community, ongoing updates, and AI comment automation.
-- **Silver Tier (Downsell): R$ 1.497** — Self-serve access, no individual 1:1 support.
-- **Platinum Tier (Anchor / Upsell): R$ 8.997** — Gold package + direct 1:1 strategic involvement with the founder (available in PT only).
-- **Setup Day (Order Bump): R$ 497** — A 90-minute 1:1 setup session.
-
-#### Ideal Client Profile (ICP)
-
-- **Target Persona:** B2B SMB Founders/Leaders doing R$ 1M+/year in revenue, selling to other companies, with an addressable LinkedIn market of >10k contacts.
-- **Core Pain:** Has already burned budget on agencies that delivered generic, low-performing content (or struggled with consistency on their own) and wants a qualified pipeline + recognized market authority.
-- **Brand Voice:** Direct, irreverent, confrontational. Leverages high-intensity storytelling with real vulnerability and concrete numbers (+R$68M B2B, 40-60% reply rate).
 
 ---
 
@@ -182,8 +153,7 @@ The suite covers the plugin structure (`test_plugin_structure.py`), the script b
 
 ## Roadmap
 
-- [ ] Self-serve launch (Gold + continuity) — first for the warm audience already waiting for the product
-- [ ] Sales page + payment gateway + HubSpot Sales integration
+- [ ] Self-serve launch — first for the warm audience already waiting for the product
 - [x] Multilingual scoring (PT + EN)
 - [ ] Multi-language operation end-to-end, including generation and ES
 - [ ] Publication on the public plugin marketplace

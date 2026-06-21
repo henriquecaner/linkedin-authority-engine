@@ -3,3 +3,8 @@ tests/__pycache__/
 .pytest_cache/
 *.pyc
 __pycache__/
+
+# Frente 1 (GTM / strategy) + legacy — local only, never commit
+gtm/
+archive/
+CLAUDE.local.md

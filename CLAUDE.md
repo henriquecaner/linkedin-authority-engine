@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-This repo is **not an application** — it is the source of a Claude Code / Claude Cowork **plugin** (`linkedin-authority-engine/`) plus its go-to-market layer. The plugin turns a founder's expertise into LinkedIn posts tuned for the 360Brew algorithm. Most of the "code" is markdown (commands, skills, agents) that Claude reads at runtime; the only executable code is a small Python CLI suite used for scoring/validation.
+This repo is **not an application** — it is the source of a Claude Code / Claude Cowork **plugin** (`linkedin-authority-engine/`). The plugin turns a founder's expertise into LinkedIn posts tuned for the 360Brew algorithm. Most of the "code" is markdown (commands, skills, agents) that Claude reads at runtime; the only executable code is a small Python CLI suite used for scoring/validation.
 
 Two distinct artifact sets live here, and the distinction matters when editing:
 - **Plugin source** (`linkedin-authority-engine/`) — what ships to users. Editing this changes product behavior.
@@ -50,13 +50,9 @@ The plugin has no server and no persistent process. Each command is a markdown p
 - `SPECS` (char counts, paragraph minimums, etc.) lives in `postlib.py`. The dimension `WEIGHTS` live in `score_post.py` (saves 30%, hook 20%, algorithm 20%, structure 15%, cta 10%, data 5%) and are documented as aligned with `skills/360brew-algorithm/SKILL.md`. **These three locations (postlib SPECS, score_post WEIGHTS, the SKILL.md Metrics section) must stay in sync** — there is no enforcement, so changing one requires manually updating the others.
 - **Multilingual matching is union-based, not detection-based.** With `--lang auto` (default), text is matched against *both* PT and EN pattern sets simultaneously; `detect_language()` is for reporting only and never gates matching. PT/EN keyword sets are designed not to collide, and structural matches dedupe by canonical label. When adding a pattern, add it to both `_*["pt"]` and `_*["en"]` dicts and keep labels canonical so union matching doesn't double-count.
 
-### GTM layer (repo root, not plugin source)
+### Design docs (not plugin source)
 
-`gtm-context.md` + `outputs/pricing/` + `outputs/audit/` are commercial strategy artifacts produced by the separate `hormozi-gtm` plugin. They describe the product's pricing/ICP, not its behavior. Treat as documentation.
-
-### Legacy / scratch (do not treat as source)
-
-`Skill-old/`, `lp-old/`, and `docs/superpowers/` (plans + specs) are historical design notes and prior iterations. They are not part of the shipping plugin.
+`docs/superpowers/` (plans + specs) holds the plugin's design history and active roadmap specs. It documents how the product was built and what's next; it is not part of the shipping plugin.
 
 ## Conventions
 
