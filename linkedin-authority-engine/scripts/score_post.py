@@ -74,6 +74,10 @@ def score_hook(text: str, lang: str) -> tuple:
         score -= 4.0
         feedback.append("[X] Hook punished by 360Brew detected (-4)")
 
+    if postlib.find_ai_cliches(text, lang):
+        score -= 1.5
+        feedback.append("[X] AI-cliché hook detected (-1.5)")
+
     if re.search(r'\d+', hook):
         score += 1.5
         feedback.append("[+] Specific numbers in the hook (+1.5)")

@@ -8,6 +8,7 @@ SCRIPTS = pathlib.Path(__file__).resolve().parent.parent / "linkedin-authority-e
 sys.path.insert(0, str(SCRIPTS))
 
 import postlib  # noqa: E402
+import score_post  # noqa: E402
 
 
 # --- language detection ---
@@ -92,3 +93,45 @@ def test_lang_restriction_excludes_other_language():
 def test_specs_present():
     for key in ("chars_min", "chars_max", "paragraphs_min", "avg_word_length_max"):
         assert key in postlib.SPECS
+
+
+# --- AI-cliché hooks (separate bucket from engagement-bait) ---
+
+def test_ai_cliche_en():
+    assert "Let that sink in" in postlib.find_ai_cliches("Let that sink in.\nBig news today.", "en")
+
+def test_ai_cliche_pt():
+    assert "Let that sink in" in postlib.find_ai_cliches("Deixa isso assentar.\nNovidade hoje.", "pt")
+
+def test_ai_cliche_clean_text_no_false_positive():
+    assert postlib.find_ai_cliches("I spent 40 hours testing three tools last week.", "auto") == []
+
+def test_ai_cliche_dedup_across_languages():
+    labels = postlib.find_ai_cliches("Game-changer e divisor de águas no mesmo post", "auto")
+    assert labels.count("Game-changer") == 1
+
+def test_ai_cliche_only_first_lines():
+    # a cliché buried below the first 5 lines is not a hook
+    text = "Clean hook line.\n\n\n\n\n\nLet that sink in."
+    assert postlib.find_ai_cliches(text, "en") == []
+
+def test_ai_cliche_pt_verdade_sobre_needs_frame():
+    # bare "a verdade sobre" is ordinary PT — must NOT fire
+    assert postlib.find_ai_cliches("Compartilho a verdade sobre nossa jornada.", "pt") == []
+    # the framed hook DOES fire
+    assert "Here's the truth about" in postlib.find_ai_cliches("Aqui está a verdade sobre pricing.", "pt")
+
+def test_ai_cliche_curly_apostrophe():
+    assert "Here's the shift" in postlib.find_ai_cliches("Here’s the shift in B2B.", "en")
+
+
+def test_ai_cliche_pt_accent_insensitive():
+    assert "Here's the shift" in postlib.find_ai_cliches("Aqui esta a virada do mercado.", "pt")
+    assert "The real question is" in postlib.find_ai_cliches("A real pergunta e essa.", "pt")
+
+
+def test_score_hook_penalizes_ai_cliche():
+    base = "Here is what I learned about pricing.\nThree lessons below."
+    s_base, _ = score_post.score_hook(base, "en")
+    s_cliche, _ = score_post.score_hook("Let that sink in. " + base, "en")
+    assert s_cliche == s_base - 1.5

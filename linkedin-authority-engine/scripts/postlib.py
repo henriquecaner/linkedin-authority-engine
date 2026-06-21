@@ -123,6 +123,36 @@ _PUNISHED = {
     ],
 }
 
+# AI-cliché hooks — DISTINCT from _PUNISHED (engagement bait). Only concrete,
+# regex-safe phrases live here; variable templates ("Stop doing X. Do Y.") are
+# handled qualitatively by the humanizer-linkedin skill, not the scorer.
+# Labels are canonical (shared across languages) so union matching counts once.
+_AI_CLICHE_HOOKS = {
+    "en": [
+        (r"\bread that again\b", "Read that again"),
+        (r"\blet that sink in\b", "Let that sink in"),
+        (r"\bwhat if i told you\b", "What if I told you"),
+        (r"\bhere'?s the truth about\b", "Here's the truth about"),
+        (r"\bnobody tells you\b", "Nobody tells you"),
+        (r"\bunlock the power of\b", "Unlock the power of"),
+        (r"\bgame[ -]?changer\b", "Game-changer"),
+        (r"\bhere'?s the shift\b", "Here's the shift"),
+        (r"\bthe real question is\b", "The real question is"),
+        (r"\bhere'?s the kicker\b", "Here's the kicker"),
+    ],
+    "pt": [
+        (r"\bleia (?:isso )?de novo\b", "Read that again"),
+        (r"\bdeixa isso (?:assentar|bater)\b", "Let that sink in"),
+        (r"\be se eu te dissesse\b", "What if I told you"),
+        (r"\b(?:aqui est[áa] |eis )a verdade sobre\b", "Here's the truth about"),
+        (r"\bningu[ée]m te conta\b", "Nobody tells you"),
+        (r"\b(?:destrave|desbloqueie) o poder de\b", "Unlock the power of"),
+        (r"\bdivisor de águas\b", "Game-changer"),
+        (r"\baqui est[áa] a virada\b", "Here's the shift"),
+        (r"\ba (?:verdadeira|real) pergunta [ée]\b", "The real question is"),
+    ],
+}
+
 # High save-potential patterns. Labels are canonical (shared across languages)
 # so a structural match is counted once even under union matching.
 _SAVES = {
@@ -216,6 +246,19 @@ def find_punished(text: str, lang: str = "auto") -> list:
     for l in resolve_langs(lang):
         for pattern, name in _PUNISHED[l]:
             if re.search(pattern, first_lines, re.IGNORECASE) and name not in found:
+                found.append(name)
+    return found
+
+
+def find_ai_cliches(text: str, lang: str = "auto") -> list:
+    """Returns canonical AI-cliché hook labels found in the first lines
+    (deduped across languages). Separate from find_punished (engagement bait)."""
+    text = text.replace("’", "'")
+    first_lines = '\n'.join(text.split('\n')[:5])
+    found = []
+    for l in resolve_langs(lang):
+        for pattern, name in _AI_CLICHE_HOOKS[l]:
+            if name not in found and re.search(pattern, first_lines, re.IGNORECASE):
                 found.append(name)
     return found
 
