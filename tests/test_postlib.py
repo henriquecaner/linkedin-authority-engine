@@ -8,6 +8,7 @@ SCRIPTS = pathlib.Path(__file__).resolve().parent.parent / "linkedin-authority-e
 sys.path.insert(0, str(SCRIPTS))
 
 import postlib  # noqa: E402
+import score_post  # noqa: E402
 
 
 # --- language detection ---
@@ -122,3 +123,10 @@ def test_ai_cliche_pt_verdade_sobre_needs_frame():
 
 def test_ai_cliche_curly_apostrophe():
     assert "Here's the shift" in postlib.find_ai_cliches("Here’s the shift in B2B.", "en")
+
+
+def test_score_hook_penalizes_ai_cliche():
+    base = "Here is what I learned about pricing.\nThree lessons below."
+    s_base, _ = score_post.score_hook(base, "en")
+    s_cliche, _ = score_post.score_hook("Let that sink in. " + base, "en")
+    assert s_cliche == s_base - 1.5

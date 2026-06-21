@@ -445,7 +445,7 @@ Rest     ███░░░░░░░░░░░░░░░░░░░░�
 | 8-9 | Has 2 of 3 elements |
 | 6-7 | Relevant, but generic |
 | 4-5 | Cliché, no angle |
-| 0-3 | Punished by the algorithm ("What do you think?", "Good morning, LinkedIn") |
+| 0-3 | Punished by the algorithm ("What do you think?", "Good morning, LinkedIn") or an AI-cliché hook ("Let that sink in", "Game-changer", "Unlock the power of") |
 
 **Algorithm (20%)**
 | Score | Description |
