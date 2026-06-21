@@ -92,3 +92,24 @@ def test_lang_restriction_excludes_other_language():
 def test_specs_present():
     for key in ("chars_min", "chars_max", "paragraphs_min", "avg_word_length_max"):
         assert key in postlib.SPECS
+
+
+# --- AI-cliché hooks (separate bucket from engagement-bait) ---
+
+def test_ai_cliche_en():
+    assert "Let that sink in" in postlib.find_ai_cliches("Let that sink in.\nBig news today.", "en")
+
+def test_ai_cliche_pt():
+    assert "Let that sink in" in postlib.find_ai_cliches("Deixa isso assentar.\nNovidade hoje.", "pt")
+
+def test_ai_cliche_clean_text_no_false_positive():
+    assert postlib.find_ai_cliches("I spent 40 hours testing three tools last week.", "auto") == []
+
+def test_ai_cliche_dedup_across_languages():
+    labels = postlib.find_ai_cliches("Game-changer e divisor de águas no mesmo post", "auto")
+    assert labels.count("Game-changer") == 1
+
+def test_ai_cliche_only_first_lines():
+    # a cliché buried below the first 5 lines is not a hook
+    text = "Clean hook line.\n\n\n\n\n\nLet that sink in."
+    assert postlib.find_ai_cliches(text, "en") == []
