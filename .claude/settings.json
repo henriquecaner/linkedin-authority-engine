@@ -1,6 +1,5 @@
 {
   "enabledPlugins": {
-    "hormozi-gtm@hormozi-gtm-marketplace": true,
     "superpowers@claude-plugins-official": true,
     "plugin-dev@claude-plugins-official": true
   }

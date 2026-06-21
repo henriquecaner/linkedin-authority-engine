@@ -64,7 +64,7 @@ A integração utiliza o ecossistema do **HeyGen Live Avatar** para criar um age
 ### 3.1. Configuração do Agente (HeyGen Console)
 * **Avatar ID:** Clone digital do Henrique Caner (voz e aparência calibradas em PT-BR).
 * **Agent Skills (Prompt do Sistema do Avatar):**
-  * O avatar deve agir como o Henrique Caner, usando o tom *direto, irreverente e focado em arquitetura comercial* definido em `gtm-context.md`.
+  * O avatar deve agir como o Henrique Caner, usando o tom *direto, irreverente e focado em arquitetura comercial*.
   * Deve injetar sistematicamente o roteiro de perguntas extraídas de `skills/discovery-script/SKILL.md`.
   * **Regra de Condução:** O avatar não precisa seguir a ordem robótica das perguntas, mas deve garantir que cobre os blocos fundamentais (Perfil, Posicionamento, ICP, Oferta e Narrativa Comercial) antes de encerrar.
 
