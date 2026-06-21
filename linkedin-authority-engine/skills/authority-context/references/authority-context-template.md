@@ -3,6 +3,8 @@
 > **How to use:** Fill in after the setup interview. Each field indicates which interview question the data comes from. Fields marked with `*` are critical for this plugin (`linkedin-authority-engine`).
 > 
 > **Primary skill:** this plugin (`linkedin-authority-engine`) (always use it as the base for content creation)
+>
+> **Frontmatter:** when generated, this file carries a YAML frontmatter with `last_updated`, `version`, and `language` (`pt` = Brazilian Portuguese / pt-BR, or `en`). Section labels stay in English; the client's data is written in the chosen language.
 
 ---
 

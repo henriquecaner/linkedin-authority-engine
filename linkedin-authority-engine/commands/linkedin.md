@@ -18,6 +18,8 @@ Run /linkedin-authority-engine:init to create your authority profile before gene
 
 - If it **exists**: continue with the routing below.
 
+When the profile exists, read its `language` frontmatter field and render the menu and all prompts in that language (`pt` → Brazilian Portuguese / pt-BR, `en` → English). When no profile exists yet, the "No profile found" message stays in English — the language has not been chosen yet.
+
 ---
 
 ## Routing by argument

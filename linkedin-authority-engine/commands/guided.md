@@ -14,6 +14,7 @@ Before any generation:
 3. Apply: tone of voice, content pillars, real credentials, editorial constraints.
 4. Prioritize winning patterns: approved hooks in `winning-hooks.md`, high-performing topics in `topic-performance.md`.
 5. Validate internally on each generation: "Does this sound like how this client would talk?"
+6. **Language.** Read the `language` field from the `authority-context.md` frontmatter and operate in it for the whole session: `language: pt` → generate every post and conduct the interaction in **Brazilian Portuguese (pt-BR)** ("você", never "tu"; Brazilian vocabulary, spelling, and idiom; never European Portuguese); `language: en` → English. Pass the token as `--lang <pt|en>` to **both** `validate_specs.py` and `score_post.py`. If the field is absent (older profile), omit `--lang` (scorer defaults to `auto`) and infer the language from the conversation.
 
 ---
 
@@ -165,7 +166,7 @@ The user picks **1 CTA**. Post assembled (hook + body + CTA) → run the **Final
 Run `${CLAUDE_PLUGIN_ROOT}/scripts/validate_specs.py` on the post:
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/validate_specs.py post.txt
+python ${CLAUDE_PLUGIN_ROOT}/scripts/validate_specs.py post.txt --lang <pt|en>
 ```
 
 If it returns errors (link in body, too many hashtags, complex words, dense paragraphs): **fix before continuing**. Do not advance to Stage B with a technical error.
@@ -183,7 +184,7 @@ Run the `linkedin-authority-engine:visual-brief` skill on the humanized post. Au
 Run `${CLAUDE_PLUGIN_ROOT}/scripts/score_post.py` on the humanized post:
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/score_post.py post.txt --objective <authority|sales|engagement>
+python ${CLAUDE_PLUGIN_ROOT}/scripts/score_post.py post.txt --lang <pt|en> --objective <authority|sales|engagement>
 ```
 
 Present the report across the 6 dimensions (Saves Potential 30%, Hook 20%, Algorithm 20%, Structure 15%, CTA 10%, Data 5%) + Top 1% / Top 5% classification.
