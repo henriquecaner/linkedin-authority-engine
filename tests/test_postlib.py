@@ -125,6 +125,11 @@ def test_ai_cliche_curly_apostrophe():
     assert "Here's the shift" in postlib.find_ai_cliches("Here’s the shift in B2B.", "en")
 
 
+def test_ai_cliche_pt_accent_insensitive():
+    assert "Here's the shift" in postlib.find_ai_cliches("Aqui esta a virada do mercado.", "pt")
+    assert "The real question is" in postlib.find_ai_cliches("A real pergunta e essa.", "pt")
+
+
 def test_score_hook_penalizes_ai_cliche():
     base = "Here is what I learned about pricing.\nThree lessons below."
     s_base, _ = score_post.score_hook(base, "en")

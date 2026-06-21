@@ -148,8 +148,8 @@ _AI_CLICHE_HOOKS = {
         (r"\bningu[ée]m te conta\b", "Nobody tells you"),
         (r"\b(?:destrave|desbloqueie) o poder de\b", "Unlock the power of"),
         (r"\bdivisor de águas\b", "Game-changer"),
-        (r"\baqui está a virada\b", "Here's the shift"),
-        (r"\ba (?:verdadeira|real) pergunta é\b", "The real question is"),
+        (r"\baqui est[áa] a virada\b", "Here's the shift"),
+        (r"\ba (?:verdadeira|real) pergunta [ée]\b", "The real question is"),
     ],
 }
 
