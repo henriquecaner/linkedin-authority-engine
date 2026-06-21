@@ -2,7 +2,7 @@
 
 > Plugin for **Claude Code** and **Claude Cowork** that turns a founder's expertise into authority on LinkedIn. Posts tuned for the 360Brew algorithm, with a living client profile and memory that learns every session.
 
-[![version](https://img.shields.io/badge/version-1.1.0-black)](./linkedin-authority-engine/.claude-plugin/plugin.json)
+[![version](https://img.shields.io/badge/version-1.2.0-black)](./linkedin-authority-engine/.claude-plugin/plugin.json)
 [![platform](https://img.shields.io/badge/Claude%20Code%20%7C%20Cowork-plugin-blue)](https://thelevr.com)
 [![algorithm](https://img.shields.io/badge/360Brew-v3.5%20Q1%202026-orange)](./linkedin-authority-engine/skills/360brew-algorithm/SKILL.md)
 [![license](https://img.shields.io/badge/license-proprietary-lightgrey)](#license)
