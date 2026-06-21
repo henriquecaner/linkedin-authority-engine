@@ -113,3 +113,12 @@ def test_ai_cliche_only_first_lines():
     # a cliché buried below the first 5 lines is not a hook
     text = "Clean hook line.\n\n\n\n\n\nLet that sink in."
     assert postlib.find_ai_cliches(text, "en") == []
+
+def test_ai_cliche_pt_verdade_sobre_needs_frame():
+    # bare "a verdade sobre" is ordinary PT — must NOT fire
+    assert postlib.find_ai_cliches("Compartilho a verdade sobre nossa jornada.", "pt") == []
+    # the framed hook DOES fire
+    assert "Here's the truth about" in postlib.find_ai_cliches("Aqui está a verdade sobre pricing.", "pt")
+
+def test_ai_cliche_curly_apostrophe():
+    assert "Here's the shift" in postlib.find_ai_cliches("Here’s the shift in B2B.", "en")

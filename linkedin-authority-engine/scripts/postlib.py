@@ -144,7 +144,7 @@ _AI_CLICHE_HOOKS = {
         (r"\bleia (?:isso )?de novo\b", "Read that again"),
         (r"\bdeixa isso (?:assentar|bater)\b", "Let that sink in"),
         (r"\be se eu te dissesse\b", "What if I told you"),
-        (r"\ba verdade sobre\b", "Here's the truth about"),
+        (r"\b(?:aqui est[áa] |eis )a verdade sobre\b", "Here's the truth about"),
         (r"\bningu[ée]m te conta\b", "Nobody tells you"),
         (r"\b(?:destrave|desbloqueie) o poder de\b", "Unlock the power of"),
         (r"\bdivisor de águas\b", "Game-changer"),
@@ -253,6 +253,7 @@ def find_punished(text: str, lang: str = "auto") -> list:
 def find_ai_cliches(text: str, lang: str = "auto") -> list:
     """Returns canonical AI-cliché hook labels found in the first lines
     (deduped across languages). Separate from find_punished (engagement bait)."""
+    text = text.replace("’", "'")
     first_lines = '\n'.join(text.split('\n')[:5])
     found = []
     for l in resolve_langs(lang):
