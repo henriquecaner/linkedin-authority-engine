@@ -34,7 +34,7 @@ After `init`, use `/linkedin-authority-engine:linkedin` for the mode menu.
 
 The plugin reads your authority profile, drafts the post in the right framework, strips out AI writing patterns, and grades it before you publish. Then it hands you the 90-minute post-publication protocol. Every post that lands feeds the local memory, so the next one starts closer to your voice.
 
-- **12 skills** — 360Brew algorithm reference, a bank of 147 hooks, 8 copywriting structures, 16 content types, templates by category, CTAs, style and tone, humanizer, post-publication protocol, visual brief, memory substrate and discovery script.
+- **12 skills** — 360Brew algorithm reference, a bank of 147 hooks, 8 copywriting structures, 22 content types, templates by category, CTAs, style and tone, humanizer, post-publication protocol, visual brief, memory substrate and discovery script.
 - **2 agents** — `linkedin-strategist` (strategy) and `humanizer-linkedin` (final anti-AI pass).
 - **3 CLI scripts + shared lib** — `score_post.py`, `suggest_hooks.py`, `validate_specs.py`, plus `postlib.py` (the shared, multilingual PT+EN matcher library and 360Brew specs). Scoring and validation accept `--lang auto|pt|en`.
 - **1 hook** — a `SessionStart` banner pointing to `init`.

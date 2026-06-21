@@ -72,3 +72,7 @@ Visual tone: [Minimalist / Data or infographic / Human or photo / Illustration]
 ## Integration with adjacent skills
 
 If the user has an image generation or presentation skill active (e.g. Canva MCP), suggest triggering those skills to materialize the brief. Otherwise, deliver just the ready prompt.
+
+## Video (a format, not a text type)
+
+Video posts (a <60s take, behind-the-scenes, or a point-of-view) build trust because people hear your voice and see your face. They are a **format**, not one of the text content-types — pair them with captions and a hook in the first 2 seconds. When a post's job is trust and you can record, prefer video over a selfie.
