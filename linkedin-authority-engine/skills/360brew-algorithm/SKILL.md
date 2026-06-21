@@ -1,13 +1,13 @@
 ---
 name: 360brew-algorithm
-description: Complete reference for LinkedIn's 360Brew algorithm (v3.0, Q1 2026): fundamentals, format and timing specs, metrics, and scoring system. Use it when creating or evaluating posts to keep them aligned with the algorithm's rules, maximize organic reach, and estimate outlier probabilities.
+description: Complete reference for LinkedIn's 360Brew algorithm (v3.5, Q1 2026): fundamentals, format and timing specs, metrics, and scoring system. Use it when creating or evaluating posts to keep them aligned with the algorithm's rules, maximize organic reach, and estimate outlier probabilities.
 ---
 
 ## Core
 
 # 360Brew algorithm - fundamentals
 
-> Version 3.0 · Baseline: Q1 2026
+> Version 3.5 · Baseline: Q1 2026
 
 ## What 360Brew is
 
@@ -96,7 +96,7 @@ To break out of the median (where 66% of reach has been lost), **all four elemen
 
 ## Key changes vs 2025
 
-| Before (v2.0 - 2025) | Now (v3.0 - 2026) |
+| Before (v2.0 - 2025) | Now (v3.5 - 2026) |
 |---------------------|---------------------|
 | Multiple algorithms | Single 360Brew engine (150B params) |
 | Social Graph | **Interest Graph** |
