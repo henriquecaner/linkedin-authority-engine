@@ -11,3 +11,7 @@ CLAUDE.local.md
 
 # Local-only Claude config (per-machine enabled plugins, out of the versioned product)
 .claude/settings.local.json
+
+# local tool state (Claude Code browser + wrangler)
+.playwright-mcp/
+.wrangler/
