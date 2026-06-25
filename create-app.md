@@ -1,0 +1,74 @@
+- generic [ref=e1]:
+  - generic:
+    - generic:
+      - iframe
+  - generic:
+    - iframe
+  - generic [ref=e137]:
+    - complementary
+  - dialog [ref=e142]:
+    - generic [ref=e143]:
+      - region "Seção da página" [ref=e144]:
+        - group [ref=e146]:
+          - generic [ref=e147]:
+            - navigation [ref=e149]:
+              - button "Voltar" [ref=e150] [cursor=pointer]:
+                - generic [ref=e151]:
+                  - img [ref=e153]
+                  - generic [ref=e155]: Voltar
+            - heading "Zippy-Oxygen" [level=1] [ref=e157]:
+              - generic [ref=e158]:
+                - textbox [ref=e160]: Zippy-Oxygen
+                - generic:
+                  - img
+            - button "Criar aplicativo" [disabled] [ref=e162]:
+              - generic [ref=e164]: Criar aplicativo
+        - group [ref=e166]:
+          - link "Saiba mais Link abre em uma nova janela" [ref=e169] [cursor=pointer]:
+            - /url: https://developers.hubspot.com/docs/apps/legacy-apps/private-apps/overview
+            - generic [ref=e170]: Saiba mais
+            - img "Link abre em uma nova janela" [ref=e172]
+          - navigation [ref=e179]:
+            - button "Informações básicas" [ref=e180] [cursor=pointer]:
+              - img [ref=e183]
+              - text: Informações básicas
+            - button "Escopos" [ref=e187] [cursor=pointer]:
+              - img [ref=e190]
+              - text: Escopos
+            - button "Webhooks" [ref=e193] [cursor=pointer]:
+              - img [ref=e196]
+              - text: Webhooks
+      - region "Seção da página" [ref=e201]:
+        - main [ref=e204]:
+          - generic [ref=e211]:
+            - generic [ref=e212]:
+              - heading "Informações básicas" [level=3] [ref=e213]
+              - text: Dê ao seu aplicativo um nome, logotipo e descrição exclusivos para ajudar sua equipe a entender o que ele faz.
+            - generic [ref=e215]:
+              - generic [ref=e217]:
+                - generic [ref=e218]:
+                  - generic [ref=e219]:
+                    - generic [ref=e224]:
+                      - text: Nome
+                      - generic [ref=e225]: "*"
+                    - generic [ref=e227]:
+                      - generic [ref=e228]: Este nome aparecerá em sua página de aplicativos privados, algumas ferramentas da HubSpot e outros materiais. Precisa ser exclusivo para esta conta.
+                      - button "Gerar um nome aleatório" [ref=e231] [cursor=pointer]
+                  - textbox "Nome *" [ref=e232]: Zippy-Oxygen
+                - generic [ref=e236]: 188 caracteres
+              - generic [ref=e237]:
+                - generic [ref=e240]: ZO
+                - generic [ref=e241]:
+                  - generic [ref=e242]: Logotipo
+                  - generic [ref=e243]:
+                    - text: Faça upload de um logotipo quadrado para ajudar a identificar exclusivamente este aplicativo.
+                    - img [ref=e246]
+                  - button "Carregar logotipo" [ref=e251] [cursor=pointer]:
+                    - generic [ref=e252]:
+                      - img [ref=e253]
+                      - generic [ref=e257]: Carregar logotipo
+              - generic [ref=e259]: Descrição
+              - generic [ref=e260]:
+                - textbox "Descrição" [ref=e261]:
+                  - /placeholder: Forneça uma descrição para seu aplicativo
+                - generic [ref=e263]: 150 caracteres
