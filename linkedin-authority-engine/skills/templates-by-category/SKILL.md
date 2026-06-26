@@ -439,3 +439,9 @@ Why do I keep going?
 3. **Count the characters** - Stay between 1,250-2,500
 4. **Pick 1 CTA** - Don't mix several
 5. **Validate with the scoring system** - Target: ≥9/10
+
+---
+
+## Related
+
+These are ready-made scaffolds. To turn a raw lived experience into a story-arc post from scratch (situation → tension → turning point → outcome → lesson), use the `linkedin-authority-engine:story-extractor` skill — it can hand off here for the career-lesson and failure templates.

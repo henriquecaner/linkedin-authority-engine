@@ -141,3 +141,9 @@ Saves are the most powerful signal in 360Brew — worth 5x a like. CTAs that enc
 - [ ] Obvious benefit
 - [ ] If there's a link: is it in the first comment, not the body?
 - [ ] Encourages a save OR a long comment (3+ sentences) — not a shallow like?
+
+---
+
+## Related
+
+This skill is the **bank** of CTAs. To diagnose why a specific post's close is weak and get 3-5 rewritten alternatives for the goal, use the `linkedin-authority-engine:cta-optimizer` skill — it loads this bank and applies it to one post.

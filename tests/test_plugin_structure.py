@@ -6,15 +6,36 @@ EXPECTED_SKILLS = [
     "visual-brief", "humanizer-linkedin",
 ]
 
+# Workflow skills added in v1.3.0 (self-invoking; carry their own When-to-trigger / Process / Output).
+EXPECTED_WORKFLOW_SKILLS = [
+    "niche-definer", "audience-persona", "content-pillars", "content-calendar",
+    "repurposer", "story-extractor", "cta-optimizer", "carousel-builder",
+    "profile-optimizer", "analytics-interpreter",
+]
+
+def _assert_skill_valid(plugin_dir, name):
+    sk = plugin_dir / "skills" / name / "SKILL.md"
+    assert sk.exists(), f"missing skill: {name}"
+    text = sk.read_text(encoding="utf-8")
+    assert text.startswith("---"), f"{name}: no frontmatter"
+    assert "description:" in text.split("---")[1], f"{name}: frontmatter without description"
+    body = text.split("---", 2)[2].strip()
+    assert len(body) > 200, f"{name}: body too short (incomplete port?)"
+
 def test_knowledge_skills_present_and_valid(plugin_dir):
     for name in EXPECTED_SKILLS:
-        sk = plugin_dir / "skills" / name / "SKILL.md"
-        assert sk.exists(), f"missing skill: {name}"
-        text = sk.read_text(encoding="utf-8")
-        assert text.startswith("---"), f"{name}: no frontmatter"
-        assert "description:" in text.split("---")[1], f"{name}: frontmatter without description"
-        body = text.split("---", 2)[2].strip()
-        assert len(body) > 200, f"{name}: body too short (incomplete port?)"
+        _assert_skill_valid(plugin_dir, name)
+
+def test_workflow_skills_present_and_valid(plugin_dir):
+    for name in EXPECTED_WORKFLOW_SKILLS:
+        _assert_skill_valid(plugin_dir, name)
+
+def test_workflow_skills_have_no_taplio_coupling(plugin_dir):
+    import re
+    pat = re.compile(r"taplio|search_inspiration|get_me|create_draft|utm_source|power up with", re.I)
+    for name in EXPECTED_WORKFLOW_SKILLS:
+        text = (plugin_dir / "skills" / name / "SKILL.md").read_text(encoding="utf-8")
+        assert not pat.search(text), f"{name}: residual Taplio coupling"
 
 def test_no_stale_skill_references(plugin_dir):
     import re
@@ -27,7 +48,7 @@ def test_plugin_json_valid(plugin_dir):
     assert p.exists(), "plugin.json missing"
     data = json.loads(p.read_text(encoding="utf-8"))
     assert data["name"] == "linkedin-authority-engine"
-    assert data["version"] == "1.2.0"
+    assert data["version"] == "1.3.0"
     for key in ("displayName", "description", "author", "license"):
         assert key in data, f"plugin.json missing key {key}"
 

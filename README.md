@@ -80,7 +80,7 @@ memory/                ─┤──►  reads profile + winning patterns
                   write-back ──►  memory/  (self-enrichment)
 ```
 
-### Skills (12)
+### Skills (22)
 
 The plugin's intelligence lives in the skills — each one is a reference that Claude loads when it needs it.
 
@@ -90,7 +90,7 @@ The plugin's intelligence lives in the skills — each one is a reference that C
 | `authority-context` | Read/write protocol for the client's memory substrate. The 3 self-enrichment doors. |
 | `hooks` | A bank of 147 hooks by type (proof, authority, transformation, contrarian, confession…). |
 | `copywriting-structures` | 8 frameworks (AIDA, PAS, BAB, FAB, Star-Story-Solution, APP, HSO, Storytelling) and a selection guide. |
-| `content-types` | A catalog of 16 post types by objective. |
+| `content-types` | A catalog of 22 post types by objective. |
 | `templates-by-category` | Ready templates for 7 categories, with placeholders and examples. |
 | `ctas` | A bank of CTAs by objective (saves, leads, engagement, sales…). |
 | `style-and-tone` | 360Brew formatting guide, authenticity and a voice checklist. |
@@ -98,6 +98,12 @@ The plugin's intelligence lives in the skills — each one is a reference that C
 | `post-publication-protocol` | The 90 critical minutes after publishing: signals, actions and mistakes that kill reach. |
 | `visual-brief` | Visual brief for the post with technical specs and ready prompts for image generation. |
 | `discovery-script` | The `init` interview script (internal use). |
+
+As of v1.3.0, 10 **workflow skills** extend the plugin beyond writing a single post. You trigger them by asking in plain language, no slash command:
+
+- **Strategy:** `niche-definer`, `audience-persona`, `content-pillars`, `content-calendar` — the first three write their result back into the authority profile after you confirm.
+- **Production:** `repurposer`, `story-extractor`, `cta-optimizer`, `carousel-builder`.
+- **Audits:** `profile-optimizer`, `analytics-interpreter`.
 
 ### Agents (2)
 
@@ -129,7 +135,7 @@ authority-engine/
 ├── linkedin-authority-engine/   # the plugin (product)
 │   ├── .claude-plugin/          # plugin.json + marketplace.json
 │   ├── commands/                # 6 commands
-│   ├── skills/                  # 12 skills
+│   ├── skills/                  # 22 skills
 │   ├── agents/                  # 2 agents
 │   ├── scripts/                 # 3 CLI scripts + postlib.py (shared lib)
 │   └── hooks/                   # SessionStart hook

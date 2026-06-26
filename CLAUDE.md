@@ -42,7 +42,7 @@ The plugin has no server and no persistent process. Each command is a markdown p
 
 2. **The pipeline.** Generation flows: read profile/memory → generate (structure → hook → body → CTA) → `humanizer-linkedin` skill (strip AI tone) → `score_post.py` (6 dimensions) → `post-publication-protocol` → write-back. The humanizer pass before scoring is mandatory for any externally-facing post.
 
-3. **Skills are the knowledge base.** The 12 skills in `linkedin-authority-engine/skills/` are references Claude loads on demand (hooks bank, copy frameworks, CTAs, 360Brew spec, etc.). Commands orchestrate; skills hold the domain knowledge. Change a numeric spec in one place and check whether `score_post.py` mirrors it (see below).
+3. **Skills are the knowledge base — and, as of v1.3.0, also self-invoking workflows.** The 22 skills in `linkedin-authority-engine/skills/` split into two kinds: (a) *knowledge bases* the commands load on demand (hooks bank, copy frameworks, CTAs, 360Brew spec, etc.) — commands orchestrate, these hold domain knowledge; and (b) *workflow skills* added in v1.3.0 (`niche-definer`, `audience-persona`, `content-pillars`, `content-calendar`, `repurposer`, `story-extractor`, `cta-optimizer`, `carousel-builder`, `profile-optimizer`, `analytics-interpreter`) that carry their own When-to-trigger / Inputs / Process / Output, auto-invoke from plain-language requests, and follow the same Gates scaffold. The strategy trio (`niche-definer`, `audience-persona`, `content-pillars`) writes back into `authority-context.md` via the **Gate 3-S** protocol (propose → diff → confirm → in-place section replace → version bump), defined in the `authority-context` skill. Change a numeric spec in one place and check whether `score_post.py` mirrors it (see below).
 
 ### The Python scoring layer
 
@@ -56,6 +56,6 @@ The plugin has no server and no persistent process. Each command is a markdown p
 
 ## Conventions
 
-- **Output naming:** generated posts save to `outputs/posts/<YYYYMMDD>-<slug>-v1.md`, incrementing the version suffix (`v2`, `v3`) when a slug already exists.
+- **Output naming:** generated posts save to `outputs/posts/<YYYYMMDD>-<slug>-v1.md`, incrementing the version suffix (`v2`, `v3`) when a slug already exists. Non-post strategy artifacts (content calendars, profile audits, analytics reports) save to `outputs/strategy/<YYYYMMDD>-<artifact>.md` and do **not** run the post finalization pipeline.
 - **Versioning:** the plugin version is duplicated in `.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json` — bump both together.
 - **Prose for humans** (READMEs, post copy, marketing) must pass through a humanizer pass (the `humanizer-linkedin` skill in-plugin, or the global `humanizer` skill) before being saved or shown. Skip for code, configs, commit messages, and short status updates.

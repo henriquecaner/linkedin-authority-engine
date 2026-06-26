@@ -34,10 +34,20 @@ After `init`, use `/linkedin-authority-engine:linkedin` for the mode menu.
 
 The plugin reads your authority profile, drafts the post in the right framework, strips out AI writing patterns, and grades it before you publish. Then it hands you the 90-minute post-publication protocol. Every post that lands feeds the local memory, so the next one starts closer to your voice.
 
-- **12 skills** — 360Brew algorithm reference, a bank of 147 hooks, 8 copywriting structures, 22 content types, templates by category, CTAs, style and tone, humanizer, post-publication protocol, visual brief, memory substrate and discovery script.
+- **22 skills** — a knowledge base the commands load on demand (360Brew algorithm reference, a bank of 147 hooks, 8 copywriting structures, 22 content types, templates by category, CTAs, style and tone, humanizer, post-publication protocol, visual brief, memory substrate, discovery script), plus 10 workflow skills you trigger by asking in plain language: `niche-definer`, `audience-persona`, `content-pillars`, `content-calendar`, `repurposer`, `story-extractor`, `cta-optimizer`, `carousel-builder`, `profile-optimizer`, `analytics-interpreter`.
 - **2 agents** — `linkedin-strategist` (strategy) and `humanizer-linkedin` (final anti-AI pass).
 - **3 CLI scripts + shared lib** — `score_post.py`, `suggest_hooks.py`, `validate_specs.py`, plus `postlib.py` (the shared, multilingual PT+EN matcher library and 360Brew specs). Scoring and validation accept `--lang auto|pt|en`.
 - **1 hook** — a `SessionStart` banner pointing to `init`.
+
+## Beyond the post
+
+The four commands above write and grade a post. Ten skills cover the work around it. You invoke them by asking in plain language, no slash command needed.
+
+**Strategy** — define your niche, build an audience persona, set your content pillars, plan four weeks of posts. The first three write their result back into your authority profile after you confirm the change.
+
+**Production** — repurpose a blog, video, or tweet into a native post; pull a story out of a raw experience; fix a weak CTA; turn a framework into a carousel script.
+
+**Audits** — audit your LinkedIn profile copy, or paste your analytics and get three moves for next month.
 
 ## Structure
 
@@ -45,7 +55,7 @@ The plugin reads your authority profile, drafts the post in the right framework,
 linkedin-authority-engine/
 ├── .claude-plugin/   # plugin.json + marketplace.json
 ├── commands/         # 6 commands
-├── skills/           # 12 skills
+├── skills/           # 22 skills
 ├── agents/           # 2 agents
 ├── scripts/          # 3 CLI scripts + postlib.py (shared lib)
 └── hooks/            # SessionStart hook

@@ -42,13 +42,31 @@ When the profile exists, read its `language` frontmatter field and render the me
 
 ```
 🎯 LinkedIn Authority Engine — What are we creating?
+
+POST MODES (type the number)
 0 Onboarding — create or refresh your authority profile (/init)
 1 Guided   — post from scratch (full workflow)
 2 Rewrite  — optimize an existing post
 3 Thread   — series of posts
 4 Score    — evaluate + humanize a finished post
 
-Type the number or the mode name.
+STRATEGY (just ask — feeds your profile)
+• "Define my niche"            — sharpen positioning
+• "Build my audience persona"  — the one person you write for
+• "Build my content pillars"   — 3-5 recurring themes + topics
+• "Plan my next 4 weeks"       — 4-week content calendar
+
+PRODUCE (just ask)
+• "Turn this blog/video/tweet into a post"  — repurpose source material
+• "Turn this experience into a post"        — extract a story
+• "Fix my CTA"                              — diagnose + rewrite the close
+• "Turn this into a carousel"               — slide-by-slide script
+
+AUDIT (just ask)
+• "Audit my LinkedIn profile"  — headline / About / Featured
+• "Read my analytics"          — paste your numbers → 3 next moves
+
+Type a number for a post mode, or just say what you want.
 ```
 
 Wait for the user's choice and route to the matching command:
@@ -57,3 +75,5 @@ Wait for the user's choice and route to the matching command:
 - `2` or `rewrite` → invoke `/linkedin-authority-engine:rewrite`
 - `3` or `thread` → invoke `/linkedin-authority-engine:thread`
 - `4` or `score` → invoke `/linkedin-authority-engine:score`
+
+The STRATEGY / PRODUCE / AUDIT items are **skills**, not numbered commands — they auto-invoke when the user asks in plain language (the trigger phrases above are examples). If the user picks one of these, just act on the request; the matching skill (`niche-definer`, `audience-persona`, `content-pillars`, `content-calendar`, `repurposer`, `story-extractor`, `cta-optimizer`, `carousel-builder`, `profile-optimizer`, `analytics-interpreter`) loads on its own. All of them honor the profile check above.
