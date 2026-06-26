@@ -2,7 +2,8 @@
 
 > Plugin for **Claude Code** and **Claude Cowork** that turns a founder's expertise into authority on LinkedIn. Posts tuned for the 360Brew algorithm, with a living client profile and memory that learns every session.
 
-[![version](https://img.shields.io/badge/version-1.2.0-black)](./linkedin-authority-engine/.claude-plugin/plugin.json)
+[![version](https://img.shields.io/badge/version-1.3.0-black)](./linkedin-authority-engine/.claude-plugin/plugin.json)
+[![skills](https://img.shields.io/badge/skills-22-2ea44f)](./linkedin-authority-engine/skills)
 [![platform](https://img.shields.io/badge/Claude%20Code%20%7C%20Cowork-plugin-blue)](https://thelevr.com)
 [![algorithm](https://img.shields.io/badge/360Brew-v3.5%20Q1%202026-orange)](./linkedin-authority-engine/skills/360brew-algorithm/SKILL.md)
 [![license](https://img.shields.io/badge/license-proprietary-lightgrey)](#license)
@@ -19,14 +20,29 @@ The bottleneck was never knowledge. It's that you didn't have a system to take w
 
 ## What the plugin does
 
-You talk to Claude. The plugin reads your authority profile, drafts the post in the right framework, strips the AI tone out of the text, and grades it before you publish. It also gives you a protocol for the first 90 minutes after the post goes live. Every post that lands feeds the memory, so the next one starts closer to your voice.
+You talk to Claude in plain language. The plugin reads your authority profile and does what the request needs: sharpen your positioning, plan a month of posts, draft and grade a single post, or audit your profile copy. Whatever it writes comes out in your voice and gets checked against the LinkedIn algorithm, not vague best practices. Every result feeds a memory, so the next session starts closer to you.
 
-Three things set it apart from a generic text generator:
+As of v1.3.0 it covers the whole loop, not just the writing:
 
-- **Tuned for 360Brew.** Format, timing, hook, and CTA all get checked against the LinkedIn algorithm reference (v3.5, Q1 2026), not against vague "best practices."
-- **Living client profile.** The `authority-context.md` holds who you are, your voice, your topics, and your numbers. The content comes out yours, not off a template.
-- **Self-enriching memory.** Patterns that work get saved as learnings. The plugin gets sharper on your case each session, through three write-back "doors."
-- **Multilingual Scoring Engine.** Complete support for Portuguese (PT) and English (EN) posts. A shared library (`postlib.py`) acts as the single source of truth for PT/EN matchers and 360Brew specs, allowing automatic detection (`--lang auto`) or explicit override (`--lang pt|en`) during scoring and validation.
+| Stage | Just ask, or run | Powered by |
+|---|---|---|
+| **Strategy** | "define my niche", "build my content pillars", "plan my next 4 weeks" | `niche-definer`, `audience-persona`, `content-pillars`, `content-calendar` |
+| **Produce** | `/guided`, "turn this into a post", "turn this into a carousel", "fix my CTA" | `guided`, `repurposer`, `story-extractor`, `carousel-builder`, `cta-optimizer` |
+| **Score & ship** | `/score`, `/rewrite` | `score_post.py`, `humanizer-linkedin`, `post-publication-protocol` |
+| **Audit** | "audit my profile", "read my analytics" | `profile-optimizer`, `analytics-interpreter` |
+
+What sets it apart from a generic text generator:
+
+- **Tuned for 360Brew.** Format, timing, hook, and CTA get checked against the LinkedIn algorithm reference (v3.5, Q1 2026), not generic advice.
+- **A living client profile.** `authority-context.md` holds who you are, your voice, your topics, and your numbers, so the content comes out yours, not off a template. The strategy skills write back into it as your positioning sharpens.
+- **Self-enriching memory.** Patterns that work get saved as learnings, so the plugin gets sharper on your case each session, through three write-back "doors."
+- **Portuguese and English.** Scoring and validation run on both. A shared library (`postlib.py`) is the single source of truth for the PT/EN matchers and the 360Brew specs; force a language with `--lang pt|en` or let it auto-detect.
+
+## A typical session
+
+You don't memorize commands. You say what you want, and the right skill loads on its own.
+
+"Help me figure out what to be known for" pulls up `niche-definer`, which sharpens your positioning and writes it into your profile. "Plan my next month" builds a four-week calendar off your pillars. "Turn this podcast transcript into a post" hands it to `repurposer`, runs it through the humanizer and the score, and saves the result. "Audit my profile" reads your headline and About and hands back rewrites. The slash commands (`guided`, `rewrite`, `thread`, `score`) are still there when you want the structured post workflow.
 
 ---
 
@@ -52,11 +68,13 @@ After `init`, use `/linkedin-authority-engine:linkedin` to see the mode menu.
 | Command | What it does |
 |---|---|
 | `init` | Onboarding. Runs the discovery interview and creates `authority-context.md`, `memory/` and `outputs/posts/`. Accepts `--refresh` to update the profile. |
-| `linkedin` | Central menu. Shows the modes and routes to the chosen one. A good starting point. |
+| `linkedin` | Central menu. Shows the modes and the strategy/produce/audit skills, and routes to the chosen one. A good starting point. |
 | `guided` | Creates a post from scratch in a 7-step workflow: category → objective → angle → structure → type → hook → body → CTA. |
 | `rewrite` | Optimizes an existing post into two versions (conservative and bold), with a 360Brew diagnosis, humanizer and comparative score. |
 | `thread` | Builds a series of 3-7 posts on a topic, with a planned architecture (hook, authority, educational, story, conversion). |
 | `score` | Evaluates and humanizes a finished post. Runs technical validation, humanizer and a grade across the 6 dimensions, with a verdict: publish / adjust / rework. |
+
+Beyond the commands, 10 **workflow skills** (strategy, production, audits) load when you ask for them in plain language. They are listed under [Skills](#skills-22).
 
 ---
 
@@ -80,9 +98,11 @@ memory/                ─┤──►  reads profile + winning patterns
                   write-back ──►  memory/  (self-enrichment)
 ```
 
+The strategy skills (`niche-definer`, `audience-persona`, `content-pillars`) close a second loop: they write their result back into `authority-context.md` through the **Gate 3-S** protocol (propose → diff → confirm → version bump), so the profile that feeds every post keeps getting sharper.
+
 ### Skills (22)
 
-The plugin's intelligence lives in the skills — each one is a reference that Claude loads when it needs it.
+The plugin's intelligence lives in the skills. Each one is a reference Claude loads when it needs it. Twelve are knowledge bases the commands draw on:
 
 | Skill | Function |
 |---|---|
@@ -99,7 +119,7 @@ The plugin's intelligence lives in the skills — each one is a reference that C
 | `visual-brief` | Visual brief for the post with technical specs and ready prompts for image generation. |
 | `discovery-script` | The `init` interview script (internal use). |
 
-As of v1.3.0, 10 **workflow skills** extend the plugin beyond writing a single post. You trigger them by asking in plain language, no slash command:
+The other 10 are **workflow skills** (added in v1.3.0). They carry their own steps and trigger when you ask in plain language, no slash command:
 
 - **Strategy:** `niche-definer`, `audience-persona`, `content-pillars`, `content-calendar` — the first three write their result back into the authority profile after you confirm.
 - **Production:** `repurposer`, `story-extractor`, `cta-optimizer`, `carousel-builder`.
@@ -153,14 +173,15 @@ authority-engine/
 pytest
 ```
 
-The suite covers the plugin structure (`test_plugin_structure.py`), the script behavior via CLI including PT/EN scoring (`test_scripts_cli.py`), and the shared matcher library (`test_postlib.py`).
+The suite covers the plugin structure (`test_plugin_structure.py`, including the workflow skills and an anti-Taplio-coupling guard), the script behavior via CLI including PT/EN scoring (`test_scripts_cli.py`), and the shared matcher library (`test_postlib.py`).
 
 ---
 
 ## Roadmap
 
-- [ ] Self-serve launch — first for the warm audience already waiting for the product
 - [x] Multilingual scoring (PT + EN)
+- [x] Workflow skills — strategy, production, profile & analytics (v1.3.0)
+- [ ] Self-serve launch — first for the warm audience already waiting for the product
 - [ ] Multi-language operation end-to-end, including generation and ES
 - [ ] Publication on the public plugin marketplace
 
