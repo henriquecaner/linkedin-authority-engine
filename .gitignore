@@ -4,6 +4,9 @@ tests/__pycache__/
 *.pyc
 __pycache__/
 
+# macOS system files
+.DS_Store
+
 # Frente 1 (GTM / strategy) + legacy — local only, never commit
 gtm/
 archive/
