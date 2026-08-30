@@ -21,3 +21,21 @@ CLAUDE.local.md
 # local tool state (Claude Code browser + wrangler)
 .playwright-mcp/
 .wrangler/
+
+# User-specific authority and memory substrate (generated on onboarding)
+authority-context.md
+memory/*.md
+!memory/README.md
+outputs/posts/*
+outputs/strategy/*
+outputs/comments/*
+!outputs/**/.gitkeep
+!memory/**/.gitkeep
+
+# Personal branding assets
+assets/branding/photo-*
+assets/branding/logo-*
+
+# Local scratch / debug files
+console-errs.txt
+create-app.md

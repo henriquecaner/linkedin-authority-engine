@@ -46,7 +46,17 @@ You don't memorize commands. You say what you want, and the right skill loads on
 
 ---
 
-## Installation
+## Installation & Quickstart
+
+### Option A: Google Antigravity (Native IDE / CLI)
+
+1. Clone or open this repository in **Antigravity**.
+2. Antigravity automatically detects the [`.agents/`](file:///.agents) directory, loading all rules, subagents, and skills natively.
+3. Start the onboarding in chat:
+   > *"Quero fazer o onboarding de autoridade"* or *"iniciar setup"*
+4. The engine conducts a discovery interview and creates your `authority-context.md` and `memory/` substrate.
+
+### Option B: Claude Code / Cowork Plugin
 
 ```bash
 # 1. add the local marketplace
