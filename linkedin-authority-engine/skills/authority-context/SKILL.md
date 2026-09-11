@@ -14,7 +14,7 @@ The client folder is the source of truth (local-first). Unabyss (MCP) is optiona
 - `outputs/strategy/` — non-post strategy artifacts (content calendars, profile audits, analytics reports) named `<YYYYMMDD>-<artifact>.md`. Created on demand by the strategy/profile/analytics skills.
 
 ## Gate 1 — Write (onboarding)
-`init` writes `authority-context.md`. See the `init` command.
+`init` writes `authority-context.md`. See the `init` command. Path U additionally seeds `memory/voice-profile.md` from the measured post corpus (seeding contract in `references/memory-schemas.md`); seeding does not open Gate 3 write-back.
 
 ## Gate 2 — Read (generation)
 Before generating any post: read `authority-context.md` (core theme, 3 pillars, ICP, voice, constraints, YES/NO territories) and `memory/` (prioritize hooks/topics with a positive verdict). If Unabyss is present, pull real performance (optional — enrichment via Unabyss MCP when present; not required in v1). Also read the `language` frontmatter field and operate in it: `pt` → generate and interact in **Brazilian Portuguese (pt-BR)** ("você", Brazilian vocabulary/spelling, never European Portuguese); `en` → English; and pass it as `--lang <pt|en>` to `validate_specs.py` and `score_post.py`. If the field is absent, omit `--lang` and infer the language from the conversation.
@@ -24,7 +24,7 @@ Before generating any post: read `authority-context.md` (core theme, 3 pillars, 
 Write-back has two modes. Pick by what the skill produced.
 
 ### Gate 3-M — Memory append (default)
-Append (never overwrite): `winning-hooks.md` (approved hooks + category/objective/score), `topic-performance.md` (topic/pillar/type/score) and `learnings.md` (what worked, voice adjustments, rejections). `voice-profile.md` is READ-ONLY in v1 (read in Gate 2, writing arrives in v1.x). Columns and schemas in `references/memory-schemas.md`. Used by every generation/scoring command and by `analytics-interpreter`.
+Append (never overwrite): `winning-hooks.md` (approved hooks + category/objective/score), `topic-performance.md` (topic/pillar/type/score) and `learnings.md` (what worked, voice adjustments, rejections). `voice-profile.md` is READ-ONLY in v1 (read in Gate 2, writing arrives in v1.x) — Gate 1 onboarding seeding is the only exception, and it does not open Gate 3 write-back. Columns and schemas in `references/memory-schemas.md`. Used by every generation/scoring command and by `analytics-interpreter`.
 
 ### Gate 3-S — Profile section write-back (strategy skills only)
 Used by `niche-definer`, `audience-persona`, and `content-pillars` when their output durably refines the client profile. Unlike Gate 3-M, this **mutates structured sections of `authority-context.md` in place** (e.g. §2 Positioning, §4 Audience, §11 Content instruction). That is destructive, so it is never silent. Follow this exact sequence — it mirrors how `init --refresh` updates stale fields "while preserving the rest":

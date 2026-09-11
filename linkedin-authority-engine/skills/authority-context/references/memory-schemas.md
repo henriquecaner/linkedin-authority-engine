@@ -17,7 +17,9 @@ Files created in the client folder. Append-only. Read during generation (Gate 2)
 ## voice-profile.md
 Dated bullets: `**YYYY-MM-DD:** voice adjustment → result → keep? (yes/no)`
 
-**v1: READ-ONLY.** This file is read during generation (Gate 2) to calibrate the voice. Writing voice adjustments arrives in v1.x. The absence of write-back in v1 is intentional, not a bug.
+**Gate 1 (seeding, allowed):** `/init` Path U writes dated bullets measured from the real post corpus, in the existing bullet shape with `result` = the measured value and `keep?` = `yes` for an observed baseline. One bullet per metric that has a voice consequence: mean chars, mean paragraph length, mean chars per paragraph, `avg_word_length`, emoji rate, hashtag mean, question rate, first-person rate, plus one bullet per punished or AI-cliché hook found live. The seeding block carries the header `<!-- seeded from Unipile deep discovery, YYYY-MM-DD, N posts -->` so a reader can tell measurement from a later human adjustment.
+
+**Gate 3-M (write-back, still forbidden in v1):** no session appends this file; that arrives in v1.x. Gate 1 seeding does not open Gate 3 write-back. The file is read during generation (Gate 2) to calibrate the voice.
 
 ## learnings.md
 Dated free-form entries: `**YYYY-MM-DD:** learning`

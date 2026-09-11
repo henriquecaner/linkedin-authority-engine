@@ -7,24 +7,26 @@ description: Internal resource loaded by the linkedin-authority-engine:init comm
 
 Ask one question at a time (or in short blocks). Do not move past a section until the `*` fields are covered.
 
+Path U rule: when a deep-discovery dossier exists, convert each covered question into a confirmation — *"The dossier reads X. Correct?"* — and skip nothing silently; a skipped question must appear in the confirmation summary with its dossier-derived value. Questions tagged `[D]` below can be pre-filled from the dossier.
+
 Conduct the interview in the language chosen in step 1 of `init` (the `language` token). When it is `pt`, ask every question in **Brazilian Portuguese (pt-BR)** — "você", Brazilian vocabulary and spelling, never European Portuguese. The question wording below is the English reference; translate it to the chosen language as you go.
 
 ## Profile
 
-- What is your full name, current role, and company?
-- How long have you held this position, and how many years of total experience in the field?
-- What city or region do you operate in?
+- [D] What is your full name, current role, and company?
+- [D] How long have you held this position, and how many years of total experience in the field?
+- [D] What city or region do you operate in?
 - In 30 seconds, how would you introduce yourself to someone who has never seen you before? (this answer becomes the bio) *
-- What are your main credibility markers — concrete results, brands you've worked with, numbers that prove the impact?
-- Do you have a LinkedIn profile? What is the URL?
+- [D] What are your main credibility markers — concrete results, brands you've worked with, numbers that prove the impact?
+- [D] Do you have a LinkedIn profile? What is the URL?
 - How did your path lead you here? What career milestones and turning points shaped who you are professionally?
 
 ## Positioning
 
-- On which broad theme do you want to be recognized as a reference? *
+- [D] On which broad theme do you want to be recognized as a reference? *
 - If we split your content into 3 main pillars, what would they be? *
 - Where do you pick the client up — what is the starting point — and where do you take them by the end of your work? (this is your value proposition) *
-- What real stories or cases do you have available to use as content?
+- [D] What real stories or cases do you have available to use as content?
 - Which of your achievements or stories haven't been told publicly yet — raw material that could become high-impact content?
 - Which beliefs in your market do you disagree with? What does the majority do or believe that you consider wrong?
 - If you were to give ONE talk this year, what would the topic be?
@@ -59,10 +61,11 @@ Conduct the interview in the language chosen in step 1 of `init` (the `language`
 
 - Who are your 3 main direct competitors? What does each one communicate well, and where is the gap in their positioning?
 - Which executives or content creators do you admire for their positioning — not to copy, but as a reference for tone and sophistication? *
+- What are the LinkedIn URLs of those 3 competitors and of the executives you admire?
 
 ## Territories
 
-- Which topics do you feel comfortable talking about often — where you have repertoire, a formed opinion, and energy?
+- [D] Which topics do you feel comfortable talking about often — where you have repertoire, a formed opinion, and energy?
 - Which topics do you NOT want to touch — for personal, strategic, or other reasons?
 - What are your usual information sources — sites, newsletters, podcasts, books, people you follow? *
 
@@ -74,10 +77,10 @@ Conduct the interview in the language chosen in step 1 of `init` (the `language`
 
 ## Tone of Voice
 
-- How would you describe your communication style in 3 words?
+- [D] How would you describe your communication style in 3 words?
 - Is there a tone benchmark you admire — someone whose way of speaking you want as a reference?
 - What level of vulnerability are you comfortable with: 1 (purely professional, no personal life) to 5 (no filter — mistakes, dilemmas, behind the scenes)? *
-- Where do you sit on the spectrums: formal vs. casual, technical vs. accessible, distant vs. close?
+- [D] Where do you sit on the spectrums: formal vs. casual, technical vs. accessible, distant vs. close?
 
 ## Content Instruction
 
@@ -95,6 +98,6 @@ Conduct the interview in the language chosen in step 1 of `init` (the `language`
 
 - Is there anything that would help me create content that I haven't asked about yet?
 - What was the challenge or dissatisfaction that drove you to pursue this now — why this project, why at this moment?
-- Which keywords do you want to appear frequently in your communication — the terms that define your brand? *
-- Have you tried creating content on LinkedIn before? What worked and what didn't?
+- [D] Which keywords do you want to appear frequently in your communication — the terms that define your brand? *
+- [D] Have you tried creating content on LinkedIn before? What worked and what didn't?
 - Is there any event, talk, or launch planned in the coming months that the content should prepare for?

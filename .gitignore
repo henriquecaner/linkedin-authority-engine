@@ -29,6 +29,12 @@ memory/*.md
 outputs/posts/*
 outputs/strategy/*
 outputs/comments/*
+# Unipile credentials (never commit)
+.env
+.env.local
+
+# Discovery dossiers (third-party PII)
+outputs/discovery/*
 !outputs/**/.gitkeep
 !memory/**/.gitkeep
 

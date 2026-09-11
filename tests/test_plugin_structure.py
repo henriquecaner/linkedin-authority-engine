@@ -10,7 +10,7 @@ EXPECTED_SKILLS = [
 EXPECTED_WORKFLOW_SKILLS = [
     "niche-definer", "audience-persona", "content-pillars", "content-calendar",
     "repurposer", "story-extractor", "cta-optimizer", "carousel-builder",
-    "profile-optimizer", "analytics-interpreter",
+    "profile-optimizer", "analytics-interpreter", "linkedin-deep-discovery",
 ]
 
 def _assert_skill_valid(plugin_dir, name):
@@ -48,7 +48,7 @@ def test_plugin_json_valid(plugin_dir):
     assert p.exists(), "plugin.json missing"
     data = json.loads(p.read_text(encoding="utf-8"))
     assert data["name"] == "linkedin-authority-engine"
-    assert data["version"] == "1.3.0"
+    assert data["version"] == "1.4.0"
     for key in ("displayName", "description", "author", "license"):
         assert key in data, f"plugin.json missing key {key}"
 
