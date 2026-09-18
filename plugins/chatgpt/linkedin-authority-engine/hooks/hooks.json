@@ -1,0 +1,16 @@
+{
+  "description": "LinkedIn Authority Engine SessionStart banner pointing to the onboarding.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'LinkedIn Authority Engine active. If there is no authority-context.md in this project yet, ask to run the init onboarding skill to create your authority profile. Then ask for the mode menu to create posts.'"
+          }
+        ]
+      }
+    ]
+  }
+}

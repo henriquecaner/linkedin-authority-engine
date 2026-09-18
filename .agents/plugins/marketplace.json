@@ -1,0 +1,20 @@
+{
+  "name": "level-tech-plugins",
+  "interface": {
+    "displayName": "LEVEL TECH Plugins"
+  },
+  "plugins": [
+    {
+      "name": "linkedin-authority-engine",
+      "source": {
+        "source": "local",
+        "path": "./plugins/chatgpt/linkedin-authority-engine"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
