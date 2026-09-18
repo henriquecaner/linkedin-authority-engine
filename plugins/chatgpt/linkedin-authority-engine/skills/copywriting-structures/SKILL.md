@@ -1,6 +1,6 @@
 ---
 name: copywriting-structures
-description: Eight copywriting structures for LinkedIn posts (AIDA, PAS, BAB, FAB, Star-Story-Solution, APP, HSO, Storytelling) with a guide for choosing by situation. Use when deciding the structural framework of a post before writing.
+description: Eight copywriting structures for LinkedIn posts (AIDA, PAS, BAB, FAB, Star-Story-Solution, APP, HSO, Storytelling) with a guide for choosing by situation. Use when deciding the structural framework of a post before writing. PT triggers: estruture seu texto com você, escolha sua estrutura ideal, fortaleça seu argumento.
 ---
 
 # Copywriting structures

@@ -1,6 +1,6 @@
 ---
 name: cta-optimizer
-description: Diagnose why a post's closing is weak and rewrite it to maximize the one signal that matters — saves, comments, shares, DMs, profile visits, or clicks. Use when the user has a post but the ending falls flat, defaults to "Thoughts?", or doesn't match the objective. Loads the CTA bank; returns a diagnosis plus 3-5 alternatives. Inline, no file output.
+description: Diagnose why a post's closing is weak and rewrite it to maximize the one signal that matters — saves, comments, shares, DMs, profile visits, or clicks. Use when the user has a post but the ending falls flat, defaults to "Thoughts?", or doesn't match the objective. Loads the CTA bank; returns a diagnosis plus 3-5 alternatives. Inline, no file output. PT triggers: corrija seu final com você, otimize seu close, fortaleça seu CTA.
 ---
 
 # CTA Optimizer
@@ -9,11 +9,11 @@ Most posts earn the read and then waste it on "Let me know what you think". This
 
 ## Gate 1 — Profile exists?
 
-If there is no `authority-context.md`, run the `init` onboarding skill first, then stop.
+Source of profile, in order: (1) `authority-context.md` + `memory/` on disk when present; (2) a pasted `profile-card` block; (3) otherwise run the `init` onboarding skill first, then stop.
 
 ## Gate 2 — Read the substrate
 
-Load the `authority-context` skill and read §3 (primary objective) and §10 (voice). Then **load the `ctas` skill** — that bank is the source of truth for the formulas and the 2026 signal priority. Operate in the profile's `language`.
+Source of profile, in order: (1) `authority-context.md` + `memory/` on disk when present; (2) a pasted `profile-card` block; (3) otherwise run the `init` onboarding skill first, then stop. Load the `authority-context` skill and read §3 (primary objective) and §10 (voice). Then **load the `ctas` skill** — that bank is the source of truth for the formulas and the 2026 signal priority. Operate in the profile's `language`.
 
 ## When to trigger
 

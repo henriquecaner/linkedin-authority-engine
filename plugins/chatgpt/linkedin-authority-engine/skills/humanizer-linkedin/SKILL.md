@@ -1,6 +1,6 @@
 ---
 name: humanizer-linkedin
-description: Humanizing pipeline for LinkedIn posts (Step B of the Finishing Pipeline): when to run it, how to run it, the priority AI patterns in LinkedIn posts, surgery (not demolition) principles, and the output format with a compact diff. Use automatically after the CTA is chosen, before the final score, in any post-generation mode.
+description: Humanizing pipeline for LinkedIn posts (Step B of the Finishing Pipeline): when to run it, how to run it, the priority AI patterns in LinkedIn posts, surgery (not demolition) principles, and the output format with a compact diff. Use automatically after the CTA is chosen, before the final score, in any post-generation mode. PT triggers: humanize seu texto com você, remova seus vícios de IA, soe como você.
 ---
 
 # Humanizer pipeline (LinkedIn)

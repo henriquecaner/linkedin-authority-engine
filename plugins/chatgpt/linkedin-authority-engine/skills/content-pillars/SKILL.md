@@ -1,6 +1,6 @@
 ---
 name: content-pillars
-description: Define the 3 (up to 5) recurring themes the client returns to relentlessly, each with 5-10 ready post topics. Use when content feels random, the user asks "what should I post about", or after the niche is defined. Reads the profile, grounds pillars in what already performs (memory/), and writes them back to authority-context.md §2/§11 after the user confirms.
+description: Define the 3 (up to 5) recurring themes the client returns to relentlessly, each with 5-10 ready post topics. Use when content feels random, the user asks "what should I post about", or after the niche is defined. Reads the profile, grounds pillars in what already performs (memory/), and writes them back to authority-context.md §2/§11 after the user confirms. PT triggers: defina seus pilares com você, organize seus temas, escolha sobre o que postar.
 ---
 
 # Content Pillars Builder
@@ -9,11 +9,11 @@ Pillars are the 3 to 5 themes a creator returns to until the feed recognizes the
 
 ## Gate 1 — Profile exists?
 
-If there is no `authority-context.md`, run the `init` onboarding skill first, then stop.
+Source of profile, in order: (1) `authority-context.md` + `memory/` on disk when present; (2) a pasted `profile-card` block; (3) otherwise run the `init` onboarding skill first, then stop.
 
 ## Gate 2 — Read the substrate
 
-Load the `authority-context` skill. Read `authority-context.md` (§2 Positioning, §4 Audience, §8 Territories, §11 Content instruction) and `memory/`. **Ground the pillars in data**: if `memory/topic-performance.md` has real scores, map the top performers to themes — pillars should lean on what already works for this account, not be invented from scratch. Operate in the profile's `language`.
+Source of profile, in order: (1) `authority-context.md` + `memory/` on disk when present; (2) a pasted `profile-card` block; (3) otherwise run the `init` onboarding skill first, then stop. Load the `authority-context` skill. Read `authority-context.md` (§2 Positioning, §4 Audience, §8 Territories, §11 Content instruction) and `memory/`. **Ground the pillars in data**: if `memory/topic-performance.md` has real scores, map the top performers to themes — pillars should lean on what already works for this account, not be invented from scratch. Operate in the profile's `language`.
 
 ## When to trigger
 

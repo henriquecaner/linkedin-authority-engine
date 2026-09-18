@@ -1,6 +1,6 @@
 ---
 name: rewrite
-description: Rewrite Mode of the LinkedIn Authority Engine — optimizes an existing post into two versions (conservative and bold), applying 360Brew diagnosis, humanizer and a comparative score. Use when the user has a draft or finished post that needs improvement.
+description: Two-version optimization (A conservative, B bold) of an existing draft with 360Brew diagnosis, humanizer and comparative score. Use for 'melhore este rascunho', 'two versions', 'make this stronger', a pasted draft that needs improvement. Finished draft needing only a verdict → score.
 ---
 
 # Rewrite skill
@@ -8,6 +8,7 @@ description: Rewrite Mode of the LinkedIn Authority Engine — optimizes an exis
 
 Before any analysis or generation:
 
+Source of profile, in order: (1) `authority-context.md` + `memory/` on disk when present; (2) a pasted `profile-card` block; (3) otherwise run the `init` onboarding skill first, then stop.
 1. Load the `authority-context` skill.
 2. Read `authority-context.md` (full profile) and every file in `memory/` (`winning-hooks.md`, `topic-performance.md`, `voice-profile.md`, `learnings.md`).
 3. Apply: tone of voice, content pillars, real credentials, editorial constraints.

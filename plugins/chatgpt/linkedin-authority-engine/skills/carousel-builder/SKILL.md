@@ -1,6 +1,6 @@
 ---
 name: carousel-builder
-description: Turn a topic, framework, or long-form idea into a LinkedIn carousel script — cover slide + value slides + closing CTA slide, one idea per slide, plus the post caption. Use when the user wants a carousel/document post or has a framework that earns the swipe. Humanizes the copy and hands off to the visual-brief skill for design.
+description: Turn a topic, framework, or long-form idea into a LinkedIn carousel script — cover slide + value slides + closing CTA slide, one idea per slide, plus the post caption. Use when the user wants a carousel/document post or has a framework that earns the swipe. Humanizes the copy and hands off to the visual-brief skill for design. PT triggers: crie seu carrossel com você, transforme sua ideia em slides, ganhe seus swipes.
 ---
 
 # Carousel Builder
@@ -9,11 +9,11 @@ A carousel earns the swipe slide by slide. This skill writes the script — one 
 
 ## Gate 1 — Profile exists?
 
-If there is no `authority-context.md`, run the `init` onboarding skill first, then stop.
+Source of profile, in order: (1) `authority-context.md` + `memory/` on disk when present; (2) a pasted `profile-card` block; (3) otherwise run the `init` onboarding skill first, then stop.
 
 ## Gate 2 — Read the substrate
 
-Load the `authority-context` skill. Read `authority-context.md` (§2 pillars, §10 voice, §12 visual identity if present) and `memory/`. Operate in the profile's `language`.
+Source of profile, in order: (1) `authority-context.md` + `memory/` on disk when present; (2) a pasted `profile-card` block; (3) otherwise run the `init` onboarding skill first, then stop. Load the `authority-context` skill. Read `authority-context.md` (§2 pillars, §10 voice, §12 visual identity if present) and `memory/`. Operate in the profile's `language`.
 
 ## When to trigger
 

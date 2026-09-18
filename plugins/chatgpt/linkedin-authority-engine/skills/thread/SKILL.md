@@ -1,6 +1,6 @@
 ---
 name: thread
-description: Thread Mode of the LinkedIn Authority Engine — creates a series of 3-7 posts around a central theme, with a planned architecture (hook, authority, educational, story, conversion) and a finalization pipeline per post. Use when the user wants a sequential content campaign.
+description: Series of 3-7 posts around one central theme with per-post pipeline and publishing calendar. Use for 'sequência de posts', 'content series', 'campaign', 'uma semana de posts'. Single post → guided.
 ---
 
 # Thread skill
@@ -8,6 +8,7 @@ description: Thread Mode of the LinkedIn Authority Engine — creates a series o
 
 Before any generation:
 
+Source of profile, in order: (1) `authority-context.md` + `memory/` on disk when present; (2) a pasted `profile-card` block; (3) otherwise run the `init` onboarding skill first, then stop.
 1. Load the `authority-context` skill.
 2. Read `authority-context.md` (full profile) and every file in `memory/` (`winning-hooks.md`, `topic-performance.md`, `voice-profile.md`, `learnings.md`).
 3. Apply: tone of voice, content pillars, real credentials, editorial constraints across every post in the series.

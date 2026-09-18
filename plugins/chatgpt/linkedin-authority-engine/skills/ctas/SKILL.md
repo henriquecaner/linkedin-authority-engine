@@ -1,6 +1,6 @@
 ---
 name: ctas
-description: A bank of LinkedIn CTAs by objective (saves, leads, engagement, followers, sales, newsletter) with formulas and mistakes to avoid. Use when choosing the closing CTA of any post to maximize the right signal in 360Brew.
+description: A bank of LinkedIn CTAs by objective (saves, leads, engagement, followers, sales, newsletter) with formulas and mistakes to avoid. Use when choosing the closing CTA of any post to maximize the right signal in 360Brew. PT triggers: escolha seu CTA com você, feche seus posts, converta sua audiência.
 ---
 
 # CTAs by objective

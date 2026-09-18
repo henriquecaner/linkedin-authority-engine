@@ -1,6 +1,6 @@
 ---
 name: templates-by-category
-description: Ready-to-use templates for 7 LinkedIn post categories (career lesson, achievement with numbers, failure, debunk, how-to, opinion, behind the scenes) with section structure, placeholders, and filled-in examples. Use when writing posts to get a structured starting point by category.
+description: Ready-to-use templates for 7 LinkedIn post categories (career lesson, achievement with numbers, failure, debunk, how-to, opinion, behind the scenes) with section structure, placeholders, and filled-in examples. Use when writing posts to get a structured starting point by category. PT triggers: escolha seu template com você, acelere sua escrita, parta de um modelo pronto.
 ---
 
 # Templates by category

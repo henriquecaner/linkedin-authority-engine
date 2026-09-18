@@ -1,6 +1,6 @@
 ---
 name: profile-optimizer
-description: Audit a LinkedIn profile (headline, banner, photo, About, Featured, Experience) and return prioritized fixes with rewritten copy, scored by impact. Use when the user pastes their profile or asks "audit my LinkedIn", "fix my headline", "is my profile converting". Grounds rewrites in the client's positioning; saves the audit to outputs/strategy/.
+description: Audit a LinkedIn profile (headline, banner, photo, About, Featured, Experience) and return prioritized fixes with rewritten copy, scored by impact. Use when the user pastes their profile or asks "audit my LinkedIn", "fix my headline", "is my profile converting". Grounds rewrites in the client's positioning; saves the audit to outputs/strategy/. PT triggers: otimize seu perfil com você, reescreva seu headline, converta suas visitas.
 ---
 
 # Profile Optimizer
@@ -9,11 +9,11 @@ The profile is where the post sends people. A great post into a weak profile lea
 
 ## Gate 1 — Profile exists?
 
-If there is no `authority-context.md`, run the `init` onboarding skill first, then stop. (This grounds the rewrites in the client's real positioning instead of generic advice.)
+Source of profile, in order: (1) `authority-context.md` + `memory/` on disk when present; (2) a pasted `profile-card` block; (3) otherwise run the `init` onboarding skill first, then stop. (This grounds the rewrites in the client's real positioning instead of generic advice.)
 
 ## Gate 2 — Read the substrate
 
-Load the `authority-context` skill. Read `authority-context.md` (§2 Positioning, §4 Audience, §5 Offers, §1 credibility markers) and `memory/`. The rewrites must match this positioning and speak to this ICP. Operate in the profile's `language`.
+Source of profile, in order: (1) `authority-context.md` + `memory/` on disk when present; (2) a pasted `profile-card` block; (3) otherwise run the `init` onboarding skill first, then stop. Load the `authority-context` skill. Read `authority-context.md` (§2 Positioning, §4 Audience, §5 Offers, §1 credibility markers) and `memory/`. The rewrites must match this positioning and speak to this ICP. Operate in the profile's `language`.
 
 ## When to trigger
 

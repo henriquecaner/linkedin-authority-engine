@@ -1,6 +1,6 @@
 ---
 name: content-calendar
-description: Generate a 4-week LinkedIn content calendar tuned to the client's pillars, cadence, and audience — a day-by-day plan with pillar, format, topic, hook angle, and CTA goal per post. Use after pillars are defined, or when the user wants a month planned. Saves the calendar to outputs/strategy/ and hands each slot off to the `guided` skill.
+description: Generate a 4-week LinkedIn content calendar tuned to the client's pillars, cadence, and audience — a day-by-day plan with pillar, format, topic, hook angle, and CTA goal per post. Use after pillars are defined, or when the user wants a month planned. Saves the calendar to outputs/strategy/ and hands each slot off to the `guided` skill. PT triggers: planeje seu mês com você, organize sua rotina de posts, preencha seu calendário.
 ---
 
 # Content Calendar Planner
@@ -9,11 +9,11 @@ A calendar turns intention into a backlog. This skill lays out four weeks so the
 
 ## Gate 1 — Profile exists?
 
-If there is no `authority-context.md`, run the `init` onboarding skill first, then stop.
+Source of profile, in order: (1) `authority-context.md` + `memory/` on disk when present; (2) a pasted `profile-card` block; (3) otherwise run the `init` onboarding skill first, then stop.
 
 ## Gate 2 — Read the substrate
 
-Load the `authority-context` skill. Read `authority-context.md` (§2 the 3 pillars, §4 Audience, §11 content mix + posting frequency + preferred days) and `memory/`. If §2 has no pillars yet, run `content-pillars` first. Operate in the profile's `language`.
+Source of profile, in order: (1) `authority-context.md` + `memory/` on disk when present; (2) a pasted `profile-card` block; (3) otherwise run the `init` onboarding skill first, then stop. Load the `authority-context` skill. Read `authority-context.md` (§2 the 3 pillars, §4 Audience, §11 content mix + posting frequency + preferred days) and `memory/`. If §2 has no pillars yet, run `content-pillars` first. Operate in the profile's `language`.
 
 ## When to trigger
 

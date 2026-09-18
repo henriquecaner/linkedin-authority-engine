@@ -1,6 +1,6 @@
 ---
 name: discovery-script
-description: Internal resource loaded by the `init` skill to run the discovery interview (Path A, in-session). Do not use on its own. Questions are grouped by the 13 sections of authority-context.md; * = question that feeds a critical profile field.
+description: Internal resource loaded by the `init` skill to run the discovery interview (Path A, in-session). Do not use on its own. Questions are grouped by the 13 sections of authority-context.md; * = question that feeds a critical profile field. PT triggers: conduza sua entrevista com você, colete seus dados, monte seu perfil.
 ---
 
 # Discovery script — guided interview

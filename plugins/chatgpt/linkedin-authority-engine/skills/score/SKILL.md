@@ -1,6 +1,6 @@
 ---
 name: score
-description: Score Mode of the LinkedIn Authority Engine — evaluates and humanizes a finished post, running technical validation, humanizer and a score across the 6 dimensions with a final verdict (publish / adjust / rework). Use when the user has a finished post and wants to know if it's ready to publish.
+description: Publish verdict on a finished draft: technical validation, humanizer, 6-dimension weighted score, publish / adjust / rework. Use for 'está pronto para publicar', 'score my draft', 'is this ready', a pasted post needing evaluation (evaluate) only. Improvement wanted → rewrite.
 ---
 
 # Score skill
@@ -8,6 +8,7 @@ description: Score Mode of the LinkedIn Authority Engine — evaluates and human
 
 Before evaluating:
 
+Source of profile, in order: (1) `authority-context.md` + `memory/` on disk when present; (2) a pasted `profile-card` block; (3) otherwise run the `init` onboarding skill first, then stop.
 1. Load the `authority-context` skill.
 2. Read `authority-context.md` (full profile) and every file in `memory/` (`winning-hooks.md`, `topic-performance.md`, `voice-profile.md`, `learnings.md`).
 3. Apply: tone of voice, content pillars, real credentials, editorial constraints as additional evaluation criteria.
@@ -90,6 +91,7 @@ Present the report across the 6 dimensions:
 | CTA | 10% | X/10 | ... |
 | Data | 5% | X/10 | ... |
 | **Total** | 100% | **X.X/10** | |
+Show the weighted math in one line: `0.30×Saves + 0.20×Hook + 0.20×Algo + 0.15×Struct + 0.10×CTA + 0.05×Data = X.X`, then the band (≥9 publish, 7–8.9 adjust, <7 rework).
 
 If `topic-performance.md` has a real baseline, present the comparison: "Average for this profile: X.X/10 — this post is X% above/below."
 

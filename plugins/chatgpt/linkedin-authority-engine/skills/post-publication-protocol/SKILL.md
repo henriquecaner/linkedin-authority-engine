@@ -1,6 +1,6 @@
 ---
 name: post-publication-protocol
-description: The protocol for the critical 90 minutes after publishing on LinkedIn: signals measured by 360Brew, step-by-step actions, timing by objective, and mistakes that destroy reach. Use when finishing any post to deliver alongside the content and guide post-publication execution.
+description: The protocol for the critical 90 minutes after publishing on LinkedIn: signals measured by 360Brew, step-by-step actions, timing by objective, and mistakes that destroy reach. Use when finishing any post to deliver alongside the content and guide post-publication execution. PT triggers: execute seus 90 minutos com você, amplifique seu alcance, evite seus erros pós-publicação.
 ---
 
 # Post-publication protocol — the critical 90 minutes

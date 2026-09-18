@@ -1,6 +1,6 @@
 ---
 name: style-and-tone
-description: Style and tone guide for LinkedIn posts: 360Brew 2026 formatting specs, authenticity principles, good vs bad examples, and a style checklist. Use when reviewing or calibrating the voice and formatting of any post before publishing.
+description: Style and tone guide for LinkedIn posts: 360Brew 2026 formatting specs, authenticity principles, good vs bad examples, and a style checklist. Use when reviewing or calibrating the voice and formatting of any post before publishing. PT triggers: calibre sua voz com você, formate seus posts, mantenha seu estilo.
 ---
 
 # Style and tone guide

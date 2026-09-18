@@ -1,6 +1,6 @@
 ---
 name: visual-brief
-description: Visual brief generation for LinkedIn posts: mapping the ideal format by content type, an output template with technical specs, ready-to-use prompts for AI image generation (Midjourney/DALL-E/Canva), and rules for adapting to a client's style document. Use when finalizing a post to generate the visual brief that goes with the content.
+description: Visual brief generation for LinkedIn posts: mapping the ideal format by content type, an output template with technical specs, ready-to-use prompts for AI image generation (Midjourney/DALL-E/Canva), and rules for adapting to a client's style document. Use when finalizing a post to generate the visual brief that goes with the content. PT triggers: crie seu visual com você, ilustre seus posts, gere seu briefing de imagem.
 ---
 
 # Visual brief (Step C of the finalization pipeline)
@@ -80,3 +80,9 @@ Video posts (a <60s take, behind-the-scenes, or a point-of-view) build trust bec
 ## Related
 
 For carousels specifically, the `carousel-builder` skill writes the slide-by-slide script and caption first, then hands off here for the slide design spec.
+
+## In-session generation (ChatGPT)
+
+1. Generate the cover/first visual now with the AI prompt above, honoring §12 visual identity (or the minimalist default).
+2. Critique the result against this checklist before showing: (a) legible at feed size, (b) ≤7 words on cover, (c) palette from §12/default, (d) no generic stock handshake, (e) carousel cover teases without repeating slide 2.
+3. One retry max, then ship best + note the compromise.

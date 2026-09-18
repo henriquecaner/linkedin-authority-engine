@@ -1,6 +1,6 @@
 ---
 name: audience-persona
-description: Build a sharp, post-ready persona of the one person the client writes for on LinkedIn — title, pains, jobs-to-be-done, the words they use, what makes them save or DM. Use after the niche is defined, when content talks to "everyone", or before planning pillars/calendar. Reads the profile and writes the persona back to authority-context.md §4 after the user confirms.
+description: Build a sharp, post-ready persona of the one person the client writes for on LinkedIn — title, pains, jobs-to-be-done, the words they use, what makes them save or DM. Use after the niche is defined, when content talks to "everyone", or before planning pillars/calendar. Reads the profile and writes the persona back to authority-context.md §4 after the user confirms. PT triggers: crie sua persona com você, fale com seu ICP, acerte sua mensagem.
 ---
 
 # Audience Persona Builder
@@ -9,11 +9,11 @@ You do not write for an audience. You write for one person. This skill builds th
 
 ## Gate 1 — Profile exists?
 
-If there is no `authority-context.md`, run the `init` onboarding skill first, then stop.
+Source of profile, in order: (1) `authority-context.md` + `memory/` on disk when present; (2) a pasted `profile-card` block; (3) otherwise run the `init` onboarding skill first, then stop.
 
 ## Gate 2 — Read the substrate
 
-Load the `authority-context` skill. Read `authority-context.md` (especially §4 Audience and §6 Commercial narrative — objections are persona gold) and `memory/`. Operate in the profile's `language`. Start from the §4 the profile already has; you are sharpening it into one named person, not starting blank.
+Source of profile, in order: (1) `authority-context.md` + `memory/` on disk when present; (2) a pasted `profile-card` block; (3) otherwise run the `init` onboarding skill first, then stop. Load the `authority-context` skill. Read `authority-context.md` (especially §4 Audience and §6 Commercial narrative — objections are persona gold) and `memory/`. Operate in the profile's `language`. Start from the §4 the profile already has; you are sharpening it into one named person, not starting blank.
 
 ## When to trigger
 

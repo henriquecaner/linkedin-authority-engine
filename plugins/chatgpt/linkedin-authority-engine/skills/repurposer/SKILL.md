@@ -1,6 +1,6 @@
 ---
 name: repurposer
-description: Convert an existing piece of content (blog post, tweet/thread, YouTube transcript, podcast, Notion doc) into a native LinkedIn post — one idea, rewritten for LinkedIn dynamics, not pasted verbatim. Use when the user pastes or links an external artifact to bring onto LinkedIn. For a raw personal experience with no external source, use story-extractor instead. Runs the full finalization pipeline and saves to outputs/posts/.
+description: Convert an existing piece of content (blog post, tweet/thread, YouTube transcript, podcast, Notion doc) into a native LinkedIn post — one idea, rewritten for LinkedIn dynamics, not pasted verbatim. Use when the user pastes or links an external artifact to bring onto LinkedIn. For a raw personal experience with no external source, use story-extractor instead. Runs the full finalization pipeline and saves to outputs/posts/. PT triggers: transforme seu blog com você, traga seu conteúdo externo, faça repurpose do seu material.
 ---
 
 # Repurposer
@@ -9,11 +9,11 @@ A LinkedIn post is not a blog post in disguise, and a tweet thread pasted vertic
 
 ## Gate 1 — Profile exists?
 
-If there is no `authority-context.md`, run the `init` onboarding skill first, then stop.
+Source of profile, in order: (1) `authority-context.md` + `memory/` on disk when present; (2) a pasted `profile-card` block; (3) otherwise run the `init` onboarding skill first, then stop.
 
 ## Gate 2 — Read the substrate
 
-Load the `authority-context` skill. Read `authority-context.md` (voice §10, pillars §2, constraints §9, NO territories §8) and `memory/`. The repurposed post must sound like the client and stay on-pillar — not like the source author. Operate in the profile's `language`.
+Source of profile, in order: (1) `authority-context.md` + `memory/` on disk when present; (2) a pasted `profile-card` block; (3) otherwise run the `init` onboarding skill first, then stop. Load the `authority-context` skill. Read `authority-context.md` (voice §10, pillars §2, constraints §9, NO territories §8) and `memory/`. The repurposed post must sound like the client and stay on-pillar — not like the source author. Operate in the profile's `language`.
 
 ## When to trigger
 

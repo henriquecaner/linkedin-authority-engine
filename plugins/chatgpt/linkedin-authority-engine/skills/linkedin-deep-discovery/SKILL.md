@@ -1,6 +1,6 @@
 ---
 name: linkedin-deep-discovery
-description: Desktop only — deep discovery via Unipile API v2 (requires UNIPILE_API_KEY on a local runtime). Pull a client's LinkedIn profile, recent posts and company page into a dossier that pre-fills the init interview. Use when a LinkedIn URL is available and UNIPILE_API_KEY resolves, or on "pull my LinkedIn", "refresh my profile data", "audit competitor X". Never ask the user to paste API keys in chat.
+description: Desktop only — deep discovery via Unipile API v2 (requires UNIPILE_API_KEY on a local runtime). Pull a client's LinkedIn profile, recent posts and company page into a dossier that pre-fills the init interview. Use when a LinkedIn URL is available and UNIPILE_API_KEY resolves, or on "pull my LinkedIn", "refresh my profile data", "audit competitor X". Never ask the user to paste API keys in chat. PT triggers: puxe seu LinkedIn com você, enriqueça seu dossiê, analise seus concorrentes.
 ---
 
 # LinkedIn deep discovery (Path U)

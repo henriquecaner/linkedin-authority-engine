@@ -1,6 +1,6 @@
 ---
 name: story-extractor
-description: Extract a publishable LinkedIn story from a raw lived experience — structure it into a story-arc post (situation, tension, turning point, outcome, lesson) that starts at the punch. Use when the user dumps a first-person experience with no external source, says "something happened", or wants to turn a moment into a post. To repurpose an existing blog/video/tweet, use repurposer instead. Respects the profile's vulnerability level; runs the full finalization pipeline.
+description: Extract a publishable LinkedIn story from a raw lived experience — structure it into a story-arc post (situation, tension, turning point, outcome, lesson) that starts at the punch. Use when the user dumps a first-person experience with no external source, says "something happened", or wants to turn a moment into a post. To repurpose an existing blog/video/tweet, use repurposer instead. Respects the profile's vulnerability level; runs the full finalization pipeline. PT triggers: conte sua história com você, transforme sua experiência em post, respeite sua vulnerabilidade.
 ---
 
 # Story Extractor
@@ -9,11 +9,11 @@ The client lived something. This skill turns the raw dump into a story with tens
 
 ## Gate 1 — Profile exists?
 
-If there is no `authority-context.md`, run the `init` onboarding skill first, then stop.
+Source of profile, in order: (1) `authority-context.md` + `memory/` on disk when present; (2) a pasted `profile-card` block; (3) otherwise run the `init` onboarding skill first, then stop.
 
 ## Gate 2 — Read the substrate
 
-Load the `authority-context` skill. Read `authority-context.md` — especially §2 (stories available, untold stories), §10 **vulnerability level (1-5)**, §9 constraints, §8 NO territories — and `memory/`. **Never push the story past the client's stated vulnerability level.** Operate in the profile's `language`.
+Source of profile, in order: (1) `authority-context.md` + `memory/` on disk when present; (2) a pasted `profile-card` block; (3) otherwise run the `init` onboarding skill first, then stop. Load the `authority-context` skill. Read `authority-context.md` — especially §2 (stories available, untold stories), §10 **vulnerability level (1-5)**, §9 constraints, §8 NO territories — and `memory/`. **Never push the story past the client's stated vulnerability level.** Operate in the profile's `language`.
 
 ## When to trigger
 

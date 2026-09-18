@@ -1,12 +1,13 @@
 ---
 name: linkedin
-description: Mode menu for the LinkedIn Authority Engine. Shows Onboarding, Guided, Rewrite, Thread and Score and routes to the chosen mode. Use when the user doesn't know where to start or wants an overview of the available modes.
+description: Mode menu and router: onboarding, guided, rewrite, thread, score. Use when the user doesn't know where to start, says 'o que vamos criar', 'me mostra as opções', 'what can you do', or pastes content with no clear instruction. Never generate here, only route. Covers all modes with an overview.
 ---
 
 # Linkedin skill
 ## Profile check (required before any mode)
 
 Before showing the menu or routing to a mode, silently verify whether `authority-context.md` exists in the current project.
+Source of profile, in order: (1) `authority-context.md` + `memory/` on disk when present; (2) a pasted `profile-card` block; (3) otherwise run the `init` onboarding skill first, then stop.
 
 - If it **does not exist**: show the message below and stop.
 

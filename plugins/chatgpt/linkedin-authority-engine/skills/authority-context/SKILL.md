@@ -1,6 +1,6 @@
 ---
 name: authority-context
-description: Read and write protocol for the client memory substrate (authority-context.md + memory/). ALWAYS use it before generating content (read the profile + winning patterns) and at the end of every generation session (write-back). Defines the 3 gates of auto-enrichment.
+description: Read and write protocol for the client memory substrate (authority-context.md + memory/). ALWAYS use it before generating content (read the profile + winning patterns) and at the end of every generation session (write-back). Defines the 3 gates of auto-enrichment. PT triggers: leia seu perfil com você, salve seus aprendizados, mantenha sua memória viva.
 ---
 
 # Authority context — self-enriching substrate

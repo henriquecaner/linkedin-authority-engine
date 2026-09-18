@@ -1,6 +1,6 @@
 ---
 name: guided
-description: Guided Mode of the LinkedIn Authority Engine — builds a post from scratch with a full 7-step workflow (category, objective, agenda, structure, type, hook, body, CTA), reading the authority profile and running through the finalization pipeline. Use when the user wants to create a new post.
+description: Full 7-step workflow that builds a LinkedIn post from scratch from just a topic (category, objective, structure, type, hook, body, CTA) plus the A-E finalization pipeline. Use for 'crie um post sobre X', 'from scratch', 'new post', a bare topic with no draft. When the user already has a draft, use score; for two stronger versions, rewrite; for a series, thread.
 ---
 
 # Guided skill
@@ -8,6 +8,7 @@ description: Guided Mode of the LinkedIn Authority Engine — builds a post from
 
 Before any generation:
 
+Source of profile, in order: (1) `authority-context.md` + `memory/` on disk when present; (2) a pasted `profile-card` block; (3) otherwise run the `init` onboarding skill first, then stop.
 1. Load the `authority-context` skill.
 2. Read `authority-context.md` (full profile) and every file in `memory/` (`winning-hooks.md`, `topic-performance.md`, `voice-profile.md`, `learnings.md`).
 3. Apply: tone of voice, content pillars, real credentials, editorial constraints.
@@ -213,6 +214,7 @@ python ${PLUGIN_ROOT}/scripts/score_post.py post.txt --lang <pt|en> --objective 
 
 
 Present the report across the 6 dimensions (Saves Potential 30%, Hook 20%, Algorithm 20%, Structure 15%, CTA 10%, Data 5%) + Top 1% / Top 5% classification.
+Show the weighted math in one line: `0.30×Saves + 0.20×Hook + 0.20×Algo + 0.15×Struct + 0.10×CTA + 0.05×Data = X.X`, then the band (≥9 publish, 7–8.9 adjust, <7 rework).
 
 If `topic-performance.md` has a real baseline for the profile, also present the comparison (relative context > absolute).
 

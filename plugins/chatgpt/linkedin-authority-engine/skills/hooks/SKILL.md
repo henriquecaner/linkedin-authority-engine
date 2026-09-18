@@ -1,6 +1,6 @@
 ---
 name: hooks
-description: Bank of 147 LinkedIn hooks organized by type (proof of work, authority proof, transformation, contrarian, confession, curiosity, story, lists & frameworks). Use when generating post headlines, opening lines, and hook variations for any content category.
+description: Bank of 147 LinkedIn hooks organized by type (proof of work, authority proof, transformation, contrarian, confession, curiosity, story, lists & frameworks). Use when generating post headlines, opening lines, and hook variations for any content category. PT triggers: crie seus ganchos com você, abra seus posts, prenda sua audiência.
 ---
 
 # LinkedIn hook library

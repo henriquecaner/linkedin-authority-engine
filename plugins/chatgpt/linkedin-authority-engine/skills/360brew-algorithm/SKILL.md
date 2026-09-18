@@ -1,6 +1,6 @@
 ---
 name: 360brew-algorithm
-description: Complete reference for LinkedIn's 360Brew algorithm (v3.5, Q1 2026): fundamentals, format and timing specs, metrics, and scoring system. Use it when creating or evaluating posts to keep them aligned with the algorithm's rules, maximize organic reach, and estimate outlier probabilities.
+description: Complete reference for LinkedIn's 360Brew algorithm (v3.5, Q1 2026): fundamentals, format and timing specs, metrics, and scoring system. Use it when creating or evaluating posts to keep them aligned with the algorithm's rules, maximize organic reach, and estimate outlier probabilities. PT triggers: entenda seu alcance, otimize seus posts com você, preveja seus outliers.
 ---
 
 ## Core

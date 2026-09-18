@@ -1,6 +1,6 @@
 ---
 name: niche-definer
-description: Define or sharpen the client's LinkedIn niche — audience, problem, unique angle, one-line positioning. Use when positioning feels vague ("marketing leaders"), the content reads as generic, or before building content pillars. Reads the authority profile, proposes a sharper niche, and writes it back to authority-context.md after the user confirms.
+description: Define or sharpen the client's LinkedIn niche — audience, problem, unique angle, one-line positioning. Use when positioning feels vague ("marketing leaders"), the content reads as generic, or before building content pillars. Reads the authority profile, proposes a sharper niche, and writes it back to authority-context.md after the user confirms. PT triggers: afie seu nicho com você, defina seu posicionamento, diferencie-se no mercado.
 ---
 
 # Niche Definer
@@ -9,11 +9,11 @@ A niche is not a topic. It is the intersection of one audience, one problem they
 
 ## Gate 1 — Profile exists?
 
-If there is no `authority-context.md` in the project, this skill has nothing to sharpen. Tell the user to run the `init` onboarding skill first, then stop.
+Source of profile, in order: (1) `authority-context.md` + `memory/` on disk when present; (2) a pasted `profile-card` block; (3) otherwise run the `init` onboarding skill first, then stop. Tell the user to run the `init` onboarding skill first, then stop.
 
 ## Gate 2 — Read the substrate
 
-Load the `authority-context` skill. Read `authority-context.md` (especially §2 Positioning, §4 Audience, §8 Territories) and `memory/`. Operate in the profile's `language` field (`pt` → Brazilian Portuguese / pt-BR; `en` → English). You are refining an existing positioning, not inventing one from zero — start from what the profile already says and push it sharper.
+Source of profile, in order: (1) `authority-context.md` + `memory/` on disk when present; (2) a pasted `profile-card` block; (3) otherwise run the `init` onboarding skill first, then stop. Load the `authority-context` skill. Read `authority-context.md` (especially §2 Positioning, §4 Audience, §8 Territories) and `memory/`. Operate in the profile's `language` field (`pt` → Brazilian Portuguese / pt-BR; `en` → English). You are refining an existing positioning, not inventing one from zero — start from what the profile already says and push it sharper.
 
 ## When to trigger
 

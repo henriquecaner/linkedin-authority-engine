@@ -1,6 +1,6 @@
 ---
 name: analytics-interpreter
-description: Translate raw LinkedIn analytics into a clear diagnosis — what is working, what is not, and exactly 3 actions for next month. Use when the user pastes their numbers or asks "what do my analytics mean", "why did reach drop", "what should I do differently". Reads the profile goal and past performance; writes the diagnosis back to memory/.
+description: Translate raw LinkedIn analytics into a clear diagnosis — what is working, what is not, and exactly 3 actions for next month. Use when the user pastes their numbers or asks "what do my analytics mean", "why did reach drop", "what should I do differently". Reads the profile goal and past performance; writes the diagnosis back to memory/. PT triggers: analise seus números com você, entenda sua queda de alcance, planeje suas próximas ações.
 ---
 
 # Analytics Interpreter
@@ -9,11 +9,11 @@ Numbers are not a diagnosis. This skill finds the 2-3 patterns that matter, ties
 
 ## Gate 1 — Profile exists?
 
-If there is no `authority-context.md`, run the `init` onboarding skill first, then stop.
+Source of profile, in order: (1) `authority-context.md` + `memory/` on disk when present; (2) a pasted `profile-card` block; (3) otherwise run the `init` onboarding skill first, then stop.
 
 ## Gate 2 — Read the substrate
 
-Load the `authority-context` skill. Read `authority-context.md` (§3 primary objective + tracking metric) and `memory/topic-performance.md` (any past scores/baseline). The diagnosis is judged against **the client's goal**, not against vanity. Operate in the profile's `language`.
+Source of profile, in order: (1) `authority-context.md` + `memory/` on disk when present; (2) a pasted `profile-card` block; (3) otherwise run the `init` onboarding skill first, then stop. Load the `authority-context` skill. Read `authority-context.md` (§3 primary objective + tracking metric) and `memory/topic-performance.md` (any past scores/baseline). The diagnosis is judged against **the client's goal**, not against vanity. Operate in the profile's `language`.
 
 ## When to trigger
 

@@ -1,6 +1,6 @@
 ---
 name: content-types
-description: Catalog of 22 LinkedIn content types with structure, funnel-stage mapping, and reach/conversion badges, plus a selection guide by objective and funnel stage. Use when deciding the post type before choosing the copywriting framework.
+description: Catalog of 22 LinkedIn content types with structure, funnel-stage mapping, and reach/conversion badges, plus a selection guide by objective and funnel stage. Use when deciding the post type before choosing the copywriting framework. PT triggers: escolha seu formato com você, acerte seu tipo de post, alinhe seu funil.
 ---
 
 # 22 content types
